@@ -6,16 +6,20 @@ This program was started backin 2004 and had a decent life as a windows program,
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files that will continue to be hosted on my ancient, very ugly, on purpose, website!
 
 requirements:
+
 python3
 pypacker  (if you use pip to install it, remember to use pip3)
 
 initial setup:
+
 chmod +x fingerprintupdate.sh
 
 periodically get the latest fingerprint files:
+
 ./fingerprintingupdate.sh
 
 use:
+
 python3 -r [some pcap] -m [one of the modules]
 python3 -r tcp.pcap -m tcp
 
