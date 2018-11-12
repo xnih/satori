@@ -18,10 +18,9 @@ periodically get the latest fingerprint files:
 
 use:
 python3 -r [some pcap] -m [one of the modules]
-python3 -r tcp.pcap -m tcp
 
 modules feature is optional
 
-at this time, only reads in precaptured pcaps, no live/on the fly stuff, but since you have to run tcpdump as root normally, means bad coding on my part is less likely to hose you!
+At this time, only reads in precaptured pcaps, no live/on the fly stuff, but since you have to run tcpdump as root normally, means bad coding on my part is less likely to hose you!
 
 This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point!
