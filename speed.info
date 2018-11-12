@@ -1,0 +1,19 @@
+This is really going to depended on the makeup of the pcap file, but tests below were run with a few files that were single type packets:
+
+HTTP with UserAgent in it:
+- output to screen: Packets/s: 2687.846614314404
+- output to disk:   Packets/s: 6951.393647723584
+- compare to Windows version:  909
+
+DHCP with "3" different types of info being displayed on each:
+- output to screen: Packets/s: 1633.4671705921742
+- putput to disk:   Packets/s: 4557.845538705156
+- compare to Windows version:  339
+
+TCP
+- output to screen: Packets/s: 1623.227164283516
+- output to disk:   Packets/s: 4755.095848078051
+- compare to Windows version:  233
+
+To be fair on the window version of Satori, it does more than just determine the fingerprint, it is trying to search if the device is already in the system, update a timestamp, compute an over arcing score, etc, but it is still very slow in comparison to the new version!
+
