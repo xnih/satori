@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<WEBUSERAGENT created="2006-08-05" last_updated="2018-11-10" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2018-11-12" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Android" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-06-16">
             <webuseragent_tests>
@@ -103,6 +103,11 @@
         <fingerprint name="Grendel Scan" os_name="Grendel" os_class="Scanner" os_vendor="Grendel" os_url="http://grendel-scan.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Grendel-Scan"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="HP Laserjet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="HP" device_url="http://hp.com" comments="MFP M575" author="xnih13@gmail.com" last_updated="2018-11-12">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="WinCE; U; LF:WJ1.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2010-09-04">
@@ -311,6 +316,11 @@
                 <test weight="5" matchtype="partial" webuseragent="Nmap Scripting Engine"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="NSX 6.3 Manager" os_name="NSX 6.5" os_class="Linux" os_vendor="VMware, Inc." os_url="http://www.vmware.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-12">
+            <webuseragent_tests>
+                <test weight="5" matchtype="exact" webuseragent="VMware vim-java 1.0"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="PlayStation 2" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2012-07-21">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="PSP (PlayStation Portable); 2.00"/>
@@ -352,9 +362,10 @@
                 <test weight="5" matchtype="partial" webuseragent="Win32"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-12">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 10.0"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/10.0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2014-06-24">
