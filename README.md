@@ -11,10 +11,8 @@ pypacker  (if you use pip to install it, remember to use pip3)
 
 initial setup:
 
-chmod +x fingerprintupdate.sh
-
-periodically get the latest fingerprint files:
-./fingerprintingupdate.sh
+periodically get the latest fingerprint files and any updates:
+git pull
 
 use:
 python3 -r [some pcap] -m [one of the modules]
