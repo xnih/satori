@@ -18,7 +18,7 @@ def BuildTCPFingerprintFiles():
   sPartialList = {}
   saPartialList = {}
 
-  obj = untangle.parse('tcp.xml')
+  obj = untangle.parse('fingerprints/tcp.xml')
   fingerprintsCount = len(obj.TCP.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.TCP.fingerprints.fingerprint[x]['name']

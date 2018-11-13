@@ -92,7 +92,7 @@ def BuildDHCPFingerprintFiles():
   #need to decide how to deal with ; in dhcpvendorcode
 
 
-  obj = untangle.parse('dhcp.xml')
+  obj = untangle.parse('fingerprints/dhcp.xml')
   fingerprintsCount = len(obj.DHCP.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.DHCP.fingerprints.fingerprint[x]['name']

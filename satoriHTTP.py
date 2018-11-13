@@ -16,7 +16,7 @@ def BuildHTTPUserAgentFingerprintFiles():
   useragentExactList = {}
   useragentPartialList = {}
 
-  obj = untangle.parse('webuseragent.xml')
+  obj = untangle.parse('fingerprints/webuseragent.xml')
   fingerprintsCount = len(obj.WEBUSERAGENT.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.WEBUSERAGENT.fingerprints.fingerprint[x]['name']
