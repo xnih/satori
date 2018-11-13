@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                                                    -->
+<!-- Terms of use of fingerprint data:                                                  -->
+<!-- You are welcome to use the fingerprint data provided as long as you:               -->
+<!-- 1.  Notify the author of this file of your intentions, email to xnih@cableone.net  -->
+<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
+<!--     http://myweb.cableone.net/xnih                                                 -->
+<!--                                                                                    -->
+<!-- If you are using this for your own programs it is highly recommended you           -->
+<!-- contribute new fingerprints                                                        -->
+<!--                                                                                    -->
+<!-- Updates can be found at:                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
+<!-- example:                                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
+<!--                                                                                    -->
+<!--                                                                                    -->
+<SMB created="2008-05-23" last_updated="2013-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+    <fingerprints>
+        <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="FreeBSD"/>
+                <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="MacOSX"/>
+                <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Samba 2.0 Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 2.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Samba 2.2.0 - 2.2.6 Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 2.2.0"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 2.2.1"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 2.2.3"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Samba 2.2.7 - 3.2.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 2.2.7"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 3.0"/>
+                <test weight="5" matchtype="partial" smbnativelanman="Samba 3.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Samba Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Samba"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-27">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows 5.0"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows 2000 2195"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2000 LAN Manager"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2000 5.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-07-11">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows 7 Enterprise 7600"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 7 Enterprise 6.1"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows 7 Home Premium 7600"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 7 Home Premium 6.1"/>
+                <test weight="1" matchtype="partial" smbnativename="Windows 7"/>
+                <test weight="1" matchtype="partial" smbnativename="7600"/>
+                <test weight="1" matchtype="partial" smbnativelanman="6.1"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows 7 Ultimate 7100"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 7 Ultimate 6.1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-02-11">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 7 Enterprise 7601 Service Pack 1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 7 Enterprise 6.1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com/en-US/windows-8/meet" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
+            <smb_tests>
+                <test weight="1" matchtype="partial" smbnativelanman="6.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 8.1" os_name="Windows 8.1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com/en-US/windows-8/meet" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
+            <smb_tests>
+                <test weight="1" matchtype="partial" smbnativelanman="6.3"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows NT 4" os_name="Windows NT 4" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-28">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows NT 4.0"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows NT 1381"/>
+                <test weight="5" matchtype="exact" smbnativelanman="NT LAN Manager 4.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2003" os_name="Windows Server 2003" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server 2003 3790"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2003 5.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2003 R2" os_name="Windows Server 2003 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-02-11">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2003 R2"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2003 R2 3790 Service Pack 2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2003 SP1" os_name="Windows Server 2003 SP1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2003 3790 Service Pack 1"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2003 R2 3790 Service Pack 1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2003 5.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2003 SP2" os_name="Windows Server 2003 SP2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="10" matchtype="exact"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2003 5.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2008" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-05-05">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server 2008"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-06-16">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Enterprise 7600"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008 R2 Enterprise 6.1"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Standard 7600 "/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008 R2 Standard 6.1"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Enterprise 7601 Service Pack 1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2008 SP2" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-02-11">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows Server (R) 2008 Enterprise 6002 Service Pack 2"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Server (R) 2008 Enterprise 6.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="5" matchtype="partial" smbnativename="Windows Vista"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Vista Ultimate" os_name="Windows Vista Ultimate" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="5" matchtype="partial" smbnativename="Windows Vista"/>
+                <test weight="5" matchtype="partial" smbnativename="(TM) Ultimate"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Vista (TM) Ultimate 6.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows Vista Ultimate SP1" os_name="Windows Vista Ultimate SP1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows Vista (TM) Ultimate 6001 Service Pack 1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows Vista (TM) Ultimate 6.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-07-11">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Windows 2002 2600"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows 5.1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2000 LAN Manager"/>
+                <test weight="5" matchtype="exact" smbnativename="Windows 2002 Service Pack 3 2600"/>
+                <test weight="1" matchtype="partial" smbnativename="2600"/>
+                <test weight="1" matchtype="partial" smbnativename="2002"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows XP SP1" os_name="Windows XP SP1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 2002 Service Pack 1 2600"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 2002 2600 Service Pack 1"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows XP SP2" os_name="Windows XP SP2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 2002 Service Pack 2 2600"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 2002 Service Pack 2, v.2149 2600"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows XP SP3" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-01-06">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 2002 Service Pack 3 2600"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
+            </smb_tests>
+        </fingerprint>
+    </fingerprints>
+</SMB>
