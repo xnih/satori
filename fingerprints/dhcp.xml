@@ -15,7 +15,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!--                                                                                    -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2018-11-15" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2018-11-17" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -2842,7 +2842,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,249,43,252"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-17">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,15,3,6,255"/>
@@ -2851,9 +2851,12 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,3,6,15,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,81,3,6,15,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,31,33,43,44,46,47,121,249,252"/>
-                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="MSFT 5.0"/>
+                <test weight="2" matchtype="exact" dhcptype="Request" dhcpvendorcode="MSFT 5.0"/>
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,121,249,43,252"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,31,33,43,44,46,47,119,121,249,252"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,3,6,15,119,252,95,44,46"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,55,57,61,51,12,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-08">
@@ -2879,7 +2882,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="15,3,6,44,46,47,31,33,43,252"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2018-11-15">
+        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2018-11-17">
             <dhcp_tests>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
                 <test weight="1" matchtype="exact" dhcptype="Inform" ipttl="128"/>
@@ -2904,8 +2907,10 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,81,15,3,6,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,12,81,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,3,6,15,255"/>
-                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,121,249,43,252"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,6,44,46,47,31,33,121,249,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,1,58,59,51,54,15,3,6,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,12,81,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
@@ -3073,6 +3078,15 @@
                 <test weight="2" matchtype="exact" dhcptype="Request" dhcpvendorcode="MSFT 5.0"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,116,61,12,60,55"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2012" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-17">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="54"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,61,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="83"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="43"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
