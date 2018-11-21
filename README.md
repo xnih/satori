@@ -18,8 +18,8 @@ periodically get the latest fingerprint files and any updates:
 - git pull
 
 ## use:
-- python3 -r [some pcap] -m [one of the modules]
-- python3 -i [some interface] -m [one of the modules]
+- python3 satori.py -r [some pcap] -m [one of the modules]
+- python3 satori.py -i [some interface] -m [one of the modules]
 
 modules feature is optional
 
