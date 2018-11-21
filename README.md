@@ -5,17 +5,21 @@ This program was started back in 2004 and had a decent life as a windows program
 
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files that will continue to be hosted on my ancient, very ugly, on purpose, website!
 
-requirements:
-python3
-pypacker  (if you use pip to install it, remember to use pip3)
+## requirements:
+- python3
+- pypacker*
+- pcapy*
 
-initial setup:
+*(if you use pip to install it, remember to use pip3)
+
+## updates:
 
 periodically get the latest fingerprint files and any updates:
-git pull
+- git pull
 
-use:
-python3 -r [some pcap] -m [one of the modules]
+## use:
+- python3 -r [some pcap] -m [one of the modules]
+- python3 -i [some interface] -m [one of the modules]
 
 modules feature is optional
 
