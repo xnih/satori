@@ -19,6 +19,6 @@ python3 -r [some pcap] -m [one of the modules]
 
 modules feature is optional
 
-At this time, only reads in precaptured pcaps, no live/on the fly stuff, but since you have to run tcpdump as root normally, means bad coding on my part is less likely to hose you!
+I have added the ability to listen to live packets, but be aware, you are running as root typically to do this, use at own risk as mentioned before, I am by no means a programmer!
 
 This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point!
