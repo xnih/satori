@@ -7,6 +7,7 @@ from pypacker.layer567 import dhcp
 from pypacker.layer567 import http
 from pypacker import pypacker
 from datetime import datetime
+import pcapy
 import getopt
 import time
 import sys
@@ -19,7 +20,7 @@ import satoriHTTP
 def usage():
     print("""
     -r, --read        pcap to read in; example: -r tcp.pcap
-    -i, --interface   interface to listen to; example: -i eth0 (not implemented yet)
+    -i, --interface   interface to listen to; example: -i eth0
     -m, --modules     modules to load; example: -m tcp,dhcp
     -l, --log         log file to write output to; example -l output.txt (not implemented yet)
     -v, --verbose     verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically
@@ -29,7 +30,7 @@ def dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, R
 
   ip4 = eth.upper_layer
   udp1 = eth.upper_layer.upper_layer
-  timeStamp = datetime.utcfromtimestamp(ts/1000000000).isoformat()
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
   #print ("src port: %s; dst port: %s" % (udp1.sport, udp1.dport))  #check to see if udp port 67 or 68 or should that be done before sending here?  or does the dhcp.DHCP handle?
   dhcp1 = eth[dhcp.DHCP]
@@ -195,7 +196,7 @@ def tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList):  
     elif tcpFlags == 'SA':
       tcpFingerprint = satoriTCP.TCPFingerprintLookup(saExactList, saPartialList, tcpSignature)
     #ignore anything that is not S or SA, but should probably clean that up prior to this point!
-    timeStamp = datetime.utcfromtimestamp(ts/1000000000).isoformat()
+    timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
 
     print("%s;%s;%s;TCP;%s;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, tcpFlags, tcpSignature, tcpFingerprint))
@@ -208,7 +209,7 @@ def httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList):
   tcp1 = eth.upper_layer.upper_layer
   http1 = eth.upper_layer.upper_layer.upper_layer
 
-  timeStamp = datetime.utcfromtimestamp(ts/1000000000).isoformat()
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   hdrUserAgent = ''
   bodyUserAgent = ''
 
@@ -275,29 +276,56 @@ def main():
 
   if readpcap != '':
     preader = ppcap.Reader(filename=readpcap)
+    for ts, buf in preader:
+      try:
+        counter = counter + 1
+        ts = ts/1000000000
+
+        eth = ethernet.Ethernet(buf)
+
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
+          tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
+          dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList)
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
+          httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
+          # add http ServerProcess at later date
+      except (KeyboardInterrupt, SystemExit):
+        raise
+      except:
+        pass
+
+
   elif interface != '':
-    preader = ''  #need to get it to read an interface instead, but quick/dirty to address a check
+    try:
+      preader = pcapy.open_live(interface, 65536, False, 1)
+    except Exception as e:
+      print(e)
+      sys.exit(1)
+    while True:
+      try:
+        counter = counter + 1
+        (header, buf) = preader.next()
+        ts = header.getts()[0]
+
+        eth = ethernet.Ethernet(buf)
+
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
+          tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
+          dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList)
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
+          httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
+          # add http ServerProcess at later date
+      except (KeyboardInterrupt, SystemExit):
+        raise
+      except:
+        pass
+
+
   else:  #we should never get here with "proceed" check, but just in case
     preader = ''
     print("Not sure how we got here")
-
-  for ts, buf in preader:
-    try:
-      counter = counter + 1
-
-      eth = ethernet.Ethernet(buf)
-
-      if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
-        tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
-      if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
-        dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList)
-      if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
-        httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
-        # add http ServerProcess at later date
-    except (KeyboardInterrupt, SystemExit):
-      raise
-    except:
-      pass
 
   endTime = time.time()
   totalTime = endTime - startTime
@@ -322,10 +350,9 @@ try:
         readpcap = val
     if opt in ('-m', '--modules'):
       modules = val
-    if opt in ('-i', '--interface'):  #not implemented yet
+    if opt in ('-i', '--interface'):
       interface = val
       proceed = True
-      # run a check to verify legit interface when we get to that.
     if opt in ('-l', '--log'):  #not implemented yet
       log = val
       # do a check to see if file already exists, if so open in append mode, else create
