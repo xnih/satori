@@ -5,10 +5,15 @@ This program was started back in 2004 and had a decent life as a windows program
 
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files that will continue to be hosted on my ancient, very ugly, on purpose, website!
 
-## requirements:
+## requirements
+### os related
+- libpcap-dev
+
+### python related
 - python3
 - pypacker*
 - pcapy*
+- untangle*
 
 *(if you use pip to install it, remember to use pip3)
 
