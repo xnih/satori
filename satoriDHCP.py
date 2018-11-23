@@ -566,7 +566,7 @@ def DHCPFingerprintLookup(exactList, partialList, value):
 
   for key, val in partialList.items():
     if value.find(key) > -1:
-      partialValue = val
+      partialValue = partialValue + '|' + val
 
   fingerprint = exactValue + '|' + partialValue
   if fingerprint.startswith('|'):

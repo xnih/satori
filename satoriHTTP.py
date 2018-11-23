@@ -51,13 +51,14 @@ def httpUserAgentFingerprintLookup(exactList, partialList, value):
   #same as DHCP one, may be able to look at combining in the future?
   exactValue = ''
   partialValue = ''
+  print (value)
 
   if value in exactList:
     exactValue = exactList.get(value)
 
   for key, val in partialList.items():
     if value.find(key) > -1:
-      partialValue = val
+      partialValue = partialValue + '|' + val
 
   fingerprint = exactValue + '|' + partialValue
   if fingerprint.startswith('|'):
