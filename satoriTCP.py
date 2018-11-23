@@ -1,5 +1,9 @@
 import untangle
 import struct
+from pypacker.layer12 import ethernet
+from pypacker.layer3 import ip
+#from pypacker.layer4 import tcp
+from datetime import datetime
 
 
 # grab the latest fingerprint files:
@@ -9,6 +13,83 @@ import struct
 # python3 satori.py > output.txt
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
 #
+
+
+def tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
+  ip4 = eth.upper_layer
+  tcp1 = eth.upper_layer.upper_layer
+
+  # lets verify we have tcp options and it is a SYN or SYN/ACK packet
+  if (len(tcp1.opts) > 0) and ((tcp1.flags == 0x02) or (tcp1.flags == 0x12)):
+    p0fSignature = ''
+    tcpSignature = ''
+    ethercapSignature = ''
+
+    #print("%s:%s -> %s:%s" % (eth[ip.IP].src_s, eth[tcp.TCP].sport, eth[ip.IP].dst_s, eth[tcp.TCP].dport))
+
+    [ipVersion, ipHdrLen] = computeIP(ip4.v_hl)
+    [ethTTL, ttl] = computeNearTTL(ip4.ttl)
+    [df, mf, offset] = computeIPOffset(ip4.off)
+
+    winSize = tcp1.win
+    tcpFlags = computeTCPFlags(tcp1.flags)
+    tcpHdrLen = computeTCPHdrLen(tcp1.off_x2)
+    [tcpOpts, tcpTimeStampEchoReply, mss] = decodeTCPOptions(tcp1.opts)
+
+    odd = detectOddities(ip4, ipHdrLen, ipVersion, tcpHdrLen, tcpFlags, tcp1, tcpOpts, tcpTimeStampEchoReply)
+
+
+    #build p0fv2 signature
+    found = False
+    if (winSize != 0) and (mss != 0):
+      if ((winSize % mss) == 0):
+        p0fSignature = p0fSignature + 'S' + str(winSize // mss) + ':'
+        found = True
+      mtu = mss + 40  #probably should verify if this should be 40 or _ip_hlen + _tcp_hlen
+      if ((winSize % mtu) == 0):
+        p0fSignature = p0fSignature + 'T' + str(winSize // mtu) + ':'
+        found = True
+      if (found == False):
+        p0fSignature = p0fSignature + str(winSize) + ':'
+    else:
+      p0fSignature = p0fSignature + str(winSize) + ':'
+    p0fSignature = p0fSignature + str(ttl) + ':' + str(df) + ':' + str(ipHdrLen + tcpHdrLen) + ':' + tcpOpts + ':' + odd
+
+
+    #build EtterCap Signature  (needs finished out, not complete)
+    if winSize == '':
+      etterWinSize = '_MSS'
+    else:
+      etterWinSize = hex(winSize).lstrip("0x").upper()
+    etterMSS = hex(mss).lstrip("0x").rjust(4,"0").upper()
+    try:
+      x = tcpOpts.find('W')
+      if (x > 0):
+        ws = tcpOpts[x+1::]
+        x = ws.find(',')
+        if (x > 0):
+          ws = ws[0:x]
+        ws = hex(int(ws)).lstrip("0x").rjust(2,"0")
+      else:
+        ws = 'WS'
+    except:
+      ws = 'WS'  #may need to do something else, but good enough for now
+    ettercapSignature = etterWinSize + ':' + etterMSS + ':' + hex(ttl).lstrip("0x") + ':' + ws + ':' # + sack, NOP anywhere, DF, Timestamp Present, Flag of packet (s or a), len
+
+    #build Satori tcp Signature
+    tcpSignature = str(winSize) + ':' + str(ttl) + ':' + str(df) + ':' + str(ipHdrLen + tcpHdrLen) + ':' + tcpOpts + ':' + odd
+    if tcpFlags == 'S':
+      tcpFingerprint = TCPFingerprintLookup(sExactList, sPartialList, tcpSignature)
+    elif tcpFlags == 'SA':
+      tcpFingerprint = TCPFingerprintLookup(saExactList, saPartialList, tcpSignature)
+    #ignore anything that is not S or SA, but should probably clean that up prior to this point!
+    timeStamp = datetime.utcfromtimestamp(ts).isoformat()
+
+
+    print("%s;%s;%s;TCP;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, tcpSignature, tcpFingerprint))
+    #print("%s;%s;p0fv2;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, p0fSignature, p0fv2Fingerprint))
+    #print("%s;%s;Ettercap;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, ettercapSignature, ettercapFingerprint))
+
 
 
 def BuildTCPFingerprintFiles():
