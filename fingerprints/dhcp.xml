@@ -76,6 +76,20 @@
                 <test weight="5" matchtype="partial" dhcptype="Discover" dhcpvendorcode="dhcpcd-5.5.6"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Amazon Fire OS 4.5.5" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="tablet" device_vendor="Amazon" device_url="www.amazon.com/kindle" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,33,3,6,15,26,28,51,58,59"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.5.6"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Amazon Fire TV Home 6.1.1" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="Smart TV" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,33,3,6,15,26,28,51,58,59"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.5.6"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Amino AmiNET110" os_name="" os_class="" os_vendor="" os_url="" device_type="IPTV" device_vendor="Amino Technologies" device_url="http://www.aminocom.com" comments="" author="xnih13@gmail.com" last_updated="2006-09-21">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,51,55,43,60,61"/>
@@ -179,14 +193,25 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+        <fingerprint name="Android 7.0.x" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
-                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="android-dhcp-7.0"/>
+                <test weight="5" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-7.0"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,25"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
-                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="android-dhcp-7.0"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-7.0"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 7.1.x" os_name="Android 7.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-7.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,25"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-7.1"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
             </dhcp_tests>
         </fingerprint>
