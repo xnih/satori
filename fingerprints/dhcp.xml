@@ -90,6 +90,16 @@
                 <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.5.6"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Amazon Fire OS 5.6.x" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="Tablet" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,33,3,6,15,28,51,58,59"/>
+                <test weight="5" matchtype="partial" dhcptype="Discover" dhcpvendorcode="dhcpcd-5.5.6"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,33,3,6,15,28,51,58,59"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.5.6"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Amino AmiNET110" os_name="" os_class="" os_vendor="" os_url="" device_type="IPTV" device_vendor="Amino Technologies" device_url="http://www.aminocom.com" comments="" author="xnih13@gmail.com" last_updated="2006-09-21">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,51,55,43,60,61"/>
