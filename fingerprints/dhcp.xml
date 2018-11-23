@@ -83,7 +83,7 @@
                 <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.5.6"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Amazon Fire TV Home 6.1.1" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="Smart TV" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+        <fingerprint name="Amazon Fire OS 5.2.x" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="Smart TV" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,57,60,12,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,33,3,6,15,26,28,51,58,59"/>
