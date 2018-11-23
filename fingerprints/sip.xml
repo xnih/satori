@@ -2,18 +2,19 @@
 <!--                                                                                    -->
 <!-- Terms of use of fingerprint data:                                                  -->
 <!-- You are welcome to use the fingerprint data provided as long as you:               -->
-<!-- 1.  Notify the author of this file of your intentions, email to xnih@cableone.net  -->
+<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
 <!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
-<!--     http://myweb.cableone.net/xnih                                                 -->
+<!--     http://github.com/xnih/satori                                                  -->
 <!--                                                                                    -->
 <!-- If you are using this for your own programs it is highly recommended you           -->
 <!-- contribute new fingerprints                                                        -->
 <!--                                                                                    -->
 <!-- Updates can be found at:                                                           -->
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
 <!-- example:                                                                           -->
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
-<!--                                                                                    -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
 <SIPSERVER created="2010-07-18" last_updated="2014-06-23" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>

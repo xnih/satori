@@ -2,20 +2,22 @@
 <!--                                                                                    -->
 <!-- Terms of use of fingerprint data:                                                  -->
 <!-- You are welcome to use the fingerprint data provided as long as you:               -->
-<!-- 1.  Notify the author of this file of your intentions, email to xnih@cableone.net  -->
+<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
 <!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
-<!--     http://myweb.cableone.net/xnih                                                 -->
+<!--     http://github.com/xnih/satori                                                  -->
 <!--                                                                                    -->
 <!-- If you are using this for your own programs it is highly recommended you           -->
 <!-- contribute new fingerprints                                                        -->
 <!--                                                                                    -->
 <!-- Updates can be found at:                                                           -->
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
 <!-- example:                                                                           -->
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2018-11-17" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+
+<DHCP created="2005-08-21" last_updated="2018-11-23" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -176,6 +178,16 @@
                 <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="dhcpcd-5.2.10"/>
                 <test weight="1" matchtype="exact" dhcptype="Discover" ipttl="255"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="android-dhcp-7.0"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,25"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="android-dhcp-7.0"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Anonym.OS" os_name="OpenBSD 3.8" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://sourceforge.net/projects/anonym-os" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-20">
@@ -907,6 +919,14 @@
                 <test weight="1" matchtype="exact" dhcptype="Release" ipttl="64"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Debian GNU/Linux 8 (jessie)" os_name="Linux" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="Beagle Bone Black" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,61,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="3,1,252,42,15,6,12"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,55,61,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="3,1,252,42,15,6,12"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Debian-based Linux" os_name="Linux" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="Linux" author="support@packetfence.org" last_updated="2009-02-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,28,2,3,15,6,12"/>
@@ -1593,6 +1613,16 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.7.2"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Kindle Firmware 5.10.x" os_name="Linux 2.6" os_class="Linux" os_vendor="" os_url="" device_type="eBook Reader" device_vendor="Amazon" device_url="www.amazon.com/kindle" comments="5.10.1.1" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,57,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.17.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,60,50,54,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.17.1"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Kindle Firmware 5.3.x" os_name="Linux 2.6" os_class="Linux" os_vendor="" os_url="" device_type="eBook Reader" device_vendor="Amazon" device_url="www.amazon.com/kindle" comments="5.3.7" author="xnih13@gmail.com" last_updated="2014-07-06">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,57,55"/>
@@ -2086,6 +2116,14 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,55,50"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="NodeMCU - ESP8266" os_name="XTOS" os_class="XTOS" os_vendor="Espressif Systems" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,28,6,15,44,46,47,31,33,121,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,50,54,55,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,28,6,15,44,46,47,31,33,121,43"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Nokia 6086 UMA" os_name="" os_class="" os_vendor="" os_url="" device_type="Smartphone" device_vendor="Nokia" device_url="http://www.nokia.com" comments="" author="xnih13@gmail.com" last_updated="2009-08-25">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,55,43,60,125"/>
@@ -2151,6 +2189,15 @@
                 <test weight="1" matchtype="exact" dhcptype="Inform" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Onion Omega2" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="0.1.10 firmware" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42,121"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.26.2"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="OpenBSD 3.8" os_name="OpenBSD 3.8" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-20">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="12,50,53,55"/>
@@ -2194,6 +2241,18 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,3,121,26,12,15,119,6,40,41,87,85,86,44,45,46,47,42,121,249,252,42"/>
                 <test weight="1" matchtype="exact" dhcptype="Discover" ipttl="128"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="OpenWRT Chaos Calmer 15.x" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="linkit smart 7688 v0.9.2 and 0.9.3" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.23.2"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,54,51,58,59,1,28,6,3,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.23.2"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,3,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="OS/2 Warp" os_name="OS/2 Warp" os_class="OS/2 Warp" os_vendor="IBM Corp." os_url="http://www.ibm.com/software/os/warp" device_type="" device_vendor="" device_url="" comments="Dead OSes" author="support@packetfence.org" last_updated="2009-02-09">
@@ -2340,6 +2399,13 @@
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="PXEClient:Arch:00000:UNDI:002001"/>
                 <test weight="1" matchtype="exact" dhcptype="Discover" ipttl="20"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="20"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Raspbian GNU/Linux 8 (jessie)" os_name="Raspbian 8" os_class="Linux" os_vendor="Debian" os_url="http://www.raspbian.org/" device_type="" device_vendor="Pi" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,12,145,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,12,15,28,42,51,54,58,59,119"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd-6.7.1:Linux-4.4.38+:armv6l:BCM2708"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Red Hat Linux 6.2" os_name="Linux 2.2" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-23">
@@ -2708,6 +2774,13 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Ubuntu 18" os_name="Linux" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,2,3,15,6,119,12,44,47,26,121,42,249,33,252"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,12,3,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Ubuntu 6.0.6" os_name="Linux 2.6" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="Ubuntu Live CD" author="xnih13@gmail.com" last_updated="2009-02-21">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,50,55"/>
@@ -2795,6 +2868,15 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,6,15,3,43"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Vizio Smart TV 2.1.18.x" os_name="" os_class="" os_vendor="" os_url="" device_type="Smart TV" device_vendor="Vizio" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 0.9.9-pre"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,60,50,54,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="WD My Book World Edition" os_name="" os_class="" os_vendor="" os_url="" device_type="NAS" device_vendor="Western Digital Corp." device_url="http://www.wdc.com/en/products/Products.asp?DriveID=587" comments="" author="cycocrew@orange.fr" last_updated="2009-03-06">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55"/>
@@ -2842,7 +2924,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,249,43,252"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-17">
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-21">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,15,3,6,255"/>
@@ -2857,6 +2939,7 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,3,6,15,119,252,95,44,46"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,55,57,61,51,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,12,81,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-08">
