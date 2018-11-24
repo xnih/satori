@@ -2233,13 +2233,29 @@
                 <test weight="1" matchtype="exact" dhcptype="Inform" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Onion Omega2" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="0.1.10 firmware" author="xnih13@gmail.com" last_updated="2018-11-23">
+        <fingerprint name="Onion Omega2 (0.1.10)" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="0.1.10 firmware" author="xnih13@gmail.com" last_updated="2018-11-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,55,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42,121"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.26.2"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Onion Omega2 (0.2.1)" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="0.2.1 firmware" author="xnih13@gmail.com" last_updated="2018-11-23">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42,121"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.25.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42,121"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.25.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,55,60,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,54,51,58,59,1,28,6,3,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,55,60,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,12,3,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="OpenBSD 3.8" os_name="OpenBSD 3.8" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-20">
