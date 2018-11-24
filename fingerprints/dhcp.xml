@@ -2240,6 +2240,11 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42,121"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.26.2"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42,121"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,54,51,58,59,1,28,6,3,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.26.2"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,3,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Onion Omega2 (0.2.1)" os_name="OpenWRT" os_class="OpenWRT" os_vendor="OpenWRT" os_url="" device_type="" device_vendor="" device_url="" comments="0.2.1 firmware" author="xnih13@gmail.com" last_updated="2018-11-23">
@@ -2473,6 +2478,11 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,12,145,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,12,15,26,28,42,51,54,58,59,119"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd-6.11.5:Linux-4.14.52+:armv6l:BCM2835"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="dhcpcd-6.11.5:Linux-4.14.79+:armv6l:BCM2835"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd-6.11.5:Linux-4.14.79+:armv6l:BCM2835"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,145,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,12,15,26,28,42,51,54,58,59,119"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,80,116,57,60,12,145,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Red Hat Linux 6.2" os_name="Linux 2.2" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-23">
