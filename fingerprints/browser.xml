@@ -16,11 +16,11 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMBBROWSER created="2005-06-20" last_updated="2013-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMBBROWSER created="2005-06-20" last_updated="2018-12-22" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
-        <fingerprint name="Brother Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Brother Industries, Ltd." device_url="http://www.brother.com" comments="" author="xnih13@gmail.com" last_updated="2009-02-15">
+        <fingerprint name="Brother Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Brother Industries, Ltd." device_url="http://www.brother.com" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <smbbrowser_tests>
-                <test weight="10" matchtype="exact" osversion="11.3" browserversion="1.51"/>
+                <test weight="10" matchtype="exact" osversion="1.51" browserversion="11.3"/>
             </smbbrowser_tests>
         </fingerprint>
         <fingerprint name="Hewlett-Packard Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2009-03-02">
@@ -58,6 +58,11 @@
                 <test weight="10" matchtype="exact" osversion="4.9" browserversion="15.1"/>
             </smbbrowser_tests>
         </fingerprint>
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+            <smbbrowser_tests>
+                <test weight="10" matchtype="exact" osversion="10.0" browserversion="15.1"/>
+            </smbbrowser_tests>
+        </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-21">
             <smbbrowser_tests>
                 <test weight="10" matchtype="exact" osversion="5.0" browserversion="15.1"/>
@@ -68,19 +73,20 @@
                 <test weight="10" matchtype="exact" osversion="6.1" browserversion="15.1"/>
             </smbbrowser_tests>
         </fingerprint>
-        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-12-24">
+        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <smbbrowser_tests>
                 <test weight="10" matchtype="exact" osversion="6.2" browserversion="15.1"/>
             </smbbrowser_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-12-24">
+        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <smbbrowser_tests>
                 <test weight="10" matchtype="exact" osversion="6.3" browserversion="15.1"/>
             </smbbrowser_tests>
         </fingerprint>
-        <fingerprint name="Windows 95" os_name="Windows 95" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-02">
+        <fingerprint name="Windows 95" os_name="Windows 95" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <smbbrowser_tests>
                 <test weight="10" matchtype="exact" osversion="4.0" browserversion="15.1"/>
+                <test weight="5" matchtype="exact" osversion="4.0" browserversion="21.4"/>
             </smbbrowser_tests>
         </fingerprint>
         <fingerprint name="Windows NT 4" os_name="Windows NT 4" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-21">
@@ -97,6 +103,17 @@
         <fingerprint name="Windows Server 2008" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-02">
             <smbbrowser_tests>
                 <test weight="10" matchtype="exact" osversion="6.0" browserversion="15.1"/>
+            </smbbrowser_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+            <smbbrowser_tests>
+                <test weight="10" matchtype="exact" osversion="6.1" browserversion="15.1"/>
+            </smbbrowser_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2012" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+            <smbbrowser_tests>
+                <test weight="10" matchtype="exact" osversion="6.2" browserversion="15.1"/>
+                <test weight="5" matchtype="exact" osversion="6.3" browserversion="15.1"/>
             </smbbrowser_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-21">
