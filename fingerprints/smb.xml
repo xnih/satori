@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2013-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2018-12-21" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
             <smb_tests>
@@ -58,6 +58,12 @@
                 <test weight="5" matchtype="exact" smbnativelanman="Samba"/>
             </smb_tests>
         </fingerprint>
+        <fingerprint name="Windows 10 - Build 10586" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-21">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise Evaluation 10586"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Windows 10 Enterprise Evaluation 6.3"/>
+            </smb_tests>
+        </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-27">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Windows 5.0"/>
@@ -90,9 +96,11 @@
                 <test weight="1" matchtype="partial" smbnativelanman="6.2"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8.1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com/en-US/windows-8/meet" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
+        <fingerprint name="Windows 8.1" os_name="Windows 8.1" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com/en-US/windows-8/meet" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-21">
             <smb_tests>
                 <test weight="1" matchtype="partial" smbnativelanman="6.3"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 8.1 Enterprise Evaluation 9600"/>
+                <test weight="10" matchtype="exact" smbnativelanman="Windows 8.1 Enterprise Evaluation 6.3"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows NT 4" os_name="Windows NT 4" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-28">
@@ -121,9 +129,8 @@
                 <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2003 5.2"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2003 SP2" os_name="Windows Server 2003 SP2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-05-23">
+        <fingerprint name="Windows Server 2003 SP2" os_name="Windows Server 2003 SP2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-21">
             <smb_tests>
-                <test weight="10" matchtype="exact"/>
                 <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2003 5.2"/>
             </smb_tests>
         </fingerprint>
@@ -133,13 +140,15 @@
                 <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-06-16">
+        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-21">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Enterprise 7600"/>
                 <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008 R2 Enterprise 6.1"/>
                 <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Standard 7600 "/>
                 <test weight="5" matchtype="exact" smbnativelanman="Windows Server 2008 R2 Standard 6.1"/>
-                <test weight="5" matchtype="exact" smbnativename="Windows Server 2008 R2 Enterprise 7601 Service Pack 1"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2008 R2 Enterprise 7601 Service Pack 1"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows Server 2008 R2 Datacenter 7601 Service Pack 1"/>
+                <test weight="10" matchtype="exact" smbnativelanman="Windows Server 2008 R2 Datacenter 6.1"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2008 SP2" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-02-11">
