@@ -13,41 +13,98 @@ class netbiosSessionService(pypacker.Packet):
   ]
 
 
-#72 is worthless to me, just look at 73.
-
-
-class negotiateProtocol(pypacker.Packet):
+class negotiateProtocol(pypacker.Packet):   #0x72
 #mss = struct.unpack('!h',i.body_bytes)[0]
   __hdr__ = [
     ("wordcount", "B", 0),
     ("bytecount", "H", 0),
   ]
 
+class UDPSMB_Header(pypacker.Packet):
+  __hdr__ = [
+    ("component", "4s", b""),
+    ("command", "B", 0),
+    ("errorClass", "B", 0),
+    ("reserved", "B", 0),
+    ("errorCode", "H", 0),
+    ("flags", "B", 0),
+    ("flags2", "H", 0),
+    ("processIDHigh", "H", 0),
+    ("signature", "8s", b""),
+    ("reserved2", "H", 0),
+    ("treeID", "H", 0),
+    ("processID", "H", 0),
+    ("userID", "H", 0),
+    ("multiplexID", "H", 0),
+  ]
+
+class NBDS_Header(pypacker.Packet):
+  __hdr__ = [
+    ("msgType", "B", 0),
+    ("flags", "B", 0),
+    ("datagramID", "H", 0),
+    ("sourceIP", "4s", b""),
+    ("sourcePort", "H", 0),
+    ("datagramLen", "H", 0),
+    ("packetOffset", "H", 0),
+    ("sourceName", "34s", b""),
+    ("destName", "34s", b"")
+  ]
+
+class SMBMailSlot_Header(pypacker.Packet):
+  __hdr__ = [
+    ("opcode", "H", 0),
+    ("priority", "H", 0),
+    ("class", "H", 0),
+    ("length", "H", 0)
+  ]
+
+class transRequest_Header(pypacker.Packet):  #0x25
+  __hdr__ = [
+    ("wordCount", "B", 0),
+    ("totalParamCount", "H", 0),
+    ("totalDataCount", "H", 0),
+    ("maxParamCount", "H", 0),
+    ("maxDataCount", "H", 0),
+    ("maxSetupCount", "B", 0),
+    ("reserved", "B", 0),
+    ("flags", "H", 0),
+    ("timeout", "4s", b""),
+    ("reserved2", "H", 0),
+    ("paramCount", "H", 0),
+    ("paramOffset", "H", 0),
+    ("dataCount", "H", 0),
+    ("dataOffset", "H", 0),
+    ("setupCount", "B", 0),
+    ("reserved3", "B", 0)
+  ]
+
+class MWBP_HostAnnounce(pypacker.Packet):   #0x01
+  __hdr__ = [
+    ("command", "B", 0),
+    ("updateCount", "B", 0),
+    ("updatePeriod", "4s", b""),
+    ("hostName", "16s", b""),
+    ("osMajorVer", "B", 0),
+    ("osMinVer", "B", 0),
+    ("serverType", "4s", b""),
+    ("browMajorVer", "B", 0),
+    ("browMinVer", "B", 0),
+    ("signature", "H", 0),
+#    ("comment", "256s", b"")
+  ]
 
 """
-  def _dissect(self, buf):
-#    bytecount = buf[1:3]
-    self._init_triggerlist("dialects", buf[4:], self._parse_dialects)
-#    return hex(bytecount)
-
-
-  @staticmethod
-  def _parse_dialects(buf):
-    optlist = []
-    i = 0
-    p = ''
-
-    print(buf)
-    while i < len(buf):
-      if buf[i] != 0x00:
-        p = p + str(buf[i])
-      else:
-       optlist.append(p)
-#       print(p)
-       p = ''
-      i += 1
-    print (optlist)
-    return optlist
+  MWBP_WorkGroupAnnounce = packed record
+    UpdateCount    :uchar;
+    UpdatePeriod   :dword;
+    Workgroup      :array[0 .. 15] of char;
+    OSMajorVer     :uchar;
+    OSMinorVer     :uchar;
+    ServerType     :dword;
+    MysteryField   :dword;
+//master browser, multilength, seems to be same as hostname, so ignoring for now
+  end;
 """
 
 
@@ -154,18 +211,6 @@ class SSAndResponse_Header(pypacker.Packet):
 my pascal code to convert
 
 
-NBDS_Header = packed record
-    MsgType       :uchar;
-    NodeType      :uchar;
-    DatagramID    :word;
-    SourceIP      :array[0..3] of Byte;
-    SourcePort    :word;
-    DatagramLen   :word;
-    PacketOffset  :word;
-    SourceName    :QueryName;
-    DestName      :QueryName;
-  end;
-
   NBSS_Header = packed record
     MsgType       :uchar;
     Length        :array[0..2] of Byte;
@@ -186,56 +231,6 @@ NBDS_Header = packed record
     ProcessID      :word;
     UserID         :word;
     MultiplexID    :word;
-  end;
-
-  TCPSMB_Header = packed record
-    ServerComponent:dword;
-    Command        :uchar;
-    Status         :dword;
-    flags          :uchar;
-    flags2         :word;
-    ProcessIDHigh  :word;
-    Signature      :array[0 .. 7] of char;
-    Reserved       :word;
-    TreeID         :word;
-    ProcessID      :word;
-    UserID         :word;
-    MultiplexID    :word;
-  end;
-
-  MAILSLOT_Header = packed record
-    opcode        :word;
-    priority      :word;
-    MSClass       :word;
-    Length        :word;
-  end;
-
-  TRANSRQST_Header = packed record       //0x25
-    WordCount      :uchar;
-    TotalParmCount :word;
-    TotalDataCount :word;
-    MaxParmCount   :word;
-    MaxDataCount   :word;
-    MaxSetupCount  :uchar;
-    Reserved1      :uchar;
-    Flags          :word;
-    Timeout        :dword;
-    Reserved2      :word;
-    ParamCount     :word;
-    ParamOffset    :word;
-    DataCount      :word;
-    DataOffset     :word;
-    SetupCount     :uchar;
-    Reserved3      :uchar;
-    MailProtocol   :MailSlot_Header;
-  end;
-
-
-  {smb command = 0x72}
-  NegotiateProtocol_Header = packed record
-    WordCount:uchar;
-    ByteCount:word;
-    //buffer of length bytecount needed
   end;
 
   MWBP_HostAnnounce = packed record

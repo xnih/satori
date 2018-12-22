@@ -53,6 +53,7 @@ def main():
   [serverExactList, serverPartialList] = satoriHTTP.BuildHTTPServerFingerprintFiles()
   [icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList] = satoriICMP.BuildICMPFingerprintFiles()
   [nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList] = satoriSMB.BuildSMBTCPFingerprintFiles()
+  [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
 
   if len(modules) == 0:
     #no preference so we'll run all modules we have
@@ -112,10 +113,9 @@ def main():
 #            if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #              satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
             if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
-              try:
-                satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-              except Exception as e:
-                print(e)
+              satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+            if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
+              satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
           except (KeyboardInterrupt, SystemExit):
             raise
           except:
@@ -162,10 +162,9 @@ def main():
 #        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
         if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
-          try:
-            satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-          except Exception as e:
-            print(e)
+          satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
+          satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
       except (KeyboardInterrupt, SystemExit):
         raise
       except:
@@ -208,6 +207,10 @@ def main():
           satoriHTTP.httpServerProcess(eth, ts, serverExactList, serverPartialList)
 #        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
+          satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
+          satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
       except (KeyboardInterrupt, SystemExit):
         raise
       except:
