@@ -16,46 +16,47 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2018-11-23" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2018-12-22" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Brother Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Brother Industries, Ltd." device_url="http://www.brother.com" comments="MFC 7820N" author="xnih13@gmail.com" last_updated="2009-02-15">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Debut/0.07"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="CentOS" os_name="CentOS" os_class="Linux" os_vendor="Fedora" os_url="http://www.centos.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="CentOS" os_name="CentOS" os_class="Linux" os_vendor="Fedora" os_url="http://www.centos.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="CentOS"/>
+                <test weight="5" matchtype="partial" webserver="CentOS"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Debian" os_name="Debian" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Debian" os_name="Debian" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Debian"/>
+                <test weight="5" matchtype="partial" webserver="Debian"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Fedora" os_name="Fedora" os_class="Linux" os_vendor="Fedora" os_url="http://fedoraproject.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Fedora" os_name="Fedora" os_class="Linux" os_vendor="Fedora" os_url="http://fedoraproject.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Fedora"/>
+                <test weight="5" matchtype="partial" webserver="Fedora"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+        <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="FreeBSD"/>
+                <test weight="5" matchtype="partial" webserver="FreeBSD"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Gentoo" os_name="Gentoo" os_class="Linux" os_vendor="Gentoo" os_url="http://www.gentoo.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Gentoo" os_name="Gentoo" os_class="Linux" os_vendor="Gentoo" os_url="http://www.gentoo.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Gentoo"/>
+                <test weight="5" matchtype="partial" webserver="Gentoo"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="HP JetDirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="HP JetDirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="HP-ChaiServer/3.0"/>
+                <test weight="5" matchtype="partial" webserver="HP-ChaiServer/3.0"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-01-09">
+        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Linux"/>
+                <test weight="5" matchtype="partial" webserver="Linux"/>
+                <test weight="5" matchtype="partial" webserver="linux-gnu"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Mac OS" os_name="Mac OS" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -103,11 +104,11 @@
                 <test weight="5" matchtype="exact" webserver="OracleAS"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Red Hat" os_name="Red Hat" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Red Hat" os_name="Red Hat" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Red Hat"/>
-                <test weight="5" matchtype="exact" webserver="Red-Hat"/>
-                <test weight="5" matchtype="exact" webserver="RedHat"/>
+                <test weight="5" matchtype="partial" webserver="Red Hat"/>
+                <test weight="5" matchtype="partial" webserver="Red-Hat"/>
+                <test weight="5" matchtype="partial" webserver="RedHat"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Samsung SmartTV" os_name="VDLinux 2.6" os_class="Linux" os_vendor="Samsung" os_url="http://developer.samsung.com/devices/tv-specs" device_type="SmartTV" device_vendor="Samsung" device_url="http://developer.samsung.com/devices/tv-specs" comments="" author="xnih13@gmail.com" last_updated="2014-06-23">
@@ -136,17 +137,17 @@
                 <test weight="5" matchtype="partial" webserver="Ubuntu"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Unix" os_name="Unix" os_class="Unix" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Unix" os_name="Unix" os_class="Unix" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Unix"/>
+                <test weight="5" matchtype="partial" webserver="Unix"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-08-22">
+        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Win32"/>
-                <test weight="5" matchtype="exact" webserver="NT;"/>
-                <test weight="5" matchtype="exact" webserver="-NT/"/>
-                <test weight="5" matchtype="exact" webserver="WinNT/"/>
+                <test weight="5" matchtype="partial" webserver="Win32"/>
+                <test weight="5" matchtype="partial" webserver="NT;"/>
+                <test weight="5" matchtype="partial" webserver="-NT/"/>
+                <test weight="5" matchtype="partial" webserver="WinNT/"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -155,9 +156,10 @@
                 <test weight="5" matchtype="exact" webserver="Windows 2000"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2014-07-06">
+        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Microsoft-Windows/6.3"/>
+                <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.5"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows 95" os_name="Windows 95" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-08">
@@ -165,7 +167,7 @@
                 <test weight="5" matchtype="exact" webserver="Microsoft-PWS-95/2.0"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows NT 4" os_name="Windows NT 4" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
+        <fingerprint name="Windows NT 4" os_name="Windows NT 4" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Microsoft-IIS/4.0"/>
                 <test weight="5" matchtype="exact" webserver="Microsoft-IIS/3.0"/>
@@ -192,6 +194,11 @@
         <fingerprint name="Windows Server 2012" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.0"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+            <webserver_tests>
+                <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.5"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
