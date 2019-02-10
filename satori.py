@@ -174,6 +174,9 @@ def main():
   elif interface != '':
     try:
       preader = pcapy.open_live(interface, 65536, False, 1)
+      #highly recommended to add something like this for a bpf filter on a high throughput connection (4 Gb/s link script sorta died on me in testing)
+      #assuming only doing -m http
+      #preader.filter('tcp port 80 and tcp port 8080')
     except Exception as e:
       print(e)
       sys.exit(1)
