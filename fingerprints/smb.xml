@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2018-12-21" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2019-02-09" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
             <smb_tests>
@@ -58,7 +58,7 @@
                 <test weight="5" matchtype="exact" smbnativelanman="Samba"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - Build 10586" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-21">
+        <fingerprint name="Windows 10 - 10586" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise Evaluation 10586"/>
                 <test weight="5" matchtype="exact" smbnativelanman="Windows 10 Enterprise Evaluation 6.3"/>

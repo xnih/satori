@@ -16,90 +16,243 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2018-12-22" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2019-02-09" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Android" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-06-16">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Android"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 1.1" os_name="Android 1.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
+        <fingerprint name="Android 1.1" os_name="Android 1.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 1.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 1.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 1.6" os_name="Android 1.6" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
+        <fingerprint name="Android 1.6" os_name="Android 1.6" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 1.6"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 1.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 2.0" os_name="Android 2.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
+        <fingerprint name="Android 2.0" os_name="Android 2.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 2.0"/>
-                <test weight="5" matchtype="partial" webuseragent="ECLAIR"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 2.0"/>
+                <test weight="7" matchtype="partial" webuseragent="ECLAIR"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 2.1" os_name="Android 2.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
+        <fingerprint name="Android 2.1" os_name="Android 2.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 2.1"/>
-                <test weight="5" matchtype="partial" webuseragent="ECLAIR"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 2.1"/>
+                <test weight="7" matchtype="partial" webuseragent="ECLAIR"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 2.2" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
+        <fingerprint name="Android 2.2" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 2.2"/>
-                <test weight="5" matchtype="partial" webuseragent="FROYO"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 2.2"/>
+                <test weight="7" matchtype="partial" webuseragent="FROYO"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 2.3" os_name="Android 2.3" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
+        <fingerprint name="Android 2.3" os_name="Android 2.3" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 2.3"/>
-                <test weight="5" matchtype="partial" webuseragent="GINGERBREAD"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 2.3"/>
+                <test weight="7" matchtype="partial" webuseragent="GINGERBREAD"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 4.0" os_name="Android 4.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
+        <fingerprint name="Android 4.0" os_name="Android 4.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 4.0"/>
-                <test weight="10" matchtype="partial" webuseragent="Android/4.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 4.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/4.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 4.1" os_name="Android 4.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
+        <fingerprint name="Android 4.1" os_name="Android 4.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="Android/4.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 4.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/4.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 6.0" os_name="Android 6.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Android 4.2" os_name="Android 4.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 6.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 4.2"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/4.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Android 4.3" os_name="Android 4.3" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 7.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 4.3"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/4.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 8.0" os_name="Android 8.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Android 4.4" os_name="Android 4.4" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 8.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 4.4"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/4.4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 8.1" os_name="Android 8.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Android 5.0" os_name="Android 5.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Android 8.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android 5.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/5.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV 2G/3G" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
+        <fingerprint name="Android 5.1" os_name="Android 5.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 5.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/5.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 6.0" os_name="Android 6.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 6.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/6.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/23"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 7.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/7.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/24"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 7.1" os_name="Android 7.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 7.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/7.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/25"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 8.0" os_name="Android 8.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 8.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/8.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 8.1" os_name="Android 8.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 8.1"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/8.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Android 9.0" os_name="Android 9.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="6" matchtype="partial" webuseragent="Android 9"/>
+                <test weight="6" matchtype="partial" webuseragent="Android/9"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV 2G/3G" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 4"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 5"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 6"/>
                 <test weight="5" matchtype="partial" webuseragent="Apple TV"/>
+                <test weight="5" matchtype="exact" webuseragent="AppleTV"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; (Apple TV; U; CPU OS 12_1_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; (Apple TV; U; CPU OS 12_1_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; (Apple TV; U; CPU OS 12_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 8.4.1" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 8.4.2" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS/8.4.2 AppleTV"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 8.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch1,1"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch1,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch OS 4.2" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch OS,4.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch OS 4.3" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch OS,4.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch OS 5.1" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch OS,5.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 1" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch2,6"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch2,7"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 2" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch2,3"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch2,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 3 GPS" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch3,3"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch3,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 3 GPS+Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch3,1"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch3,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 4 GPS" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch4,1"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch4,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 4 GPS+Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch4,3"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch4,4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="BlackBerry" os_name="" os_class="" os_vendor="" os_url="" device_type="Smartphone" device_vendor="BlackBerry" device_url="http://www.blackberry.com" comments="" author="xnih13@gmail.com" last_updated="2009-08-25">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="BlackBerry"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="BrightSign" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="BrightSign"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="BrightSign HD1022" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="(HD1022)"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="BrightSign HD223" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="(HD223)"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Chrome OS" os_name="Linux" os_class="Linux" os_vendor="Google" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
@@ -133,14 +286,220 @@
                 <test weight="10" matchtype="partial" webuseragent="iPad;"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPad OS 10.3.3" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPad 2017" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 10_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,11"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,12"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPad OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPad 2nd Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 2nd Gen CMDA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 2nd Gen GSM" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 2nd Gen New Revision" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 3G" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad1,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 3rd Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 3rd Gen CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 3rd Gen GSM" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 4th Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 4th Gen CMDA+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 4th Gen GSM+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad3,5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 6th Gen Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 6th Gen Wifi+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air 1st Gen China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air 2 Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad5,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air 2 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad5,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air GSM+CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad CDMA+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,7"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad GSM+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad2,5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 3 China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,9"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 3 GSM+CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,8"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 3 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,7"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 4 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad5,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 4 wifi+cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad5,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini Reina China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini Reina GSM+CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini Reina Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad4,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 10.3.3" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 10_3_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 10.3.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 10_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 10"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.1.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_1_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.1.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.3" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.4" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.5" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.6" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.2.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 11.3.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 11_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.4.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -153,9 +512,29 @@
                 <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPad OS 11.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPad OS 11.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 11"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 12.1.3" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 12_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.x" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -164,54 +543,288 @@
                 <test weight="5" matchtype="partial" webuseragent="iPad/6."/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPad OS 9.3.5" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 9.3.x" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 9.x" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="iPad; U; CPU OS 9"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro 2nd Gen Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro 2nd Gen Wifi+Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro 3rd Gen Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro 3rd Gen Wifi+Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,7"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad8,8"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,7"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Pro Wifi+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad6,8"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="3" matchtype="partial" webuseragent="iPhone;"/>
+                <test weight="3" matchtype="partial" webuseragent="iPhone OS"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone 3G" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone1,2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.0.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone 3GS" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone2,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 4" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone3,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 4 CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone3,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 4 GSM Rev A" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone3,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 4S" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone4,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5 (GSM)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone5,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5 (GSM+CDMA)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone5,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5C (Global)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone5,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5C (GSM)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone5,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5S (Global)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone6,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 5S (GSM)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone6,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 6" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone7,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 6 Plus" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone7,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 6s" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone8,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 6s Plus" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone8,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 7" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone9,1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone9,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 7 Plus" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone9,2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone9,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 8" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 8 Plus" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 10.3.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 10.3.2" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 10.3.3" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 10.3.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 10"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.0.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.1.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.1.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.1.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.1.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.1.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.1.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.1.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.2.6" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.2.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.2.3" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.2.4" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.2.5" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 11.2.6" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.2.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.2.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.3.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.3.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.4.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.4.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.4.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.4.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 11.4.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_4"/>
+                <test weight="7" matchtype="partial" webuseragent="[iPhone OS,11.4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -219,29 +832,65 @@
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 11"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 12.0.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 12.0.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.0.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.0.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 12.0.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 12.0.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 12_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone OS,12.0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone/12.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 12.1.3" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 12.1.4" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone OS,12.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 12.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="iPhone OS 12.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 12"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; iOS 12"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
@@ -290,10 +939,80 @@
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 9"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="iPhone SE (GSM)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone8,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone SE (GSM+CDMA)" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone8,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone X Global" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone X GSM" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone10,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone XR" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone11,8"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone XS" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone11,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone XS Max" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone11,6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone XS Max China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone11,4"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="iPhone/iPod touch/iPad" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2010-09-04">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="iPad"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 1st Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod1,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 2nd Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod2,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 3rd Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod3,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 4th Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod4,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 5th Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod5,1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPod 6th Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-09-02">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod7,1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPod OS 6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
@@ -314,11 +1033,31 @@
                 <test weight="-5" matchtype="partial" webuseragent="like Mac OS X"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.10" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.10" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_10"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.10"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.10;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_10"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.10"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.10;"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.10.1" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_10_1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.10.2" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_10_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.10.3" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_10_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.10.4" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_10_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.10.5" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -326,120 +1065,215 @@
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_10_5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.11" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.11" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_11"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.11"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.11;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_11"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.11"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.11;"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.11"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.11.6" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.11.1" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.11.2" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.11.3" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.11.4" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.11.5" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.11.6" os_name="El Capitan" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_11_6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.11.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_12"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.12"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.12;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_12"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.12;"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10.12"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.12"/>
+                <test weight="7" matchtype="partial" webuseragent="X/10.12"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.1" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.1" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.1"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.2" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.2" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.2"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.3" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.3" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.3"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.4" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.4" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.4"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.5" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.5" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.5"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.12.6" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.12.6" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_12_6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.12.6"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.12.6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.12.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_13"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.13"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.13;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_13"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10.13"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.13;"/>
+                <test weight="7" matchtype="partial" webuseragent="X/10.13"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.13"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.1" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.1" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_1"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.13.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.2" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.2" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_2"/>
+                <test weight="7" matchtype="partial" webuseragent="X/10.13.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.3" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.3" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_3"/>
+                <test weight="7" matchtype="partial" webuseragent="X/10.13.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.4" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.4" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_4"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.13.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.5" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.5" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_5"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.13.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.13.6" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.13.6" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_13_6"/>
+                <test weight="10" matchtype="partial" webuseragent="X/10.13.6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.13.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.14" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.14" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_14"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.14"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_14"/>
+                <test weight="7" matchtype="partial" webuseragent="X 10.14"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/10.14"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.14"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.14.1" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.14.0" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_14_0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.14.1" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_14_1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.4" os_name="Tiger" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.14.2" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_4"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.4"/>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_14_2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.5" os_name="Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.14.3" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_5"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.5"/>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_14_3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.4" os_name="Tiger" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_6"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.6"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.6;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_4"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.5" os_name="Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_5"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_6"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.6"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.6;"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.6.8" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -448,35 +1282,50 @@
                 <test weight="10" matchtype="exact" webuseragent="Mac OS X 10.6.8"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.7" os_name="Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.7" os_name="Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_7"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.7"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.7;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_7"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.7"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.7;"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.8" os_name="Mountain Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.8" os_name="Mountain Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_8"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.8"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.8;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_8"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.8"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.8;"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.9" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.9" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_9"/>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10.9"/>
-                <test weight="5" matchtype="partial" webuseragent="Macintosh; 10.9;"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_9"/>
+                <test weight="7" matchtype="partial" webuseragent="Mac OS X 10.9"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.9;"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.9.1" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.9.1" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_9_1"/>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_9_1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.9.2" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Mac OS X - 10.9.2" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Mac OS X 10_9_2"/>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_9_2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.9.3" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_9_3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.9.4" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_9_4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.9.5" os_name="Mavericks" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Mac OS X 10_9_5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Nagios Scan" os_name="Nagios" os_class="Scanner" os_vendor="Nagios" os_url="http://www.nagios.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
@@ -520,6 +1369,16 @@
                 <test weight="10" matchtype="partial" webuseragent="PLAYSTATION 3"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="PlayStation 4" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="PlayStation 4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Redhat" os_name="Linux" os_class="Linux" os_vendor="Redhat" os_url="https://www.redhat.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="redhat"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Redhat Satellite Client" os_name="Linux" os_class="Linux" os_vendor="Redhat" os_url="https://www.redhat.com/en/technologies/management/satellite" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="RHSM/1.0"/>
@@ -528,6 +1387,16 @@
         <fingerprint name="Roku 3" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Roku/DVP-3.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku DVP 8" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Roku/DVP-8"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku DVP 9" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Roku/DVP-9"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Samsung SmartTV" os_name="VDLinux 2.6" os_class="Linux" os_vendor="Samsung" os_url="http://developer.samsung.com/devices/tv-specs" device_type="SmartTV" device_vendor="Samsung" device_url="http://developer.samsung.com/devices/tv-specs" comments="" author="xnih13@gmail.com" last_updated="2014-06-24">
@@ -546,15 +1415,51 @@
                 <test weight="5" matchtype="partial" webuseragent="Nintendo Wii"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
+        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Win32"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows; U;"/>
+                <test weight="3" matchtype="partial" webuseragent="Windows"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-12">
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 10.0"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/10.0"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows 10"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-WNS/10.0"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-Delivery-Optimization/10.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows/10.0.14393"/>
+                <test weight="10" matchtype="partial" webuseragent="OS: 10.0.141393"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1703" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows/10.0.15063"/>
+                <test weight="10" matchtype="partial" webuseragent="OS: 10.0.15063"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1709" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows/10.0.16299"/>
+                <test weight="10" matchtype="partial" webuseragent="OS: 10.0.16299"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows/10.0.17134"/>
+                <test weight="10" matchtype="partial" webuseragent="OS: 10.0.17134"/>
+                <test weight="10" matchtype="partial" webuseragent="(WinNT 10.0.17134 )"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows/10.0.17763"/>
+                <test weight="10" matchtype="partial" webuseragent="OS: 10.0.17763"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2014-06-24">
@@ -571,9 +1476,10 @@
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2013-12-24">
+        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="WinNT 6.1.7601 SP1"/>
+                <test weight="5" matchtype="partial" webuseragent="OS: 6.1.7601"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
@@ -587,13 +1493,14 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
+        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.3"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.3"/>
                 <test weight="5" matchtype="partial" webuseragent="WNS/6.3"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.7"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.3"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows/6.3.9600"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows CE" os_name="Windows CE" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
@@ -626,6 +1533,11 @@
                 <test weight="10" matchtype="partial" webuseragent="Windows Phone OS 7.5"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Windows Server 2000" os_name="Windows Server 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Windows NT 5.0"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Windows Server 2003" os_name="Windows Server 2003" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 5.2"/>
@@ -640,6 +1552,25 @@
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2012" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Windows NT 6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows 6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows/6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Windows NT 6.3"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows/6.3"/>
+                <test weight="5" matchtype="partial" webuseragent="WNS/6.3"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.7"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.3"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows/6.3.9600"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
@@ -662,9 +1593,20 @@
                 <test weight="5" matchtype="partial" webuseragent="WordPress/4.9"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="WordPress 5.0" os_name="" os_class="" os_vendor="" os_url="" device_type="WordPress Server" device_vendor="WordPress" device_url="https://www.wordpress.org" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="WordPress/5.0"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Xbox" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="xnih13@gmail.com" last_updated="2012-11-01">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="XBox"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Xbox One" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="xnih13@gmail.com" last_updated="2019-02-09">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="XboxOne"/>
+                <test weight="5" matchtype="partial" webuseragent="Xbox One"/>
             </webuseragent_tests>
         </fingerprint>
     </fingerprints>
