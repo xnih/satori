@@ -12,6 +12,7 @@ from datetime import datetime
 # looking for new fingerprints
 # python3 satori.py > output.txt
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
+# cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
 
