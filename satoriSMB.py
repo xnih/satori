@@ -12,6 +12,7 @@ import smbHeader
 # looking for new fingerprints
 # python3 satori.py > output.txt
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
+# cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
 # 
@@ -71,7 +72,7 @@ def smbUDPProcess(eth, ts, browserExactList, browserPartialList):
       if (osVersion != '') and (browVersion != ''):
         fingerprint = osVersion + ',' + browVersion
         osGuess = SMBUDPFingerprintLookup(browserExactList, browserPartialList, fingerprint)
-        print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, fingerprint, osGuess))
+        print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, fingerprint, osGuess))
 
 
 def smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList):
@@ -170,10 +171,10 @@ def smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, 
 
         if nativeOS != '':
           osGuess = SMBTCPFingerprintLookup(nativeExactList, nativePartialList, nativeOS)
-          print("%s;%s;%s;SMBNATIVE;NativeOS;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, nativeOS, osGuess))
+          print("%s;%s;%s;SMBNATIVE;NativeOS;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, nativeOS, osGuess))
         if nativeLanMan != '':
           osGuess = SMBTCPFingerprintLookup(lanmanExactList, lanmanPartialList, nativeLanMan)
-          print("%s;%s;%s;SMBNATIVE;NativeLanMan;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, nativeLanMan, osGuess))
+          print("%s;%s;%s;SMBNATIVE;NativeLanMan;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, nativeLanMan, osGuess))
 
 
 def BuildSMBUDPFingerprintFiles():
