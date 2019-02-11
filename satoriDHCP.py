@@ -13,6 +13,7 @@ from pypacker import pypacker
 # looking for new fingerprints
 # python3 satori.py -r dhcp.pcap -m dhcp > output.txt
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
+# cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
 
