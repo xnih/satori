@@ -12,7 +12,7 @@ I am NOT a programmer, I hack code together, so this is what it is.  Time permit
 ### python related
 - python3
 - pypacker*
-- pcapy*
+- pcapy*  (may need pythonX-devel package before this will install)
 - untangle*
 
 *(if you use pip to install it, remember to use pip3)
