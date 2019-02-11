@@ -10,6 +10,7 @@ from pypacker.layer3 import ip
 # looking for new fingerprints
 # python3 satori.py > output.txt
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
+# cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
 
@@ -47,7 +48,7 @@ def httpServerProcess(eth, ts, serverExactList, serverPartialList):
     httpServerFingerprint = httpServerFingerprintLookup(serverExactList, serverPartialList, bodyServer)
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, bodyServer, httpServerFingerprint))
+    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, bodyServer, httpServerFingerprint))
 
 
 
@@ -85,7 +86,7 @@ def httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList):
     httpUserAgentFingerprint = httpUserAgentFingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp,eth[ethernet.Ethernet].src_s, eth[ip.IP].src_s, changedUserAgent, httpUserAgentFingerprint))
+    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, changedUserAgent, httpUserAgentFingerprint))
 
 
 def BuildHTTPServerFingerprintFiles():
