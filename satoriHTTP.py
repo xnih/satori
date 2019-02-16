@@ -1,5 +1,6 @@
 import untangle
 import struct
+from pathlib import Path
 from datetime import datetime
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
@@ -94,7 +95,9 @@ def BuildHTTPServerFingerprintFiles():
   serverExactList = {}
   serverPartialList = {}
 
-  obj = untangle.parse('fingerprints/web.xml')
+  satoriPath = str(Path(__file__).resolve().parent)
+
+  obj = untangle.parse(satoriPath + '/fingerprints/web.xml')
   fingerprintsCount = len(obj.WEBSERVER.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.WEBSERVER.fingerprints.fingerprint[x]['name']
@@ -129,7 +132,9 @@ def BuildHTTPUserAgentFingerprintFiles():
   useragentExactList = {}
   useragentPartialList = {}
 
-  obj = untangle.parse('fingerprints/webuseragent.xml')
+  satoriPath = str(Path(__file__).resolve().parent)
+
+  obj = untangle.parse(satoriPath + '/fingerprints/webuseragent.xml')
   fingerprintsCount = len(obj.WEBUSERAGENT.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.WEBUSERAGENT.fingerprints.fingerprint[x]['name']

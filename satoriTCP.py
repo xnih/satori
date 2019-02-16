@@ -1,5 +1,6 @@
 import untangle
 import struct
+from pathlib import Path
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
 #from pypacker.layer4 import tcp
@@ -100,7 +101,9 @@ def BuildTCPFingerprintFiles():
   sPartialList = {}
   saPartialList = {}
 
-  obj = untangle.parse('fingerprints/tcp.xml')
+  satoriPath = str(Path(__file__).resolve().parent)
+
+  obj = untangle.parse(satoriPath + '/fingerprints/tcp.xml')
   fingerprintsCount = len(obj.TCP.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.TCP.fingerprints.fingerprint[x]['name']

@@ -1,5 +1,6 @@
 import untangle
 import struct
+from pathlib import Path
 from datetime import datetime
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
@@ -182,7 +183,9 @@ def BuildSMBUDPFingerprintFiles():
   browserExactList = {}
   browserPartialList = {}
 
-  obj = untangle.parse('fingerprints/browser.xml')
+  satoriPath = str(Path(__file__).resolve().parent)
+
+  obj = untangle.parse(satoriPath + '/fingerprints/browser.xml')
   fingerprintsCount = len(obj.SMBBROWSER.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.SMBBROWSER.fingerprints.fingerprint[x]['name']
@@ -223,7 +226,9 @@ def BuildSMBTCPFingerprintFiles():
   lanmanExactList = {}
   lanmanPartialList = {}
 
-  obj = untangle.parse('fingerprints/smb.xml')
+  satoriPath = str(Path(__file__).resolve().parent)
+
+  obj = untangle.parse(satoriPath + '/fingerprints/smb.xml')
   fingerprintsCount = len(obj.SMB.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.SMB.fingerprints.fingerprint[x]['name']

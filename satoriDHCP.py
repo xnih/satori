@@ -1,5 +1,6 @@
 import untangle
 import struct
+from pathlib import Path
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
 from pypacker.layer567 import dhcp
@@ -210,8 +211,9 @@ def BuildDHCPFingerprintFiles():
 
   #need to decide how to deal with ; in dhcpvendorcode
 
+  satoriPath = str(Path(__file__).resolve().parent)
 
-  obj = untangle.parse('fingerprints/dhcp.xml')
+  obj = untangle.parse(satoriPath + '/fingerprints/dhcp.xml')
   fingerprintsCount = len(obj.DHCP.fingerprints)
   for x in range(0,fingerprintsCount):
     os = obj.DHCP.fingerprints.fingerprint[x]['name']
