@@ -16,11 +16,24 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2018-12-22" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2019-02-16" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Big-IP Load Balancer" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+            <webserver_tests>
+                <test weight="5" matchtype="exact" webserver="BigIP"/>
+                <test weight="5" matchtype="exact" webserver="BIGS"/>
+                <test weight="5" matchtype="exact" webserver="BIM"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="Brother Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Brother Industries, Ltd." device_url="http://www.brother.com" comments="MFC 7820N" author="xnih13@gmail.com" last_updated="2009-02-15">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Debut/0.07"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon" device_url="www.canon.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="CANON"/>
+                <test weight="10" matchtype="exact" webserver="CANON HTTP Server"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="CentOS" os_name="CentOS" os_class="Linux" os_vendor="Fedora" os_url="http://www.centos.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -31,6 +44,17 @@
         <fingerprint name="Debian" os_name="Debian" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Debian"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="EFI Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="EFI" device_url="www.efi.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+            <webserver_tests>
+                <test weight="5" matchtype="exact" webserver="gSOAP/2.7"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="EZProxy" os_name="" os_class="" os_vendor="" os_url="" device_type="Proxy" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="ECAcc"/>
+                <test weight="5" matchtype="exact" webserver="EZproxy"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Fedora" os_name="Fedora" os_class="Linux" os_vendor="Fedora" os_url="http://fedoraproject.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
@@ -48,15 +72,19 @@
                 <test weight="5" matchtype="partial" webserver="Gentoo"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="HP JetDirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="HP JetDirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="HP-ChaiServer/3.0"/>
+                <test weight="5" matchtype="exact" webserver="gSOAP/2.7"/>
+                <test weight="5" matchtype="exact" webserver="Mrvl-R2_0"/>
+                <test weight="5" matchtype="exact" webserver="Virata-EmWeb/R6_2_1"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Linux"/>
                 <test weight="5" matchtype="partial" webserver="linux-gnu"/>
+                <test weight="5" matchtype="partial" webserver="Jetty"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Mac OS" os_name="Mac OS" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -196,9 +224,9 @@
                 <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.0"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
             <webserver_tests>
-                <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.5"/>
+                <test weight="5" matchtype="partial" webserver="Microsoft-IIS/8.5"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -209,6 +237,13 @@
         <fingerprint name="Xbox 360" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="" author="xnih13@gmail.com" last_updated="2014-06-23">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Xbox/2"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox" device_url="www.xerox.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+            <webserver_tests>
+                <test weight="10" matchtype="exact" webserver="Fuji Xerox Embedded Server"/>
+                <test weight="5" matchtype="partial" webserver="Xerox"/>
+                <test weight="5" matchtype="exact" webserver="gSOAP/2.8"/>
             </webserver_tests>
         </fingerprint>
     </fingerprints>
