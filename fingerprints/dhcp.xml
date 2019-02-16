@@ -215,6 +215,16 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="255"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Android 6.0.x" os_name="Android 6.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="5" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-6.0"/>
+                <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-6.0"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Android 7.0.x" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
@@ -225,6 +235,8 @@
                 <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-7.0"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,60,12,55,0,0,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Android 7.1.x" os_name="Android 7.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
@@ -236,6 +248,28 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
                 <test weight="5" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-7.1"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 8.0.x" os_name="Android 8" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-8.0"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-8.0"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 8.1.x" os_name="Android 8" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-8.1"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-8.1"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 9.x" os_name="Android 9" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-9"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-9"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Anonym.OS" os_name="OpenBSD 3.8" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://sourceforge.net/projects/anonym-os" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-20">
@@ -774,6 +808,16 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,55,60"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Cisco Aironet 1550" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c1550"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c1550"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,61,12,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Cisco Aironet 2600" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c2600"/>
@@ -794,6 +838,15 @@
                 <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP c2700"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,6,15,3,150,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,6,15,3,150,43,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Aironet 2800" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c2800"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c2800"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,15,3,6,43,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Aironet 3500" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-14">
@@ -850,6 +903,17 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,42,66,150"/>
                 <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="ATA186"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="250"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco ATA 188" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Discover" dhcpvendorcode="ATA188"/>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="ATA188"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,42,66,150"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,42,66,150"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,42,150,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,60,43,50,54,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,43,50,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Catalyst 29xx" os_name="IOS" os_class="IOS" os_vendor="Cisco Systems, Inc." os_url="http://www.cisco.com" device_type="Switch" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="Switches" author="xnih13@gmail.com" last_updated="2009-02-08">
@@ -1431,12 +1495,17 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="dhcpcd 3.1.5"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Grandstream GXP1405" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Grandstream" device_url="http://www.grandstream.com/products/ip-voice-telephony/high-end-ip-phones/product/gxp1400/1405" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
+        <fingerprint name="Grandstream GXP1405" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Grandstream" device_url="http://www.grandstream.com/products/ip-voice-telephony/high-end-ip-phones/product/gxp1400/1405" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,60,125,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,43,125"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Grandstream GXP1405 dslforum.org"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Grandstream GXP1405 dslforum.org"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,43,125"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,60,125,50,54,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,125,50,57,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Release" dhcpoptions="53,61,54,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Haiku" os_name="Haiku" os_class="Haiku" os_vendor="Haiku, Inc." os_url="http://haiku-os.org/" device_type="" device_vendor="" device_url="" comments="r1alpha3" author="xnih13@gmail.com" last_updated="2011-11-20">
@@ -3041,7 +3110,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,249,43,252"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-21">
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,15,3,6,255"/>
@@ -3057,6 +3126,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,3,6,15,119,252,95,44,46"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,55,57,61,51,12,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,12,81,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,3,6,15,31,33,43,44,46,47,121,249,252"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,3,6,15,31,33,43,44,46,47,119,121,249,252"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-08">
@@ -3289,10 +3364,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="43"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
+        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,81,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,31,33,43,44,46,47,121,249,252"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="54"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-05">
