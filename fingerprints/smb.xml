@@ -30,34 +30,91 @@
                 <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
             </smb_tests>
         </fingerprint>
+        <fingerprint name="Mac OS X - 10.12" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.12"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.13" os_name="High Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.13"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 3.2.3"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.14" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.14"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 3.3.2"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.15"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 3.4"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.5" os_name="Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="10" matchtype="exact" smbnativelanman="3.0.25b-apple"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="10" matchtype="exact" smbnativelanman="3.0.28b-apple"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.6.8" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.6.8"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 1.6.7"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.7" os_name="Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.8"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 1.7.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.8" os_name="Mountain Lion" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Mac OS X 10.8"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMBFS 1.8.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="MikroTik" os_name="RouterOS" os_class="RouterOS" os_vendor="MicroTik" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativelanman="MikrotikSMB"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Netreon" os_name="" os_class="" os_vendor="Netreon" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativelanman="Netreon LANMAN 1.0"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Samba  4.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="Unix"/>
+                <test weight="7" matchtype="partial" smbnativelanman="Samba 4."/>
+            </smb_tests>
+        </fingerprint>
         <fingerprint name="Samba 2.0 Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
                 <test weight="7" matchtype="partial" smbnativelanman="Samba 2.0"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Samba 2.2.0 - 2.2.6 Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Samba 2.2.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 2.2.0"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 2.2.1"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 2.2.3"/>
+                <test weight="7" matchtype="partial" smbnativelanman="Samba 2.2."/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Samba 2.2.7 - 3.2.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Samba 3.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 2.2.7"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 3.0"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 3.2"/>
-            </smb_tests>
-        </fingerprint>
-        <fingerprint name="Samba 3.3.0 - 4.8.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
-            <smb_tests>
-                <test weight="5" matchtype="exact" smbnativename="Unix"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 3.3.0"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 4.0"/>
-                <test weight="7" matchtype="partial" smbnativelanman="Samba 4.8"/>
+                <test weight="7" matchtype="partial" smbnativelanman="Samba 3."/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Samba Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
