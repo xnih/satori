@@ -1943,6 +1943,69 @@
                 <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.6"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Mac OS X - 10.15" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 10.15"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.0" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.1" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.2" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.3" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.4" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.5" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.5"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Mac OS X - 10.4" os_name="Tiger" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Mac OS X 10_4"/>
