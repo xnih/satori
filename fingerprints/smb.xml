@@ -67,10 +67,90 @@
                 <test weight="5" matchtype="exact" smbnativelanman="SMBFS"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 10586" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Windows 10 - 1511" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise Evaluation 10586"/>
                 <test weight="7" matchtype="exact" smbnativelanman="Windows 10 Enterprise Evaluation 6.3"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 14393"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 14393"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 14393"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1703" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 15063"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 15063"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 15063"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 15063"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1709" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 16299"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 16299"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 16299"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 16299"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 17134"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 17134"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 17134"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 17134"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 17763"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 17763"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 17763"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 17763"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1903" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 18362"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 18362"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 18362"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 18362"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1909" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 18363"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 18363"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enteprise 18363"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 18363"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 2015 LTSB" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise 2015 LTSB 10240"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 2016 LTSB" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise 2016 LTSB 14393"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 2019 LTSC" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise LTSC 2019 17763"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 2019 N" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise N 18362"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
