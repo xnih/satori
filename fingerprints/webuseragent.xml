@@ -187,11 +187,12 @@
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; CPU OS 12_1_1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Apple TV OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TVOS,12.1.2"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="12.1.2 AppleTV"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -1153,7 +1154,7 @@
                 <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="iPhone OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="iPhone OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_1"/>
@@ -1163,6 +1164,7 @@
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.1);iPhone"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -1690,11 +1692,12 @@
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.10.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.10.4" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Mac OS X - 10.10.4" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_10_4"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.10.4"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.10.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.10.4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.10.5" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -1938,6 +1941,69 @@
                 <test weight="10" matchtype="partial" webuseragent="OS X/10.14.6"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.14.6"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.6"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,10.15"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 10.15"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.0" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.0"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.1" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.1"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.2" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.2"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.3" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.3"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.4" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.15.5" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.15.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.15.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.4" os_name="Tiger" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -2238,9 +2304,12 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows (10.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1507" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 10 - 1507" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="10.0.10240"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 10240)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 10240)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 10240)"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 10 - 1511" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -2253,9 +2322,12 @@
                 <test weight="10" matchtype="partial" webuseragent="10.0.14393"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1703" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 10 - 1703" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="10.0.15063"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 15063)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 15063)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 15063)"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 10 - 1709" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -2263,14 +2335,41 @@
                 <test weight="10" matchtype="partial" webuseragent="10.0.16299"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="10.0.17134"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 17134)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 17134)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 17134)"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="10.0.17763"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 17763)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 17763)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 17763)"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1903" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="10.0.18362"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 18362)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 18362)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 18362)"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1909" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="10.0.18363"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Home (build 18363)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise (build 18363)"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Pro (build 18363)"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 2016 LTSB" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise 2016 LTSB (build 14393)"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2019-02-10">
@@ -2292,7 +2391,7 @@
                 <test weight="7" matchtype="partial" webuseragent="6.1.7601"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.2"/>
@@ -2302,6 +2401,7 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows; 8;"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
+                <test weight="5" matchtype="partial" webuseragent="9200"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
