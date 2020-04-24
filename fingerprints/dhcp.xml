@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2019-02-18" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2020-04-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -547,7 +547,7 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="64"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco 7841 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
+        <fingerprint name="Cisco 7841 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,42,66,6,3,15,150,35"/>
@@ -555,6 +555,7 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,42,6,3,15,150,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,150,42,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,35,66,150,2,7,42,43,58,59,159,160 "/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,50,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco 7905 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2009-10-14">
@@ -708,13 +709,17 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,6,3,15,150,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco 8841 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
+        <fingerprint name="Cisco 8841 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,42,66,6,3,15,150,35"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco Systems, Inc. IP Phone CP-8841"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,42,6,3,15,150,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Release" dhcpoptions="53,54,61,255"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,6,15,150,42,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,2,121,15,6,12,40,41,42,26,119,3,121,249,33,252,42,17"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,35,66,150,2,7,42,43,58,59,159,160"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco Systems, Inc. IP Phone CP-8841"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco 8851 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
@@ -846,6 +851,14 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Cisco Aironet 1850" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c1850"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,15,3,28,12,6,7,26,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,1,58,59,51,54,15,3,6,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Cisco Aironet 2600" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c2600"/>
@@ -861,15 +874,20 @@
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c2600"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco Aironet 2700" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-15">
+        <fingerprint name="Cisco Aironet 2700" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2020-04-24">
             <dhcp_tests>
-                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c2700"/>
-                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
-                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,12,55,60,255"/>
-                <test weight="5" matchtype="exact" dhcptype="Release" dhcpoptions="53,54,61,60,255"/>
-                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP c2700"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,6,15,3,150,255"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,6,15,3,150,43,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,61,12,55,60,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c2700"/>
+                <test weight="5" matchtype="exact" dhcptype="Offer" dhcpoptions="53,1,58,59,51,54,6,15,3,150,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,12,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c2700"/>
+                <test weight="5" matchtype="exact" dhcptype="Release" dhcpoptions="53,54,61,60,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP c2700"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Aironet 2800" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2019-02-18">
@@ -885,6 +903,9 @@
         </fingerprint>
         <fingerprint name="Cisco Aironet 3500" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-14">
             <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c3500"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,61,12,55,60,255"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c3500"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,12,55,60,255"/>
@@ -929,6 +950,15 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c702"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Aironet 9120AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,15,3,6,42,255"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,15,3,6,42,43,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode=" Cisco AP C9120AX"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco ATA 186" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
