@@ -325,6 +325,18 @@
                 <test weight="10" matchtype="partial" webuseragent="Watch4,4"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Apple Watch Series 5 GPS" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-024">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch5,1"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch5,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 5 GPS+Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch5,3"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch5,4"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="BlackBerry" os_name="" os_class="" os_vendor="" os_url="" device_type="Smartphone" device_vendor="BlackBerry" device_url="http://www.blackberry.com" comments="" author="xnih13@gmail.com" last_updated="2009-08-25">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="BlackBerry"/>
@@ -447,6 +459,16 @@
                 <test weight="10" matchtype="partial" webuseragent="iPad7,6"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="iPad 7th Gen Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,11"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad 7th Gen Wifi+LTE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad7,12"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="iPad Air 1st Gen China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="iPad4,3"/>
@@ -460,6 +482,16 @@
         <fingerprint name="iPad Air 2 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="iPad5,3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air 3 Cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad11,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad Air 3 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad11,3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad Air GSM+CDMA" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -510,6 +542,16 @@
         <fingerprint name="iPad mini 4 wifi+cellular" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="iPad5,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 5" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad11,2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad mini 5 wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad11,1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad mini Reina China" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -807,6 +849,13 @@
             <webuseragent_tests>
                 <test weight="3" matchtype="partial" webuseragent="iPhone;"/>
                 <test weight="3" matchtype="partial" webuseragent="iPhone OS"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPhone 11" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPhone12,1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone12,3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone12,5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone 3G" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -1589,6 +1638,11 @@
                 <test weight="10" matchtype="partial" webuseragent="iPod7,1"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="iPod 7th Gen" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPod9,1"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="iPod OS 6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2012-11-01">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="iPod; U; CPU OS 6"/>
@@ -1857,6 +1911,33 @@
                 <test weight="10" matchtype="partial" webuseragent="OS X/10.14.3"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.14.3"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.14.4" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_14_4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.4"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.14.5" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_14_5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.5"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 10.14.6" os_name="Mojave" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10_14_6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X 10.14.6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X/10.14.6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X,10.14.6"/>
+                <test weight="10" matchtype="partial" webuseragent="OS X Version 10.14.6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.4" os_name="Tiger" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
