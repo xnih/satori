@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2019-02-10" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2020-04-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Android" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2012-06-16">
             <webuseragent_tests>
@@ -2299,7 +2299,7 @@
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.3"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.3"/>
@@ -2307,6 +2307,13 @@
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.7"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.3"/>
                 <test weight="7" matchtype="partial" webuseragent="6.3.9600"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows Server 2012 6.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Microsoft-CryptoAPI/10.0"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows-Update-Agent/10"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">

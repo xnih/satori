@@ -16,8 +16,14 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2019-02-16" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2020-04-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Amazon Web Serve or ECS" os_name="Amazon" os_class="Linux" os_vendor="Amazon" os_url="https://aws.amazon.com/ecs/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="ECS"/>
+                <test weight="5" matchtype="partial" webserver="Amazon"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="Big-IP Load Balancer" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="BigIP"/>
@@ -46,6 +52,12 @@
                 <test weight="5" matchtype="partial" webserver="Debian"/>
             </webserver_tests>
         </fingerprint>
+        <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="https://usa.kyoceradocumentsolutions.com/" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Dell"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/16.16"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="EFI Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="EFI" device_url="www.efi.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="gSOAP/2.7"/>
@@ -67,6 +79,15 @@
                 <test weight="5" matchtype="partial" webserver="FreeBSD"/>
             </webserver_tests>
         </fingerprint>
+        <fingerprint name="Generic Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Generic" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/16.16"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/19.83"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.65"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.66"/>
+                <test weight="5" matchtype="partial" webserver="debut/1."/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="Gentoo" os_name="Gentoo" os_class="Linux" os_vendor="Gentoo" os_url="http://www.gentoo.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Gentoo"/>
@@ -78,6 +99,13 @@
                 <test weight="5" matchtype="exact" webserver="gSOAP/2.7"/>
                 <test weight="5" matchtype="exact" webserver="Mrvl-R2_0"/>
                 <test weight="5" matchtype="exact" webserver="Virata-EmWeb/R6_2_1"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Kyocera Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Kyocera" device_url="https://usa.kyoceradocumentsolutions.com/" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Kyocera"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.66"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.65"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
@@ -126,6 +154,21 @@
                 <test weight="5" matchtype="exact" webserver="NetWare-Enterprise-Web-Server/5.1"/>
             </webserver_tests>
         </fingerprint>
+        <fingerprint name="nginx 1.12.0 - 1.19.x" os_name="nginx" os_class="Linux" os_vendor="Microsoft Corp." os_url="https://www.nginx.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="nginx/1.12.0"/>
+                <test weight="5" matchtype="partial" webserver="nginx/1.14.2"/>
+                <test weight="5" matchtype="partial" webserver="nginx/1.15.12"/>
+                <test weight="5" matchtype="partial" webserver="nginx/1.16.1"/>
+                <test weight="5" matchtype="partial" webserver="nginx"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="nginx 1.9.0+" os_name="nginx" os_class="Linux" os_vendor="F5, Inc." os_url="https://www.nginx.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="nginx/1.9.6"/>
+                <test weight="5" matchtype="partial" webserver="nginx"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="Oracle AS" os_name="Oracle AS" os_class="Oracle" os_vendor="Oracle" os_url="http://www.oracle.com/technetwork/middleware/ias/overview/index.html" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Oracle Application Server"/>
@@ -149,6 +192,12 @@
                 <test weight="5" matchtype="exact" webserver="Web-Server/3.0"/>
             </webserver_tests>
         </fingerprint>
+        <fingerprint name="Sharp Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Sharp Printer" device_vendor="Sharp" device_url="http://www.sharpusa.com/" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Sharp"/>
+                <test weight="5" matchtype="partial" webserver="Rapid Logic/1.1"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="SUSE" os_name="SUSE" os_class="Linux" os_vendor="SUSE" os_url="http://www.suse.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="SuSE"/>
@@ -170,12 +219,19 @@
                 <test weight="5" matchtype="partial" webserver="Unix"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
+        <fingerprint name="Windows" os_name="Windows" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Win32"/>
                 <test weight="5" matchtype="partial" webserver="NT;"/>
                 <test weight="5" matchtype="partial" webserver="-NT/"/>
                 <test weight="5" matchtype="partial" webserver="WinNT/"/>
+                <test weight="5" matchtype="partial" webserver="Win64"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="exact" webserver="Microsoft-IIS/10.0"/>
+                <test weight="5" matchtype="partial" webserver="Microsoft-HTTPAPI/2.0"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -224,9 +280,21 @@
                 <test weight="5" matchtype="exact" webserver="Microsoft-IIS/8.0"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2012" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="Microsoft-IIS/8.5"/>
+                <test weight="5" matchtype="partial" webserver="Microsoft-HTTPAPI/2.0"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2016" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Microsoft-IIS/10.0"/>
+                <test weight="5" matchtype="partial" webserver="Microsoft-HTTPAPI/2.0"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2019" os_name="Windows Server 2019" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2019" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Microsoft-IIS/10.0"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-04">
@@ -239,11 +307,13 @@
                 <test weight="5" matchtype="exact" webserver="Xbox/2"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox" device_url="www.xerox.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
+        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox" device_url="www.xerox.com" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webserver_tests>
                 <test weight="10" matchtype="exact" webserver="Fuji Xerox Embedded Server"/>
                 <test weight="5" matchtype="partial" webserver="Xerox"/>
                 <test weight="5" matchtype="exact" webserver="gSOAP/2.8"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.66"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5/19.83"/>
             </webserver_tests>
         </fingerprint>
     </fingerprints>
