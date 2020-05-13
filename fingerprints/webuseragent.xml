@@ -187,49 +187,49 @@
         </fingerprint>
         <fingerprint name="Apple TV 2G/3G" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 4"/>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 5"/>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 6"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 4"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 5"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 6"/>
                 <test weight="5" matchtype="partial" webuseragent="Apple TV"/>
                 <test weight="5" matchtype="exact" webuseragent="AppleTV"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 12_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TVOS,12.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; CPU OS 12_1_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="Apple TVOS,12.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.2 AppleTV"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="Apple TV| U| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 12_1"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,12.1"/>
-                <test weight="7" matchtype="partial" webuseragent="Apple TV| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 12_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 8.4.1" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 8_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 8.4.2" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="Apple TV| U| CPU OS 8_4_2"/>
+                <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/8.4.2 AppleTV"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple TV OS 8.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="Apple TV| U| CPU OS 8_4"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple Watch" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -394,13 +394,13 @@
         </fingerprint>
         <fingerprint name="HP Laserjet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="HP" device_url="http://hp.com" comments="MFP M575" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="WinCE| U| LF:WJ1.5"/>
+                <test weight="5" matchtype="partial" webuseragent="WinCE; U; LF:WJ1.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad|"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad;"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad 2017" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -586,238 +586,238 @@
         </fingerprint>
         <fingerprint name="iPad OS 10.3.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 10_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 10_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 10_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 10_3_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 10.3.2" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 10_3_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 10_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 10_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 10_3_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 10.3.3" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 10_3_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 10_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 10_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 10_3_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 10.3.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 10_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 10_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 10_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 10_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPad| CPU OS 10"/>
-                <test weight="5" matchtype="partial" webuseragent="iPad| U| CPU OS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; U; CPU OS 10"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.1.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="11.1.1 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.1.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_1"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.1 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_2"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.2 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.3" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_3"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.3 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.4" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_4"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.4 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.5" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_5"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.5 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.6" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2_6"/>
                 <test weight="10" matchtype="partial" webuseragent="11.2.6 model/iPad"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_2_6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.2.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 11_2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 11_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 11_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.3.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 11_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 11_3_"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 11_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_3_"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.4.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 11_4_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 11_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 11_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 11_4_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.4.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 11_4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 11_4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 11_4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 11_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 11.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPad| CPU OS 11"/>
-                <test weight="5" matchtype="partial" webuseragent="iPad| U| CPU OS 11"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 11"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; U; CPU OS 11"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 12_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 12_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.1 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 12_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.2 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 12.1.3" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 12_1_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 12_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.3 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 12.1.4" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 12_1_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 12_1_4"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.4 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 12_1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 12_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.1.1" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 6_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 6_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 6_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 6_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPad/6.1.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.1.2" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 6_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 6_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 6_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 6_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPad/6.1.2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.1.3" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 6_1_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 6_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 6_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 6_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPad/6.1.3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.1.x" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 6_1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 6_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 6_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 6_1"/>
                 <test weight="7" matchtype="partial" webuseragent="iPad/6.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 6.x" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPad| CPU OS 6"/>
-                <test weight="5" matchtype="partial" webuseragent="iPad| U| CPU OS 6"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 6"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; U; CPU OS 6"/>
                 <test weight="5" matchtype="partial" webuseragent="iPad/6."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.1" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 9_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| iOS 9.3.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 9_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; iOS 9.3.1"/>
                 <test weight="10" matchtype="partial" webuseragent="9.3.1 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.2" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 9_3_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| iOS 9.3.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 9_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; iOS 9.3.2"/>
                 <test weight="10" matchtype="partial" webuseragent="9.3.2 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.3" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 9_3_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| iOS 9.3.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 9_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; iOS 9.3.3"/>
                 <test weight="10" matchtype="partial" webuseragent="9.3.3 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.4" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 9_3_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| iOS 9.3.4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 9_3_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; iOS 9.3.4"/>
                 <test weight="10" matchtype="partial" webuseragent="9.3.4 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.5" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3_5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| CPU OS 9_3_5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPad| iOS 9.3.5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 9_3_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; iOS 9.3.5"/>
                 <test weight="10" matchtype="partial" webuseragent="9.3.5 model/iPad"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.3.x" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPad| U| CPU OS 9_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| CPU OS 9_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPad| iOS 9.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; U; CPU OS 9_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; CPU OS 9_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPad; iOS 9.3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 9.x" os_name="iOS 9" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPad| U| CPU OS 9"/>
-                <test weight="5" matchtype="partial" webuseragent="iPad| CPU OS 9"/>
-                <test weight="5" matchtype="partial" webuseragent="iPad| iOS 9"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; U; CPU OS 9"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; CPU OS 9"/>
+                <test weight="5" matchtype="partial" webuseragent="iPad; iOS 9"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad Pro 2nd Gen Wifi" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -862,7 +862,7 @@
         </fingerprint>
         <fingerprint name="iPhone" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Smartphone" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="3" matchtype="partial" webuseragent="iPhone|"/>
+                <test weight="3" matchtype="partial" webuseragent="iPhone;"/>
                 <test weight="3" matchtype="partial" webuseragent="iPhone OS"/>
             </webuseragent_tests>
         </fingerprint>
@@ -979,723 +979,723 @@
         </fingerprint>
         <fingerprint name="iPhone OS 10.0.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_0_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.0.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.0.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.0.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.0.1"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_0_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.0.2" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_0_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.0.2| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_0_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.0.2; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.0.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.0.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.0.2"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_0_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.0.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_0"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,10.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 10.0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 10.0"/>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 10_0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.1.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.1.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.1.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.1.1"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_1_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.1.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_1"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,10.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 10.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 10.1"/>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 10_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.2.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_2_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.2.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.2.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.2.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.2.1"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_2_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.2.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_2"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,10.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 10.2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 10.2"/>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 10_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.3.1" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/10.3.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.3.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.3.1"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 10_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 10_3_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.3.2" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_3_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.2| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.2; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/10.3.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.3.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.3.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.3.2"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_3_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 10_3_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 10_3_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.3.3" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_3_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.3| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 10.3.3; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/10.3.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,10.3.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 10.3.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 10.3.3"/>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 10_3_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 10_3_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 10_3_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.3.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 10_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 10_3"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,10.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 10.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 10.3"/>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 10_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 10_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 10_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 10.x" os_name="iOS 10" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 10"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| U| CPU OS 10"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| iOS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; iOS 10"/>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 10"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| CPU OS 10"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; CPU OS 10"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.0.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_0_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_0_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.0.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.0.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_0_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.0.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_0_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_0_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_0_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.0.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.2| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.2; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.0.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.0.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.0.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_0_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.0.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_0_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.0.3" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_0_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_0_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_0_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.0.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.3| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.0.3; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.0.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.0.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.0.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_0_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.0.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_0_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.0.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_0"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone/iOS/11.0"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 11.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 11_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 11.0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.1.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.1.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.1.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.1.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_1_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.1.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.1.2| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.1.2; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.1.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_1_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.1.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_1"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.1"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone/iOS/11.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 11.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 11_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 11.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.1| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.1; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.1)|iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.1);iPhone"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.2" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.2| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.2; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.3" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.3| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.3; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.4" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_4"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.4| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.4; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.4 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.5" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_5"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.5"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.5| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.5; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.5 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.6" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_2_6"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2_6"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.2.6"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.6| Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.2.6; Apple iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.2.6 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.2.6"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.2.6"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_2_6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.2.6"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_2_6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.2.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_2"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone/iOS/11.2"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 11.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 11_2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 11.2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.3.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_3_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.3.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.3.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_3_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.3.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.3.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_3_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.3.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_3"/>
                 <test weight="7" matchtype="partial" webuseragent="iOS/11.3 model/iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone/iOS/11.3"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 11.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 11_3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 11.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.4.1" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 11_4_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,11.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 11.4.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 11.4.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_4_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/11.4.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/11.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 11.4.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 11.4.1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 11.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 11_4_1"/>
-                <test weight="10" matchtype="partial" webuseragent="11.4.1|iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 11_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="11.4.1;iPhone"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.4.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 11_4"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,11.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 11_4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 11_4"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone/iOS/11.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 11.4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 11.4"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 11.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 11_4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 11_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 11.x" os_name="iOS 11" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 11"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| U| CPU OS 11"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 11"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone OS,11"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| iOS 11"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; iOS 11"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone 11"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| CPU OS 11"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; CPU OS 11"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.0.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_0_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 12.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.0.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.0.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.0.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_0_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/12.0.1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 12.0.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 12_0_1"/>
-                <test weight="10" matchtype="partial" webuseragent="12.0.1|iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 12_0_1"/>
+                <test weight="10" matchtype="partial" webuseragent="12.0.1;iPhone"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.0.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 12_0"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,12.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 12.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_0"/>
                 <test weight="7" matchtype="partial" webuseragent="iOS/12.0 model/iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 12.0"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 12_0"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 12_0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.1.1" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 12.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/12.1.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/12.1.1"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.1 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.1 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 12.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="12.1.1|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 12_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="12.1.1;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 12_1_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.1.2" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/12.1.2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 12.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.2| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.2; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/12.1.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/12.1.2"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.2 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.2 iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.2| en_US| iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.2; en_US; iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 12.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="12.1.2|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 12_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iphone|12.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="12.1.2;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 12_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iphone;12.1.2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.1.3" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 12.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.3| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.3; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/12.1.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/12.1.3"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.3 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.3 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 12.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="12.1.3|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 12_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="12.1.3;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 12_1_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.1.4" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 12_1_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_4"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,12.1.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 12.1.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.4| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 12.1.4"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 12.1.4; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1_4"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/12.1.4 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/12.1.4"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.4 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="12.1.4 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 12.1.4"/>
-                <test weight="10" matchtype="partial" webuseragent="12.1.4|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 12_1_4"/>
+                <test weight="10" matchtype="partial" webuseragent="12.1.4;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 12_1_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.1.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 12_1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone OS,12.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 12.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 12.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 12.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 12_1"/>
                 <test weight="7" matchtype="partial" webuseragent="iOS/12.1 model/iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="12.1 iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 12.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 12_1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 12_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 12.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 12"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| iOS 12"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| U| CPU OS 12"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; iOS 12"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 12"/>
                 <test weight="5" matchtype="partial" webuseragent="12.0 (iPhone"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone 12"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| CPU OS 12"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; CPU OS 12"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.0" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="CPU iPhone OS 13_0"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_0"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_0"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone OS,13.0"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| iOS 13.0"/>
-                <test weight="5" matchtype="partial" webuseragent="iOS 13.0| Apple iPhone"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_0"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; iOS 13.0"/>
+                <test weight="5" matchtype="partial" webuseragent="iOS 13.0; Apple iPhone"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_0"/>
                 <test weight="5" matchtype="partial" webuseragent="iOS/13.0 model/iPhone"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone/iOS/13.0"/>
                 <test weight="5" matchtype="partial" webuseragent="13.0 (iPhone"/>
                 <test weight="5" matchtype="partial" webuseragent="13.0 iPhone"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone 13.0"/>
-                <test weight="5" matchtype="partial" webuseragent="13.0|iPhone"/>
-                <test weight="5" matchtype="partial" webuseragent="iPhone| CPU OS 13_0"/>
+                <test weight="5" matchtype="partial" webuseragent="13.0;iPhone"/>
+                <test weight="5" matchtype="partial" webuseragent="iPhone; CPU OS 13_0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.1.1" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.1.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.1.1"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.1 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.1 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.1.1"/>
-                <test weight="10" matchtype="partial" webuseragent="13.1.1|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_1_1"/>
+                <test weight="10" matchtype="partial" webuseragent="13.1.1;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_1_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.1.2" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.2| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.2; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.1.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.1.2"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.2 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.2 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.1.2"/>
-                <test weight="10" matchtype="partial" webuseragent="13.1.2|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_1_2"/>
+                <test weight="10" matchtype="partial" webuseragent="13.1.2;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_1_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.1.3" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_1_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.3| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.1.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.1.3; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_1_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.1.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.1.3"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.3 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.1.3 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.1.3"/>
-                <test weight="10" matchtype="partial" webuseragent="13.1.3|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_1_3"/>
+                <test weight="10" matchtype="partial" webuseragent="13.1.3;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_1_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.1.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 13.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 13.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 13.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 13.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 13.1"/>
                 <test weight="7" matchtype="partial" webuseragent="13.1.0 (iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 13.1"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 13.1"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 13.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.2.1" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_2_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.2.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.2.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.2.1"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.1 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.1 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.2.1"/>
-                <test weight="10" matchtype="partial" webuseragent="13.2.1|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_2_1"/>
+                <test weight="10" matchtype="partial" webuseragent="13.2.1;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_2_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.2.2" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_2_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.2| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.2.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.2; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.2.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.2.2"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.2 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.2 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.2.2"/>
-                <test weight="10" matchtype="partial" webuseragent="13.2.2|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_2_2"/>
+                <test weight="10" matchtype="partial" webuseragent="13.2.2;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_2_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.2.3" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_2_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.3| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.2.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.2.3; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_2_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.2.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.2.3"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.3 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.2.3 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.2.3"/>
-                <test weight="10" matchtype="partial" webuseragent="13.2.3|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_2_3"/>
+                <test weight="10" matchtype="partial" webuseragent="13.2.3;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_2_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.2.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 13.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 13.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 13.2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 13.2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 13.2"/>
                 <test weight="7" matchtype="partial" webuseragent="13.2.0 (iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 13.2"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 13.2"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 13.2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.3.1" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_3_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_3_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.3.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.3.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.3.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_3_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.3.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.3.1"/>
                 <test weight="10" matchtype="partial" webuseragent="13.3.1 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.3.1 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.3.1"/>
-                <test weight="10" matchtype="partial" webuseragent="13.3.1|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_3_1"/>
+                <test weight="10" matchtype="partial" webuseragent="13.3.1;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_3_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.3.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 13.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 13.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 13.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 13.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 13.3"/>
                 <test weight="7" matchtype="partial" webuseragent="13.3.0 (iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 13.3"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 13.3"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 13.3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.1" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_4_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.1| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.4.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.1; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_1"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.4.1 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.4.1"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.1 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.1 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.4.1"/>
-                <test weight="10" matchtype="partial" webuseragent="13.4.1|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_4_1"/>
+                <test weight="10" matchtype="partial" webuseragent="13.4.1;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_4_1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.2" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_4_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.4.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.4.2"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.2| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.4.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.2; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_2"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.4.2 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.4.2"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.2 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.2 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.4.2"/>
-                <test weight="10" matchtype="partial" webuseragent="13.4.2|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_4_2"/>
+                <test weight="10" matchtype="partial" webuseragent="13.4.2;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_4_2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.3" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_4_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.4.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.4.3"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.3| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.4.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.3; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.4.3 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.4.3"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.3 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.3 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.4.3"/>
-                <test weight="10" matchtype="partial" webuseragent="13.4.3|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_4_3"/>
+                <test weight="10" matchtype="partial" webuseragent="13.4.3;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_4_3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.4" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_4_4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_4"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.4.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.4.4"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.4| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.4.4"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.4; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_4"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.4.4 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.4.4"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.4 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.4 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.4.4"/>
-                <test weight="10" matchtype="partial" webuseragent="13.4.4|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_4_4"/>
+                <test weight="10" matchtype="partial" webuseragent="13.4.4;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_4_4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.5" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 13_4_5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_5"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone OS,13.4.5"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 13.4.5"/>
-                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.5| Apple iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| U| CPU OS 13_4_5"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 13.4.5"/>
+                <test weight="10" matchtype="partial" webuseragent="iOS 13.4.5; Apple iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; U; CPU OS 13_4_5"/>
                 <test weight="10" matchtype="partial" webuseragent="iOS/13.4.5 model/iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone/iOS/13.4.5"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.5 (iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="13.4.5 iPhone"/>
                 <test weight="10" matchtype="partial" webuseragent="iPhone 13.4.5"/>
-                <test weight="10" matchtype="partial" webuseragent="13.4.5|iPhone"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| CPU OS 13_4_5"/>
+                <test weight="10" matchtype="partial" webuseragent="13.4.5;iPhone"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; CPU OS 13_4_5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.4.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 13.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 13.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 13.4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 13.4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 13.4"/>
                 <test weight="7" matchtype="partial" webuseragent="13.4.0 (iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 13.4"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 13.4"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 13.4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 13.5.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="CPU iPhone OS 13.5"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| iOS 13.5"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| U| CPU OS 13.5"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; iOS 13.5"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; U; CPU OS 13.5"/>
                 <test weight="7" matchtype="partial" webuseragent="13.5.0 (iPhone"/>
                 <test weight="7" matchtype="partial" webuseragent="iPhone 13.5"/>
-                <test weight="7" matchtype="partial" webuseragent="iPhone| CPU OS 13.5"/>
+                <test weight="7" matchtype="partial" webuseragent="iPhone; CPU OS 13.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2012-07-21">
@@ -1750,7 +1750,7 @@
                 <test weight="5" matchtype="partial" webuseragent="iPhone OS,6"/>
                 <test weight="5" matchtype="partial" webuseragent="CPU OS 6"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone OS/6.0"/>
-                <test weight="5" matchtype="partial" webuseragent="iOS| 6.0"/>
+                <test weight="5" matchtype="partial" webuseragent="iOS; 6.0"/>
                 <test weight="5" matchtype="partial" webuseragent="iPhone/6.0"/>
             </webuseragent_tests>
         </fingerprint>
@@ -1777,19 +1777,19 @@
         <fingerprint name="iPhone OS 8.1.1" os_name="iOS 8" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 8_1_1"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 8.1.1"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 8.1.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 8.1.2" os_name="iOS 8" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 8_1_2"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 8.1.2"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 8.1.2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 8.1.3" os_name="iOS 8" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="CPU iPhone OS 8_1_3"/>
-                <test weight="10" matchtype="partial" webuseragent="iPhone| iOS 8.1.3"/>
+                <test weight="10" matchtype="partial" webuseragent="iPhone; iOS 8.1.3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPhone OS 8.1.x" os_name="iOS 8" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -1932,14 +1932,14 @@
         </fingerprint>
         <fingerprint name="iPod OS 6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="iPod| U| CPU OS 6"/>
+                <test weight="5" matchtype="partial" webuseragent="iPod; U; CPU OS 6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Linux i686"/>
                 <test weight="5" matchtype="partial" webuseragent="Linux x86_64"/>
-                <test weight="5" matchtype="exact" webuseragent="| Linux"/>
+                <test weight="5" matchtype="exact" webuseragent="; Linux"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-01-09">
@@ -1952,7 +1952,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_10"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.10"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.10|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.10;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.10"/>
             </webuseragent_tests>
         </fingerprint>
@@ -1996,7 +1996,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_11"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.11"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.11|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.11;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.11"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2045,7 +2045,7 @@
         <fingerprint name="Mac OS X - 10.12" os_name="Sierra" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_12"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.12|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.12;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.12"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.12"/>
                 <test weight="7" matchtype="partial" webuseragent="X/10.12"/>
@@ -2103,7 +2103,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_13"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.13"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.13|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.13;"/>
                 <test weight="7" matchtype="partial" webuseragent="X/10.13"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.13"/>
             </webuseragent_tests>
@@ -2365,7 +2365,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_6"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.6"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.6|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.6;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.6"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2429,7 +2429,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_7"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.7"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.7|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.7;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.7"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2437,7 +2437,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_7_1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.7.1"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.7.1|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.7.1;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.7.1"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2445,7 +2445,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_7_2"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.7.2"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.7.2|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.7.2;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.7.2"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2453,7 +2453,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_7_3"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.7.3"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.7.3|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.7.3;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.7.3"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2461,7 +2461,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_7_4"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.7.4"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.7.4|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.7.4;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.7.4"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2469,7 +2469,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_7_5"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.7.5"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.7.5|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.7.5;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.7.5"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2477,7 +2477,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_8"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.8"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.8|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.8;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.8"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2485,7 +2485,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_8_1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.8.1"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.8.1|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.8.1;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.8.1"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2493,7 +2493,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_8_2"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.8.2"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.8.2|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.8.2;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.8.2"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2501,7 +2501,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_8_3"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.8.3"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.8.3|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.8.3;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.8.3"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2509,7 +2509,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_8_4"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.8.4"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.8.4|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.8.4;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.8.4"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2517,7 +2517,7 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10_8_5"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 10.8.5"/>
-                <test weight="10" matchtype="partial" webuseragent="Macintosh| 10.8.5|"/>
+                <test weight="10" matchtype="partial" webuseragent="Macintosh; 10.8.5;"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.8.5"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2525,7 +2525,7 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_9"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 10.9"/>
-                <test weight="7" matchtype="partial" webuseragent="Macintosh| 10.9|"/>
+                <test weight="7" matchtype="partial" webuseragent="Macintosh; 10.9;"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X,10.9"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2597,7 +2597,7 @@
         </fingerprint>
         <fingerprint name="PlayStation 2" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="10" matchtype="partial" webuseragent="PSP (PlayStation Portable)| 2.00"/>
+                <test weight="10" matchtype="partial" webuseragent="PSP (PlayStation Portable); 2.00"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="PlayStation 3" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2012-06-16">
@@ -2605,9 +2605,10 @@
                 <test weight="10" matchtype="partial" webuseragent="PLAYSTATION 3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="PlayStation 4" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2019-02-09">
+        <fingerprint name="PlayStation 4" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Sony Corp." device_url="http://www.playstation.com" comments="Gaming Consoles" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="PlayStation 4"/>
+                <test weight="10" matchtype="partial" webuseragent="PS4_1.00"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Redhat" os_name="Linux" os_class="Linux" os_vendor="Redhat" os_url="https://www.redhat.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -2659,13 +2660,13 @@
         </fingerprint>
         <fingerprint name="Windows 10" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
-                <test weight="5" matchtype="partial" webuseragent="Windows NT 10.0"/>
+                <test weight="10" matchtype="partial" webuseragent="Windows NT 10.0"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/10.0"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 10"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-WNS/10.0"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-Delivery-Optimization/10.0"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows| ver:10.0"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows|10.0"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows; ver:10.0"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;10.0"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (10.0"/>
             </webuseragent_tests>
         </fingerprint>
@@ -2742,9 +2743,9 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 7"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows|6.1"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.1"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows| 7|"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows; 7;"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="WinNT 6.1"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.5"/>
@@ -2761,9 +2762,9 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 8"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows|6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.2"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows| 8|"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows; 8;"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
                 <test weight="5" matchtype="partial" webuseragent="9200"/>
@@ -2834,14 +2835,14 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Microsoft-CryptoAPI/6.1"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows|6.1"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;6.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2012" os_name="Windows Server 2012" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.2"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows|6.2"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows;6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
@@ -2875,7 +2876,7 @@
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows XP"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 5.1"/>
-                <test weight="5" matchtype="partial" webuseragent="Windows| XP|"/>
+                <test weight="5" matchtype="partial" webuseragent="Windows; XP;"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/6.7"/>
             </webuseragent_tests>
         </fingerprint>
