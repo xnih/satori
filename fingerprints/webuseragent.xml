@@ -33,6 +33,15 @@
                 <test weight="7" matchtype="partial" webuseragent="Android 1.6"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Android 10.0" os_name="Android 10.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Android 10"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/10"/>
+                <test weight="7" matchtype="partial" webuseragent="Android OS 10"/>
+                <test weight="7" matchtype="partial" webuseragent="Android/29"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (29/10"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Android 2.0" os_name="Android 2.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 2.0"/>
@@ -119,11 +128,12 @@
                 <test weight="7" matchtype="partial" webuseragent="Android/21"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 5.1" os_name="Android 5.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Android 5.1" os_name="Android 5.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 5.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/5.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/22"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (28/9"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Android 6.0" os_name="Android 6.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -133,34 +143,38 @@
                 <test weight="7" matchtype="partial" webuseragent="Android/23"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+        <fingerprint name="Android 7.0" os_name="Android 7.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 7.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/7.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/24"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (24/7.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 7.1" os_name="Android 7.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+        <fingerprint name="Android 7.1" os_name="Android 7.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 7.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/7.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/25"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (25/7.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 8.0" os_name="Android 8.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Android 8.0" os_name="Android 8.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 8.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/8.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Android OS 8.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/26"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (26/8.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android 8.1" os_name="Android 8.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Android 8.1" os_name="Android 8.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Android 8.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/8.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android OS 8.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Android/27"/>
+                <test weight="7" matchtype="partial" webuseragent="Android (27/8.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Android 9.0" os_name="Android 9.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
