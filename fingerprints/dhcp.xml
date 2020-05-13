@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2020-04-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2020-05-13" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -176,6 +176,14 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="64"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,55,50,54"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,28"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 10.x" os_name="Android 10" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-10"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-10"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Android 2.2" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2010-08-24">
@@ -512,10 +520,25 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,12,15,23,28,29,31,33,40,41,42,44"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon, Inc." device_url="http://www.canon.com" comments="Printers" author="support@packetfence.org" last_updated="2009-02-09">
+        <fingerprint name="BusyBox Client" os_name="BusyBox" os_class="Unix" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Open Source Lab" device_url="https://busybox.net/" comments="" author="ericmarquart@gmail.com" last_updated="2020-05-13">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.11.2"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.13.3"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.15.2"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.19.3"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.21.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp1.21.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.23.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.24.1"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.27.2"/>
+                <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.28.3"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon, Inc." device_url="http://www.canon.com" comments="Printers" author="support@packetfence.org" last_updated="2020-05-13">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="3,6,15,44,47"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,15,44,47"/>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="Canon"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Chromebook" os_name="ChromeOS" os_class="ChromeOS" os_vendor="Google, Inc." os_url="http://www.google.com/chromebook" device_type="" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2014-07-09">
@@ -1001,6 +1024,11 @@
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,6,15,44,3,33"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,6,15,44,52"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Catalyst 9120AX" os_name="IOS" os_class="IOS" os_vendor="Cisco Systems, Inc." os_url="http://www.cisco.com" device_type="Switch" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="Switches" author="xnih13@gmail.com" last_updated="2020-04-30">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP C9120AX"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2014-09-11">
@@ -2633,7 +2661,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd 3.1.8"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="PXE Client" os_name="" os_class="Network Bootloader" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2007-03-06">
+        <fingerprint name="PXE Client" os_name="" os_class="Network Bootloader" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,55,57,97,93,94,60"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,2,3,5,6,11,12,13,15,16,17,18,43,54,60,67,128,129,130,131,132,133,134,135"/>
@@ -2643,6 +2671,8 @@
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="PXEClient:Arch:00000:UNDI:002001"/>
                 <test weight="1" matchtype="exact" dhcptype="Discover" ipttl="20"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="20"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="PXEClient:Arch:00007:UNDI:003016"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="PXEClient:Arch:00007:UNDI:003016"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="PXE Client (ZEN)" os_name="" os_class="Network Bootloader" os_vendor="Novell, Inc." os_url="http://www.novell.com" device_type="" device_vendor="" device_url="" comments="ZEN Boot Partition" author="xnih13@gmail.com" last_updated="2009-02-09">
@@ -3656,9 +3686,11 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Xbox" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="support@packetfence.org" last_updated="2009-02-09">
+        <fingerprint name="Xbox" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="support@packetfence.org" last_updated="2020-05-13">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="3,6"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="MSFT 5.0 XBOX"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="MSFT 5.0 XBOX"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Xbox 360" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
