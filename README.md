@@ -7,9 +7,9 @@ It currently supports fingerprinting by the following means:
 - HTTP (User Agent and Server)
 - SMB (TCP and UDP)
 
-This program was started back in 2004 and had a decent life as a windows program, doing passive OS fingerprinting for 10 years with regular updates, but it feel by the wayside.  It has been a goal to get it back out here, written in something that I could share the code with others.  
+This program was started back in 2004 and had a decent life as a windows program, doing passive OS fingerprinting for 10 years with regular updates, but it fell by the wayside.  It has been a goal to get it back out here, written in something that I could share the code with others.  
 
-I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files that will continue to be hosted on my ancient, very ugly, on purpose, website!
+I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files.
 
 ## requirements
 ### os related
