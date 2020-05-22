@@ -1868,6 +1868,16 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.17.1"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Kindle Firmware 5.12.x" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="eBook Reader" device_vendor="Amazon" device_url="www.amazon.com/kindle" comments="5.10.1.1" author="xnih13@gmail.com" last_updated="2020-05-21">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="udhcp 1.28.3"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.28.3"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Kindle Firmware 5.3.x" os_name="Linux 2.6" os_class="Linux" os_vendor="" os_url="" device_type="eBook Reader" device_vendor="Amazon" device_url="www.amazon.com/kindle" comments="5.3.7" author="xnih13@gmail.com" last_updated="2014-07-06">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,57,55"/>
@@ -2494,6 +2504,14 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="16"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="OpenBSD 6.7" os_name="OpenBSD 6" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-21">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,55,61,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,28,2,121,3,15,119,6,12,67,66"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,54,55,61,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,2,121,3,15,119,6,12,67,66"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="OpenSolaris 2008.11 - 2010.02" os_name="OpenSolaris" os_class="Solaris" os_vendor="Sun Microsystems, Inc." os_url="http://opensolaris.org/os" device_type="" device_vendor="" device_url="" comments="Solaris" author="xnih13@gmail.com" last_updated="2010-11-14">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,51,57,50,54,60,55"/>
@@ -3081,10 +3099,25 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Ubuntu 18" os_name="Linux" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-11-23">
+        <fingerprint name="Ubuntu 18.x" os_name="Linux" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-21">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,12,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,2,3,15,6,119,12,44,47,26,121,42,249,33,252"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,12,3,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Ubuntu 19.x" os_name="Linux" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-21">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,55,57,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,12,15,6,2,26,28,121,33,40,41,42,54,119,249,252,17"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,55,57,54,50,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,12,15,6,2,26,28,121,33,40,41,42,54,119,249,252,17"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Ubuntu 20.x" os_name="Linux" os_class="Linux" os_vendor="Ubuntu" os_url="http://www.ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-21">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,55,57,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,2,6,12,15,26,28,121,3,33,40,41,42,119,249,252,17"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,51,58,59,1,28,6,12,3,255"/>
             </dhcp_tests>
         </fingerprint>
