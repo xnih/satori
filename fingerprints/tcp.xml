@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<TCP created="2005-08-21" last_updated="2020-05-21" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<TCP created="2005-08-21" last_updated="2020-05-26" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="1763 MicroLogix 1100 PLC" os_name="1763 MicroLogix 1100 PLC" os_class="ICS device" os_vendor="Allen-Bradley" os_url="https://ab.rockwellautomation.com/Programmable-Controllers/MicroLogix-1100" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
@@ -900,7 +900,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:48:M1460,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="14393 build" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="14393 build" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1380,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:T"/>
@@ -918,6 +918,12 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:64:1:48:M1460,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:64:1:52:M1460,N,W2,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:48:M1460,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:ZT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:48:M1380,N,N,S:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1460,N,W8,N,N,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:56:M1460,N,N,T:AT"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows 10 - 1703" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="16063 build" author="xnih13@gmail.com" last_updated="2020-05-15">
@@ -937,26 +943,60 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:52:M1460,N,W3,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1709" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="16299 build" author="xnih13@gmail.com" last_updated="2020-05-15">
+        <fingerprint name="Windows 10 - 1709" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="16299 build" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:52:M1460,N,W8,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:60:M1460,N,W8,S,T:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17134 build" author="xnih13@gmail.com" last_updated="2020-05-15">
+        <fingerprint name="Windows 10 - 1803" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17134 build" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:60:M1460,N,W8,S,T:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:52:M1460,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1380,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="17520:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:ZT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17763 build" author="xnih13@gmail.com" last_updated="2019-02-15">
-            <tcp_tests/>
+        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17763 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W7:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:ZT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:60:1:52:M1460,N,W8,N,N,S:T"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1903" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18362 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:60:M1460,N,W8,S,T:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 1908" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18363 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:60:M1460,N,W8,S,T:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:48:M1460,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1360,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64480:128:1:52:M1240,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:ZT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
+            </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-20">
             <tcp_tests>
@@ -994,7 +1034,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:60:M1460,N,W2,S,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-15">
+        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1380,N,W2,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W2,N,N,S:T"/>
@@ -1007,6 +1047,11 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1432,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:16:1:52:M1460,N,W2,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:64:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:48:M1460,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:60:M1460,N,W8,S,T:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:56:M1460,S,T:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:48:M1460,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2014-07-06">
@@ -1022,9 +1067,10 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:Z"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows 95" os_name="Windows 95" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-20">
@@ -1091,7 +1137,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:48:N,W8,N,N,S:A"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:48:M1460,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:44:N,N,S:A"/>
@@ -1104,9 +1150,10 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:48:M1380,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:44:M1460:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1380,N,W8,S,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:48:M1460,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:52:M1380,N,W8,N,N,S:A"/>
@@ -1119,15 +1166,32 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1380,N,W8,S,T:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:48:M1380,N,N,S:T;"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1380,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:48:M1380,N,N,S:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1380,N,W8,N,N,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:56:M1380,N,N,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:56:M1380,S,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:48:M1380,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1380,N,W8,S,T:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1460,N,W8,S,T:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1380,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:52:M1380,N,W8,N,N,S:A"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:44:M1460:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:48:M1460,N,N,S:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:44:M1380:A"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Windows Server 2019" os_name="Windows Server 2019" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-26">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="64240:128:1:52:M1380,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:52:M1380,N,W8,N,N,S:A"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-15">
