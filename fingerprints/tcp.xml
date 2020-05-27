@@ -1059,7 +1059,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1908" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18363 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+        <fingerprint name="Windows 10 - 1909" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18363 build" author="xnih13@gmail.com" last_updated="2020-05-27">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
