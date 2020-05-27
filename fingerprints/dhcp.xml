@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2020-05-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2020-05-27" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -188,7 +188,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 2.2" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2010-08-24">
+        <fingerprint name="Android 2.2.x" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2020-05-27">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,28,51,58,59"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,28,51,58,59"/>
@@ -199,7 +199,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd 4.0.15"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 2.3" os_name="Android 2.3" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="Republic Wireless 1.65k.1027" author="xnih13@gmail.com" last_updated="2013-08-21">
+        <fingerprint name="Android 2.3.x" os_name="Android 2.3" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="Republic Wireless 1.65k.1027" author="xnih13@gmail.com" last_updated="2020-05-27">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,15,28,51,58,59,119"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,15,28,51,58,59,119"/>
@@ -211,7 +211,7 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="64"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 3.0" os_name="Android 3.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2011-11-17">
+        <fingerprint name="Android 3.0.x" os_name="Android 3.0" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2020-05-27">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,33,3,6,28,51,58,59"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,60,12,55"/>
