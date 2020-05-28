@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2020-05-27" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2020-05-28" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -1458,6 +1458,13 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,3,15,6,42,255"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="FortiGate 30D" os_name="" os_class="" os_vendor="" os_url="" device_type="Firewall" device_vendor="Fortinet" device_url="https://www.fortinet.com" comments="" author="xnih13@gmail.com" last_updated="2020-05-28">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,2,3,6,12,15,28,40,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,55,12,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="FortiGate-30D"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="FreeBSD 6.0-6.2" os_name="FreeBSD 6.0" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="unknown version" author="xnih13@gmail.com" last_updated="2009-02-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,28,2,3,15,6,12"/>
@@ -2234,6 +2241,12 @@
         <fingerprint name="Moneris HiSpeed 3100IP" os_name="" os_class="" os_vendor="" os_url="" device_type="Miscellaneous" device_vendor="Moneris Solutions" device_url="http://www.moneris.com" comments="Misc" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,15,70,69"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Morse Watchman Keywatch" os_name="" os_class="" os_vendor="" os_url="" device_type="Key Lock Box" device_vendor="Morse Watchman" device_url="https://www.morsewatchmans.com/products/keywatcher-touch" comments="" author="xnih13@gmail.com" last_updated="2020-05-28">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Morse Watchman KWT_V1"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Motorola NIM100" os_name="" os_class="" os_vendor="" os_url="" device_type="DVR" device_vendor="Motorola, Inc." device_url="http://www.motorola.com" comments="Digital Video Recorders" author="support@packetfence.org" last_updated="2009-02-09">
@@ -3625,7 +3638,7 @@
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,58,59,51,54,1,81,15,3,6,43,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
+        <fingerprint name="Windows Server 2016" os_name="Windows Server 2016" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-28">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,81,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,31,33,43,44,46,47,121,249,252"/>
@@ -3634,6 +3647,8 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,31,33,43,44,46,47,121,249,252"/>
                 <test weight="2" matchtype="exact" dhcptype="Request" dhcpvendorcode="MSFT 5.0"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="3"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,61,43,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-05">
@@ -3700,7 +3715,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,60,55,43,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Windows XP SP3" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-18">
+        <fingerprint name="Windows XP SP3" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-28">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,116,61,50,12,60,55,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,15,3,6,44,46,47,31,33,249,43"/>
@@ -3721,6 +3736,8 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,116,61,12,60,55,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,12,81,60,55,43"/>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,255"/>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,15,3,6,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,61,12,60,55,43,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="WyzeCam v2" os_name="" os_class="" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Wyze" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-08">
@@ -3828,6 +3845,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,60,12,81,57,55"/>
                 <test weight="1" matchtype="exact" dhcptype="Inform" ipttl="255"/>
                 <test weight="10" matchtype="partial" dhcptype="Inform" dhcpvendorcode="Mod=WorkCentre 7125"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Xerox WorkCentre - 7335" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2020-05-28">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,6,15,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Xerox WorkCentre - 7545" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2019-02-18">
