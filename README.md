@@ -18,8 +18,11 @@ I am NOT a programmer, I hack code together, so this is what it is.  Time permit
 ### python related
 - python3
 - pypacker*
-- pcapy*  (may need pythonX-devel package before this will install)
+- pcapy*  (make sure you have libpcap-dev installed prior!)
 - untangle*
+
+#### optional
+- netifaces* (while not specifically needed saves some error messages at least on rasbianos)
 
 *(if you use pip to install it, remember to use pip3)
 
