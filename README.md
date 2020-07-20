@@ -39,4 +39,12 @@ modules feature is optional
 
 I have added the ability to listen to live packets, but be aware, you are running as root typically to do this, use at own risk as mentioned before, I am by no means a programmer!
 
-This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point!
+## graylog
+I'm only a novice working with graylog, but feeding satori logs into it is much faster for processing through them after the fact than grep!
+
+You can do things like " NOT os_guess:* " to find devices that satori was unable to provide a guess at the OS.
+
+The content pack currently contains about 5 rules to properly parse the data.  It may not be ideal on how they are configured, I've spent a very limited amount of timing with graylog!  It has worked well enough for what I've done in testing.  nxlog would probably be a good way to inject them into graylog, but to date I've just used netcat and pushed them into a raw tcp listener!
+
+## version
+This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point and I've been running it in production like systems since I put this out here!
