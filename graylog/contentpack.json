@@ -6,7 +6,7 @@
   "summary": "Satori log file processing pipeline and rules",
   "description": "",
   "vendor": "Chatter on the Wire",
-  "url": "",
+  "url": "https://raw.githubusercontent.com/xnih/satori/master/graylog/contentpack.json",
   "parameters": [],
   "entities": [
     {
