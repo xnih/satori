@@ -15,10 +15,16 @@ from pypacker.layer3 import ip
 #
 
 
-def httpServerProcess(eth, ts, serverExactList, serverPartialList):
-  ip4 = eth.upper_layer
-  tcp1 = eth.upper_layer.upper_layer
-  http1 = eth.upper_layer.upper_layer.upper_layer
+def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+  ip4 = pkt.upper_layer
+  tcp1 = pkt.upper_layer.upper_layer
+  http1 = pkt.upper_layer.upper_layer.upper_layer
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   hdrServer = ''
@@ -44,19 +50,26 @@ def httpServerProcess(eth, ts, serverExactList, serverPartialList):
     httpServerFingerprint = httpServerFingerprintLookup(serverExactList, serverPartialList, hdrServer)
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = hdrUserAgent.replace(';', '|')
-    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, hdrServer, httpServerFingerprint))
+
+    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, ip4.src_s, src_mac, hdrServer, httpServerFingerprint), end='\n', flush=True)
   if (bodyServer != ''):
     httpServerFingerprint = httpServerFingerprintLookup(serverExactList, serverPartialList, bodyServer)
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, bodyServer, httpServerFingerprint))
+    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, ip4.src_s, src_mac, bodyServer, httpServerFingerprint), end='\n', flush=True)
 
 
 
-def httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList):
-  ip4 = eth.upper_layer
-  tcp1 = eth.upper_layer.upper_layer
-  http1 = eth.upper_layer.upper_layer.upper_layer
+def httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+  ip4 = pkt.upper_layer
+  tcp1 = pkt.upper_layer.upper_layer
+  http1 = pkt.upper_layer.upper_layer.upper_layer
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   hdrUserAgent = ''
@@ -82,12 +95,12 @@ def httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList):
     httpUserAgentFingerprint = httpUserAgentFingerprintLookup(useragentExactList, useragentPartialList, hdrUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = hdrUserAgent.replace(';', '|')
-    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, changedUserAgent, httpUserAgentFingerprint))
+    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, ip4.src_s, src_mac, changedUserAgent, httpUserAgentFingerprint), end='\n', flush=True)
   if (bodyUserAgent != ''):
     httpUserAgentFingerprint = httpUserAgentFingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, changedUserAgent, httpUserAgentFingerprint))
+    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, ip4.src_s, src_mac, changedUserAgent, httpUserAgentFingerprint), end='\n', flush=True)
 
 
 def BuildHTTPServerFingerprintFiles():

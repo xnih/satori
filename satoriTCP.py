@@ -3,7 +3,6 @@ import struct
 from pathlib import Path
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
-#from pypacker.layer4 import tcp
 from datetime import datetime
 
 
@@ -17,9 +16,16 @@ from datetime import datetime
 #
 
 
-def tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
-  ip4 = eth.upper_layer
-  tcp1 = eth.upper_layer.upper_layer
+def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+#  print(pkt)
+  ip4 = pkt.upper_layer
+  tcp1 = pkt.upper_layer.upper_layer
 
   # lets verify we have tcp options and it is a SYN or SYN/ACK packet
   if (len(tcp1.opts) > 0) and ((tcp1.flags == 0x02) or (tcp1.flags == 0x12)):
@@ -87,10 +93,9 @@ def tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList):  
     #ignore anything that is not S or SA, but should probably clean that up prior to this point!
     timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
-
-    print("%s;%s;%s;TCP;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, tcpSignature, tcpFingerprint))
-    #print("%s;%s;p0fv2;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, p0fSignature, p0fv2Fingerprint))
-    #print("%s;%s;Ettercap;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, ettercapSignature, ettercapFingerprint))
+    print("%s;%s;%s;TCP;%s;%s;%s" % (timeStamp, ip4.src_s, src_mac, tcpFlags, tcpSignature, tcpFingerprint), end='\n', flush=True)
+    #print("%s;%s;00:00;00:00:00:00;p0fv2;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, p0fSignature, p0fv2Fingerprint))
+    #print("%s;%s;00:00;00:00:00:00;Ettercap;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, ettercapSignature, ettercapFingerprint))
 
 
 

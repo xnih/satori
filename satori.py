@@ -1,5 +1,6 @@
 from pypacker import ppcap
 from pypacker.layer12 import ethernet
+from pypacker.layer12 import linuxcc
 from pypacker.layer3 import ip
 from pypacker.layer3 import icmp
 from pypacker.layer4 import tcp
@@ -29,7 +30,45 @@ def usage():
     -m, --modules     modules to load; example: -m tcp,dhcp
     -l, --log         log file to write output to; example -l output.txt (not implemented yet)
     -v, --verbose     verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically
-    """)
+    """, end='\n', flush=True)
+
+
+def packetType(buf):
+  tcpPacket = False
+  dhcpPacket = False
+  httpPacket = False
+  udpPacket = False
+
+  #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
+  eth = ethernet.Ethernet(buf)
+  if hex(eth.type) == '0x800':
+    layer = 'eth'
+    pkt = eth
+
+    if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None):
+      tcpPacket = True
+    if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None):
+      dhcpPacket = True
+    if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None):
+      httpPacket = True
+    if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None):
+      udpPacket = True
+
+  lcc = linuxcc.LinuxCC(buf)
+  if hex(lcc.type) == '0x800':
+    layer = 'lcc'
+    pkt = lcc
+
+    if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP] is not None):
+      tcpPacket = True
+    if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP, dhcp.DHCP] is not None):
+      dhcpPacket = True
+    if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, http.HTTP] is not None):
+      httpPacket = True
+    if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP] is not None):
+      udpPacket = True
+
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket)
 
 
 def main():
@@ -40,6 +79,7 @@ def main():
 
   counter = 0
   startTime = time.time()
+
   tcpCheck = False
   dhcpCheck = False
   httpCheck = False
@@ -77,10 +117,10 @@ def main():
       elif (mod[i].lower() == 'smb'):
         smbCheck = True
 
-  if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing file names into a procedure sucks.
+  if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing parameters into a procedure sucks.
     onlyfiles = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
     for f in onlyfiles:
-      print(f)
+      print(f, end='\n', flush=True)
       try:
         preader = ppcap.Reader(filename=directory + '/' + f)
         for ts, buf in preader:
@@ -88,12 +128,12 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            eth = ethernet.Ethernet(buf)
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
 
-            if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
-              satoriTCP.tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
-            if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
-              satoriDHCP.dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
+            if tcpPacket and tcpCheck:
+              satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+            if dhcpPacket and dhcpCheck:
+              satoriDHCP.dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                      ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                      InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
                                      ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, 
@@ -107,15 +147,15 @@ def main():
                                      OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                      DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                      DeclineTTLExactList)
-            if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
-              satoriHTTP.httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
-              satoriHTTP.httpServerProcess(eth, ts, serverExactList, serverPartialList)
+            if httpPacket and httpCheck:
+              satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+              satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
 #            if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #              satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-            if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
-              satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-            if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
-              satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
+            if tcpPacket and smbCheck:
+              satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+            if udpPacket and smbCheck:
+              satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
           except (KeyboardInterrupt, SystemExit):
             raise
           except:
@@ -130,19 +170,19 @@ def main():
     try:
       preader = ppcap.Reader(filename=readpcap)
     except:
-      print('File was not pcap format')
+      print('File was not pcap format', end='\n', flush=True)
       sys.exit(1)
     for ts, buf in preader:
       try:
         counter = counter + 1
         ts = ts/1000000000
 
-        eth = ethernet.Ethernet(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
 
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
-          satoriTCP.tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
-          satoriDHCP.dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
+        if tcpPacket and tcpCheck:
+          satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+        if dhcpPacket and dhcpCheck:
+          satoriDHCP.dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                  ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                  InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
                                  ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, 
@@ -156,15 +196,16 @@ def main():
                                  OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                  DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                  DeclineTTLExactList)
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
-          satoriHTTP.httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
-          satoriHTTP.httpServerProcess(eth, ts, serverExactList, serverPartialList)
+        if httpPacket and httpCheck:
+          satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+          satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
 #        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
-          satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
-          satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
+        if tcpPacket and smbCheck:
+          satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+        if udpPacket and smbCheck:
+          satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
+
       except (KeyboardInterrupt, SystemExit):
         raise
       except:
@@ -178,7 +219,7 @@ def main():
       #assuming only doing -m http
       #preader.setfilter('tcp port 80 or tcp port 8080')
     except Exception as e:
-      print(e)
+      print(e, end='\n', flush=True)
       sys.exit(1)
     while True:
       try:
@@ -186,12 +227,12 @@ def main():
         (header, buf) = preader.next()
         ts = header.getts()[0]
 
-        eth = ethernet.Ethernet(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
 
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and tcpCheck:
-          satoriTCP.tcpProcess(eth, ts, sExactList, saExactList, sPartialList, saPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None) and dhcpCheck:
-          satoriDHCP.dhcpProcess(eth, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
+        if tcpPacket and tcpCheck:
+          satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+        if dhcpPacket and dhcpCheck:
+          satoriDHCP.dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                  ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                  InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
                                  ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, 
@@ -205,15 +246,15 @@ def main():
                                  OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                  DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                  DeclineTTLExactList)
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None) and httpCheck:
-          satoriHTTP.httpUserAgentProcess(eth, ts, useragentExactList, useragentPartialList)
-          satoriHTTP.httpServerProcess(eth, ts, serverExactList, serverPartialList)
+        if httpPacket and httpCheck:
+          satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+          satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
 #        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None) and smbCheck:
-          satoriSMB.smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-        if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None) and smbCheck:
-          satoriSMB.smbUDPProcess(eth, ts, browserExactList, browserPartialList)
+        if tcpPacket and smbCheck:
+          satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+        if udpPacket and smbCheck:
+          satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
       except (KeyboardInterrupt, SystemExit):
         raise
       except:
@@ -221,7 +262,7 @@ def main():
 
 
   else:  #we should never get here with "proceed" check, but just in case
-    print("Not sure how we got here")
+    print("Not sure how we got here", end='\n', flush=True)
 
   endTime = time.time()
   totalTime = endTime - startTime
@@ -266,7 +307,7 @@ try:
   if (__name__ == '__main__') and proceed:
     main()
   else:
-    print('Need to provide a pcap to read in or an interface to watch')
+    print('Need to provide a pcap to read in or an interface to watch', end='\n', flush=True)
     usage()
 
 except getopt.error:

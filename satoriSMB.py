@@ -47,8 +47,14 @@ def parseBuffer(buf, unicode):
 
   return(val)
 
-def smbUDPProcess(eth, ts, browserExactList, browserPartialList):
-  ip4 = eth.upper_layer
+def smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+  ip4 = pkt.upper_layer
   udp1 = ip4.upper_layer
   if udp1.sport != 138:
     sys.exit(1)
@@ -73,11 +79,17 @@ def smbUDPProcess(eth, ts, browserExactList, browserPartialList):
       if (osVersion != '') and (browVersion != ''):
         fingerprint = osVersion + ',' + browVersion
         osGuess = SMBUDPFingerprintLookup(browserExactList, browserPartialList, fingerprint)
-        print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, fingerprint, osGuess))
+        print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp, ip4.src_s, src_mac, fingerprint, osGuess), end='\n', flush=True)
 
 
-def smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList):
-  ip4 = eth.upper_layer
+def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+  ip4 = pkt.upper_layer
   tcp1 = ip4.upper_layer
   #if (_tcp.src_portno <> 139) and (_tcp.dst_portno <> 139) and (_tcp.src_portno <> 445)and (_tcp.dst_portno <> 445) then exit;
   #need to take tcp1.body_bytes and shove the info into stuff now......
@@ -172,10 +184,10 @@ def smbTCPProcess(eth, ts, nativeExactList, lanmanExactList, nativePartialList, 
 
         if nativeOS != '':
           osGuess = SMBTCPFingerprintLookup(nativeExactList, nativePartialList, nativeOS)
-          print("%s;%s;%s;SMBNATIVE;NativeOS;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, nativeOS, osGuess))
+          print("%s;%s;%s;SMBNATIVE;NativeOS;%s;%s" % (timeStamp, ip4.src_s, src_mac, nativeOS, osGuess), end='\n', flush=True)
         if nativeLanMan != '':
           osGuess = SMBTCPFingerprintLookup(lanmanExactList, lanmanPartialList, nativeLanMan)
-          print("%s;%s;%s;SMBNATIVE;NativeLanMan;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, nativeLanMan, osGuess))
+          print("%s;%s;%s;SMBNATIVE;NativeLanMan;%s;%s" % (timeStamp, ip4.src_s, src_mac, nativeLanMan, osGuess), end='\n', flush=True)
 
 
 def BuildSMBUDPFingerprintFiles():
