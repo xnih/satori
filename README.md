@@ -21,7 +21,7 @@ I am NOT a programmer, I hack code together, so this is what it is.  Time permit
 ### python related
 - python3
 - pypacker*
-- pcapy*  (make sure you have libpcap-dev installed prior and if armbian may need dev packages for armbian along with setuptools if using pip3 to install)
+- pcapy*  (depending on distro may need these installed prior:libpcap-dev, python3-dev; along with setuptools if using pip3 to install)
 - untangle*
 
 #### optional
