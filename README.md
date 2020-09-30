@@ -15,10 +15,13 @@ I am NOT a programmer, I hack code together, so this is what it is.  Time permit
 ### os related
 - libpcap-dev
 
+### os related Armbian
+- python3-dev 
+
 ### python related
 - python3
 - pypacker*
-- pcapy*  (make sure you have libpcap-dev installed prior!)
+- pcapy*  (make sure you have libpcap-dev installed prior and if armbian may need dev packages for armbian along with setuptools if using pip3 to install)
 - untangle*
 
 #### optional
