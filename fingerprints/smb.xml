@@ -16,8 +16,13 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2020-05-27" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2020-12-10" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-10">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="FXNIC 0.01"/>
+            </smb_tests>
+        </fingerprint>
         <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
             <smb_tests>
                 <test weight="7" matchtype="exact" smbnativename="FreeBSD"/>
@@ -196,6 +201,12 @@
                 <test weight="10" matchtype="exact" smbnativelanman="Netreon LANMAN 1.0"/>
             </smb_tests>
         </fingerprint>
+        <fingerprint name="NMAP" os_name="" os_class="" os_vendor="Netreon" os_url="" device_type="" device_vendor="nmap.org" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-10-01">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativelanman="Native Lanman"/>
+                <test weight="10" matchtype="exact" smbnativename="Nmap"/>
+            </smb_tests>
+        </fingerprint>
         <fingerprint name="Samba  4.x Client" os_name="" os_class="" os_vendor="" os_url="http://www.samba.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
@@ -320,6 +331,14 @@
         <fingerprint name="Windows 10 - 2019 N" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise N 18362"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 20H2" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="19041" author="xnih13@gmail.com" last_updated="2020-12-10">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 19042"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 19042"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise 19042"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 19042"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
@@ -512,6 +531,12 @@
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 2002 Service Pack 3 2600"/>
                 <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Xerox WorkCentre - 6xxx" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-10">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativename="FXNICOS 0.1"/>
+                <test weight="5" matchtype="exact" smbnativename="FXNIC 0.01"/>
             </smb_tests>
         </fingerprint>
     </fingerprints>
