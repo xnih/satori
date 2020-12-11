@@ -16,12 +16,22 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2020-04-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2020-12-11" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Web Serve or ECS" os_name="Amazon" os_class="Linux" os_vendor="Amazon" os_url="https://aws.amazon.com/ecs/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="ECS"/>
                 <test weight="5" matchtype="partial" webserver="Amazon"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Apache" os_name="Apache" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-11">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Apache"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Apache 2.4" os_name="Apache" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-11">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Apache 2.4"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Big-IP Load Balancer" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
@@ -45,6 +55,16 @@
         <fingerprint name="CentOS" os_name="CentOS" os_class="Linux" os_vendor="Fedora" os_url="http://www.centos.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="CentOS"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="CommVault" os_name="CommVault" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-11">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Commvault WebServer"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Crestron" os_name="Crestron" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-11">
+            <webserver_tests>
+                <test weight="5" matchtype="partial" webserver="Crestron Webserver"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Debian" os_name="Debian" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2018-12-22">
