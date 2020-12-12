@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2020-12-11" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2020-12-12" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -1931,11 +1931,13 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="HP LaserJet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://hp.com" comments="Laserjet Pro M201dw" author="xnih13@gmail.com" last_updated="2018-11-12">
+        <fingerprint name="HP LaserJet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://hp.com" comments="Laserjet Pro M201dw" author="xnih13@gmail.com" last_updated="2020-12-12">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,22,57,60,77,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="6,3,1,15,12,44,81,69,42,43,18,66,67,150,7"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Hewlett-Packard LaserJet"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,81,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="6,3,1,15,44,12"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Internet Connection Sharing - Microsoft" os_name="Microsoft" os_class="Windows" os_vendor="Microsoft" os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-04-02">
