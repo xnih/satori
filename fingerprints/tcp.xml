@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<TCP created="2005-08-21" last_updated="2020-12-12" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<TCP created="2005-08-21" last_updated="2020-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="1763 MicroLogix 1100 PLC" os_name="1763 MicroLogix 1100 PLC" os_class="ICS device" os_vendor="Allen-Bradley" os_url="https://ab.rockwellautomation.com/Programmable-Controllers/MicroLogix-1100" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
@@ -39,7 +39,12 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:60:1:44:M1380:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Amazon Fire TV Stick" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2018-10-14">
+        <fingerprint name="Amazon Echo Show 5" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,S,T,N,W6:."/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Amazon Fire TV Stick" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="www.amazon.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="14600:64:1:60:M1460,S,T,N,W6:."/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="14480:64:1:56:M1460,S,T:ZAT"/>
@@ -47,6 +52,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="14480:64:1:60:M1460,S,T,N,W6:ZAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="14600:64:1:44:M1460:ZA"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="14600:64:1:52:M1460,N,N,S,N,W6:ZA"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,S,T,N,W6:."/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Android 10.x" os_name="Android 10" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -103,6 +109,16 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W0,N,N,T,S,E:."/>
             </tcp_tests>
         </fingerprint>
+        <fingerprint name="Apple TV OS 14.0.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-12-16">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:Z"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Apple TV OS 14.2.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-12-16">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
+            </tcp_tests>
+        </fingerprint>
         <fingerprint name="AXIS 206 Network Camera" os_name="Linux 2.6.14" os_class="Linux" os_vendor="AXIS" os_url="https://www.axis.com/en-us/products/axis-206" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-07">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5792:64:1:60:M1460,S,T,N,W1:."/>
@@ -113,7 +129,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="511:64:1:44:M1200:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Big-IP F5 LB 13.1" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Big-IP F5 LB 13.1" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:60:M1460,N,N,T,S,E,E:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:48:M1460,S,E,E:A"/>
@@ -148,6 +164,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="1608:255:1:44:M1380:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3867:255:1:48:M1380,S,E,E:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4008:255:1:56:M1380,N,N,T:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="64240:128:0:44:M1460:A"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Big-IP F5 Load Balancer Unknown Version" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
@@ -898,6 +915,13 @@
                 <test weight="5" matchtype="exact" tcpflag="A" tcpsig="468:64:1:52:N,N,T:."/>
             </tcp_tests>
         </fingerprint>
+        <fingerprint name="Roku 3930x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W5:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="42340:64:1:60:M1460,S,T,N,W7:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="25344:64:1:60:M576,S,T,N,W7:."/>
+            </tcp_tests>
+        </fingerprint>
         <fingerprint name="Roku DVP 9" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="14600:64:1:60:M1460,S,T,N,W7:."/>
@@ -952,6 +976,11 @@
         <fingerprint name="SunRocket Gizmo" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Gateway" device_vendor="InnoMedia, Inc." device_url="http://www.innomedia.com" comments="MTA 6328-2Re" author="xnih13@gmail.com" last_updated="2008-10-20">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="16000:64:0:44:M1452:A"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Tizen Linux" os_name="Tizen" os_class="Linux" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-16">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Ubuntu 18.x" os_name="Linux 4.5" os_class="Linux" os_vendor="Ubuntu" os_url="http://ubuntu.com" device_type="" device_vendor="" device_url="" comments="Ubuntu 18.04" author="xnih13@gmail.com" last_updated="2018-10-14">
@@ -1064,7 +1093,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1909" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18363 build" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Windows 10 - 1909" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="18363 build" author="xnih13@gmail.com" last_updated="2020-12-24">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
@@ -1076,6 +1105,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64480:128:1:52:M1240,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:ZT"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64766:128:1:52:M1378,N,W8,N,N,S:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:52:M1240,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Windows 10 - 2004" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="19041 build" author="xnih13@gmail.com" last_updated="2020-05-26">
