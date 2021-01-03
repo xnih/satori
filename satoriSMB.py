@@ -77,7 +77,7 @@ def smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList):
       timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
       if (osVersion != '') and (browVersion != ''):
-        fingerprint = osVersion + ',' + browVersion
+        fingerprint = osVersion + ';' + browVersion
         osGuess = SMBUDPFingerprintLookup(browserExactList, browserPartialList, fingerprint)
         print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp, ip4.src_s, src_mac, fingerprint, osGuess), end='\n', flush=True)
 
@@ -212,7 +212,7 @@ def BuildSMBUDPFingerprintFiles():
       osversion = test['osversion']
       browserversion = test['browserversion']
       if matchtype == 'exact':
-        fingerprint = osversion + ',' + browserversion
+        fingerprint = osversion + ';' + browserversion
         if fingerprint in browserExactList:
           oldValue = browserExactList.get(fingerprint)
           browserExactList[fingerprint] = oldValue + '|' + os + ':' + weight
@@ -220,7 +220,7 @@ def BuildSMBUDPFingerprintFiles():
           browserExactList[fingerprint] = os + ':' + weight
 
       else:
-        fingerprint = osversion + ',' + browserversion
+        fingerprint = osversion + ';' + browserversion
         if fingerprint in browserPartialList:
           oldValue = browserPartialList.get(fingerprint)
           browserPartialList[fingerprint] = oldValue + '|' + os + ':' + weight
