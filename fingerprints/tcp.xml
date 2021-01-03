@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<TCP created="2005-08-21" last_updated="2020-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<TCP created="2005-08-21" last_updated="2021-01-02" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="1763 MicroLogix 1100 PLC" os_name="1763 MicroLogix 1100 PLC" os_class="ICS device" os_vendor="Allen-Bradley" os_url="https://ab.rockwellautomation.com/Programmable-Controllers/MicroLogix-1100" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
@@ -1342,7 +1342,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:52:M1260,N,W0,N,N,S:A"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows XP SP3" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-02-08">
+        <fingerprint name="Windows XP SP3" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-01-02">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="64240:128:1:48:M1260,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="64240:128:1:52:M1260,N,W0,N,N,S:A"/>
@@ -1351,6 +1351,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:52:M1460,N,W0,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="A" tcpsig="32374:128:1:52:N,N,K:."/>
                 <test weight="5" matchtype="exact" tcpflag="A" tcpsig="32367:128:1:52:N,N,K:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:128:1:48:M1260,N,N,S:T;"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Xbox 360" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="" author="xnih13@gmail.com" last_updated="2014-06-23">
