@@ -1,7 +1,7 @@
 {
   "v": "1",
   "id": "4ed8569d-19db-4ca7-8f31-4ed562ddf3f2",
-  "rev": 4,
+  "rev": 6,
   "name": "Satori",
   "summary": "Satori log file processing pipeline and rules",
   "description": "",
@@ -15,7 +15,7 @@
         "name": "pipeline",
         "version": "1"
       },
-      "id": "2b0d6fdd-a6cc-48ff-8978-aa9909df3d21",
+      "id": "97755ef3-fb8b-4f70-aa70-fd7f323fbde4",
       "data": {
         "title": {
           "@type": "string",
@@ -27,7 +27,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "pipeline \"satori-raw\"\nstage 0 match either\nrule \"process_when_message_contains_DHCP\"\nrule \"process_when_message_contains_TCP\"\nrule \"process_when_message_contains_USERAGENT\"\nrule \"process_when_message_contains_SMBNATIVE_NativeLanMan\"\nrule \"process_when_message_contains_SMBNATIVE_NativeOS\"\nrule \"process_when_message_contains_HTTPSERVER\"\nstage 1 match either\nrule \"convert_timestamp_from_log\"\nend"
+          "@value": "pipeline \"satori-raw\"\nstage 1 match either\nrule \"convert_timestamp_from_log\"\nstage 0 match either\nrule \"process_when_message_contains_DHCP\"\nrule \"process_when_message_contains_TCP\"\nrule \"process_when_message_contains_USERAGENT\"\nrule \"process_when_message_contains_SMBNATIVE_NativeLanMan\"\nrule \"process_when_message_contains_SMBNATIVE_NativeOS\"\nrule \"process_when_message_contains_HTTPSERVER\"\nrule \"process_when_message_contains_SMBBROWSER\"\nend"
         },
         "connected_streams": [
           {
@@ -49,11 +49,11 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "f5f8bcbb-9d6f-46f4-aeb9-58ef9de127ae",
+      "id": "ce483da6-4391-4c33-ad85-cafd2841e1ba",
       "data": {
         "title": {
           "@type": "string",
-          "@value": "process_when_message_contains_TCP"
+          "@value": "process_when_message_contains_HTTPSERVER"
         },
         "description": {
           "@type": "string",
@@ -61,7 +61,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"process_when_message_contains_TCP\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";TCP;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:tcp_flags};%{DATA:tcp_signature};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"process_when_message_contains_HTTPSERVER\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";HTTPSERVER;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:web_server};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
@@ -77,11 +77,11 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "187861a2-d826-4cf2-ba4d-3d6d901ecca6",
+      "id": "a4a200a2-c321-4e4f-b0d0-fcb06f9ffdd6",
       "data": {
         "title": {
           "@type": "string",
-          "@value": "process_when_message_contains_SMBNATIVE_NativeOS"
+          "@value": "process_when_message_contains_SMBBROWSER"
         },
         "description": {
           "@type": "string",
@@ -89,7 +89,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"process_when_message_contains_SMBNATIVE_NativeOS\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeOS\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:native_name};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"process_when_message_contains_SMBBROWSER\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBBROWSER;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:smbbrowser_OS};%{DATA:smbbrowser_browser};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
@@ -105,35 +105,7 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "b1c5abb8-9495-4a1d-b5ab-74f30e921b30",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "process_when_message_contains_USERAGENT"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"process_when_message_contains_USERAGENT\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";USERAGENT;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:useragent};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=4.0.1+6a0cc0b"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "21dbb921-e23b-4b2c-969b-14d4f3a3d850",
+      "id": "55093fd4-7357-4144-afba-3e8795972dee",
       "data": {
         "title": {
           "@type": "string",
@@ -161,7 +133,63 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "6e8be4a1-a64e-4ac6-adaa-03a5352e6398",
+      "id": "08276c5b-a248-419b-b357-2a47ad883cb0",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "process_when_message_contains_SMBNATIVE_NativeOS"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"process_when_message_contains_SMBNATIVE_NativeOS\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeOS\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:native_name};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=4.0.1+6a0cc0b"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "a5a34661-6104-45af-ab5a-c52600053f1d",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "convert_timestamp_from_log"
+        },
+        "description": {
+          "@type": "string",
+          "@value": "convert_timestamp_from_log"
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"convert_timestamp_from_log\"\nwhen\n  has_field(\"timestamp_remote\")\nthen\n  // the following date format assumes there's no time zone in the string\n  let s = split(\"\\\\.\", to_string($message.timestamp_remote));\n  let new_date = parse_date(to_string(s[0]), \"yyyy-MM-dd'T'HH:mm:ss\");\n  set_field(\"timestamp\", new_date);\n  remove_field(\"timestamp_remote\");\nend\n\n"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=4.0.1+6a0cc0b"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "4b99cef0-5274-4e64-8f91-df99937e1968",
       "data": {
         "title": {
           "@type": "string",
@@ -189,19 +217,19 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "0007d2ed-64ae-4f18-a014-dddc8b472095",
+      "id": "7b3e5edb-ec88-489d-96d2-e4fd8d6ffa31",
       "data": {
         "title": {
           "@type": "string",
-          "@value": "convert_timestamp_from_log"
+          "@value": "process_when_message_contains_USERAGENT"
         },
         "description": {
           "@type": "string",
-          "@value": "convert_timestamp_from_log"
+          "@value": ""
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"convert_timestamp_from_log\"\nwhen\n  has_field(\"timestamp_remote\")\nthen\n  // the following date format assumes there's no time zone in the string\n  let new_date = parse_date(to_string($message.timestamp_remote), \"yyyy-MM-dd'T'HH:mm:ss\");\n  set_field(\"timestamp\", new_date);\n  remove_field(\"timestamp_remote\");\nend\n\n"
+          "@value": "rule \"process_when_message_contains_USERAGENT\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";USERAGENT;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:useragent};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
@@ -217,11 +245,11 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "81cd2fa7-086f-48fa-a111-53f28909a3e9",
+      "id": "0b0883ed-5511-430f-8731-1d557682e75d",
       "data": {
         "title": {
           "@type": "string",
-          "@value": "process_when_message_contains_HTTPSERVER"
+          "@value": "process_when_message_contains_TCP"
         },
         "description": {
           "@type": "string",
@@ -229,7 +257,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"process_when_message_contains_HTTPSERVER\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";HTTPSERVER;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:web_server};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"process_when_message_contains_TCP\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";TCP;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:tcp_flags};%{DATA:tcp_signature};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
