@@ -120,7 +120,7 @@ def main():
   if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing parameters into a procedure sucks.
     onlyfiles = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
     for f in onlyfiles:
-      print(f, end='\n', flush=True)
+      #print(f, end='\n', flush=True)
       try:
         preader = ppcap.Reader(filename=directory + '/' + f)
         for ts, buf in preader:
