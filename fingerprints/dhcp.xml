@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2020-12-12" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2021-01-06" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -4306,10 +4306,9 @@
                 <test weight="10" matchtype="partial" dhcptype="Inform" dhcpvendorcode="Mod=WorkCentre 7125"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Xerox WorkCentre - 7335" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2020-05-28">
+        <fingerprint name="Xerox WorkCentre - 7335" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2021-01-06">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="ACK" dhcpoptions="53,54,1,43,6,15,255"/>
-                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Xerox WorkCentre - 7545" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2019-02-18">
