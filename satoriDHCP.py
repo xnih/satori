@@ -1,6 +1,7 @@
 import untangle
 import struct
 from pathlib import Path
+from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
 from pypacker.layer567 import dhcp
 from datetime import datetime
@@ -17,7 +18,13 @@ from pypacker import pypacker
 #
 
 
-def dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList):
+def dhcpProcess(pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
   ip4 = pkt.upper_layer
   udp1 = pkt.upper_layer.upper_layer
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
@@ -48,13 +55,16 @@ def dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, R
   elif messageType == 'Offer':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(OfferOptionsExactList, OfferOptionsPartialList, options)
-      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, options, osGuessOptions), end='\n', flush=True)
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(OfferOption55ExactList, OfferOption55PartialList, option55)
-      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, option55, osGuessOption55), end='\n', flush=True)
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(OfferVendorCodeExactList, OfferVendorCodePartialList, vendorCode)
-      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
   elif messageType == 'Request':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(RequestOptionsExactList, RequestOptionsPartialList, options)
@@ -78,23 +88,29 @@ def dhcpProcess(pkt, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, R
   elif messageType == 'ACK':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(ACKOptionsExactList, ACKOptionsPartialList, options)
-      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions))
+#      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions))
+      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, options, osGuessOptions), end='\n', flush=True)
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(ACKOption55ExactList, ACKOption55PartialList, option55)
-      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, ip4.src_s, src_mac, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(ACKVendorCodeExactList, ACKVendorCodePartialList, vendorCode)
-      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
   elif messageType == 'NAK':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(NAKOptionsExactList, NAKOptionsPartialList, options)
-      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, options, osGuessOptions), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;Options;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, options, osGuessOptions), end='\n', flush=True)
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(NAKOption55ExactList, NAKOption55PartialList, option55)
-      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, option55, osGuessOption55), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;Option55;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, option55, osGuessOption55), end='\n', flush=True)
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(NAKVendorCodeExactList, NAKVendorCodePartialList, vendorCode)
-      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+#      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, clientAddr, clientMAC, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
+      print("%s;%s;%s;DHCP;%s;VendorCode;%s;%s" % (timeStamp, ip4.src_s, src_mac, messageType, vendorCode, osGuessVendorCode), end='\n', flush=True)
   elif messageType == 'Release':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(ReleaseOptionsExactList, ReleaseOptionsPartialList, options)
