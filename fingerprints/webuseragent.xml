@@ -3762,6 +3762,7 @@
                 <test weight="7" matchtype="partial" webuseragent="6.1.7601"/>
                 <test weight="5" matchtype="exact" webuseragent="Windows;6.1;SP1.0"/>
                 <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.1"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
@@ -3775,6 +3776,7 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
                 <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.8"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.2"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
@@ -3838,9 +3840,10 @@
                 <test weight="10" matchtype="partial" webuseragent="Windows Phone 8.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2000" os_name="Windows Server 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
+        <fingerprint name="Windows Server 2000" os_name="Windows Server 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 5.0"/>
+                <test weight="5" matchtype="partial" webuseragent="Microsoft-CryptoAPI/5.131.2195"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2003" os_name="Windows Server 2003" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2003" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
@@ -3848,9 +3851,10 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 5.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2008" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2011-12-31">
+        <fingerprint name="Windows Server 2008" os_name="Windows Server 2008" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.0"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2008 R2" os_name="Windows Server 2008 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
@@ -3895,6 +3899,7 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.0"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.0"/>
                 <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
+                <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
@@ -3904,6 +3909,8 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows; XP;"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/6.7"/>
                 <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
+                <test weight="5" matchtype="partial" webuseragent="Microsoft-CryptoAPI/5.131.2600"/>
+                <test weight="5" matchtype="partial" webuseragent="Microsoft-CryptoAPI/5.131.3790"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="WordPress 4.9" os_name="" os_class="" os_vendor="" os_url="" device_type="WordPress Server" device_vendor="WordPress" device_url="https://www.wordpress.org" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
