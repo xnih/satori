@@ -1,7 +1,7 @@
 {
   "v": "1",
   "id": "4ed8569d-19db-4ca7-8f31-4ed562ddf3f3",
-  "rev": 7,
+  "rev": 8,
   "name": "Satori",
   "summary": "Satori log file processing pipeline and rules",
   "description": "",
