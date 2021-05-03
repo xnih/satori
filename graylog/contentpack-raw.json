@@ -145,7 +145,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"satori-SMBNATIVE_NativeOS\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeOS\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:native_name};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"satori-SMBNATIVE_NativeOS\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeOS\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:test_type2};%{DATA:native_name};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
@@ -201,7 +201,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"satori-SMBNATIVE_NativeLanMan\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeLanMan\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:native_lanman};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"satori-SMBNATIVE_NativeLanMan\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";SMBNATIVE;NativeLanMan\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:test_type2};%{DATA:native_lanman};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
