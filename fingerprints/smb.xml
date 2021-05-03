@@ -16,11 +16,12 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2020-12-10" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2021-05-03" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
-        <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-10">
+        <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="FXNIC 0.01"/>
+                <test weight="5" matchtype="exact" smbnativelanman="FXNIC0.01"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
@@ -29,10 +30,11 @@
                 <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
                 <test weight="7" matchtype="exact" smbnativename="MacOSX"/>
                 <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
+                <test weight="5" matchtype="exact" smbnativename="Darwin"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.10" os_name="Yosemite" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -349,7 +351,7 @@
                 <test weight="7" matchtype="exact" smbnativelanman="Windows 2000 5.0"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 7 Enterprise 7600"/>
                 <test weight="7" matchtype="exact" smbnativelanman="Windows 7 Enterprise 6.1"/>
@@ -360,6 +362,7 @@
                 <test weight="7" matchtype="partial" smbnativelanman="6.1"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows 7 Ultimate 7100"/>
                 <test weight="10" matchtype="exact" smbnativelanman="Windows 7 Ultimate 6.1"/>
+                <test weight="7" matchtype="exact" smbnativename="6.1"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -533,10 +536,13 @@
                 <test weight="5" matchtype="exact" smbnativelanman="Windows 2002 5.1"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Xerox WorkCentre - 6xxx" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-10">
+        <fingerprint name="Xerox WorkCentre - 6xxx" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="FXNICOS 0.1"/>
                 <test weight="5" matchtype="exact" smbnativename="FXNIC 0.01"/>
+                <test weight="5" matchtype="exact" smbnativelanman="FXNIC 0.01"/>
+                <test weight="5" matchtype="exact" smbnativelanman="SMB 1.0"/>
+                <test weight="5" matchtype="exact" smbnativename="S 1.00"/>
             </smb_tests>
         </fingerprint>
     </fingerprints>
