@@ -16,8 +16,13 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2020-12-24" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2021-05-03" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Amazon Echo Dot" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Echo_Dot"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Amazon Echo Show" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Echo_Show"/>
@@ -536,6 +541,12 @@
                 <test weight="7" matchtype="partial" webuseragent="watchOS/7.2"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Apple Watch OS 7.3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Watch OS,7.3"/>
+                <test weight="7" matchtype="partial" webuseragent="watchOS/7.3"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Apple Watch Series 1" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Watch2,6"/>
@@ -604,7 +615,7 @@
                 <test weight="5" matchtype="partial" webuseragent="BlackBerry"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Blizzard Battle.net" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="www.blizzard.com" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Blizzard Battle.net" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Blizzard" device_url="www.blizzard.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Battle.net"/>
             </webuseragent_tests>
@@ -785,10 +796,11 @@
                 <test weight="5" matchtype="partial" webuseragent="AFTSSS"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Fire TV Stick 4K - 1st Gen (2018)" os_name="Fire OS 6" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
+        <fingerprint name="Fire TV Stick 4K - 1st Gen (2018)" os_name="Fire OS 6" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Amazon AFTMM"/>
                 <test weight="5" matchtype="partial" webuseragent="AFTMM"/>
+                <test weight="7" matchtype="partial" webuseragent="FIRETVSTICK2018"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Fire TV Stick Basic and 2nd Gen (2016-2019)" os_name="Fire OS 5" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
@@ -806,6 +818,11 @@
         <fingerprint name="FreeBSD" os_name="FreeBSD" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="unknown version" author="xnih13@gmail.com" last_updated="2011-12-31">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="FreeBSD"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Google Pixel" os_name="" os_class="Android" os_vendor="Google" os_url="" device_type="Mobile Phone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Google/Pixel"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Grendel Scan" os_name="Grendel" os_class="Scanner" os_vendor="Grendel" os_url="http://grendel-scan.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
@@ -2641,22 +2658,30 @@
                 <test weight="5" matchtype="partial" webuseragent="iPod; U; CPU OS 6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Jungle Disk" os_name="" os_class="" os_vendor="" os_url="" device_type="Cloud Backup" device_vendor="https://support.jungledisk.com" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Jungle Disk" os_name="" os_class="" os_vendor="" os_url="" device_type="Cloud Backup" device_vendor="" device_url="https://support.jungledisk.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="exact" webuseragent="Jungle Disk Workgroup HTTP/86"/>
                 <test weight="5" matchtype="partial" webuseragent="Jungle Disk Workgroup"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="LabVIEW" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="https://www.ni.com/en-us/shop/labview.html" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Kindle 2.0" os_name="" os_class="" os_vendor="" os_url="" device_type="eReader" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="kindle/2.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="LabVIEW" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="https://www.ni.com/en-us/shop/labview.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="exact" webuseragent="National Instruments LabVIEW"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
+        <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Linux i686"/>
                 <test weight="5" matchtype="partial" webuseragent="Linux x86_64"/>
                 <test weight="5" matchtype="partial" webuseragent="; Linux"/>
+                <test weight="5" matchtype="partial" webuseragent="linux-gnu"/>
+                <test weight="5" matchtype="partial" webuseragent="Linux arm"/>
+                <test weight="5" matchtype="partial" webuseragent="Linux;"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-01-09">
@@ -3282,16 +3307,17 @@
                 <test weight="10" matchtype="partial" webuseragent="OS X,10.9.5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 11.0.1" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-15">
+        <fingerprint name="Mac OS X - 11.0.1" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="OS X 11_0_1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X 11.0.1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X/11.0.1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X,11.0.1"/>
                 <test weight="10" matchtype="partial" webuseragent="OS X Version 11.0.1"/>
+                <test weight="10" matchtype="partial" webuseragent="macOS,11.0.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 11.0.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Mac OS X - 11.0.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 11_0_"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 11.0."/>
@@ -3299,9 +3325,10 @@
                 <test weight="7" matchtype="partial" webuseragent="OS X,11.0."/>
                 <test weight="7" matchtype="partial" webuseragent="OS X Version 11.0."/>
                 <test weight="7" matchtype="partial" webuseragent="macOS, 11.0"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,11.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 11.1.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Mac OS X - 11.1.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="OS X 11_1__"/>
                 <test weight="7" matchtype="partial" webuseragent="OS X 11.1."/>
@@ -3309,9 +3336,43 @@
                 <test weight="7" matchtype="partial" webuseragent="OS X,11.1."/>
                 <test weight="7" matchtype="partial" webuseragent="OS X Version 11.1."/>
                 <test weight="7" matchtype="partial" webuseragent="macOS, 11.1"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,11.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 11.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Mac OS X - 11.2.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11_2__"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11.2."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/11.2."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,11.2."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 11.2."/>
+                <test weight="7" matchtype="partial" webuseragent="macOS, 11.2"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,11.2"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 11.3.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11_3__"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/11.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,11.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 11.3."/>
+                <test weight="7" matchtype="partial" webuseragent="macOS, 11.3"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,11.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 11.4.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11_4__"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 11.4."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/11.4."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,11.4."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 11.4."/>
+                <test weight="7" matchtype="partial" webuseragent="macOS, 11.4"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,11.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 11.x" os_name="Catalina" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="OS X 11"/>
                 <test weight="5" matchtype="partial" webuseragent="OS X 11"/>
@@ -3319,6 +3380,7 @@
                 <test weight="5" matchtype="partial" webuseragent="OS X,11"/>
                 <test weight="5" matchtype="partial" webuseragent="OS X Version 11"/>
                 <test weight="5" matchtype="partial" webuseragent="macOS, 11."/>
+                <test weight="5" matchtype="partial" webuseragent="macOS,11."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="McAfee Antivirus" os_name="" os_class="" os_vendor="" os_url="" device_type="antivirus" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
@@ -3408,7 +3470,7 @@
                 <test weight="5" matchtype="partial" webuseragent="PlexMediaServer"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Print Tracker" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="https://www.printtrackerpro.com/" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Print Tracker" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="https://www.printtrackerpro.com/" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="PrintFleet-DCA"/>
             </webuseragent_tests>
@@ -3448,9 +3510,19 @@
                 <test weight="5" matchtype="partial" webuseragent="RHSM/1.0"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Roku" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="2" matchtype="partial" webuseragent="RokuOS"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Roku 3" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2013-05-27">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Roku/DVP-3.1"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku DVP 10" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Roku/DVP-10"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Roku DVP 8" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -3463,10 +3535,36 @@
                 <test weight="5" matchtype="partial" webuseragent="Roku/DVP-9"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Samsung SmartTV" os_name="VDLinux 2.6" os_class="Linux" os_vendor="Samsung" os_url="http://developer.samsung.com/devices/tv-specs" device_type="SmartTV" device_vendor="Samsung" device_url="http://developer.samsung.com/devices/tv-specs" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Roku Express 3930" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="roku;3930"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku OS 10" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="RokuOS/10"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku OS 9" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="RokuOS/9"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku SmartTV Series" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="RKU-"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku Soundbar 9101" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="roku;9101"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Samsung SmartTV" os_name="VDLinux 2.6" os_class="Linux" os_vendor="Samsung" os_url="http://developer.samsung.com/devices/tv-specs" device_type="SmartTV" device_vendor="Samsung" device_url="http://developer.samsung.com/devices/tv-specs" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="[TV]Samsung"/>
                 <test weight="5" matchtype="partial" webuseragent="Samsung;SmartTV"/>
+                <test weight="5" matchtype="partial" webuseragent="samsung"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="SCCM Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
@@ -3477,6 +3575,11 @@
         <fingerprint name="Shibboleth IDP 3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="ShibbolethIdp/3."/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Shibboleth IDP 4.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="ShibbolethIdp/4."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Slackware" os_name="Linux" os_class="Linux" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -3492,6 +3595,11 @@
         <fingerprint name="Solidworks" os_name="" os_class="" os_vendor="" os_url="" device_type="software" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="exact" webuseragent="sldIM"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Sony Bravia Android TV (2017)" os_name="VDLinux 2.6" os_class="Linux" os_vendor="Sony" os_url="" device_type="SmartTV" device_vendor="Samsung" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="SONYANDROIDTV2017"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Spiceworks" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
@@ -3615,12 +3723,26 @@
                 <test weight="7" matchtype="partial" webuseragent="(18363)"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Windows 10 - 2004" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="10.0.19041"/>
+                <test weight="7" matchtype="partial" webuseragent="(build 19041)"/>
+                <test weight="7" matchtype="partial" webuseragent="(19041)"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Windows 10 - 2016 LTSB" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Windows 10 Enterprise 2016 LTSB (build 14393)"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2020-05-13">
+        <fingerprint name="Windows 10 - 20H2" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="10.0.19042"/>
+                <test weight="7" matchtype="partial" webuseragent="(build 19042)"/>
+                <test weight="7" matchtype="partial" webuseragent="(19042)"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Windows 7" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.1"/>
@@ -3632,15 +3754,17 @@
                 <test weight="5" matchtype="partial" webuseragent="WinNT 6.1"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.5"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.1"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2020-05-14">
+        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="cycocrew@orange.fr" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="6.1.7601"/>
                 <test weight="5" matchtype="exact" webuseragent="Windows;6.1;SP1.0"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-14">
+        <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.2"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.2"/>
@@ -3650,9 +3774,10 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows; 8;"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows (6.2"/>
                 <test weight="7" matchtype="partial" webuseragent="6.2.9200"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.8"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
+        <fingerprint name="Windows 8.1" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.3"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.3"/>
@@ -3660,6 +3785,7 @@
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/7.7"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft-CryptoAPI/6.3"/>
                 <test weight="7" matchtype="partial" webuseragent="6.3.9600"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.8"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Windows 98" os_name="Windows 98" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-10">
@@ -3763,19 +3889,21 @@
                 <test weight="5" matchtype="partial" webuseragent="Windows-Update-Agent/10"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
+        <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 6.0"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows/6.0"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows 6.0"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
+        <fingerprint name="Windows XP" os_name="Windows XP" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-xp" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Windows XP"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows NT 5.1"/>
                 <test weight="5" matchtype="partial" webuseragent="Windows; XP;"/>
                 <test weight="5" matchtype="exact" webuseragent="Microsoft BITS/6.7"/>
+                <test weight="2" matchtype="exact" webuseragent="Microsoft BITS/7.6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="WordPress 4.9" os_name="" os_class="" os_vendor="" os_url="" device_type="WordPress Server" device_vendor="WordPress" device_url="https://www.wordpress.org" comments="" author="xnih13@gmail.com" last_updated="2018-11-10">
@@ -3818,17 +3946,23 @@
                 <test weight="5" matchtype="partial" webuseragent="WordPress/5.6"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="WordPress 5.7.x" os_name="" os_class="" os_vendor="" os_url="" device_type="WordPress Server" device_vendor="WordPress" device_url="https://www.wordpress.org" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="WordPress/5.7"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Xbox" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="XBox"/>
                 <test weight="5" matchtype="partial" webuseragent="Xbox"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Xbox One" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="xnih13@gmail.com" last_updated="2020-05-13">
+        <fingerprint name="Xbox One" os_name="" os_class="" os_vendor="" os_url="" device_type="Game Console" device_vendor="Microsoft Corp." device_url="http://www.xbox.com" comments="Game Consoles" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="XboxOne"/>
                 <test weight="5" matchtype="partial" webuseragent="Xbox One"/>
                 <test weight="5" matchtype="partial" webuseragent="xbox_one"/>
+                <test weight="5" matchtype="partial" webuseragent="NFXONE-03-"/>
             </webuseragent_tests>
         </fingerprint>
     </fingerprints>
