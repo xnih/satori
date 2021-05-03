@@ -311,7 +311,7 @@ def decodeTCPOptions(opts):
 #      res = res + ','
     else:
       res = res + 'U,'
-      print('unknown TCP Options')
+      #print('unknown TCP Options')
 
 
 #    x=len(i.body_bytes)
