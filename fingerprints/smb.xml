@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2021-05-03" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2021-05-18" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
@@ -341,6 +341,14 @@
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 19042"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise 19042"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 19042"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10 - 21H1" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="19041" author="xnih13@gmail.com" last_updated="2021-05-18">
+            <smb_tests>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Pro 19043"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Home 19043"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Enterprise 19043"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows 10 Education 19043"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 2000" os_name="Windows 2000" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
