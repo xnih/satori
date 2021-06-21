@@ -280,8 +280,11 @@ try:
   #need to eventually do a check to make sure both readpcap and interface are not both set!
   for opt, val in opts:
     if opt in ('-r', '--read'):
+      if interface != '':
+        print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
+        sys.exit()
       if not os.path.isfile(val):
-        print ('\nFile "%s" does not appear to exist, please verify pcap file name.' % val)
+        print('\nFile "%s" does not appear to exist, please verify pcap file name.' % val)
         sys.exit()
       else:
         proceed = True
@@ -289,6 +292,9 @@ try:
     if opt in ('-m', '--modules'):
       modules = val
     if opt in ('-i', '--interface'):
+      if readpcap != '':
+        print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
+        sys.exit()
       interface = val
       proceed = True
     if opt in ('-l', '--log'):  #not implemented yet
