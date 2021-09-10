@@ -197,7 +197,7 @@ def TCPFingerprintLookup(exactList, partialList, value):
 def detectOddities(_ip, _ip_hlen, _ip_type, _tcp_hlen, _tcp_flags, _tcp, _tcp_options, _options_er):
 
   odd = ''
-  if _tcp_options[:-1] == 'E':
+  if _tcp_options[-1] == 'E':
     odd = odd + 'P'
 
   if _ip.id == 0:
