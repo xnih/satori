@@ -104,19 +104,19 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="32767:255:1:64:M1460,N,N,S,N,W0,N,N,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Apple TV" os_name="Apple TV" os_class="Apple TV OS" os_vendor="Apple" os_url="http://www.apple.com/appletv/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-07-11">
+        <fingerprint name="Apple TV" os_name="Apple TV" os_class="Apple TV OS" os_vendor="Apple" os_url="http://www.apple.com/appletv/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W0,N,N,T,S,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W0,N,N,T,S,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 14.0.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-12-16">
+        <fingerprint name="Apple TV OS 14.0.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 14.2.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-12-16">
+        <fingerprint name="Apple TV OS 14.2.x" os_name="iOS 14" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="AXIS 206 Network Camera" os_name="Linux 2.6.14" os_class="Linux" os_vendor="AXIS" os_url="https://www.axis.com/en-us/products/axis-206" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-07">
@@ -129,54 +129,54 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="511:64:1:44:M1200:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Big-IP F5 LB 13.1" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Big-IP F5 LB 13.1" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:60:M1460,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:48:M1460,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:48:M1460,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4098:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4098:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3840:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3900:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3900:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3978:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3996:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4020:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4050:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4056:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4056:255:1:60:M1380,N,N,T,S,E,E:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:60:M1460,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:48:M1460,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:48:M1460,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4098:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4098:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3840:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3900:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3900:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3978:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3996:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4020:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4050:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4056:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4056:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:44:M1380:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:44:M1460:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:48:M1460,S,E,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:48:M1460,S,E,E:PA"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:56:M1380,N,N,T:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3564:255:1:60:M1460,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3600:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3720:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3750:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:60:M1380,N,N,T,S,E,E:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3789:255:1:48:M1460,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:48:M1380,S,E,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:60:M1460,N,N,T,S,E,E:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3564:255:1:60:M1460,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3600:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3720:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3750:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:60:M1380,N,N,T,S,E,E:PAT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3789:255:1:48:M1460,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:48:M1380,S,E,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4080:255:1:60:M1460,N,N,T,S,E,E:PAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="1608:255:1:44:M1380:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3867:255:1:48:M1380,S,E,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3867:255:1:48:M1380,S,E,E:PA"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4008:255:1:56:M1380,N,N,T:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="64240:128:0:44:M1460:A"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Big-IP F5 Load Balancer Unknown Version" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Big-IP F5 Load Balancer Unknown Version" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4176:255:1:60:M1392,N,N,T,S,E,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4176:255:1:60:M1392,N,N,T,S,E,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Big-IP Load Balancer 1500" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2010-07-11">
+        <fingerprint name="Big-IP Load Balancer 1500" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:48:M1380,S,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:48:M1460,S,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="3780:255:1:48:M1380,S,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:255:1:48:M1460,S,E:PA"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Big-IP Load Balancer D39" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="F5" device_url="http://www.f5.com" comments="" author="xnih13@gmail.com" last_updated="2010-07-11">
@@ -350,13 +350,13 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:44:M1460:ZA"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="ESX 6.5" os_name="ESX 6.5" os_class="Linux" os_vendor="VMware, Inc." os_url="http://www.vmware.com" device_type="" device_vendor="" device_url="" comments="may just be generic linux fingerprint, not esx, need more tests, builds 8294253, 7388607, 8935087, 10175896 " author="xnih13@gmail.com" last_updated="2018-11-08">
+        <fingerprint name="ESX 6.5" os_name="ESX 6.5" os_class="Linux" os_vendor="VMware, Inc." os_url="http://www.vmware.com" device_type="" device_vendor="" device_url="" comments="may just be generic linux fingerprint, not esx, need more tests, builds 8294253, 7388607, 8935087, 10175896 " author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1380,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1380,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:PT"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1380,N,W9,S,T:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,N,W9,S,T:."/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:52:M1380,N,W9,S,E,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:52:M1380,N,W9,S,E,E:PA"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:60:M1380,N,W9,S,T:AT"/>
             </tcp_tests>
         </fingerprint>
@@ -377,7 +377,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="57344:64:1:60:M1460,N,W0,N,N,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="FreeBSD 3.4" os_name="FreeBSD 3.4" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+        <fingerprint name="FreeBSD 3.4" os_name="FreeBSD 3.4" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="17520:64:1:44:M1460:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="16430:64:1:44:M1460:A"/>
@@ -386,24 +386,24 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16992:64:1:44:M1460:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:64:1:44:M1460:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:64:1:44:M1460:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="FreeBSD 4.2 thru 4" os_name="FreeBSD 4" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+        <fingerprint name="FreeBSD 4.2 thru 4" os_name="FreeBSD 4" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:60:1:44:M1460:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:44:M1460:A"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="17520:64:1:44:M1460:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:64:1:44:M1460:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="FreeBSD 6.x" os_name="FreeBSD 6" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-20">
+        <fingerprint name="FreeBSD 6.x" os_name="FreeBSD 6" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:P"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="FreeBSD 7.0" os_name="FreeBSD 7" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-20">
@@ -411,11 +411,11 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,N,W3,S,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="FreeBSD 7.1" os_name="FreeBSD 7" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-12">
+        <fingerprint name="FreeBSD 7.1" os_name="FreeBSD 7" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E:P"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:60:M1460,N,W3,S,T:AT"/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1460,S,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1460,S,E:PA"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="FreeBSD 7.2" os_name="FreeBSD 7" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-09-20">
@@ -423,9 +423,9 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,N,W3,S,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="FreeNAS 0.7" os_name="FreeNAS" os_class="FreeBSD" os_vendor="FreeNAS" os_url="http://www.freenas.org/" device_type="" device_vendor="" device_url="" comments="FreeNAS 0.7RC1" author="xnih13@gmail.com" last_updated="2009-09-15">
+        <fingerprint name="FreeNAS 0.7" os_name="FreeNAS" os_class="FreeBSD" os_vendor="FreeNAS" os_url="http://www.freenas.org/" device_type="" device_vendor="" device_url="" comments="FreeNAS 0.7RC1" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:PAT"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Google Home/Nest" os_name="" os_class="" os_vendor="" os_url="" device_type="Home Assistant" device_vendor="Google" device_url="https://home.google.com" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -512,19 +512,19 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5840:64:1:52:M1460,N,N,S,N,W5:ZA"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="iOS 12.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="iOS 12.x" os_name="iOS 12" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W7,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W7,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="iOS 13.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="iOS 13.x" os_name="iOS 13" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W7,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="10240:64:1:64:M1460,N,W3,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1388,N,W7,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W3,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W7,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="10240:64:1:64:M1460,N,W3,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1388,N,W7,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W3,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="iOS 6.x" os_name="iOS 6" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -558,7 +558,7 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5840:64:1:52:M1460,N,N,S,N,W0:A"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Linux 2.2.x" os_name="Linux 2.2" os_class="Linux" os_vendor="" os_url="http://www.kernel.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-15">
+        <fingerprint name="Linux 2.2.x" os_name="Linux 2.2" os_class="Linux" os_vendor="" os_url="http://www.kernel.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="32696:64:1:44:M536:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="32595:64:1:60:M265,N,N,T,N,W0:AT"/>
@@ -579,13 +579,13 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="32120:60:1:60:M1460,S,T,N,W0:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16060:64:1:60:M1460,S,T,N,W0:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,S,T,N,W0:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Linux 2.4.x" os_name="Linux 2.4" os_class="Linux" os_vendor="" os_url="http://www.kernel.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-15">
+        <fingerprint name="Linux 2.4.x" os_name="Linux 2.4" os_class="Linux" os_vendor="" os_url="http://www.kernel.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="31856:64:1:60:M1460,S,T,N,W0:ZAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="16060:64:1:60:M1460,S,T,N,W0:AT"/>
@@ -599,13 +599,13 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="31856:64:1:60:M1460,S,T,N,W0:Z"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="31856:64:1:60:M1460,S,T,N,W0:ZT"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16060:64:1:60:M1460,S,T,N,W0:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,E:PZ"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:52:M1460,N,N,S,N,W0:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,S,T,N,W1:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,S,T,N,W0:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="5840:64:1:60:M1460,S,T,N,W0:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:P"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Linux 2.6.x" os_name="Linux 2.6" os_class="Linux" os_vendor="" os_url="http://www.kernel.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
@@ -663,70 +663,70 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="10000:64:1:60:M1460,N,W0,N,N,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.10.x" os_name="Mac OS X 10.10" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Mac OS X 10.10.x" os_name="Mac OS X 10.10" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.11.x" os_name="Mac OS X 10.11" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X 10.11.x" os_name="Mac OS X 10.11" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1380,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.12.x" os_name="Mac OS X 10.12" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X 10.12.x" os_name="Mac OS X 10.12" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:T"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:PT"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.13.x" os_name="Mac OS X 10.13" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X 10.13.x" os_name="Mac OS X 10.13" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1380,N,W5,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1380,N,W5,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.14.x" os_name="Mac OS X 10.14" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X 10.14.x" os_name="Mac OS X 10.14" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1380,N,W5,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:Z"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1380,N,W5,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W5,N,N,T,S,E,E:PZ"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.15.x" os_name="Mac OS X 10.15" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X 10.15.x" os_name="Mac OS X 10.15" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:PZ"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.5" os_name="Mac OS X 10.5" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-05-14">
+        <fingerprint name="Mac OS X 10.5" os_name="Mac OS X 10.5" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W3,N,N,T,S,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W3,N,N,T,S,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X 10.9.x" os_name="Mac OS X 10.9" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Mac OS X 10.9.x" os_name="Mac OS X 10.9" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:T"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:16:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:32:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:48:M1460,S,E,E:PT"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:60:1:64:M1460,N,W4,N,N,T,S,E,E:P"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Minolta Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Minolta" device_url="http://www.konicaminolta.com" comments="" author="Thierry@Zoller.lu" last_updated="2008-10-20">
@@ -794,7 +794,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:52:M1380,N,N,S,N,W7:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="OpenBSD 2.6-2.9" os_name="OpenBSD 2" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
+        <fingerprint name="OpenBSD 2.6-2.9" os_name="OpenBSD 2" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="17520:64:0:44:M1460:A"/>
                 <test weight="5" matchtype="partial" tcpflag="SA" tcpsig="17376:64:*:64:M1460,N,N,S,N,W0,N,N,T:AT"/>
@@ -805,10 +805,10 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="17376:64:0:64:M1448,N,N,S,N,W0,N,N,T:."/>
                 <test weight="5" matchtype="partial" tcpflag="S" tcpsig="16384:64:*:64:M1460,N,N,S,N,W0,N,N,T:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:64:0:64:M512,N,N,S,N,W0,N,N,T:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:."/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="4096:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="3072:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="2048:60:0:60:W10,N,M265,T,E:P"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="1024:60:0:60:W10,N,M265,T,E:P"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="OpenBSD 3.8" os_name="OpenBSD 3.8" os_class="OpenBSD" os_vendor="OpenBSD" os_url="http://www.openbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">
@@ -821,17 +821,17 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="16384:64:1:64:M1460,N,N,S,N,W0,N,N,T:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="PC-BSD 1.2-1.5" os_name="FreeBSD 6.1-6.3" os_class="FreeBSD" os_vendor="PC-BSD" os_url="http://www.pcbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-02-19">
+        <fingerprint name="PC-BSD 1.2-1.5" os_name="FreeBSD 6.1-6.3" os_class="FreeBSD" os_vendor="PC-BSD" os_url="http://www.pcbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1460,S,E:A"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1460,S,E:PA"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W1,N,N,T,S,E:P"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="PC-BSD 7.x" os_name="FreeBSD 7" os_class="Unix" os_vendor="PC-BSD" os_url="http://www.pcbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2008-10-20">
+        <fingerprint name="PC-BSD 7.x" os_name="FreeBSD 7" os_class="Unix" os_vendor="PC-BSD" os_url="http://www.pcbsd.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="49152:64:1:60:M1460,N,W3,S,T:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:60:M1460,N,W3,S,T:."/>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1260,S,E:A"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:64:1:48:M1260,S,E:PA"/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="PCLinuxOS" os_name="PCLinuxOS" os_class="Linux" os_vendor="PCLinux" os_url="http://www.pclinuxos.com" device_type="" device_vendor="" device_url="" comments="S from 2007" author="xnih13@gmail.com" last_updated="2008-10-20">
@@ -874,9 +874,9 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5840:64:1:52:M1380,N,N,S,N,W7:ZA"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Redhat 6.10" os_name="Redhat 6.10" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-15">
+        <fingerprint name="Redhat 6.10" os_name="Redhat 6.10" os_class="Linux" os_vendor="Red Hat" os_url="http://www.redhat.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:60:M1460,N,N,T,S,E,E:AT"/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4140:255:1:60:M1460,N,N,T,S,E,E:PAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="14600:64:1:52:M1380,N,N,S,N,W7:ZA"/>
             </tcp_tests>
         </fingerprint>
@@ -993,9 +993,9 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W7:."/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Westermo MRD-355" os_name="Westermo MRD-355" os_class="ICS device" os_vendor="Westermo" os_url="https://www.westermo.com/products/routers/wireless-routers/mrd-355" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-12">
+        <fingerprint name="Westermo MRD-355" os_name="Westermo MRD-355" os_class="ICS device" os_vendor="Westermo" os_url="https://www.westermo.com/products/routers/wireless-routers/mrd-355" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2021-09-12">
             <tcp_tests>
-                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8000:64:0:48:M1400,W0,E:."/>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8000:64:0:48:M1400,W0,E:P"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5840:64:1:52:M1420,N,N,S,N,W2:."/>
             </tcp_tests>
         </fingerprint>
@@ -1009,7 +1009,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:48:M1460,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="14393 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+        <fingerprint name="Windows 10 - 1607" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="14393 build" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1380,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:52:M1460,N,W8,N,N,S:T"/>
@@ -1029,7 +1029,7 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="29200:64:1:60:M1460,S,T,N,W7:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:128:1:48:M1460,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="8192:128:1:48:M1460,N,N,S:ZT"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:PZ"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="65535:128:1:48:M1380,N,N,S:A"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:60:M1460,N,W8,N,N,T:AT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="8192:128:1:56:M1460,N,N,T:AT"/>
@@ -1077,12 +1077,12 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64202:128:1:52:M1366,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17763 build" author="xnih13@gmail.com" last_updated="2020-05-26">
+        <fingerprint name="Windows 10 - 1809" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="https://www.microsoft.com/en-us/windows/get-windows-10" device_type="" device_vendor="" device_url="" comments="17763 build" author="xnih13@gmail.com" last_updated="2021-09-12">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:T"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W7:."/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:128:1:52:M1460,N,W8,N,N,S:ZT"/>
-                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:Z"/>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="65535:64:1:64:M1460,N,W6,N,N,T,S,E,E:PZ"/>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:60:1:52:M1460,N,W8,N,N,S:T"/>
             </tcp_tests>
         </fingerprint>
