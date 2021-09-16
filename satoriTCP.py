@@ -27,13 +27,14 @@ def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialL
   ip4 = pkt.upper_layer
   tcp1 = pkt.upper_layer.upper_layer
 
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
+  fingerprint = None
+
   # lets verify we have tcp options and it is a SYN or SYN/ACK packet
   if (len(tcp1.opts) > 0) and ((tcp1.flags == 0x02) or (tcp1.flags == 0x12)):
     p0fSignature = ''
     tcpSignature = ''
     ethercapSignature = ''
-
-    #print("%s:%s -> %s:%s" % (eth[ip.IP].src_s, eth[tcp.TCP].sport, eth[ip.IP].dst_s, eth[tcp.TCP].dport))
 
     [ipVersion, ipHdrLen] = computeIP(ip4.v_hl)
     [ethTTL, ttl] = computeNearTTL(ip4.ttl)
@@ -85,17 +86,16 @@ def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialL
     ettercapSignature = etterWinSize + ':' + etterMSS + ':' + hex(ttl).lstrip("0x") + ':' + ws + ':' # + sack, NOP anywhere, DF, Timestamp Present, Flag of packet (s or a), len
 
     #build Satori tcp Signature
+    #ignore anything that is not S or SA, but should probably clean that up prior to this point!
     tcpSignature = str(winSize) + ':' + str(ttl) + ':' + str(df) + ':' + str(ipHdrLen + tcpHdrLen) + ':' + tcpOpts + ':' + odd
     if tcpFlags == 'S':
       tcpFingerprint = TCPFingerprintLookup(sExactList, sPartialList, tcpSignature)
     elif tcpFlags == 'SA':
       tcpFingerprint = TCPFingerprintLookup(saExactList, saPartialList, tcpSignature)
-    #ignore anything that is not S or SA, but should probably clean that up prior to this point!
-    timeStamp = datetime.utcfromtimestamp(ts).isoformat()
-
-    print("%s;%s;%s;TCP;%s;%s;%s" % (timeStamp, ip4.src_s, src_mac, tcpFlags, tcpSignature, tcpFingerprint), end='\n', flush=True)
+    fingerprint = ip4.src_s + ';'+ src_mac + ';TCP;' + tcpFlags + ';' + tcpSignature + ';' + tcpFingerprint
     #print("%s;%s;00:00;00:00:00:00;p0fv2;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, p0fSignature, p0fv2Fingerprint))
     #print("%s;%s;00:00;00:00:00:00;Ettercap;%s;%s;%s" % (timeStamp, eth[ip.IP].src_s, eth[ethernet.Ethernet].src_s, tcpFlags, ettercapSignature, ettercapFingerprint))
+  return [timeStamp, fingerprint]
 
 
 
@@ -150,8 +150,6 @@ def BuildTCPFingerprintFiles():
             saPartialList[tcpsig] = os + ':' + weight
 
   return [sExactList, saExactList, sPartialList, saPartialList]
-
-
 
 
 def TCPFingerprintLookup(exactList, partialList, value):

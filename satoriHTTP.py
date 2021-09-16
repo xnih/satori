@@ -36,28 +36,30 @@ def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
       hdrServer = hdr[b'Server'].decode("utf-8", "strict")
     if (http1.body_bytes):
       body = http1.body_bytes.decode("utf-8", "strict")
-      i = body.find("Server: ") 
+      i = body.find("Server: ")
       if i > 1:
         v = body[i:]
         i = v.find("\n")
         v = v[:i]
         i = v.find(":")
         bodyServer = v[i+1:].strip()
-  except:
+  except Exception as e:
     pass
+
+  fingerprintHdrServer = None
+  fingerprintBodyServer = None
 
   if (hdrServer != ''):
     httpServerFingerprint = httpServerFingerprintLookup(serverExactList, serverPartialList, hdrServer)
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = hdrUserAgent.replace(';', '|')
-
-    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, ip4.src_s, src_mac, hdrServer, httpServerFingerprint), end='\n', flush=True)
+    fingerprintHdrServer = ip4.src_s + ';' + src_mac + ';HTTPSERVER;' + hdrServer + ';' + httpServerFingerprint
   if (bodyServer != ''):
     httpServerFingerprint = httpServerFingerprintLookup(serverExactList, serverPartialList, bodyServer)
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;HTTPSERVER;%s;%s" % (timeStamp, ip4.src_s, src_mac, bodyServer, httpServerFingerprint), end='\n', flush=True)
-
+    fingerprintBodyServer = ip4.src_s + ';' + src_mac + ';HTTPSERVER;' + bodyServer + ';' + httpServerFingerprint
+  return [timeStamp, fingerprintHdrServer, fingerprintBodyServer]
 
 
 def httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList):
@@ -88,19 +90,24 @@ def httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialLis
         v = v[:i]
         i = v.find(":")
         bodyUserAgent = v[i+1:].strip()
-  except:
+  except Exception as e:
     pass
+
+  fingerprintHdrUserAgent = None
+  fingerprintBodyUserAgent = None
 
   if (hdrUserAgent != ''):
     httpUserAgentFingerprint = httpUserAgentFingerprintLookup(useragentExactList, useragentPartialList, hdrUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = hdrUserAgent.replace(';', '|')
-    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, ip4.src_s, src_mac, changedUserAgent, httpUserAgentFingerprint), end='\n', flush=True)
+    fingerprintHdrUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
   if (bodyUserAgent != ''):
     httpUserAgentFingerprint = httpUserAgentFingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = bodyUserAgent.replace(';', '|')
-    print("%s;%s;%s;USERAGENT;%s;%s" % (timeStamp, ip4.src_s, src_mac, changedUserAgent, httpUserAgentFingerprint), end='\n', flush=True)
+    fingerprintBodyUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
+
+  return [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent]
 
 
 def BuildHTTPServerFingerprintFiles():

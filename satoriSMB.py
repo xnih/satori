@@ -54,6 +54,9 @@ def smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList):
     #fake filler mac for all the others that don't have it, may have to add some elif above
     src_mac = '00:00:00:00:00:00'
 
+  fingerprint = None
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
+
   ip4 = pkt.upper_layer
   udp1 = ip4.upper_layer
   if udp1.sport != 138:
@@ -70,16 +73,17 @@ def smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList):
       i = i + 1
       if mail.body_bytes[i] == 0x00:
         break
-    if mail.body_bytes[i+1] == 0x01:
+    if (mail.body_bytes[i+1] == 0x01) or (mail.body_bytes[i+1] == 0x0f):
       announce = smbHeader.MWBP_HostAnnounce(mail.body_bytes[i+1:])
       osVersion = str(announce.osMajorVer) + '.' + str(announce.osMinVer)
       browVersion = str(announce.browMajorVer) + '.' + str(announce.browMinVer)
-      timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
       if (osVersion != '') and (browVersion != ''):
-        fingerprint = osVersion + ';' + browVersion
-        osGuess = SMBUDPFingerprintLookup(browserExactList, browserPartialList, fingerprint)
-        print("%s;%s;%s;SMBBROWSER;%s;%s" % (timeStamp, ip4.src_s, src_mac, fingerprint, osGuess), end='\n', flush=True)
+        smbFingerprint = osVersion + ';' + browVersion
+        osGuess = SMBUDPFingerprintLookup(browserExactList, browserPartialList, smbFingerprint)
+        fingerprint = ip4.src_s + ';' + src_mac + ';SMBBROWSER;' + smbFingerprint + ';' + osGuess
+
+  return [timeStamp, fingerprint]
 
 
 def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList):
@@ -94,6 +98,11 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
   #if (_tcp.src_portno <> 139) and (_tcp.dst_portno <> 139) and (_tcp.src_portno <> 445)and (_tcp.dst_portno <> 445) then exit;
   #need to take tcp1.body_bytes and shove the info into stuff now......
   x = len(smbHeader.netbiosSessionService())
+
+  fingerprintOS = None
+  fingerprintLanMan = None
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
+
   if len(tcp1.body_bytes) >= x:
     nbss1 = smbHeader.netbiosSessionService(tcp1.body_bytes)
     smb1 = smbHeader.tcpSMB(nbss1.body_bytes)
@@ -179,15 +188,14 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
           nativeOS = info[2]
           nativeLanMan = info[3]
 
-
-        timeStamp = datetime.utcfromtimestamp(ts).isoformat()
-
         if nativeOS != '':
           osGuess = SMBTCPFingerprintLookup(nativeExactList, nativePartialList, nativeOS)
-          print("%s;%s;%s;SMBNATIVE;NativeOS;%s;%s" % (timeStamp, ip4.src_s, src_mac, nativeOS, osGuess), end='\n', flush=True)
+          fingerprintOS = ip4.src_s + ';' + src_mac + ';SMBNATIVE;' + nativeOS + ';' + osGuess
         if nativeLanMan != '':
           osGuess = SMBTCPFingerprintLookup(lanmanExactList, lanmanPartialList, nativeLanMan)
-          print("%s;%s;%s;SMBNATIVE;NativeLanMan;%s;%s" % (timeStamp, ip4.src_s, src_mac, nativeLanMan, osGuess), end='\n', flush=True)
+          fingerprintLanMan = ip4.src_s + ';' + src_mac + ';SMBNATIVE;' + nativeLanMan + ';' + osGuess
+
+  return [timeStamp, fingerprintOS, fingerprintLanMan]
 
 
 def BuildSMBUDPFingerprintFiles():
