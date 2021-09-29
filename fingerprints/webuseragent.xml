@@ -594,7 +594,7 @@
                 <test weight="7" matchtype="partial" webuseragent="watchOS/7.5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 7.6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-07-21">
+        <fingerprint name="Apple Watch OS 7.6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-09-29">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,7.6"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/7.6"/>
@@ -604,6 +604,11 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.0"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.0"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch SE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2021-09-29">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch5,9"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple Watch Series 1" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -652,6 +657,13 @@
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Watch5,3"/>
                 <test weight="10" matchtype="partial" webuseragent="Watch5,4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch Series 6" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2021-09-29">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="Watch6,1"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch6,2"/>
+                <test weight="10" matchtype="partial" webuseragent="Watch6,3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Avast AV" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
