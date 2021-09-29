@@ -190,10 +190,10 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
 
         if nativeOS != '':
           osGuess = SMBTCPFingerprintLookup(nativeExactList, nativePartialList, nativeOS)
-          fingerprintOS = ip4.src_s + ';' + src_mac + ';SMBNATIVE;' + nativeOS + ';' + osGuess
+          fingerprintOS = ip4.src_s + ';' + src_mac + ';SMBNATIVE;NativeOS;' + nativeOS + ';' + osGuess
         if nativeLanMan != '':
           osGuess = SMBTCPFingerprintLookup(lanmanExactList, lanmanPartialList, nativeLanMan)
-          fingerprintLanMan = ip4.src_s + ';' + src_mac + ';SMBNATIVE;' + nativeLanMan + ';' + osGuess
+          fingerprintLanMan = ip4.src_s + ';' + src_mac + ';SMBNATIVE;NativeLanMan;' + nativeLanMan + ';' + osGuess
 
   return [timeStamp, fingerprintOS, fingerprintLanMan]
 
