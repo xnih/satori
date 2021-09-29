@@ -201,7 +201,7 @@
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"process_when_message_contains_DHCP\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";DHCP;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:dhcp_message_type};%{DATA:dhcp_field_type};%{DATA:dhcp_field_value};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
+          "@value": "rule \"process_when_message_contains_DHCP\"\nwhen\n  has_field(\"message\") AND contains(to_string($message.message), \";DHCP;\")\nthen\n  let extract = grok(pattern: \"%{DATA:timestamp_remote};%{IPV4:src_ip};%{COMMONMAC:src_mac};%{DATA:test_type};%{DATA:dhcp_message_type};%{DATA:dhcp_field_value};%{GREEDYDATA:os_guess}\" , value: to_string($message.message), only_named_captures: true);\n  set_fields(extract);\nend"
         }
       },
       "constraints": [
