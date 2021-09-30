@@ -50,83 +50,83 @@ def dhcpProcess(pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartial
   if messageType == 'Discover':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(DiscoverOptionsExactList, DiscoverOptionsPartialList, options)
-      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(DiscoverOption55ExactList, DiscoverOption55PartialList, option55)
-      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'Offer':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(OfferOptionsExactList, OfferOptionsPartialList, options)
-      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(OfferOption55ExactList, OfferOption55PartialList, option55)
-      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(OfferVendorCodeExactList, OfferVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'Request':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(RequestOptionsExactList, RequestOptionsPartialList, options)
-      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(RequestOption55ExactList, RequestOption55PartialList, option55)
-      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(RequestVendorCodeExactList, RequestVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'Decline':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(DeclineOptionsExactList, DeclineOptionsPartialList, options)
-      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(DeclineOption55ExactList, DeclineOption55PartialList, option55)
-      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(DeclineVendorCodeExactList, DeclineVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'ACK':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(ACKOptionsExactList, ACKOptionsPartialList, options)
-      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(ACKOption55ExactList, ACKOption55PartialList, option55)
-      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(ACKVendorCodeExactList, ACKVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'NAK':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(NAKOptionsExactList, NAKOptionsPartialList, options)
-      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(NAKOption55ExactList, NAKOption55PartialList, option55)
-      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(NAKVendorCodeExactList, NAKVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = ip4.src_s + ';' + src_mac + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'Release':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(ReleaseOptionsExactList, ReleaseOptionsPartialList, options)
-      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(ReleaseOption55ExactList, ReleaseOption55PartialList, option55)
-      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
   elif messageType == 'Inform':
     if options != '':
       osGuessOptions = DHCPFingerprintLookup(InformOptionsExactList, InformOptionsPartialList, options)
-      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + options + ';' + osGuessOptions
+      fingerprintOptions = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Options;' + options + ';' + osGuessOptions
     if option55 != '':
       osGuessOption55 = DHCPFingerprintLookup(InformOption55ExactList, InformOption55PartialList, option55)
-      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + option55 + ';' + osGuessOption55
+      fingerprintOption55 = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';Option55;' + option55 + ';' + osGuessOption55
     if vendorCode != '':
       osGuessVendorCode = DHCPFingerprintLookup(InformVendorCodeExactList, InformVendorCodePartialList, vendorCode)
-      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';' + vendorCode + ';' + osGuessVendorCode
+      fingerprintVendorCode = clientAddr + ';' + clientMAC + ';DHCP;' + messageType + ';VendorCode;' + vendorCode + ';' + osGuessVendorCode
 
 # need to revisit this when not printing them as this just makes noise right now.
 #  if messageType != None:  #last ditch check against the 'any' field ones
