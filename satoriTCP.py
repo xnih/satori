@@ -1,5 +1,6 @@
 import untangle
 import struct
+import pkg_resources
 from pathlib import Path
 from pypacker.layer12 import ethernet
 from pypacker.layer3 import ip
@@ -15,8 +16,14 @@ from datetime import datetime
 # cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
+def version():
+  dateReleased='satoriTCP.py - 2021-10-27'
+  print(dateReleased)
+
 
 def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
+  pypackerVersion = pkg_resources.get_distribution('pypacker').version
+
   if layer == 'eth':
     src_mac = pkt[ethernet.Ethernet].src_s
   else:
@@ -38,7 +45,12 @@ def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialL
 
     [ipVersion, ipHdrLen] = computeIP(ip4.v_hl)
     [ethTTL, ttl] = computeNearTTL(ip4.ttl)
-    [df, mf, offset] = computeIPOffset(ip4.off)
+
+    #this seems to work for now, but may not be a perfect fix for the changes from 4.9 to 5.0
+    if int(pypackerVersion[0]) >= 5:
+      [df, mf, offset] = computeIPOffset(ip4.frag_off)
+    else: #4.9 or below use .off
+      [df, mf, offset] = computeIPOffset(ip4.off)
 
     winSize = tcp1.win
     tcpFlags = computeTCPFlags(tcp1.flags)

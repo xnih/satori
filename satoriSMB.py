@@ -20,6 +20,10 @@ import smbHeader
 # while I'd like to build this one out, it requires using the sequence of previous ones to compare to current to see if it is a factor of "blah" (256 for example).
 # as I'm not tracking stuf in this version of Satori, for now this module will not be completed, but it is at least started.
 #
+def version():
+  dateReleased='satoriSMB.py - 2021-10-27'
+  print(dateReleased)
+  smbHeader.version()
 
 def networkByteOrder(data):  #use struct to handle this instead!
   list = []

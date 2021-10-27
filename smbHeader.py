@@ -6,6 +6,10 @@ import untangle
 # https://docs.python.org/3.1/library/struct.html#format-characters
 #import logging
 
+def version():
+  dateReleased='smbHeader.py - 2021-10-27'
+  print(dateReleased)
+
 class netbiosSessionService(pypacker.Packet):
   __hdr__ = [
     ("msgtype", "B", 0),

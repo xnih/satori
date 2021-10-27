@@ -14,6 +14,9 @@ from pypacker.layer3 import ip
 # cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
 
+def version():
+  dateReleased='satoriHTTP.py - 2021-10-27'
+  print(dateReleased)
 
 def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
   if layer == 'eth':

@@ -21,6 +21,14 @@ import satoriHTTP
 #import satoriICMP
 import satoriSMB
 
+def versionInfo():
+  dateReleased='satori.py - 2021-10-27'
+  print(dateReleased)
+  satoriTCP.version()
+  satoriDHCP.version()
+  satoriHTTP.version()
+  satoriSMB.version()
+
 def usage():
     print("""
     -d, --directory   directory to read all pcaps in a dir (does NOT do sub directories); example -d /pcaps
@@ -30,6 +38,7 @@ def usage():
     -f, --filter      bpf filter to apply (only implemented in live capture processing); example: -f "tcp port 80 or tcp port 8080"
     -l, --limit       limit the number of same events written in a time period (in minutes); example -l 1
     -v, --verbose     verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically
+    --version         print dates for the different modules
     """, end='\n', flush=True)
 
 
@@ -320,13 +329,16 @@ def main():
     print ('Total Time: %s, Total Packets: %s, Packets/s: %s' % (totalTime, counter, counter / totalTime ))
 
 try:
-  opts, args = getopt.getopt(sys.argv[1:], "r:m:i:l:v:d:f:", [ 'read=', 'modules=', 'interface=', 'limit=', 'verbose', 'directory=', 'filter='])
+  opts, args = getopt.getopt(sys.argv[1:], "r:m:i:l:v:d:f:", [ 'read=', 'modules=', 'interface=', 'limit=', 'verbose', 'directory=', 'filter=', 'version'])
 
-  readpcap = interface = modules = limit = directory = filter = ''
+  readpcap = interface = modules = limit = directory = filter = version = ''
   proceed = False
   verbose = False
 
   for opt, val in opts:
+    if opt in ('--version'):
+      versionInfo()
+      sys.exit()
     if opt in ('-r', '--read'):
       if interface != '':
         print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
