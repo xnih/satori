@@ -1,4 +1,5 @@
 from pypacker import ppcap
+from pypacker import pcapng
 from pypacker.layer12 import ethernet
 from pypacker.layer12 import linuxcc
 from pypacker.layer3 import ip
@@ -97,6 +98,15 @@ def printCheck(timeStamp, fingerprint):
     else:
       print("%s;%s" % (timeStamp, fingerprint), end='\n', flush=True)
 
+def checkDupes(f):
+  setOfElems = set()
+  for elem in f:
+    val = elem + "|" + f[elem]
+    if val in setOfElems:
+      print(val)
+    else:
+      setOfElems.add(val)
+
 def main():
   #override some warning settings in pypacker.  May need to change this to .CRITICAL in the future, but for now we're trying .ERROR
   #without this when parsing http for example we get "WARNINGS" when packets aren't quite right in the header.
@@ -111,6 +121,8 @@ def main():
   httpCheck = False
   icmpCheck = False  #not enabled in lower code at this point due to tracking features I'm not willing to code at this time.
   smbCheck = False
+  checkForDupes = False
+  checkForDupes = True
 
   #read in fingerprints
   [sExactList, saExactList, sPartialList, saPartialList] = satoriTCP.BuildTCPFingerprintFiles()
@@ -120,6 +132,94 @@ def main():
   #[icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList] = satoriICMP.BuildICMPFingerprintFiles()
   [nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList] = satoriSMB.BuildSMBTCPFingerprintFiles()
   [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
+
+  if checkForDupes:
+    checkDupes(sExactList)
+    checkDupes(saExactList)
+    checkDupes(sPartialList)
+    checkDupes(saPartialList)
+    checkDupes(DiscoverOptionsExactList)
+    checkDupes(DiscoverOptionsPartialList)
+    checkDupes(RequestOptionsExactList)
+    checkDupes(RequestOptionsPartialList)
+    checkDupes(ReleaseOptionsExactList)
+    checkDupes(ReleaseOptionsPartialList)
+    checkDupes(ACKOptionsExactList)
+    checkDupes(ACKOptionsPartialList)
+    checkDupes(AnyOptionsExactList)
+    checkDupes(AnyOptionsPartialList)
+    checkDupes(InformOptionsExactList)
+    checkDupes(InformOptionsPartialList)
+    checkDupes(DiscoverOption55ExactList)
+    checkDupes(DiscoverOption55PartialList)
+    checkDupes(RequestOption55ExactList)
+    checkDupes(RequestOption55PartialList)
+    checkDupes(ReleaseOption55ExactList)
+    checkDupes(ReleaseOption55PartialList)
+    checkDupes(ACKOption55ExactList)
+    checkDupes(ACKOption55PartialList)
+    checkDupes(AnyOption55ExactList)
+    checkDupes(AnyOption55PartialList)
+    checkDupes(InformOption55ExactList)
+    checkDupes(InformOption55PartialList)
+    checkDupes(DiscoverVendorCodeExactList)
+    checkDupes(DiscoverVendorCodePartialList)
+    checkDupes(RequestVendorCodeExactList)
+    checkDupes(RequestVendorCodePartialList)
+    checkDupes(ReleaseVendorCodeExactList)
+    checkDupes(ReleaseVendorCodePartialList)
+    checkDupes(ACKVendorCodeExactList)
+    checkDupes(ACKVendorCodePartialList)
+    checkDupes(AnyVendorCodeExactList)
+    checkDupes(AnyVendorCodePartialList)
+    checkDupes(InformVendorCodeExactList)
+    checkDupes(InformVendorCodePartialList)
+    checkDupes(DiscoverTTLExactList)
+    checkDupes(DiscoverTTLPartialList)
+    checkDupes(RequestTTLExactList)
+    checkDupes(RequestTTLPartialList)
+    checkDupes(ReleaseTTLExactList)
+    checkDupes(ACKTTLExactList)
+    checkDupes(AnyTTLExactList)
+    checkDupes(InformTTLExactList)
+    checkDupes(ACKTTLPartialList)
+    checkDupes(AnyTTLPartialList)
+    checkDupes(InformTTLPartialList)
+    checkDupes(NAKOptionsPartialList)
+    checkDupes(NAKOptionsExactList)
+    checkDupes(NAKOption55PartialList)
+    checkDupes(NAKOption55ExactList)
+    checkDupes(NAKVendorCodePartialList)
+    checkDupes(NAKVendorCodeExactList)
+    checkDupes(NAKTTLPartialList)
+    checkDupes(NAKTTLExactList)
+    checkDupes(OfferOptionsPartialList)
+    checkDupes(OfferOptionsExactList)
+    checkDupes(OfferOption55PartialList)
+    checkDupes(OfferOption55ExactList)
+    checkDupes(OfferVendorCodePartialList)
+    checkDupes(OfferVendorCodeExactList)
+    checkDupes(OfferTTLPartialList)
+    checkDupes(OfferTTLExactList)
+    checkDupes(DeclineOptionsPartialList)
+    checkDupes(DeclineOptionsExactList)
+    checkDupes(DeclineOption55PartialList)
+    checkDupes(DeclineOption55ExactList)
+    checkDupes(DeclineVendorCodePartialList)
+    checkDupes(DeclineVendorCodeExactList)
+    checkDupes(DeclineTTLPartialList)
+    checkDupes(DeclineTTLExactList)
+    checkDupes(useragentExactList)
+    checkDupes(useragentPartialList)
+    checkDupes(serverExactList)
+    checkDupes(serverPartialList)
+    checkDupes(nativeExactList)
+    checkDupes(lanmanExactList)
+    checkDupes(nativePartialList)
+    checkDupes(lanmanPartialList)
+    checkDupes(browserExactList)
+    checkDupes(browserPartialList)
+    sys.exit()
 
   if len(modules) == 0:
     tcpCheck = True
