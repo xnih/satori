@@ -122,7 +122,7 @@ def main():
   icmpCheck = False  #not enabled in lower code at this point due to tracking features I'm not willing to code at this time.
   smbCheck = False
   checkForDupes = False
-  checkForDupes = True
+  #checkForDupes = True
 
   #read in fingerprints
   [sExactList, saExactList, sPartialList, saPartialList] = satoriTCP.BuildTCPFingerprintFiles()
