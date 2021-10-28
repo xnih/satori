@@ -18,7 +18,7 @@ from pypacker import pypacker
 #
 
 def version():
-  dateReleased='satoriDHCP.py - 2021-10-27'
+  dateReleased='satoriDHCP.py - 2021-10-28'
   print(dateReleased)
 
 def dhcpProcess(pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList):
@@ -716,6 +716,7 @@ def DHCPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -801,5 +802,31 @@ def getDHCPOption53(value):
   return(res)
 
 
+def sort_key(val):
+  return int(val[1])
+
+
+def sortFingerprint(fp):
+  fingerprints = fp.split('|')
+
+  list = []
+  listOfFingerprints = []
+  for fingerprint in fingerprints:
+    parts = fingerprint.split(':')
+    list = [parts[0], parts[1]]
+    listOfFingerprints.append(list)
+  listOfFingerprints.sort(key=sort_key,reverse=True)
+
+  fp = ''
+  for fingerprint in listOfFingerprints:
+    info = ''
+    for val in fingerprint:
+      info = info + ":" + val
+    fp = fp + '|' + info[1:]
+
+  if fp[0] == '|':
+    fp = fp[1:]
+
+  return fp
 
 

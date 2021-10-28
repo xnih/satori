@@ -15,7 +15,7 @@ from pypacker.layer3 import ip
 #
 
 def version():
-  dateReleased='satoriHTTP.py - 2021-10-27'
+  dateReleased='satoriHTTP.py - 2021-10-28'
   print(dateReleased)
 
 def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
@@ -209,6 +209,7 @@ def httpServerFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -236,7 +237,33 @@ def httpUserAgentFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
+def sort_key(val):
+  return int(val[1])
 
+
+def sortFingerprint(fp):
+  fingerprints = fp.split('|')
+
+  list = []
+  listOfFingerprints = []
+  for fingerprint in fingerprints:
+    parts = fingerprint.split(':')
+    list = [parts[0], parts[1]]
+    listOfFingerprints.append(list)
+  listOfFingerprints.sort(key=sort_key,reverse=True)
+
+  fp = ''
+  for fingerprint in listOfFingerprints:
+    info = ''
+    for val in fingerprint:
+      info = info + ":" + val
+    fp = fp + '|' + info[1:]
+
+  if fp[0] == '|':
+    fp = fp[1:]
+
+  return fp

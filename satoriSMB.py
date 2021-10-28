@@ -21,7 +21,7 @@ import smbHeader
 # as I'm not tracking stuf in this version of Satori, for now this module will not be completed, but it is at least started.
 #
 def version():
-  dateReleased='satoriSMB.py - 2021-10-27'
+  dateReleased='satoriSMB.py - 2021-10-28'
   print(dateReleased)
   smbHeader.version()
 
@@ -115,7 +115,7 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
         flags2 = struct.unpack('@H',smb1.flags2)[0]
         if "{0:>16b}".format(flags2)[0] == '1':  #probably a better way to do this with bit shifting, but this works for now  *in pascal had:  (_tcp_smb.flags2 and 32768)
           unicode=True
-        else:  #0 or space 
+        else:  #0 or space
           unicode=False
 
         nativeOS = ''
@@ -320,6 +320,7 @@ def SMBUDPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -346,9 +347,36 @@ def SMBTCPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
 
+def sort_key(val):
+  return int(val[1])
+
+
+def sortFingerprint(fp):
+  fingerprints = fp.split('|')
+
+  list = []
+  listOfFingerprints = []
+  for fingerprint in fingerprints:
+    parts = fingerprint.split(':')
+    list = [parts[0], parts[1]]
+    listOfFingerprints.append(list)
+  listOfFingerprints.sort(key=sort_key,reverse=True)
+
+  fp = ''
+  for fingerprint in listOfFingerprints:
+    info = ''
+    for val in fingerprint:
+      info = info + ":" + val
+    fp = fp + '|' + info[1:]
+
+  if fp[0] == '|':
+    fp = fp[1:]
+
+  return fp
 
 

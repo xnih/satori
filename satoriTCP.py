@@ -17,7 +17,7 @@ from datetime import datetime
 #
 
 def version():
-  dateReleased='satoriTCP.py - 2021-10-27'
+  dateReleased='satoriTCP.py - 2021-10-28'
   print(dateReleased)
 
 
@@ -200,6 +200,7 @@ def TCPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
+  fingerprint = sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -271,16 +272,16 @@ def decodeTCPOptions(opts):
     elif i.type == 4:
       res = res + 'S,'
     elif i.type == 5:
-      res = res + 'K,' 
+      res = res + 'K,'
     elif i.type == 6:
       res = res + 'J,'
     elif i.type == 7:
-      res = res + 'F,'  
+      res = res + 'F,'
       #print("Options Echo (need to compute?):  %s" % (i.body_bytes))
     elif i.type == 8:
       res = res + 'T,'
       tcpTimeStamp = struct.unpack('!I',i.body_bytes[0:4])[0]
-      tcpTimeStampEchoReply = struct.unpack('!I',i.body_bytes[4:8])[0] 
+      tcpTimeStampEchoReply = struct.unpack('!I',i.body_bytes[4:8])[0]
     elif i.type == 9:
       res = res + 'P,'
     elif i.type == 10:
@@ -333,7 +334,7 @@ def decodeTCPOptions(opts):
 #      if x == 1:
 #        val = "!b"
 #      elif x == 2:
-#        val = "!h" 
+#        val = "!h"
 #      elif x == 4:
 #        val = "!l"
 #      elif x == 8:   #while timestamp (type 8) is length 8, it is really 2x 4's, so have to look at this closer later
@@ -358,7 +359,7 @@ def computeTCPFlags(flags):
 
 def computeIP(info):
   ipVersion = int('0x0' + hex(info)[2],16)
-  ipHdrLen = int('0x0' + hex(info)[3],16) * 4  
+  ipHdrLen = int('0x0' + hex(info)[3],16) * 4
   return [ipVersion, ipHdrLen]
 
 
@@ -367,7 +368,7 @@ def computeNearTTL(info):
     ttl = 16
     ethTTL = 16
   elif (info>16) and (info<=32):
-    ttl = 32 
+    ttl = 32
     ethTTL = 43
   elif (info>32) and (info<=60):
     ttl = 60 #unlikely to find many of these anymore
@@ -387,7 +388,7 @@ def computeNearTTL(info):
   return [ethTTL, ttl]
 
 
-def computeIPOffset(info):  
+def computeIPOffset(info):
   # need to see if I can find a way to import these from ip.py as they are already defined there.
   # Fragmentation flags (ip_off)
   IP_RF = 0x4   # reserved
@@ -417,3 +418,29 @@ def computeTCPHdrLen(info):
 
 
 
+def sort_key(val):
+  return int(val[1])
+
+
+def sortFingerprint(fp):
+  fingerprints = fp.split('|')
+
+  list = []
+  listOfFingerprints = []
+  for fingerprint in fingerprints:
+    parts = fingerprint.split(':')
+    list = [parts[0], parts[1]]
+    listOfFingerprints.append(list)
+  listOfFingerprints.sort(key=sort_key,reverse=True)
+
+  fp = ''
+  for fingerprint in listOfFingerprints:
+    info = ''
+    for val in fingerprint:
+      info = info + ":" + val
+    fp = fp + '|' + info[1:]
+
+  if fp[0] == '|':
+    fp = fp[1:]
+
+  return fp
