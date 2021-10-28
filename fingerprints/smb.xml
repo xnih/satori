@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2021-05-18" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2021-10-27" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
@@ -28,6 +28,13 @@
             <smb_tests>
                 <test weight="7" matchtype="exact" smbnativename="FreeBSD"/>
                 <test weight="5" matchtype="exact" smbnativelanman="NETSMB"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="GuardianOS" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativelanman="Samba Samba for GuardianOS v4.3.007.200609131215"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Samba Samba for GuardianOS v5.0.133.200807301131"/>
+                <test weight="5" matchtype="exact" smbnativelanman="Samba for GuardianOS v.7.7.220"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
@@ -141,11 +148,12 @@
                 <test weight="7" matchtype="exact" smbnativelanman="3.0.25b-apple"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
                 <test weight="7" matchtype="exact" smbnativelanman="3.0.28b-apple"/>
                 <test weight="7" matchtype="exact" smbnativename="Mac OS X 10.6"/>
+                <test weight="5" matchtype="exact" smbnativelanman="3.0.28a-apple"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.6.8" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
@@ -238,6 +246,17 @@
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
                 <test weight="5" matchtype="exact" smbnativelanman="Samba"/>
                 <test weight="5" matchtype="exact" smbnativelanman="SMBFS"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Visuality Systems NQ Enterprise Storage SMB stack" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativelanman="NQ 7.3"/>
+                <test weight="5" matchtype="exact" smbnativelanman="NQ 4.32"/>
+            </smb_tests>
+        </fingerprint>
+        <fingerprint name="Visuality Systems YNQ Storage SMB stack" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativelanman="YNQ 1.2.1"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 10 - 1511" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com" device_type="" device_vendor="" device_url="" comments="10586" author="xnih13@gmail.com" last_updated="2020-05-27">
@@ -465,7 +484,7 @@
                 <test weight="7" matchtype="exact" smbnativelanman="Windows Server (R) 2008 Enterprise 6.0"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Windows Server 2012 R2" os_name="Windows Server 2012 R2" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2008r2" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativelanman="Windows Server 2012 R2 Standard 6.3"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows Server 2012 R2 Standard 9600"/>
@@ -476,6 +495,12 @@
                 <test weight="7" matchtype="exact" smbnativelanman="Windows Storage Server 2012 Standard 6.2"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows Storage Server 2012 Standard 9200"/>
                 <test weight="10" matchtype="exact" smbnativename="Windows Server 2012 R2 Datacenter 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Server 2012 R2 Workgroup 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Server 2012 R2 Essentials 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Server 2012 R2 Standard 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Storage Server 2012 R2 Standard 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Storage Server 2012 R2 Workgroup 9600"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Storage Server 2012 R2 Essentials 9600"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows Server 2016" os_name="Windows Server 2016 6.3" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windowsserver2016" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-22">
@@ -496,9 +521,10 @@
                 <test weight="10" matchtype="exact" smbnativelanman="Windows Server 2019 Standard 6.3"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">
+        <fingerprint name="Windows Vista" os_name="Windows Vista" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
             <smb_tests>
                 <test weight="7" matchtype="partial" smbnativename="Windows Vista"/>
+                <test weight="7" matchtype="exact" smbnativelanman="Windows Vista"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows Vista Ultimate" os_name="Windows Vista Ultimate" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-vista" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-14">

@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2021-05-03" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2021-10-27" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -441,6 +441,13 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Biamp Systems Inc., TesiraForte"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,12,15,26,28,51,54,58,59,119"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,60,12,145,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Big-IP F5" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,3,15,6,12,42,26"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,51,55,60,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="F5Networks"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="BlackBerry" os_name="" os_class="" os_vendor="" os_url="" device_type="Smartphone" device_vendor="BlackBerry" device_url="http://www.blackberry.com" comments="" author="xnih13@gmail.com" last_updated="2009-08-25">
@@ -888,7 +895,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP c1530"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco Aironet 1550" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2020-09-25">
+        <fingerprint name="Cisco Aironet 1550" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2021-10-27">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c1550"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP c1550"/>
@@ -896,6 +903,11 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,61,12,55,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP c1550"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,54,61,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Release" dhcpoptions="53,54,61,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,12,55,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Aironet 1560" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="From vendor website" author="xnih13@gmail.com" last_updated="2021-01-06">
@@ -1024,6 +1036,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,6,15,44,3,7,33,150,43"/>
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP c702"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Aironet 9105AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP C9105AX"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Aironet 9120AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
@@ -1882,6 +1900,14 @@
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Hewlett-Packard LaserJet"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,81,12,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="6,3,1,15,44,12"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="iDRAC" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="iDRAC"/>
+                <test weight="10" matchtype="exact" dhcptype="Inform" dhcpvendorcode="iDracdiscovery"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,12,55,60,61,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="1,3,15,6,43"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Internet Connection Sharing - Microsoft" os_name="Microsoft" os_class="Windows" os_vendor="Microsoft" os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-04-02">
