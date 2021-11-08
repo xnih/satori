@@ -232,7 +232,7 @@
                 <test weight="2" matchtype="partial" macaddress="00:1F:5B"/>
             </mac_tests>
         </fingerprint>
-        <fingerprint name="iPod touch" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/ipodtouch" comments="" author="xnih13@gmail.com" last_updated="2012-01-09">
+        <fingerprint name="iPod touch" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/ipodtouch" comments="" author="xnih13@gmail.com" last_updated="2021-11-08">
             <mac_tests>
                 <test weight="2" matchtype="partial" macaddress="00:21:E9"/>
                 <test weight="2" matchtype="partial" macaddress="00:22:41"/>
@@ -240,8 +240,6 @@
                 <test weight="2" matchtype="partial" macaddress="00:1D:4F"/>
                 <test weight="2" matchtype="partial" macaddress="00:1F:5B"/>
                 <test weight="2" matchtype="partial" macaddress="00:1F:F3"/>
-                <test weight="2" matchtype="partial" macaddress="00:21:E9"/>
-                <test weight="2" matchtype="partial" macaddress="00:22:41"/>
             </mac_tests>
         </fingerprint>
         <fingerprint name="LifeSize Room" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Conferencing" device_vendor="LifeSize Communications, Inc." device_url="http://www.lifesize.com/products/lifesize_room" comments="" author="cycocrew@orange.fr" last_updated="2009-02-09">
@@ -261,12 +259,11 @@
                 <test weight="2" matchtype="partial" macaddress="00:0D:93"/>
             </mac_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-02">
+        <fingerprint name="Mac OS X" os_name="Mac OS X" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-11-08">
             <mac_tests>
                 <test weight="2" matchtype="partial" macaddress="00:30:65"/>
                 <test weight="2" matchtype="partial" macaddress="00:0A:95"/>
                 <test weight="2" matchtype="partial" macaddress="00:03:93"/>
-                <test weight="2" matchtype="partial" macaddress="00:0A:95"/>
                 <test weight="2" matchtype="partial" macaddress="00:0D:93"/>
                 <test weight="2" matchtype="partial" macaddress="00:16:CB"/>
                 <test weight="2" matchtype="partial" macaddress="00:17:F2"/>
@@ -278,7 +275,6 @@
                 <test weight="2" matchtype="partial" macaddress="00:21:E9"/>
                 <test weight="2" matchtype="partial" macaddress="00:23:12"/>
                 <test weight="2" matchtype="partial" macaddress="00:23:6C"/>
-                <test weight="2" matchtype="partial" macaddress="00:30:65"/>
             </mac_tests>
         </fingerprint>
         <fingerprint name="Mitel IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Mitel Corp." device_url="http://www.mitel.com/DocController?documentId=9517" comments="" author="eric.sans@enterasys.com" last_updated="2009-04-27">
@@ -357,7 +353,6 @@
         </fingerprint>
         <fingerprint name="Siemens Scalance W788-2RR Access Point" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Siemens AG" device_url="http://www.automation.siemens.com/net/html_76/produkte/050_access_points.htm" comments="" author="cycocrew@orange.fr" last_updated="2009-01-14">
             <mac_tests>
-                <test weight="2" matchtype="partial" macaddress="08:00:06"/>
                 <test weight="2" matchtype="partial" macaddress="08:00:06"/>
             </mac_tests>
         </fingerprint>
