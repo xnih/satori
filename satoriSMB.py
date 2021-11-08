@@ -1,5 +1,6 @@
 import untangle
 import struct
+import satoriCommon
 from pathlib import Path
 from datetime import datetime
 from pypacker.layer12 import ethernet
@@ -21,7 +22,7 @@ import smbHeader
 # as I'm not tracking stuf in this version of Satori, for now this module will not be completed, but it is at least started.
 #
 def version():
-  dateReleased='satoriSMB.py - 2021-10-28'
+  dateReleased='satoriSMB.py - 2021-11-08'
   print(dateReleased)
   smbHeader.version()
 
@@ -320,7 +321,7 @@ def SMBUDPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
-  fingerprint = sortFingerprint(fingerprint)
+  fingerprint = satoriCommon.sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -347,36 +348,8 @@ def SMBTCPFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
-  fingerprint = sortFingerprint(fingerprint)
+  fingerprint = satoriCommon.sortFingerprint(fingerprint)
   return fingerprint
 
-
-
-def sort_key(val):
-  return int(val[1])
-
-
-def sortFingerprint(fp):
-  fingerprints = fp.split('|')
-
-  list = []
-  listOfFingerprints = []
-  for fingerprint in fingerprints:
-    parts = fingerprint.split(':')
-    list = [parts[0], parts[1]]
-    listOfFingerprints.append(list)
-  listOfFingerprints.sort(key=sort_key,reverse=True)
-
-  fp = ''
-  for fingerprint in listOfFingerprints:
-    info = ''
-    for val in fingerprint:
-      info = info + ":" + val
-    fp = fp + '|' + info[1:]
-
-  if fp[0] == '|':
-    fp = fp[1:]
-
-  return fp
 
 

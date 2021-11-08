@@ -1,5 +1,6 @@
 import untangle
 import struct
+import satoriCommon
 from pathlib import Path
 from datetime import datetime
 from pypacker.layer12 import ethernet
@@ -15,7 +16,7 @@ from pypacker.layer3 import ip
 #
 
 def version():
-  dateReleased='satoriHTTP.py - 2021-10-28'
+  dateReleased='satoriHTTP.py - 2021-11-08'
   print(dateReleased)
 
 def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
@@ -209,7 +210,7 @@ def httpServerFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
-  fingerprint = sortFingerprint(fingerprint)
+  fingerprint = satoriCommon.sortFingerprint(fingerprint)
   return fingerprint
 
 
@@ -237,33 +238,7 @@ def httpUserAgentFingerprintLookup(exactList, partialList, value):
   if fingerprint.endswith('|'):
     fingerprint = fingerprint[:-1]
 
-  fingerprint = sortFingerprint(fingerprint)
+  fingerprint = satoriCommmon.sortFingerprint(fingerprint)
   return fingerprint
 
 
-def sort_key(val):
-  return int(val[1])
-
-
-def sortFingerprint(fp):
-  fingerprints = fp.split('|')
-
-  list = []
-  listOfFingerprints = []
-  for fingerprint in fingerprints:
-    parts = fingerprint.split(':')
-    list = [parts[0], parts[1]]
-    listOfFingerprints.append(list)
-  listOfFingerprints.sort(key=sort_key,reverse=True)
-
-  fp = ''
-  for fingerprint in listOfFingerprints:
-    info = ''
-    for val in fingerprint:
-      info = info + ":" + val
-    fp = fp + '|' + info[1:]
-
-  if fp[0] == '|':
-    fp = fp[1:]
-
-  return fp
