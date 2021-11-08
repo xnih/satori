@@ -125,6 +125,10 @@ def main():
   [nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList] = satoriSMB.BuildSMBTCPFingerprintFiles()
   [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
 
+  #check pypacker version
+  pypackerVersion = satoriCommon.checkPyPackerVersion()
+  print(pypackerVersion)
+
   if len(modules) == 0:
     tcpCheck = True
     dhcpCheck = True
@@ -158,7 +162,7 @@ def main():
 
             (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
             if tcpPacket and tcpCheck:
-              [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+              [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
               printCheck(timeStamp, fingerprint)
             if dhcpPacket and dhcpCheck:
               [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
@@ -217,7 +221,7 @@ def main():
         (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
 
         if tcpPacket and tcpCheck:
-          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
           printCheck(timeStamp, fingerprint)
 
         if dhcpPacket and dhcpCheck:
@@ -280,7 +284,7 @@ def main():
         (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
 
         if tcpPacket and tcpCheck:
-          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList)
+          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
           printCheck(timeStamp, fingerprint)
         if dhcpPacket and dhcpCheck:
           [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
@@ -345,8 +349,7 @@ try:
       sys.exit()
     if opt in ('--dupes'):
       satoriCommon.Dupes()
-      #checkForDupes = True
-      proceed = True
+      sys.exit()
     if opt in ('-r', '--read'):
       if interface != '':
         print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')

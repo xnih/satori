@@ -1,6 +1,5 @@
 import untangle
 import struct
-import pkg_resources
 import satoriCommon
 from pathlib import Path
 from pypacker.layer12 import ethernet
@@ -22,9 +21,7 @@ def version():
   print(dateReleased)
 
 
-def tcpProcess(pkt, layer, ts, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
-  pypackerVersion = pkg_resources.get_distribution('pypacker').version
-
+def tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
   if layer == 'eth':
     src_mac = pkt[ethernet.Ethernet].src_s
   else:

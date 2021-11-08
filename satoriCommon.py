@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import pkg_resources
 from pathlib import Path
 
 def version():
@@ -21,8 +22,12 @@ def findDupes(path):
           else:
             setOfElems.add(val)
 
+def checkPyPackerVersion():
+  pypackerVersion = pkg_resources.get_distribution('pypacker').version
+  return pypackerVersion
 
 def Dupes():
+  print('Checking for Dupes')
   satoriPath = str(Path(__file__).resolve().parent)
 
   findDupes(satoriPath + '/fingerprints/browser.xml')
