@@ -3,8 +3,15 @@ import pkg_resources
 from pathlib import Path
 
 def version():
-  dateReleased='satoriCommon.py - 2021-11-08'
+  dateReleased='satoriCommon.py - 2021-11-09'
   print(dateReleased)
+
+
+def getImportVersions():
+  print("\n3rd party imports needed to make Satori work:")
+  print("pypacker: %s" % (pkg_resources.get_distribution('pypacker').version))
+  print("pcapy: %s" % (pkg_resources.get_distribution('pcapy').version))
+  print("untagle: %s" % (pkg_resources.get_distribution('untangle').version))
 
 
 def findDupes(path):
@@ -25,6 +32,7 @@ def findDupes(path):
 def checkPyPackerVersion():
   pypackerVersion = pkg_resources.get_distribution('pypacker').version
   return pypackerVersion
+
 
 def Dupes():
   print('Checking for Dupes')

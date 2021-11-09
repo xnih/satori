@@ -11,11 +11,10 @@ from pypacker.layer567 import http
 from pypacker import pypacker
 import datetime
 import pcapy
-import getopt
+import argparse
 import time
 import sys
 import os
-import signal
 import satoriTCP
 import satoriDHCP
 import satoriHTTP
@@ -23,27 +22,16 @@ import satoriHTTP
 import satoriSMB
 import satoriCommon
 
+
 def versionInfo():
-  dateReleased='satori.py - 2021-11-08'
+  dateReleased='satori.py - 2021-11-09'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
   satoriHTTP.version()
   satoriSMB.version()
   satoriCommon.version()
-
-def usage():
-    print("""
-    -d, --directory   directory to read all pcaps in a dir (does NOT do sub directories); example -d /pcaps
-    -r, --read        pcap to read in; example: -r tcp.pcap
-    -i, --interface   interface to listen to; example: -i eth0
-    -m, --modules     modules to load; example: -m tcp,dhcp
-    -f, --filter      bpf filter to apply (only implemented in live capture processing); example: -f "tcp port 80 or tcp port 8080"
-    -l, --limit       limit the number of same events written in a time period (in minutes); example -l 1
-    -v, --verbose     verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically
-    --version         print dates for the different modules
-    --dupes           check for dupes in the fingerprint files
-    """, end='\n', flush=True)
+  satoriCommon.getImportVersions()
 
 
 def packetType(buf):
@@ -87,7 +75,7 @@ def packetType(buf):
 def printCheck(timeStamp, fingerprint):
 
   if fingerprint != None:
-    if limit != '':
+    if historyTime != 0:
       if fingerprint in historyCheck:
         value = historyCheck[fingerprint]
         FMT = '%Y-%m-%dT%H:%M:%S'
@@ -101,15 +89,18 @@ def printCheck(timeStamp, fingerprint):
     else:
       print("%s;%s" % (timeStamp, fingerprint), end='\n', flush=True)
 
+
 def main():
   #override some warning settings in pypacker.  May need to change this to .CRITICAL in the future, but for now we're trying .ERROR
   #without this when parsing http for example we get "WARNINGS" when packets aren't quite right in the header.
   logger = pypacker.logging.getLogger("pypacker")
   pypacker.logger.setLevel(pypacker.logging.ERROR)
 
+  #some verbose vars
   counter = 0
   startTime = time.time()
 
+  #general vars
   tcpCheck = False
   dhcpCheck = False
   httpCheck = False
@@ -125,9 +116,8 @@ def main():
   [nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList] = satoriSMB.BuildSMBTCPFingerprintFiles()
   [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
 
-  #check pypacker version
+  #check pypacker version due to changes between 4.9 and 5.0 for one TCP feature
   pypackerVersion = satoriCommon.checkPyPackerVersion()
-  print(pypackerVersion)
 
   if len(modules) == 0:
     tcpCheck = True
@@ -265,7 +255,6 @@ def main():
       except:
         pass
 
-
   elif interface != '':
     try:
       preader = pcapy.open_live(interface, 65536, False, 1)
@@ -326,7 +315,6 @@ def main():
       except:
         pass
 
-
   else:  #we should never get here with "proceed" check, but just in case
     print("Not sure how we got here", end='\n', flush=True)
 
@@ -336,76 +324,77 @@ def main():
   if verbose:
     print ('Total Time: %s, Total Packets: %s, Packets/s: %s' % (totalTime, counter, counter / totalTime ))
 
+
+## Parse Arguments
 try:
-  opts, args = getopt.getopt(sys.argv[1:], "r:m:i:l:v:d:f:", [ 'read=', 'modules=', 'interface=', 'limit=', 'verbose', 'directory=', 'filter=', 'version', 'dupes'])
-
-  readpcap = interface = modules = limit = directory = filter = version = dupes = ''
-  proceed = False
-  verbose = False
-
-  for opt, val in opts:
-    if opt in ('--version'):
-      versionInfo()
-      sys.exit()
-    if opt in ('--dupes'):
-      satoriCommon.Dupes()
-      sys.exit()
-    if opt in ('-r', '--read'):
-      if interface != '':
-        print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
-        sys.exit()
-      if not os.path.isfile(val):
-        print('\nFile "%s" does not appear to exist, please verify pcap file name.' % val)
-        sys.exit()
-      else:
-        proceed = True
-        readpcap = val
-    if opt in ('-m', '--modules'):
-      modules = val
-    if opt in ('-i', '--interface'):
-      if readpcap != '':
-        print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
-        sys.exit()
-      interface = val
-      proceed = True
-    if opt in ('-l', '--limit'):
-      if val.isnumeric(): 
-        limit = val
-      else:
-        print ('\nLimitation: "%s" must be a number.' % val)
-        sys.exit()
-    if opt in ('-v', '--verbose'):
-      verbose = True
-    if opt in ('-d', '--directory'):
-      if not os.path.isdir(val):
-        print ('\nDir "%s" does not appear to exist, please verify directory name.' % val)
-        sys.exit()
-      else:
-        proceed = True
-        directory = val
-    if opt in ('-f', '--filter'):
-      if directory != '':
-        print('Filter not implemented in directory processing, please remove and try again', end='\n', flush=True)
-        sys.exit(1)
-      if readpcap != '':
-        print('Filter not implemented in pcap file read processing, please remove and try again', end='\n', flush=True)
-        sys.exit(1)
-      filter = val
-
-  if limit == '':
-    historyTime = 0
-  else:
-    historyTime = limit
+  historyTime = 0
   historyCheck = {}
+  readpcap = interface = modules = limit = directory = filter = version = dupes = ''
+  verbose = False
+  proceed = False
+
+  parser = argparse.ArgumentParser(prog='Satori')
+  parser.add_argument('-d', '--directory', action="store", dest="directory", help="directory to read all pcaps in (does NOT do sub directories); example: -d /pcaps", default="")
+  parser.add_argument('-r', '--read', action="store", dest="readpcap", help="pcap to read in; example: -r tcp.pcap", default="")
+  parser.add_argument('-i', '--interface', action="store", dest="interface", help="interface to listen to; example: -i eth0", default="")
+  parser.add_argument('-m', '--modules', action="store", dest="modules", help="modules to load; example: -m tcp,dhcp,smb,http", default="")
+  parser.add_argument('-f', '--filter', action="store", dest="filter", help="bpf filter to apply (only implemented in live capture processing); example: -f \"tcp port 80 or tcp port 8080\"", default="")
+  parser.add_argument('-l', '--limit', type=int, action="store", dest="limit", help="limit the number of same events written in a time period (in minutes); example -l 1", default=0)
+  parser.add_argument('-v', '--verbose', action="store_true", dest="verbose", help="verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically", default=False)
+  parser.add_argument('--version', action="store_true", dest="version", help="print dates for the different modules and 3rd party tools used", default="")
+  parser.add_argument('--dupes', action="store_true", dest="dupes", help="check for dupes in the fingerprint files", default="")
+
+  args = parser.parse_args()
+
+  if args.readpcap != '':
+    if args.interface != '':
+      print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
+      sys.exit()
+    if not os.path.isfile(args.readpcap):
+      print('\nFile "%s" does not appear to exist, please verify pcap file name.' % args.readpcap)
+      sys.exit()
+    else:
+      proceed = True
+      readpcap = args.readpcap
+  if args.modules != '':
+    modules = args.modules
+  if args.interface != '':
+    if args.readpcap != '':
+      print('\nCannot operate in interface and readpcap mode simultaneously, please select only one.')
+      sys.exit()
+    interface = args.interface
+    proceed = True
+  if args.limit != 0:
+    historyTime = args.limit
+  if args.verbose:
+    verbose = True
+  if args.directory != '':
+    if not os.path.isdir(args.directory):
+      print ('\nDir "%s" does not appear to exist, please verify directory name.' % args.directory)
+      sys.exit()
+    else:
+      proceed = True
+      directory = args.directory
+  if args.filter != '':
+    if args.directory != '':
+      print('Filter not implemented in directory processing, please remove and try again', end='\n', flush=True)
+      sys.exit(1)
+    if args.readpcap != '':
+      print('Filter not implemented in pcap file read processing, please remove and try again', end='\n', flush=True)
+      sys.exit(1)
+    filter = args.filter
+  if args.version:
+    versionInfo()
+    sys.exit()
+  if args.dupes:
+    satoriCommon.Dupes()
+    sys.exit()
 
   if (__name__ == '__main__') and proceed:
     main()
   else:
-    print('Need to provide a pcap to read in or an interface to watch', end='\n', flush=True)
-    usage()
+    print('Need to provide a pcap to read in, a directory to read, or an interface to watch!', end='\n', flush=True)
+    parser.print_help()
 
-except getopt.error:
-     usage()
-
-
-
+except argparse.ArgumentError:
+  print(self)
