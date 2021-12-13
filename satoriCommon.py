@@ -3,7 +3,7 @@ import pkg_resources
 from pathlib import Path
 
 def version():
-  dateReleased='satoriCommon.py - 2021-11-09'
+  dateReleased='satoriCommon.py - 2021-12-13'
   print(dateReleased)
 
 
@@ -45,6 +45,7 @@ def Dupes():
   findDupes(satoriPath + '/fingerprints/sip.xml')
   findDupes(satoriPath + '/fingerprints/smb.xml')
   findDupes(satoriPath + '/fingerprints/tcp.xml')
+  findDupes(satoriPath + '/fingerprints/ssl.xml')
   findDupes(satoriPath + '/fingerprints/webuseragent.xml')
   findDupes(satoriPath + '/fingerprints/web.xml')
 
@@ -54,24 +55,25 @@ def sort_key(val):
 
 
 def sortFingerprint(fp):
-  fingerprints = fp.split('|')
+  if '|' in fp:
+    fingerprints = fp.split('|')
 
-  list = []
-  listOfFingerprints = []
-  for fingerprint in fingerprints:
-    parts = fingerprint.split(':')
-    list = [parts[0], parts[1]]
-    listOfFingerprints.append(list)
-  listOfFingerprints.sort(key=sort_key,reverse=True)
+    list = []
+    listOfFingerprints = []
+    for fingerprint in fingerprints:
+      parts = fingerprint.split(':')
+      list = [parts[0], parts[1]]
+      listOfFingerprints.append(list)
+    listOfFingerprints.sort(key=sort_key,reverse=True)
 
-  fp = ''
-  for fingerprint in listOfFingerprints:
-    info = ''
-    for val in fingerprint:
-      info = info + ":" + val
-    fp = fp + '|' + info[1:]
+    fp = ''
+    for fingerprint in listOfFingerprints:
+      info = ''
+      for val in fingerprint:
+        info = info + ":" + val
+      fp = fp + '|' + info[1:]
 
-  if fp[0] == '|':
-    fp = fp[1:]
+    if fp[0] == '|':
+      fp = fp[1:]
 
   return fp

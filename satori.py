@@ -1,11 +1,11 @@
 from pypacker import ppcap
-from pypacker import pcapng
 from pypacker.layer12 import ethernet
 from pypacker.layer12 import linuxcc
 from pypacker.layer3 import ip
 from pypacker.layer3 import icmp
 from pypacker.layer4 import tcp
 from pypacker.layer4 import udp
+from pypacker.layer4 import ssl
 from pypacker.layer567 import dhcp
 from pypacker.layer567 import http
 from pypacker import pypacker
@@ -21,15 +21,17 @@ import satoriHTTP
 #import satoriICMP
 import satoriSMB
 import satoriCommon
+import satoriSSL
 
 
 def versionInfo():
-  dateReleased='satori.py - 2021-11-09'
+  dateReleased='satori.py - 2021-12-13'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
   satoriHTTP.version()
   satoriSMB.version()
+  satoriSSL.version()
   satoriCommon.version()
   satoriCommon.getImportVersions()
 
@@ -39,6 +41,7 @@ def packetType(buf):
   dhcpPacket = False
   httpPacket = False
   udpPacket = False
+  sslPacket = False
 
   #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
   eth = ethernet.Ethernet(buf)
@@ -54,6 +57,8 @@ def packetType(buf):
       httpPacket = True
     if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None):
       udpPacket = True
+    if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, ssl.SSL] is not None):
+      sslPacket = True
 
   lcc = linuxcc.LinuxCC(buf)
   if hex(lcc.type) == '0x800':
@@ -68,8 +73,10 @@ def packetType(buf):
       httpPacket = True
     if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP] is not None):
       udpPacket = True
+    if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, ssl.SSL] is not None):
+      sslPacket = True
 
-  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket)
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket)
 
 
 def printCheck(timeStamp, fingerprint):
@@ -106,8 +113,10 @@ def main():
   httpCheck = False
   icmpCheck = False  #not enabled in lower code at this point due to tracking features I'm not willing to code at this time.
   smbCheck = False
+  sslCheck = False
 
   #read in fingerprints
+  [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList] = satoriSSL.BuildSSLFingerprintFiles()
   [sExactList, saExactList, sPartialList, saPartialList] = satoriTCP.BuildTCPFingerprintFiles()
   [DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList] = satoriDHCP.BuildDHCPFingerprintFiles()
   [useragentExactList, useragentPartialList] = satoriHTTP.BuildHTTPUserAgentFingerprintFiles()
@@ -125,6 +134,7 @@ def main():
     httpCheck = True
     icmpCheck = True
     smbCheck = True
+    sslCheck = True
   else:
     mod = modules.split(',')
     for i in range(len(mod)):
@@ -138,6 +148,8 @@ def main():
         icmpCheck = True
       elif (mod[i].lower() == 'smb'):
         smbCheck = True
+      elif (mod[i].lower() == 'ssl'):
+        sslCheck = True
 
   if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing parameters into a procedure sucks.
     onlyfiles = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
@@ -150,9 +162,12 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
             if tcpPacket and tcpCheck:
               [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
+              printCheck(timeStamp, fingerprint)
+            if sslPacket and sslCheck:
+              [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
               printCheck(timeStamp, fingerprint)
             if dhcpPacket and dhcpCheck:
               [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
@@ -208,12 +223,14 @@ def main():
         counter = counter + 1
         ts = ts/1000000000
 
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
 
         if tcpPacket and tcpCheck:
           [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
           printCheck(timeStamp, fingerprint)
-
+        if sslPacket and sslCheck:
+          [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
+          printCheck(timeStamp, fingerprint)
         if dhcpPacket and dhcpCheck:
           [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
                                  pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
@@ -270,10 +287,13 @@ def main():
         (header, buf) = preader.next()
         ts = header.getts()[0]
 
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
 
         if tcpPacket and tcpCheck:
           [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
+          printCheck(timeStamp, fingerprint)
+        if sslPacket and sslCheck:
+          [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
           printCheck(timeStamp, fingerprint)
         if dhcpPacket and dhcpCheck:
           [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
@@ -343,6 +363,7 @@ try:
   parser.add_argument('-v', '--verbose', action="store_true", dest="verbose", help="verbose logging, mostly just telling you where/what we're doing, not recommended if want to parse output typically", default=False)
   parser.add_argument('--version', action="store_true", dest="version", help="print dates for the different modules and 3rd party tools used", default="")
   parser.add_argument('--dupes', action="store_true", dest="dupes", help="check for dupes in the fingerprint files", default="")
+  parser.add_argument('--ja3update', action="store_true", dest="ja3update", help="download latest ja3er.com json fingerprint file", default="")
 
   args = parser.parse_args()
 
@@ -388,6 +409,9 @@ try:
     sys.exit()
   if args.dupes:
     satoriCommon.Dupes()
+    sys.exit()
+  if args.ja3update:
+    satoriSSL.ja3erUpdate()
     sys.exit()
 
   if (__name__ == '__main__') and proceed:
