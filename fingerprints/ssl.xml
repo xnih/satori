@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                                                    -->
+<!-- Terms of use of fingerprint data:                                                  -->
+<!-- You are welcome to use the fingerprint data provided as long as you:               -->
+<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
+<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
+<!--     http://github.com/xnih/satori                                                  -->
+<!--                                                                                    -->
+<!-- If you are using this for your own programs it is highly recommended you           -->
+<!-- contribute new fingerprints                                                        -->
+<!--                                                                                    -->
+<!-- Updates can be found at:                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
+<!-- example:                                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
+<!--                                                                                    -->
+<SSL created="2021-12-13" last_updated="2021-12-13" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="">
+    <fingerprints>
+        <fingerprint name="Malicious - Adware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fb58831f892190644fe44e25bc830b45"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="2092e1fffb45d7e4a19a57f9bc5e203a"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8498fe4268764dbf926a38283e9d3d8f"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="20dd18bdd3209ea718989030a6f93364"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8991a387e4cc841740f25d6f5139f92d"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="3d89c0dfb1fa44911b8fa7523ef8dedb"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e330bca99c8a5256ae126a55c4c725c5"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="83e04bc58d402f9633983cbf22724b02"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b8f81673c0e1d29908346f3bab892b9b"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d551fafc4f40f1dec2bb45980bfa9492"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="29085f03f8e8a03f0b399c5c7cf0b0b8"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="bc6c386f480ee97b9d9e52d472b772d8"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b13d01846ad7a14a70bf030a16775c78"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="698e36219f3979420fa2581b21dac7ec"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="550dce18de1bb143e69d6dd9413b8355"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="098f55e27d8c4b0a590102cbdb3a5f3a"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="46efd49abcca8ea9baa932da68fdb529"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b2b61db7b9490a60d270ccb20b462826"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="92579701f145605e9edc0b01a901c6d5"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="7691297bcb20a41233fd0a0baa0a3628"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="16efcf0e00504ddfedde13bfea997952"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="93d056782d649deb51cda44ecb714bb0"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="5e573c9c9f8ba720ef9b18e9fce2e2f7"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="849b04bdbd1d2b983f6e8a457e0632a8"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="9c2589e1c0e9f533a022c6205f9719e1"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="f6fd83a21f9f3c5f9ff7b5c63bbc179d"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Adwin" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d2935c58fe676744fecc8614ee5356c7"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="decfb48a53789ebe081b88aabb58ee34"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - AsyncRAT" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fc54e0d16d9764783542f0146a98b300"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - BitRAT" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8515076cbbca9dce33151b798f782456"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - CoinMiner" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="40adfd923eb82b89d8836ba37a19bca1"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Dridex" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="51c64c77e60f3980eea90869b68c58a8"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="cb98a24ee4b9134448ffb5714fd870ac"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b386946a5a44d1ddcc843bc75336dfce"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d6f04b5a910115f4b50ecec09d40a1df"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Gootkit" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c5235d3a8b9934b7fbbd204d50bc058d"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Gozi" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="57f3642b4e37e28f5cbe3020c9331b4c"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c201b92f8b483fa388be174d6689f534"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - JBifrost" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="51a7ad14509fd614c7bb3a50c4982b8c"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Quakbot" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="3cda52da4ade09f1f781ad2e82dcfa20"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="7dd50e112cd23734a310b90f6f44a7cd"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Ransomware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="2d8794cb7b52b777bee2695e79c15760"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Ransomware.Troldesh" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1be3ecebe5aa9d3654e6e703d81f6928"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Tofsee" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fc2299d5b2964cd242c5a2c8c531a5f0"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c2b4710c6888a5d47befe865c8e6fb19"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="25d74b7b4b779eb1efd4b31d26d651c6"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a50a861119aceb0ccc74902e8fddb618"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="ffefafdb86336d057eda5fdf02b3d5ce"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="70722097d1fe1d78d8c2164640ab6df4"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="bffa4501966196d3d6e90cee1f88fc89"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="da949afd9bd6df820730f8f171584a71"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c0220cd64849a629397a9cb68f78a0ea"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="08a8a4e85b25ac42e1490bc85cfdb5ce"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="32926ca3e59f0413d0b98725454594f5"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="dff8a0aa1c904aaea76c5bf624e88333"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="44dab16d680ef93487bc16ad23b3ffb1"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d81d654effb94714a4086734fa0adad9"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="52c7396a501e4fecbdfa99c5408334ac"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c5deb9465d47232dd48772f9c4d14679"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1aee0238942d453d679fc1e37a303387"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="807fca46d9d0cf63adf4e5e80e414bbe"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="7a29c223fb122ec64d10f0a159e07996"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="70a04365be5bbd4653698bebeb43ce68"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7643725fcff971e3051fe0e47fc2c71"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1fe4c7a3544eb27afec2adfb3a3dbf60"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="34f14a69ad7009ca5863379218af17f3"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d76ee64fb7273733cbe455ac81c292e6"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8f6c918dcb585ebbea05e2cc94530e3d"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1d095e68489d3c535297cd8dffb06cb9"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="f22bdd57e3a52de86cda40da2d84e83b"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="0cc1e84568e471aa1d62ad4158ade6b5"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d18a4da84af59e1108862a39bae7c9d4"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a61299f9b501adcf680b9275d79d4ac6"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="d7150af4514b868defb854db0f62a441"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="df5c30e670dba99f9270ed36060cf054"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="35c0a31c481927f022a3b530255ac080"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="7dcce5b76c8b17472d024758970a406b"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="911479ac8a0813ed1241b3686ccdade9"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="03e186a7f83285e93341de478334006e"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="17fd49722f8d11f3d76dce84f8e099a7"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e3b2ab1f9a56f2fb4c9248f2f41631fa"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="4d7a28d6f2263ed61de88ca66eb011e3"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1543a7c46633acf71e8401baccbd0568"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="590a232d04d56409fab72e752a8a2634"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="96eba628dcb2b47607192ba74a3b55ba"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="7c410ce832e848a3321432c9a82e972b"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="906004246f3ba5e755b043c057254a29"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="9f62c4f26b90d3d757bea609e82f2eaf"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b90bdbe961a648f0427db21aaa6ccb59"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fd80fa9c6120cdeea8520510f3c644ac"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - TorrentLocker" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1712287800ac91b34cadd5884ce85568"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Trickbot" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8916410db85077a5460817142dcbc8de"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="534ce2dbc413c68e908363b5df0ae5e0"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8f52d1ce303fb4a6515836aec3cc16b1"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="49ed2ef3f1321e5f044f1e71b0e6fdd5"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="f735bbc6b69723b9df7b0e7ef27872af"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1aa7bf8b97e540ca5edd75f7b8384bfa"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e62a5f4d538cbf169c2af71bec2399b4"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fb00055a1196aeea8d1bc609885ba953"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c50f6a8b9173676b47ba6085bd0c6cee"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0" os_name="Firefox on Ubuntu" os_class="Linux" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-12-13">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fe390d12ef1170dcff3482a529bac4f0"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="579ccef312d18482fc42e2b822ca2430"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c279b0189edb9269da7bc43dea5e0c36"/>
+            </ssl_tests>
+        </fingerprint>
+    </fingerprints>
+</SSL>
+
