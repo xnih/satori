@@ -6,10 +6,16 @@ It currently supports fingerprinting by the following means:
 - TCP
 - HTTP (User Agent and Server)
 - SMB (TCP and UDP)
+- SSL (JA3/JA3S) 
 
 This program was started back in 2004 and had a decent life as a windows program, doing passive OS fingerprinting for 10 years with regular updates, but it fell by the wayside.  It has been a goal to get it back out here, written in something that I could share the code with others.  
 
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files.
+
+## ssl - if you want more fingerprints
+You'll need to download the ja3er.com json file if you want a decent DB of fingerprints, otherwise the xml version that is part of satori right now is primarily from sslbl.abuse.ch/ja3-fingerprints
+
+To download the j3er.com ones do a 'satori.py --ja3update'.  Though please be aware it is going to ignore the cert when it goes to download this, if you are not comfortable with that grab the file manually and drop it in the fingerprint directory.
 
 ## requirements
 ### os related
