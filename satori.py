@@ -319,7 +319,7 @@ def main():
           printCheck(timeStamp, fingerprintHdrUserAgent)
           printCheck(timeStamp, fingerprintBodyUserAgent)
           [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
-          printCheck(timeStamp, fingerprintHdrUserServer)
+          printCheck(timeStamp, fingerprintHdrServer)
           printCheck(timeStamp, fingerprintBodyServer)
 #        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
 #          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
