@@ -25,7 +25,7 @@ import satoriSSL
 
 
 def versionInfo():
-  dateReleased='satori.py - 2021-12-13'
+  dateReleased='satori.py - 2022-01-04'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
