@@ -29,6 +29,7 @@ To download the j3er.com ones do a 'satori.py --ja3update'.  Though please be aw
 - pypacker*
 - pcapy*  (depending on distro may need these installed prior:libpcap-dev, python3-dev; along with setuptools if using pip3 to install)
 - untangle*
+- requests*  (new requirement for the SSL fingerprinting)
 
 #### optional
 - netifaces* (while not specifically needed saves some error messages at least on rasbianos)
