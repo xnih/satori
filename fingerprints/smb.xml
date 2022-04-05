@@ -16,8 +16,13 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2022-02-21" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2022-04-05" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="CIFS Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <smb_tests>
+                <test weight="5" matchtype="exact" smbnativelanman="CIFS VFS Client for Linux"/>
+            </smb_tests>
+        </fingerprint>
         <fingerprint name="Dell Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="FXNIC 0.01"/>
@@ -423,10 +428,11 @@
                 <test weight="10" matchtype="exact" smbnativename="Windows 6.1"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">
+        <fingerprint name="Windows 7 SP1" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://www.microsoft.com/windows/windows-7/default.aspx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
             <smb_tests>
                 <test weight="10" matchtype="exact" smbnativename="Windows 7 Enterprise 7601 Service Pack 1"/>
                 <test weight="7" matchtype="exact" smbnativelanman="Windows 7 Enterprise 6.1"/>
+                <test weight="10" matchtype="exact" smbnativename="Windows Embedded Standard 7601 Service Pack 1"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Windows 8" os_name="Windows 8" os_class="Windows" os_vendor="Microsoft Corp." os_url="http://windows.microsoft.com/en-US/windows-8/meet" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-27">

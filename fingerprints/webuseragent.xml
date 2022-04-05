@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2022-02-18" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2022-04-05" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Echo Dot" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
@@ -461,6 +461,13 @@
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 15_3"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Apple TV OS 15.4.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 15_4"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TVOS,15.4"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 15_4"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Apple TV OS 8.4.1" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_1"/>
@@ -657,6 +664,12 @@
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.4"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Apple Watch OS 8.5.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Watch OS,8.5"/>
+                <test weight="7" matchtype="partial" webuseragent="watchOS/8.5"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Apple Watch SE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2021-09-29">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Watch5,9"/>
@@ -725,6 +738,16 @@
                 <test weight="5" matchtype="exact" webuseragent="Avast Antivirus"/>
                 <test weight="5" matchtype="exact" webuseragent="Avast SimpleHttp/3.0"/>
                 <test weight="5" matchtype="exact" webuseragent="Antivirus Emergency Update Agent"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Avigilon" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="http://www.avigilon.com" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Avigilon"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="AXIS Camera Station" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="http://www.axis.com" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="AXIS Camera Station"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Bitdefender AntiVirus" os_name="" os_class="" os_vendor="" os_url="" device_type="Antivirus" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
@@ -1466,6 +1489,13 @@
                 <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 15_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 15_3"/>
                 <test weight="10" matchtype="partial" webuseragent="iphone osVer/15.3"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="iPad OS 15.4.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="10" matchtype="partial" webuseragent="iPad; CPU OS 15_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iPad; U; CPU OS 15_4"/>
+                <test weight="10" matchtype="partial" webuseragent="iphone osVer/15.4"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="iPad OS 15.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="Multimedia Device" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-09-29">
@@ -3710,6 +3740,17 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS,12.2"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Mac OS X - 12.3.x" os_name="Monterey" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 12_3_"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 12.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/12.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,12.3."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 12.3."/>
+                <test weight="7" matchtype="partial" webuseragent="macOS, 12.3"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,12.3"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Mac OS X - 12.x" os_name="Monterey" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="OS X 12"/>
@@ -3723,6 +3764,11 @@
         <fingerprint name="McAfee Antivirus" os_name="" os_class="" os_vendor="" os_url="" device_type="antivirus" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="exact" webuseragent="McAfee Agent"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Microcall" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="http://www.microcall.com" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Microcall"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Nagios Scan" os_name="Nagios" os_class="Scanner" os_vendor="Nagios" os_url="http://www.nagios.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
@@ -4320,6 +4366,11 @@
                 <test weight="5" matchtype="partial" webuseragent="Xbox One"/>
                 <test weight="5" matchtype="partial" webuseragent="xbox_one"/>
                 <test weight="5" matchtype="partial" webuseragent="NFXONE-03-"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Zabbix" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="http://www.zabbix.com" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+            <webuseragent_tests>
+                <test weight="10" matchtype="exact" webuseragent="Zabbix"/>
             </webuseragent_tests>
         </fingerprint>
     </fingerprints>

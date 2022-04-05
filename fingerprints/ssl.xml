@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--                                                                                    -->
 <!-- Terms of use of fingerprint data:                                                  -->
 <!-- You are welcome to use the fingerprint data provided as long as you:               -->
@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SSL created="2021-12-13" last_updated="2021-12-13" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="">
+<SSL created="2021-12-13" last_updated="2022-04-05" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Malicious - Adware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
@@ -178,13 +178,11 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c50f6a8b9173676b47ba6085bd0c6cee"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0" os_name="Firefox on Ubuntu" os_class="Linux" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-12-13">
+        <fingerprint name="Possible False Positive - Tofsee" os_name="False Positive" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2022-04-05">
             <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja3" sslsig="fe390d12ef1170dcff3482a529bac4f0"/>
-                <test weight="5" matchtype="exact" testtype="ja3" sslsig="579ccef312d18482fc42e2b822ca2430"/>
-                <test weight="5" matchtype="exact" testtype="ja3" sslsig="c279b0189edb9269da7bc43dea5e0c36"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7643725fcff971e3051fe0e47fc2c71"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="32926ca3e59f0413d0b98725454594f5"/>
             </ssl_tests>
         </fingerprint>
     </fingerprints>
 </SSL>
-
