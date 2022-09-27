@@ -22,7 +22,7 @@ import smbHeader
 # as I'm not tracking stuf in this version of Satori, for now this module will not be completed, but it is at least started.
 #
 def version():
-  dateReleased='satoriSMB.py - 2021-11-08'
+  dateReleased='satoriSMB.py - 2022-09-26'
   print(dateReleased)
   smbHeader.version()
 
@@ -64,7 +64,7 @@ def smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList):
 
   ip4 = pkt.upper_layer
   udp1 = ip4.upper_layer
-  if udp1.sport != 138:
+  if udp1.sport != 138:  #should I look at more than port 138 here?
     sys.exit(1)
   nbds1 = smbHeader.NBDS_Header(udp1.body_bytes)
   smb = smbHeader.UDPSMB_Header(nbds1.body_bytes)
@@ -100,8 +100,6 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
 
   ip4 = pkt.upper_layer
   tcp1 = ip4.upper_layer
-  #if (_tcp.src_portno <> 139) and (_tcp.dst_portno <> 139) and (_tcp.src_portno <> 445)and (_tcp.dst_portno <> 445) then exit;
-  #need to take tcp1.body_bytes and shove the info into stuff now......
   x = len(smbHeader.netbiosSessionService())
 
   fingerprintOS = None
@@ -118,10 +116,10 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
           unicode=True
         else:  #0 or space
           unicode=False
-
         nativeOS = ''
         nativeLanMan = ''
 
+        #smb1.body_bytes[0] = Word Count under Session Setup and Request
         if smb1.body_bytes[0] == 0X0:
           pass
         elif smb1.body_bytes[0] == 0X3:
@@ -150,10 +148,11 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
 #                build = struct.unpack('@h',version.build)[0]
 #                revision = struct.unpack('@s',version.revision)[0]
 #                print(str(major) + '.' + str(minor) + ' ' + str(build) + ' ' + str(revision))
-          if x % 2 == 0:
-            buffer = SS1.body_bytes[x+1:]
-          else:
-            buffer = SS1.body_bytes[x:]
+#          if x % 2 == 0:
+#            buffer = SS1.body_bytes[x:]
+#          else:
+#            buffer = SS1.body_bytes[x:]
+          buffer = SS1.body_bytes[x:]
           #Native OS; Native LAN Manager
           info = parseBuffer(buffer, unicode)
           info = info.split(',')
@@ -173,10 +172,11 @@ def smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartia
 #                build = struct.unpack('@h',version.build)[0]
 #                revision = struct.unpack('@b',version.revision)[0]
 #                print(str(major) + '.' + str(minor) + ' ' + str(build) + ' ' + str(revision))
-          if x % 2 == 0:
-            buffer = SS1.body_bytes[x+1:]
-          else:
-            buffer = SS1.body_bytes[x:]
+#          if x % 2 == 0:
+#            buffer = SS1.body_bytes[x:]
+#          else:
+#            buffer = SS1.body_bytes[x+1:]
+          buffer = SS1.body_bytes[x:]
           #Native OS; Native LAN Manager
           info = parseBuffer(buffer, unicode)
           info = info.split(',')

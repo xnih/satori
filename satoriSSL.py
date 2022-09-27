@@ -2,6 +2,7 @@ import untangle
 import json
 import struct
 import satoriCommon
+from os import remove
 from os.path import exists
 from pathlib import Path
 from pypacker.layer12 import ethernet
@@ -125,7 +126,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriTLS.py - 2021-12-13'
+  dateReleased='satoriSSL.py - 2022-09-21'
   print(dateReleased)
 
 
@@ -272,16 +273,43 @@ def decodeSSLRecords(recs):
 
 
 def ja3erUpdate():
-  print('attempting to download, this will take awhile...')
   satoriPath = str(Path(__file__).resolve().parent)
   url = 'https://ja3er.com/getAllUasJson'
+  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
   with open(ja3erFile, 'wb') as f:
-    resp = requests.get(url, verify=False)  #not ideal to ignore I know
-    f.write(resp.content)
+    try:
+      print('attempting to download %s, this will take awhile as it is a 210MB file...' % url)
+      resp = requests.get(url, verify=False, timeout=(10, 60))  #not ideal to ignore https, but don't want to deal with certs
+      f.write(resp.content)
+      print('check file %s' % ja3erFile)
+    except Exception as e:
+      try:
+        print('failed to download %s, now attempting to download from %s, this will take awhile as it is a 210MB file...' % (url, backupurl))
+        resp = requests.get(backupurl, verify=False, timeout=(10, 60))  #not ideal to ignore https, but don't want to deal with certs
+        f.write(resp.content)
+        print('check file %s' % ja3erFile)
+      except Exception as e:
+        print(e)
+        remove(ja3erFile)
 
-  print('check file')
+
+def trisulnsmUpdate():
+  satoriPath = str(Path(__file__).resolve().parent)
+  url = 'https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json'
+  trisulnsmFile = satoriPath + '/fingerprints/trisulnsm.json'
+
+  with open(trisulnsmFile, 'wb') as f:
+    try:
+      print('attempting to download %s...' % url)
+      resp = requests.get(url, verify=False, timeout=(10, 60))  #not ideal to ignore https, but don't want to deal with certs
+      f.write(resp.content)
+      print('check file %s' % trisulnsmFile)
+    except Exception as e:
+      print(e)
+      remove(trisulsmFile)
+
 
 def BuildSSLFingerprintFiles():
   # converting from the xml format to a more flat format that will hopefully be faster than walking the entire xml every FP lookup
@@ -320,16 +348,44 @@ def BuildSSLFingerprintFiles():
           else:
             sslJA3SXMLExactList[sslsig] = os + ':' + weight
 
-  #json load
+  #ja3er json load
   json_file_path = satoriPath + '/fingerprints/ja3er.json'
   weight = '5'  #added a default value of 5 for all fingerprints
 
   if exists(json_file_path):
     with open(json_file_path, 'r') as j:
       contents = json.loads(j.read())
+    j.close()
 
     for fp in contents:
       sslJA3JSONExactList[fp['md5']] = fp['User-Agent'] + ':' + weight
+
+  #trisulnsm load
+  file_path = satoriPath + '/fingerprints/trisulnsm.json'
+  weight = '5'  #added a default value of 5 for all fingerprints
+
+
+  if exists(file_path):
+    j = open(file_path, 'r')
+    contents = j.readlines()
+    j.close()
+
+    # stripe all the line feeds
+    contents = list(map(lambda x:x.strip(),contents))
+
+    content = '['
+    for i in contents:
+      if i != "":
+        if i[0] == '{':
+          content += i + ','
+    content = content[:-1]
+    content = content + ']'
+
+    #convert string json object
+    jsonObj = json.loads(content)
+
+    for fp in jsonObj:
+      sslJA3JSONExactList[fp['ja3_hash']] = fp['desc'] + ':' + weight
 
   return [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList]
 

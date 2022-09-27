@@ -1,14 +1,8 @@
-from pypacker import ppcap
-from pypacker.layer12 import ethernet
-from pypacker.layer12 import linuxcc
-from pypacker.layer3 import ip
-from pypacker.layer3 import icmp
-from pypacker.layer4 import tcp
-from pypacker.layer4 import udp
-from pypacker.layer4 import ssl
-from pypacker.layer567 import dhcp
-from pypacker.layer567 import http
-from pypacker import pypacker
+from pypacker.layer12 import ethernet, linuxcc
+from pypacker.layer3 import ip, icmp
+from pypacker.layer4 import tcp, udp, ssl
+from pypacker.layer567 import dhcp, http
+from pypacker import pypacker, ppcap
 import datetime
 import pcapy
 import argparse
@@ -20,12 +14,13 @@ import satoriDHCP
 import satoriHTTP
 #import satoriICMP
 import satoriSMB
+import smbHeader
 import satoriCommon
 import satoriSSL
 
 
 def versionInfo():
-  dateReleased='satori.py - 2022-01-04'
+  dateReleased='satori.py - 2022-09-26'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
@@ -42,6 +37,7 @@ def packetType(buf):
   httpPacket = False
   udpPacket = False
   sslPacket = False
+  smbPacket = False
 
   #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
   eth = ethernet.Ethernet(buf)
@@ -50,15 +46,30 @@ def packetType(buf):
     pkt = eth
 
     if (eth[ethernet.Ethernet, ip.IP, tcp.TCP] is not None):
-      tcpPacket = True
-    if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None):
-      dhcpPacket = True
-    if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None):
-      httpPacket = True
+      if eth[tcp.TCP] != None:
+        tcpPacket = True
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, ssl.SSL] is not None):
+          if eth[ssl.SSL] != None:
+            sslPacket = True
+        if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, http.HTTP] is not None):
+          if eth[http.HTTP] != None:
+            httpPacket = True
+        #attempt to tell if it is SMB, kludgy!
+        tcp1 = eth[ip.IP].upper_layer
+        if (tcp1.sport == 138) or (tcp1.dport == 138) or (tcp1.sport == 139) or (tcp1.dport == 138) or (tcp1.sport == 445) or (tcp1.dport == 445):
+          smbPacket = True
+
     if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None):
-      udpPacket = True
-    if (eth[ethernet.Ethernet, ip.IP, tcp.TCP, ssl.SSL] is not None):
-      sslPacket = True
+      if eth[udp.UDP] != None:
+        udpPacket = True
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dhcp.DHCP] is not None):
+          if eth[dhcp.DHCP] != None:
+            dhcpPacket = True
+        #attempt to tell if it is SMB, kludgy!
+        udp1 = eth[ip.IP].upper_layer
+        if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
+          smbPacket = True
+
 
   lcc = linuxcc.LinuxCC(buf)
   if hex(lcc.type) == '0x800':
@@ -66,17 +77,32 @@ def packetType(buf):
     pkt = lcc
 
     if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP] is not None):
-      tcpPacket = True
-    if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP, dhcp.DHCP] is not None):
-      dhcpPacket = True
-    if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, http.HTTP] is not None):
-      httpPacket = True
-    if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP] is not None):
-      udpPacket = True
-    if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, ssl.SSL] is not None):
-      sslPacket = True
+      if lcc[tcp.TCP] != None:
+        tcpPacket = True
+        if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, ssl.SSL] is not None):
+          if lcc[ssl.SSL] != None:
+            sslPacket = True
+        if (lcc[linuxcc.LinuxCC, ip.IP, tcp.TCP, http.HTTP] is not None):
+          if lcc[http.HTTP] != None:
+            httpPacket = True
+        #attempt to tell if it is SMB, kludgy!  For TCP I probably only need 139 and 445
+        tcp1 = lcc[ip.IP].upper_layer
+        if (tcp1.sport == 138) or (tcp1.dport == 138) or (tcp1.sport == 139) or (tcp1.dport == 138) or (tcp1.sport == 445) or (tcp1.dport == 445):
+          smbPacket = True
 
-  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket)
+
+    if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP] is not None):
+      if lcc[udp.UDP] != None:
+        udpPacket = True
+        if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP, dhcp.DHCP] is not None):
+          if lcc[dhcp.DHCP] != None:
+            dhcpPacket = True
+        #attempt to tell if it is SMB, kludgy!  For UDP I probably only need 138
+        udp1 = lcc[ip.IP].upper_layer
+        if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
+          smbPacket = True
+
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket)
 
 
 def printCheck(timeStamp, fingerprint):
@@ -162,15 +188,25 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
-            if tcpPacket and tcpCheck:
-              [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
-              printCheck(timeStamp, fingerprint)
-            if sslPacket and sslCheck:
-              [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-              printCheck(timeStamp, fingerprint)
-            if dhcpPacket and dhcpCheck:
-              [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket) = packetType(buf)
+
+            try:
+              if tcpPacket and tcpCheck:
+                [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
+                printCheck(timeStamp, fingerprint)
+            except:
+              pass
+
+            try:
+              if sslPacket and sslCheck:
+                [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
+                printCheck(timeStamp, fingerprint)
+            except:
+              pass
+
+            try:
+              if dhcpPacket and dhcpCheck:
+                [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
                                      pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                      ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                      InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
@@ -185,27 +221,50 @@ def main():
                                      OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                      DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                      DeclineTTLExactList)
-              printCheck(timeStamp, fingerprintOptions)
-              printCheck(timeStamp, fingerprintOption55)
-              printCheck(timeStamp, fingerprintVendorCode)
-            if httpPacket and httpCheck:
-              [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
-              printCheck(timeStamp, fingerprintHdrUserAgent)
-              printCheck(timeStamp, fingerprintBodyUserAgent)
-              [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
-              printCheck(timeStamp, fingerprintHdrServer)
-              printCheck(timeStamp, fingerprintBodyServer)
-#            if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
-#              satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-            if tcpPacket and smbCheck:
-              [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-              printCheck(timeStamp, fingerprintOS)
-              printCheck(timeStamp, fingerprintLanMan)
-            if udpPacket and smbCheck:
-              [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
-              printCheck(timeStamp, fingerprint)
+                printCheck(timeStamp, fingerprintOptions)
+                printCheck(timeStamp, fingerprintOption55)
+                printCheck(timeStamp, fingerprintVendorCode)
+            except:
+              pass
+
+            try:
+              if httpPacket and httpCheck:
+                [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+                printCheck(timeStamp, fingerprintHdrUserAgent)
+                printCheck(timeStamp, fingerprintBodyUserAgent)
+                [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
+                printCheck(timeStamp, fingerprintHdrServer)
+                printCheck(timeStamp, fingerprintBodyServer)
+            except:
+              pass
+
+#            try:
+#              if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
+#                satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
+#            except:
+#              pass
+
+            try:
+              if tcpPacket and smbPacket and smbCheck:
+                [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+                printCheck(timeStamp, fingerprintOS)
+                printCheck(timeStamp, fingerprintLanMan)
+            except:
+              pass
+
+            try:
+              if udpPacket and smbPacket and smbCheck:
+                [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
+                printCheck(timeStamp, fingerprint)
+            except:
+              pass
+
           except (KeyboardInterrupt, SystemExit):
             raise
+          except ValueError as e:
+            pass
+          except Exception as e:
+            pass
           except:
             pass
       except:
@@ -218,21 +277,30 @@ def main():
     except:
       print('File was not pcap format', end='\n', flush=True)
       sys.exit(1)
+
     for ts, buf in preader:
       try:
         counter = counter + 1
         ts = ts/1000000000
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket) = packetType(buf)
 
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
+        try:
+          if tcpPacket and tcpCheck:
+            [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
 
-        if tcpPacket and tcpCheck:
-          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
-          printCheck(timeStamp, fingerprint)
-        if sslPacket and sslCheck:
-          [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-          printCheck(timeStamp, fingerprint)
-        if dhcpPacket and dhcpCheck:
-          [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
+        try:
+          if sslPacket and sslCheck:
+            [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
+        try:
+          if dhcpPacket and dhcpCheck:
+            [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
                                  pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                  ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                  InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
@@ -247,28 +315,52 @@ def main():
                                  OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                  DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                  DeclineTTLExactList)
-          printCheck(timeStamp, fingerprintOptions)
-          printCheck(timeStamp, fingerprintOption55)
-          printCheck(timeStamp, fingerprintVendorCode)
-        if httpPacket and httpCheck:
-          [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
-          printCheck(timeStamp, fingerprintHdrUserAgent)
-          printCheck(timeStamp, fingerprintBodyUserAgent)
-          [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
-          printCheck(timeStamp, fingerprintHdrServer)
-          printCheck(timeStamp, fingerprintBodyServer)
-#        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
-#          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-        if tcpPacket and smbCheck:
-          [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-          printCheck(timeStamp, fingerprintOS)
-          printCheck(timeStamp, fingerprintLanMan)
-        if udpPacket and smbCheck:
-          [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
-          printCheck(timeStamp, fingerprint)
+            printCheck(timeStamp, fingerprintOptions)
+            printCheck(timeStamp, fingerprintOption55)
+            printCheck(timeStamp, fingerprintVendorCode)
+        except:
+          pass
+
+        try:
+          if httpPacket and httpCheck:
+            [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+            printCheck(timeStamp, fingerprintHdrUserAgent)
+            printCheck(timeStamp, fingerprintBodyUserAgent)
+            [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
+            printCheck(timeStamp, fingerprintHdrServer)
+            printCheck(timeStamp, fingerprintBodyServer)
+        except:
+          pass
+
+#        try:
+#          if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
+#            satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
+#        except:
+#          pass
+
+        try:
+          if tcpPacket and smbPacket and smbCheck:
+            [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+            printCheck(timeStamp, fingerprintOS)
+            printCheck(timeStamp, fingerprintLanMan)
+        except Exception as e:
+          pass
+        except:
+          pass
+
+        try:
+          if udpPacket and smbPacket and smbCheck:
+            [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
 
       except (KeyboardInterrupt, SystemExit):
         raise
+      except ValueError as e:
+        pass
+      except Exception as e:
+        pass
       except:
         pass
 
@@ -286,17 +378,25 @@ def main():
         counter = counter + 1
         (header, buf) = preader.next()
         ts = header.getts()[0]
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket) = packetType(buf)
 
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket) = packetType(buf)
+        try:
+          if tcpPacket and tcpCheck:
+            [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
 
-        if tcpPacket and tcpCheck:
-          [timeStamp, fingerprint] = satoriTCP.tcpProcess(pkt, layer, ts, pypackerVersion, sExactList, saExactList, sPartialList, saPartialList)
-          printCheck(timeStamp, fingerprint)
-        if sslPacket and sslCheck:
-          [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-          printCheck(timeStamp, fingerprint)
-        if dhcpPacket and dhcpCheck:
-          [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
+        try:
+          if sslPacket and sslCheck:
+            [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
+        try:
+          if dhcpPacket and dhcpCheck:
+            [timeStamp, fingerprintOptions, fingerprintOption55, fingerprintVendorCode] = satoriDHCP.dhcpProcess(
                                  pkt, layer, ts, DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, 
                                  ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, 
                                  InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, 
@@ -311,27 +411,50 @@ def main():
                                  OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, 
                                  DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, 
                                  DeclineTTLExactList)
-          printCheck(timeStamp, fingerprintOptions)
-          printCheck(timeStamp, fingerprintOption55)
-          printCheck(timeStamp, fingerprintVendorCode)
-        if httpPacket and httpCheck:
-          [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
-          printCheck(timeStamp, fingerprintHdrUserAgent)
-          printCheck(timeStamp, fingerprintBodyUserAgent)
-          [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
-          printCheck(timeStamp, fingerprintHdrServer)
-          printCheck(timeStamp, fingerprintBodyServer)
-#        if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
-#          satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
-        if tcpPacket and smbCheck:
-          [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
-          printCheck(timeStamp, fingerprintOS)
-          printCheck(timeStamp, fingerprintLanMan)
-        if udpPacket and smbCheck:
-          [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
-          printCheck(timeStamp, fingerprint)
+            printCheck(timeStamp, fingerprintOptions)
+            printCheck(timeStamp, fingerprintOption55)
+            printCheck(timeStamp, fingerprintVendorCode)
+        except:
+          pass
+
+        try:
+          if httpPacket and httpCheck:
+            [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent] = satoriHTTP.httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialList)
+            printCheck(timeStamp, fingerprintHdrUserAgent)
+            printCheck(timeStamp, fingerprintBodyUserAgent)
+            [timeStamp, fingerprintHdrServer, fingerprintBodyServer] = satoriHTTP.httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList)
+            printCheck(timeStamp, fingerprintHdrServer)
+            printCheck(timeStamp, fingerprintBodyServer)
+        except:
+          pass
+
+#        try:
+#          if (eth[ethernet.Ethernet, ip.IP, icmp.ICMP] is not None) and icmpCheck:
+#            satoriICMP.icmpProcess(eth, ts, icmpExactList, icmpDataExactList, icmpPartialList, icmpDataPartialList)
+#        except:
+#          pass
+
+        try:
+          if tcpPacket and smbPacket and smbCheck:
+            [timeStamp, fingerprintOS, fingerprintLanMan] = satoriSMB.smbTCPProcess(pkt, layer, ts, nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList)
+            printCheck(timeStamp, fingerprintOS)
+            printCheck(timeStamp, fingerprintLanMan)
+        except:
+          pass
+
+        try:
+          if udpPacket and smbPacket and smbCheck:
+            [timeStamp, fingerprint] = satoriSMB.smbUDPProcess(pkt, layer, ts, browserExactList, browserPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
       except (KeyboardInterrupt, SystemExit):
         raise
+      except ValueError as e:
+        pass
+      except Exception as e:
+        pass
       except:
         pass
 
@@ -364,6 +487,7 @@ try:
   parser.add_argument('--version', action="store_true", dest="version", help="print dates for the different modules and 3rd party tools used", default="")
   parser.add_argument('--dupes', action="store_true", dest="dupes", help="check for dupes in the fingerprint files", default="")
   parser.add_argument('--ja3update', action="store_true", dest="ja3update", help="download latest ja3er.com json fingerprint file", default="")
+  parser.add_argument('--trisulnsm', action="store_true", dest="trisulnsm", help="download latest trisulnsm json fingerprint file", default="")
 
   args = parser.parse_args()
 
@@ -412,6 +536,9 @@ try:
     sys.exit()
   if args.ja3update:
     satoriSSL.ja3erUpdate()
+    sys.exit()
+  if args.trisulnsm:
+    satoriSSL.trisulnsmUpdate()
     sys.exit()
 
   if (__name__ == '__main__') and proceed:
