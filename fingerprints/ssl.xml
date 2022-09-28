@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SSL created="2021-12-13" last_updated="2022-04-05" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SSL created="2021-12-13" last_updated="2022-09-21" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Malicious - Adware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
@@ -59,10 +59,23 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="fc54e0d16d9764783542f0146a98b300"/>
             </ssl_tests>
         </fingerprint>
+        <fingerprint name="Malicious - Bazar" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="thedfirreport.com/2020/10/08/ryuks-return" last_updated="2022-09-21">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="72a589da586844d7f0818ce684948eea"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="e35df3e00ca4ef31d42b34bebaa2f86e"/>
+            </ssl_tests>
+        </fingerprint>
         <fingerprint name="Malicious - BitRAT" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8515076cbbca9dce33151b798f782456"/>
             </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Cobalt Strike" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="thedfirreport.com/2020/10/ryuks-return" last_updated="2022-09-21">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a0e9f5d64349fb13191bc781f81f42e1"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="ae4edc6faf64d08308082ad26be60767"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="aa29d305dff6e6ac9cd244a62c6ad0c2"/>
+             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - CoinMiner" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
@@ -77,6 +90,15 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="d6f04b5a910115f4b50ecec09d40a1df"/>
             </ssl_tests>
         </fingerprint>
+        <fingerprint name="Malicious - Emotet" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/" last_updated="2022-09-21">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="4d7a28d6f2263ed61de88ca66eb011e3"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="51c64c77e60f3980eea90869b68c58a8"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="80b3a14bccc8598a1f3bbe83e71f735f"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="ec74a5c51106f0419184d0dd08fb05bc"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="fd4bc6cea4877646ccd62f0792ec0b62"/>
+             </ssl_tests>
+        </fingerprint>
         <fingerprint name="Malicious - Gootkit" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c5235d3a8b9934b7fbbd204d50bc058d"/>
@@ -86,6 +108,12 @@
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="57f3642b4e37e28f5cbe3020c9331b4c"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c201b92f8b483fa388be174d6689f534"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - IcedID" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://www.netresec.com/" last_updated="2022-09-21">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a0e9f5d64349fb13191bc781f81f42e1"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="3b5074b1b5d032e5620f69f9f700ff0e"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - JBifrost" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
@@ -176,12 +204,20 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e62a5f4d538cbf169c2af71bec2399b4"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="fb00055a1196aeea8d1bc609885ba953"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c50f6a8b9173676b47ba6085bd0c6cee"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="6734f37431670b3ab4292b8f60f29984"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="623de93db17d313345d7ea481e7443cf"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Possible False Positive - Tofsee" os_name="False Positive" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2022-04-05">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7643725fcff971e3051fe0e47fc2c71"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="32926ca3e59f0413d0b98725454594f5"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Tor Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/" last_updated="2022-09-21">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7d705a3286e19ea42f587b344ee6865"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="a95ca7eab4d47d051a5cd4fb7b6005dc"/>
             </ssl_tests>
         </fingerprint>
     </fingerprints>
