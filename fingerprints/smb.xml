@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SMB created="2008-05-23" last_updated="2022-04-05" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<SMB created="2008-05-23" last_updated="2022-09-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="CIFS Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
             <smb_tests>
@@ -158,12 +158,11 @@
                 <test weight="7" matchtype="exact" smbnativelanman="3.0.25b-apple"/>
             </smb_tests>
         </fingerprint>
-        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+        <fingerprint name="Mac OS X - 10.6" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2022-09-27">
             <smb_tests>
                 <test weight="5" matchtype="exact" smbnativename="Unix"/>
-                <test weight="7" matchtype="exact" smbnativelanman="3.0.28b-apple"/>
+                <test weight="7" matchtype="partial" smbnativelanman="3.0.28b-apple"/>
                 <test weight="7" matchtype="exact" smbnativename="Mac OS X 10.6"/>
-                <test weight="5" matchtype="exact" smbnativelanman="3.0.28a-apple"/>
             </smb_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 10.6.8" os_name="Snow Leopard" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
