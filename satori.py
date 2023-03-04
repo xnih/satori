@@ -4,7 +4,10 @@ from pypacker.layer4 import tcp, udp, ssl
 from pypacker.layer567 import dhcp, http
 from pypacker import pypacker, ppcap
 import datetime
-import pcapy
+try:
+  import pcapy
+except:
+  import pcapyplus as pcapy
 import argparse
 import time
 import sys
@@ -20,7 +23,7 @@ import satoriSSL
 
 
 def versionInfo():
-  dateReleased='satori.py - 2022-09-26'
+  dateReleased='satori.py - 2023-03-03'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()

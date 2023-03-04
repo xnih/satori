@@ -37,7 +37,12 @@ class clientHandshakeHello(pypacker.Packet):
     ("extensions", None, triggerlist.TriggerList),
   )
 
-  len_i = pypacker.get_property_bytes_num("len", ">I")
+  pypackerVersion = satoriCommon.checkPyPackerVersion()
+
+  if float(pypackerVersion) >= 5.4:
+    len_i = pypacker.get_property_bytes_num("len")
+  else: #4.9 or below use .off
+    len_i = pypacker.get_property_bytes_num("len", ">I")
 
   @staticmethod
   def __parse_extension(buf):
@@ -88,7 +93,13 @@ class serverHandshakeHello(pypacker.Packet):
     ("extensions", None, triggerlist.TriggerList),
   )
 
-  len_i = pypacker.get_property_bytes_num("len", ">I")
+  pypackerVersion = satoriCommon.checkPyPackerVersion()
+
+  #this seems to work for now, but may not be a perfect fix for the changes from 4.9 to 5.0
+  if float(pypackerVersion) >= 5.4:
+    len_i = pypacker.get_property_bytes_num("len")
+  else: #4.9 or below use .off
+    len_i = pypacker.get_property_bytes_num("len", ">I")
 
   @staticmethod
   def __parse_extension(buf):
@@ -126,7 +137,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2022-09-21'
+  dateReleased='satoriSSL.py - 2023-03-03'
   print(dateReleased)
 
 

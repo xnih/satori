@@ -8,9 +8,18 @@ def version():
 
 
 def getImportVersions():
-  print("\n3rd party imports needed to make Satori work:")
+  print("\n3rd party imports needed to make Satori work: (pypacker, untangle, and (pcapy or pcapyplus)")
   print("pypacker: %s" % (pkg_resources.get_distribution('pypacker').version))
-  print("pcapy: %s" % (pkg_resources.get_distribution('pcapy').version))
+  try:
+    print("pcapy: %s" % (pkg_resources.get_distribution('pcapy').version))
+  except:
+    pass
+
+  try:
+    print("pcapyplus: %s" % (pkg_resources.get_distribution('pcapyplus').version))
+  except:
+    pass
+
   print("untagle: %s" % (pkg_resources.get_distribution('untangle').version))
 
 
