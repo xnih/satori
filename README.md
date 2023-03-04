@@ -12,6 +12,9 @@ This program was started back in 2004 and had a decent life as a windows program
 
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files.
 
+## interesting notes
+Verified it appears to run fine on Risc V architecture on teh VisionFive 2 at least with no mods.
+
 ## ssl - if you want more fingerprints
 You'll need to download the ja3er.com json file if you want a decent DB of fingerprints, otherwise the xml version that is part of satori right now is primarily from sslbl.abuse.ch/ja3-fingerprints
 
@@ -28,6 +31,7 @@ To download the j3er.com ones do a 'satori.py --ja3update'.  Though please be aw
 - python3
 - pypacker*
 - pcapy*  (depending on distro may need these installed prior:libpcap-dev, python3-dev; along with setuptools if using pip3 to install)
+- pcapyplus (same warnings as pcapy, but this seems to work with latest setuptools)
 - untangle*
 - requests*  (new requirement for the SSL fingerprinting)
 
