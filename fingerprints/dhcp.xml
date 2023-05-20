@@ -176,7 +176,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,28"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 10.x" os_name="Android 10" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-05-21">
+        <fingerprint name="Android 10.x" os_name="Android 10" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-10"/>
                 <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-10"/>
@@ -184,9 +184,18 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,0,0,0,0,0,0,0,0,0,0,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,0,0,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Android 11.x" os_name="Android 11" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
+        <fingerprint name="Android 11.x" os_name="Android 11" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-11"/>
                 <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-11"/>
@@ -195,6 +204,39 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,55,0,0,0,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,80,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,55,80,0,0,0,0,0,0,0,0,0,0,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,60,12,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 12.x" os_name="Android 12" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-12"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-12"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,80,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Android 13.x" os_name="Android 13" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="7" matchtype="partial" dhcptype="Discover" dhcpvendorcode="android-dhcp-13"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="android-dhcp-13"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,54,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,26,28,51,58,59,43,114,108"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,12,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,80,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,57,60,12,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Android 2.2.x" os_name="Android 2.2" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2020-05-27">
@@ -645,14 +687,37 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="udhcp 1.28.3"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon, Inc." device_url="http://www.canon.com" comments="Printers" author="support@packetfence.org" last_updated="2020-05-13">
+        <fingerprint name="Cannon Image Runner C3826" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Cannon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Canon iR-ADV C3826"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Canon iR-ADV C3826"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,55,57,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,55,57,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,44"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,50,54,55,57,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,44,69"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,55,57,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cannon Image Runner C5850" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Cannon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Canon iR-ADV C5850"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Canon iR-ADV C5850"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,50,54,55,57,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="12,15"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,44"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,55,57,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,55,57,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon, Inc." device_url="http://www.canon.com" comments="Printers" author="support@packetfence.org" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="3,6,15,44,47"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,15,44,47"/>
-                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="Canon"/>
+                <test weight="7" matchtype="partial" dhcptype="Request" dhcpvendorcode="Canon"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Chromebook" os_name="ChromeOS" os_class="ChromeOS" os_vendor="Google, Inc." os_url="http://www.google.com/chromebook" device_type="" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2014-07-09">
+        <fingerprint name="Chromebook" os_name="ChromeOS" os_class="ChromeOS" os_vendor="Google, Inc." os_url="http://www.google.com/chromebook" device_type="" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,12,15,26,28,51,54,58,59,119"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,12,15,26,28,51,54,58,59,119,252"/>
@@ -665,6 +730,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,50,57,60,55"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="dhcpcd 5.1.4"/>
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="64"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="chromeos"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Chromecast" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Digital Media Player" device_vendor="Google, Inc." device_url="http://www.google.com/chromecast" comments="" author="twohlers@yahoo.com" last_updated="2014-07-09">
@@ -1620,6 +1686,13 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="FortiGate-30D"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="FortiGate 60F" os_name="" os_class="" os_vendor="" os_url="" device_type="Firewall" device_vendor="Fortinet" device_url="https://www.fortinet.com" comments="" author="" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="FortiGate-60F"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,2,3,6,12,15,28,40,42,240,241"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,57,61,55,12,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="FreeBSD 6.0-6.2" os_name="FreeBSD 6.0" os_class="FreeBSD" os_vendor="FreeBSD" os_url="http://www.freebsd.org" device_type="" device_vendor="" device_url="" comments="unknown version" author="xnih13@gmail.com" last_updated="2009-02-23">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,28,2,3,15,6,12"/>
@@ -1986,6 +2059,17 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="128"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="HP Jetdirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="HP" device_url="http://hp.com" comments="" author="" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="HP JetDirect"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="HP JetDirect"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,51,12,81,55,60,61,77,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,51,12,81,55,60,61,77,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,44,6,7,12,15,54,58,59,69,119,81"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,44,6,7,12,15,54,58,59,69,119,81"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,54,51,50,12,81,55,60,61,77,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="HP LaserJet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://hp.com" comments="Laserjet Pro M201dw" author="xnih13@gmail.com" last_updated="2020-12-12">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,81,22,57,60,77,55,255"/>
@@ -1995,12 +2079,17 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="6,3,1,15,44,12"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="iDRAC" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+        <fingerprint name="iDRAC" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Dell" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="iDRAC"/>
                 <test weight="10" matchtype="exact" dhcptype="Inform" dhcpvendorcode="iDracdiscovery"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,12,55,60,61,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="1,3,15,6,43"/>
+                <test weight="10" matchtype="exact" dhcptype="Inform" dhcpvendorcode="iDRACDiscovery"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,15,6,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,12,55,60,61,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,61,55,12,60,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="43"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Internet Connection Sharing - Microsoft" os_name="Microsoft" os_class="Windows" os_vendor="Microsoft" os_url="http://www.microsoft.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-04-02">
@@ -2689,6 +2778,13 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,119,95,252,44,46"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Mag 522" os_name="" os_class="" os_vendor="" os_url="" device_type="IPTV" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="InfomirMAG522v2"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42,43"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Mandriva 2011" os_name="Linux 2.6" os_class="Linux" os_vendor="" os_url="http://www.mandriva.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2010-11-01">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,50,57,60,12,55"/>
@@ -2731,12 +2827,15 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,15,70,69"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Morse Watchman Keywatch" os_name="" os_class="" os_vendor="" os_url="" device_type="Key Lock Box" device_vendor="Morse Watchman" device_url="https://www.morsewatchmans.com/products/keywatcher-touch" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
+        <fingerprint name="Morse Watchman Keywatch" os_name="" os_class="" os_vendor="" os_url="" device_type="Key Lock Box" device_vendor="Morse Watchman" device_url="https://www.morsewatchmans.com/products/keywatcher-touch" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,55,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="Morse Watchman KWT_V1"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,54,50,61,12,55,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,44,46,47"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Morse Watchman KWT_V1"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,15,44,46,47"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="53,61,12,55,60,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Motorola NIM100" os_name="" os_class="" os_vendor="" os_url="" device_type="DVR" device_vendor="Motorola, Inc." device_url="http://www.motorola.com" comments="Digital Video Recorders" author="support@packetfence.org" last_updated="2009-02-09">
@@ -4343,6 +4442,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoption55="1,15,3,6,44,46,47,31,33,249,43,252,12"/>
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpoptions="53,61,60,12,55,77,255"/>
                 <test weight="10" matchtype="partial" dhcptype="Inform" dhcpvendorcode="mfg=Xerox"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Xovis Sensor" os_name="" os_class="" os_vendor="" os_url="" device_type="Sensor" device_vendor="https://www.xovis.com" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+            <dhcp_tests>
+                <test weight="7" matchtype="exact" dhcptype="Request" dhcpvendorcode="xovis-pc-sensor"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Zenwalk based distro" os_name="Linux 2.6" os_class="Linux" os_vendor="Zenwalk.org" os_url="http://www.zenwalk.org" device_type="" device_vendor="" device_url="" comments="Arudius" author="xnih13@gmail.com" last_updated="2009-03-01">
