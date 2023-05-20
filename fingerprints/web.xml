@@ -16,8 +16,13 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2020-12-12" author="xnih13@gmail.com" last_edited_by="xnih13@gmail.com" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2023-05-19" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Amazon Load Balancer" os_name="" os_class="" os_vendor="" os_url="https://aws.amazon.com/elasticloadbalancing/" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
+            <webserver_tests>
+                <test weight="7" matchtype="exact" webserver="awselb/2.0"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="Amazon Web Serve or ECS" os_name="Amazon" os_class="Linux" os_vendor="Amazon" os_url="https://aws.amazon.com/ecs/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="ECS"/>
@@ -114,6 +119,11 @@
                 <test weight="5" matchtype="partial" webserver="Gentoo"/>
             </webserver_tests>
         </fingerprint>
+        <fingerprint name="GStreamer" os_name="" os_class="" os_vendor="" os_url="https://gstreamer.freedesktop.org/" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
+            <webserver_tests>
+                <test weight="7" matchtype="exact" webserver="GStreamer RTSP server"/>
+            </webserver_tests>
+        </fingerprint>
         <fingerprint name="HP JetDirect" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-12">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="HP-ChaiServer/3.0"/>
@@ -130,9 +140,10 @@
                 <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.65"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Lexmark Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-12">
+        <fingerprint name="Lexmark Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
             <webserver_tests>
                 <test weight="5" matchtype="partial" webserver="thttpd"/>
+                <test weight="5" matchtype="exact" webserver="Lexmark_Web_Server"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Linux" os_name="Linux" os_class="Linux" os_vendor="" os_url="http://www.kernel.org/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-16">
@@ -375,13 +386,18 @@
                 <test weight="5" matchtype="exact" webserver="Xbox/2"/>
             </webserver_tests>
         </fingerprint>
-        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox" device_url="www.xerox.com" comments="" author="xnih13@gmail.com" last_updated="2020-04-24">
+        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox" device_url="www.xerox.com" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
             <webserver_tests>
                 <test weight="10" matchtype="exact" webserver="Fuji Xerox Embedded Server"/>
                 <test weight="5" matchtype="partial" webserver="Xerox"/>
                 <test weight="5" matchtype="exact" webserver="gSOAP/2.8"/>
-                <test weight="5" matchtype="partial" webserver="EWS-NIC5/90.66"/>
-                <test weight="5" matchtype="partial" webserver="EWS-NIC5/19.83"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC5"/>
+                <test weight="5" matchtype="partial" webserver="EWS-NIC4"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Z-World Rabbit" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
+            <webserver_tests>
+                <test weight="7" matchtype="exact" webserver="Z-World Rabbit"/>
             </webserver_tests>
         </fingerprint>
     </fingerprints>
