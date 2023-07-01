@@ -31,6 +31,7 @@ def dnsProcess(pkt, layer, ts, dnsExactList, dnsPartialList):
   ip4 = pkt.upper_layer
 
   fingerprintDNS = None
+  dnsAnswer = ''
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
