@@ -7,7 +7,6 @@ from pypacker.layer567 import dns
 from datetime import datetime
 from pypacker import pypacker
 
-
 # grab the latest fingerprint files:
 # wget chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml -O dhcp.xml
 #
@@ -16,6 +15,12 @@ from pypacker import pypacker
 # cat output.txt | awk -F';' '{print $3, $4, $5, $6, $7}' | sort -u > output2.txt
 # cat output.txt | awk -F';'  '{print $5";"$6";"$7}' | sort -u > output2.txt
 #
+
+
+# due to the sheer number of DNS entries this will display we'll default to only displaying if there is a known fingerprint
+# people may want to change this to collect all DNS lookups
+displayKnownFingerprintsOnly = True
+#displayKnownFingerprintsOnly = False
 
 def version():
   dateReleased='satoriDNS.py - 2023-07-01'
@@ -32,22 +37,27 @@ def dnsProcess(pkt, layer, ts, dnsExactList, dnsPartialList):
 
   fingerprintDNS = None
   dnsAnswer = ''
+  dnsFingerprint = ''
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
 
   dns1 = pkt[dns.DNS]
   for x in range(0,dns1.questions_amount):
     if dns1.answers_amount == 0 and dns1.authrr_amount == 0:
-      if (dns1.flags != 256) and (dns1.flags != 33152):
-        output = 'dns flag to look at closer: ' + str(dns1.flags) + ' - ' + pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
-        print(output)
-      dnsAnswer =  pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
+#      if (dns1.flags != 256) and (dns1.flags != 33152):
+#        output = 'dns flag to look at closer: ' + str(dns1.flags) + ' - ' + pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
+#        print(output)
+      if dns1.flags == 256 or dns1.flags == 33152:
+        dnsAnswer =  pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
 
   if (dnsAnswer != ''):
     dnsFingerprint = fingerprintLookup(dnsExactList, dnsPartialList, dnsAnswer)
     fingerprintDNS = ip4.src_s + ';' + src_mac + ';DNS;' + dnsAnswer + ';' + dnsFingerprint
-  return [timeStamp, fingerprintDNS]
 
+  if displayKnownFingerprintsOnly == False:
+    return [timeStamp, fingerprintDNS]
+  elif dnsFingerprint != '':
+    return [timeStamp, fingerprintDNS]
 
 
 def BuildDNSFingerprintFiles():
