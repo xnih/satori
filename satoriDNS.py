@@ -23,7 +23,7 @@ displayKnownFingerprintsOnly = True
 #displayKnownFingerprintsOnly = False
 
 def version():
-  dateReleased='satoriDNS.py - 2023-07-01'
+  dateReleased='satoriDNS.py - 2023-07-02'
   print(dateReleased)
 
 def dnsProcess(pkt, layer, ts, dnsExactList, dnsPartialList):
@@ -44,9 +44,6 @@ def dnsProcess(pkt, layer, ts, dnsExactList, dnsPartialList):
   dns1 = pkt[dns.DNS]
   for x in range(0,dns1.questions_amount):
     if dns1.answers_amount == 0 and dns1.authrr_amount == 0:
-#      if (dns1.flags != 256) and (dns1.flags != 33152):
-#        output = 'dns flag to look at closer: ' + str(dns1.flags) + ' - ' + pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
-#        print(output)
       if dns1.flags == 256 or dns1.flags == 33152:
         dnsAnswer =  pypacker.dns_name_decode(dns1.queries[x].name)[:-1]
 
