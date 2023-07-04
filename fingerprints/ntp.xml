@@ -23,6 +23,16 @@
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,0,0,unset,0,random"/>
             </ntp_tests>
         </fingerprint>
+        <fingerprint name="Cisco AP" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,34,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,71,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,86,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,260,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,263,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,526,set,0,current"/>
+            </ntp_tests>
+        </fingerprint>
         <fingerprint name="Cisco Prime Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
             <ntp_tests>
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
