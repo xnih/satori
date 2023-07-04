@@ -18,7 +18,7 @@ from pypacker import pypacker
 #
 
 def version():
-  dateReleased='satoriNTP.py - 2023-07-03'
+  dateReleased='satoriNTP.py - 2023-07-04'
   print(dateReleased)
 
 def ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList):
@@ -79,12 +79,12 @@ def ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList):
   # 6 = broadcastClient
 
   if mode == 1:
-    fingerprint = 'active;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + str(get16bitSecs(dispersion)) + ',' + idVal + ',' + referenceVal + ',' + transmitVal
+    fingerprint = 'active;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + idVal + ',' + referenceVal + ',' + transmitVal + ',' + str(get16bitSecs(dispersion))
   elif mode == 2:
     # probably will remove this one?
-    fingerprint = 'passive;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + str(get16bitSecs(dispersion)) + ',' + idVal + ',' + referenceVal + ',' + transmitVal
+    fingerprint = 'passive;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + idVal + ',' + referenceVal + ',' + transmitVal + ',' + str(get16bitSecs(dispersion))
   elif mode == 3:
-    fingerprint = 'client;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + str(get16bitSecs(dispersion)) + ',' + idVal + ',' + referenceVal + ',' + transmitVal
+    fingerprint = 'client;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(poll) + ',' + idVal + ',' + referenceVal + ',' + transmitVal + ',' + str(get16bitSecs(dispersion))
 #  elif mode == 4:
     #poll seemed to be from client it was replying too
 #    fingerprint = 'server;' + str(sport) + ',' + str(leap) + ',' + str(version) + ',' + str(get16bitSecs(dispersion)) + ',' + idVal + ',' + referenceVal + ',' + transmitVal
