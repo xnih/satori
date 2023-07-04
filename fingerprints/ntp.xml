@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--                                                                                    -->
+<!-- Terms of use of fingerprint data:                                                  -->
+<!-- You are welcome to use the fingerprint data provided as long as you:               -->
+<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
+<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
+<!--     http://github.com/xnih/satori                                                  -->
+<!--                                                                                    -->
+<!-- If you are using this for your own programs it is highly recommended you           -->
+<!-- contribute new fingerprints                                                        -->
+<!--                                                                                    -->
+<!-- Updates can be found at:                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
+<!-- example:                                                                           -->
+<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
+<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
+<!--                                                                                    -->
+<NTP created="2023-07-01" last_updated="2023-07-03" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+    <fingerprints>
+        <fingerprint name="Dell Management Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,random"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Prime Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,random"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="RHEL Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,9,0,unset,0,random"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,10,0,unset,0,random"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Ubuntu Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,current"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 10+ and 2016+ Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="active;123,0,3,10,0,set,current,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,10,0,set,current,current"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 2012 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,14,0,set,random,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,0,set,random,current"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Windows 2019 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,0,set,random,current"/>
+            </ntp_tests>
+        </fingerprint>
+    </fingerprints>
+</NTP>
