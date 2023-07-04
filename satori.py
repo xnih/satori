@@ -1,7 +1,7 @@
 from pypacker.layer12 import ethernet, linuxcc
 from pypacker.layer3 import ip, icmp
 from pypacker.layer4 import tcp, udp, ssl
-from pypacker.layer567 import dhcp, http, dns
+from pypacker.layer567 import dhcp, http, dns, ntp
 from pypacker import pypacker, ppcap
 import datetime
 try:
@@ -21,11 +21,11 @@ import smbHeader
 import satoriCommon
 import satoriSSL
 import satoriDNS
-#import satoriNTP
+import satoriNTP
 
 
 def versionInfo():
-  dateReleased='satori.py - 2023-07-01'
+  dateReleased='satori.py - 2023-07-03'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
@@ -33,7 +33,7 @@ def versionInfo():
   satoriSMB.version()
   satoriSSL.version()
   satoriDNS.version()
-#  satoriNTP.version()
+  satoriNTP.version()
   satoriCommon.version()
   satoriCommon.getImportVersions()
 
@@ -46,7 +46,7 @@ def packetType(buf):
   sslPacket = False
   smbPacket = False
   dnsPacket = False
-#  ntpPacket = False
+  ntpPacket = False
 
   #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
   eth = ethernet.Ethernet(buf)
@@ -80,6 +80,9 @@ def packetType(buf):
         if (eth[ethernet.Ethernet, ip.IP, udp.UDP, dns.DNS] is not None):
           if eth[dns.DNS] != None:
             dnsPacket = True
+        if (eth[ethernet.Ethernet, ip.IP, udp.UDP, ntp.NTP] is not None):
+          if eth[ntp.NTP] != None:
+            ntpPacket = True
         #attempt to tell if it is SMB, kludgy!
         udp1 = eth[ip.IP].upper_layer
         if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
@@ -118,12 +121,15 @@ def packetType(buf):
         if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP, dns.DNS] is not None):
           if lcc[dns.DNS] != None:
             dnsPacket = True
+        if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP, ntp.NTP] is not None):
+          if lcc[ntp.NTP] != None:
+            dnsPacket = True
         #attempt to tell if it is SMB, kludgy!  For UDP I probably only need 138
         udp1 = lcc[ip.IP].upper_layer
         if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
           smbPacket = True
 
-  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket)
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket)
 
 
 def printCheck(timeStamp, fingerprint):
@@ -174,6 +180,7 @@ def main():
   [nativeExactList, lanmanExactList, nativePartialList, lanmanPartialList] = satoriSMB.BuildSMBTCPFingerprintFiles()
   [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
   [dnsExactList, dnsPartialList] = satoriDNS.BuildDNSFingerprintFiles()
+  [ntpExactList, ntpPartialList] = satoriNTP.BuildNTPFingerprintFiles()
 
   #check pypacker version due to changes between 4.9 and 5.0 for one TCP feature
   pypackerVersion = satoriCommon.checkPyPackerVersion()
@@ -185,9 +192,8 @@ def main():
     icmpCheck = True
     smbCheck = True
     sslCheck = True
-# can be changed to True, but by default leaving as disabled
-    dnsCheck = False
-#    ntpCheck = True
+    ntpCheck = True
+    dnsCheck = True
   else:
     mod = modules.split(',')
     for i in range(len(mod)):
@@ -205,8 +211,8 @@ def main():
         sslCheck = True
       elif (mod[i].lower() == 'dns'):
         dnsCheck = True
-#      elif (mod[i].lower() == 'ntp'):
-#        ntpCheck = True
+      elif (mod[i].lower() == 'ntp'):
+        ntpCheck = True
 
   if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing parameters into a procedure sucks.
     onlyfiles = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
@@ -219,7 +225,7 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket) = packetType(buf)
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
 
             try:
               if tcpPacket and tcpCheck:
@@ -297,6 +303,13 @@ def main():
             except:
               pass
 
+            try:
+              if ntpPacket and ntpCheck:
+                [timeStamp, fingerprint] = satoriNTP.ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList)
+                printCheck(timeStamp, fingerprint)
+            except:
+              pass
+
           except (KeyboardInterrupt, SystemExit):
             raise
           except ValueError as e:
@@ -320,7 +333,7 @@ def main():
       try:
         counter = counter + 1
         ts = ts/1000000000
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -400,6 +413,12 @@ def main():
         except:
           pass
 
+        try:
+          if ntpPacket and ntpCheck:
+            [timeStamp, fingerprint] = satoriNTP.ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
 
       except (KeyboardInterrupt, SystemExit):
         raise
@@ -424,7 +443,7 @@ def main():
         counter = counter + 1
         (header, buf) = preader.next()
         ts = header.getts()[0]
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -499,6 +518,13 @@ def main():
         try:
           if dnsPacket and dnsCheck:
             [timeStamp, fingerprint] = satoriDNS.dnsProcess(pkt, layer, ts, dnsExactList, dnsPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
+        try:
+          if ntpPacket and ntpCheck:
+            [timeStamp, fingerprint] = satoriNTP.ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList)
             printCheck(timeStamp, fingerprint)
         except:
           pass
