@@ -18,6 +18,11 @@
 <!--                                                                                    -->
 <NTP created="2023-07-01" last_updated="2023-07-04" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Apple Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,0,0,unset,0,random"/>
+            </ntp_tests>
+        </fingerprint>
         <fingerprint name="Cisco Prime Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
             <ntp_tests>
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
@@ -33,6 +38,11 @@
             <ntp_tests>
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,random"/>
+            </ntp_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,0,0,unset,0,random"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="RHEL Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
