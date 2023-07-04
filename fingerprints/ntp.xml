@@ -18,6 +18,11 @@
 <!--                                                                                    -->
 <NTP created="2023-07-01" last_updated="2023-07-04" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
+        <fingerprint name="Android Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
+            <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,3,0,0,unset,0,current"/>
+            </ntp_tests>
+        </fingerprint>
         <fingerprint name="Apple Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
                 <test weight="5" matchtype="exact" ntp="client;123,0,4,0,0,unset,0,random"/>
@@ -25,10 +30,14 @@
         </fingerprint>
         <fingerprint name="Cisco AP" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,1,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,34,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,44,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,71,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,86,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,121,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,191,set,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,252,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,260,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,263,set,0,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,4,4,526,set,0,current"/>
@@ -54,8 +63,9 @@
         </fingerprint>
         <fingerprint name="Mac OS X Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,0,0,unset,0,random"/>
                 <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,random"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,random"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,3,4,8,0,unset,0,current"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="RHEL Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
@@ -73,6 +83,7 @@
             <ntp_tests>
                 <test weight="5" matchtype="exact" ntp="active;123,0,3,10,0,set,current,current"/>
                 <test weight="5" matchtype="exact" ntp="client;123,0,3,10,0,set,current,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,1,set,random,current"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="Windows 11" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
