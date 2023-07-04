@@ -20,7 +20,7 @@
     <fingerprints>
         <fingerprint name="Android Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,3,0,0,unset,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,3,0,unset,0,current,0"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="Apple Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
@@ -30,76 +30,66 @@
         </fingerprint>
         <fingerprint name="Cisco AP" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,1,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,34,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,44,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,71,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,86,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,121,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,191,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,252,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,260,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,263,set,0,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,3,4,4,526,set,0,current"/>
+                <test weight="5" matchtype="parial" ntp="client;123,3,4,4,set,0,current"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Cisco Prime Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Cisco Prime Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,random"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,random,random,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,current,random,0"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="Cisco Router" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,current,current,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,random,current,0"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Dell Management Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Dell Management Server" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,random,random"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,0,set,current,random"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,random,random,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,4,10,set,current,random,0"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="Mac OS X Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,random"/>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,random"/>
-                <test weight="5" matchtype="exact" ntp="client;1025,3,4,8,0,unset,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,unset,0,random,0"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,unset,0,random,0"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,3,4,8,unset,0,current,0"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="RHEL Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="RHEL Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,4,9,0,unset,0,random"/>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,4,10,0,unset,0,random"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,9,unset,0,random,0"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,10,unset,0,random,0"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Ubuntu Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Ubuntu Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,0,unset,0,current"/>
+                <test weight="5" matchtype="exact" ntp="client;1025,0,4,0,unset,0,current,0"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Windows 10+ and 2016+ Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Windows 10+ and 2016+ Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="active;123,0,3,10,0,set,current,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,3,10,0,set,current,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,1,set,random,current"/>
+                <test weight="5" matchtype="exact" ntp="active;123,0,3,10,set,current,current,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,10,set,current,current,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,set,random,current,1"/>
             </ntp_tests>
         </fingerprint>
         <fingerprint name="Windows 11" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,3,3,17,11,unset,current,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,3,3,17,unset,current,current,11"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Windows 2012 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Windows 2012 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,3,14,0,set,random,current"/>
-                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,0,set,random,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,14,set,random,current,0"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,set,random,current,0"/>
             </ntp_tests>
         </fingerprint>
-        <fingerprint name="Windows 2019 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-03">
+        <fingerprint name="Windows 2019 Devices" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
-                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,0,set,random,current"/>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,15,set,random,current,0"/>
             </ntp_tests>
         </fingerprint>
     </fingerprints>
