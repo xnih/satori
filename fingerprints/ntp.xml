@@ -78,6 +78,7 @@
         </fingerprint>
         <fingerprint name="Windows 11" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-04">
             <ntp_tests>
+                <test weight="5" matchtype="exact" ntp="client;123,0,3,17,set,current,current,9"/>
                 <test weight="5" matchtype="exact" ntp="client;123,3,3,17,unset,current,current,11"/>
             </ntp_tests>
         </fingerprint>
