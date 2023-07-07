@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2023-05-19" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2023-07-07" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Echo Dot" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
@@ -482,42 +482,42 @@
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 15_6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.0.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.0.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_0"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.1.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.1.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_1"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.2.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.2.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_2"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.2"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.3.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.3.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_3"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.3"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.4.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.4.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_4"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.4"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple TV OS 16.5.x" os_name="iOS 15" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple TV OS 16.5.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-05-30">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_5"/>
                 <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.5"/>
@@ -736,6 +736,12 @@
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.7"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.7"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch OS 8.8.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-07">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Watch OS,8.8"/>
+                <test weight="7" matchtype="partial" webuseragent="watchOS/8.8"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple Watch OS 9.0.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
