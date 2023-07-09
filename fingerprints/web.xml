@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2023-05-19" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2023-07-09" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Load Balancer" os_name="" os_class="" os_vendor="" os_url="https://aws.amazon.com/elasticloadbalancing/" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
             <webserver_tests>
@@ -131,6 +131,11 @@
                 <test weight="5" matchtype="exact" webserver="Mrvl-R2_0"/>
                 <test weight="5" matchtype="exact" webserver="Virata-EmWeb/R6_2_1"/>
                 <test weight="5" matchtype="exact" webserver="Mrvl-R1_0"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="HP LaserJet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Hewlett-Packard" device_url="http://www.hp.com" comments="" author="xnih13@gmail.com" last_updated="2023-07-09">
+            <webserver_tests>
+                <test weight="5" matchtype="exact" webserver="HP_Compact_Server"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Kyocera Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Kyocera" device_url="https://usa.kyoceradocumentsolutions.com/" comments="" author="xnih13@gmail.com" last_updated="2020-04-23">
