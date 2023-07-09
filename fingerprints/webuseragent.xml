@@ -33,10 +33,11 @@
                 <test weight="7" matchtype="partial" webuseragent="Echo_Show_5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Android" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
+        <fingerprint name="Android" os_name="Android" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Android"/>
                 <test weight="5" matchtype="exact" webuseragent="avdroid"/>
+                <test weight="5" matchtype="partial" webuseragent="android"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Android 1.1" os_name="Android 1.1" os_class="Android" os_vendor="Android" os_url="http://www.android.com" device_type="Smartphone" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">
@@ -690,94 +691,109 @@
                 <test weight="7" matchtype="partial" webuseragent="watchOS/7.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.0.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-09-29">
+        <fingerprint name="Apple Watch OS 8.0.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.0"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.0"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.1.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+        <fingerprint name="Apple Watch OS 8.1.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.1"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.1"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.2.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-02-18">
+        <fingerprint name="Apple Watch OS 8.2.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.2"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.2"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-02-18">
+        <fingerprint name="Apple Watch OS 8.3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.3"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.3"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-02-18">
+        <fingerprint name="Apple Watch OS 8.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.4"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.4"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.5.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-04-05">
+        <fingerprint name="Apple Watch OS 8.5.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.5"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.5"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.5"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-09-27">
+        <fingerprint name="Apple Watch OS 8.6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.6"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.6"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.6"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.7.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2022-09-27">
+        <fingerprint name="Apple Watch OS 8.7.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.7"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.7"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8.7"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 8.8.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-07">
+        <fingerprint name="Apple Watch OS 8.8.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,8.8"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/8.8"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 8."/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.0.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.0.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.0"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.0"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.0"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.1.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.1.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.1"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.1"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.1"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.2.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.2.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.2"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.2"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.2"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.3.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.3"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.3"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.3"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.4.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.4"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.4"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.4"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Apple Watch OS 9.5.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-05-19">
+        <fingerprint name="Apple Watch OS 9.5.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.5"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.5"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple Watch SE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2021-09-29">
@@ -1105,10 +1121,11 @@
                 <test weight="5" matchtype="partial" webuseragent="AFTM"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Fire TV Stick - 3rd Gen (2020)" os_name="Fire OS 7" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
+        <fingerprint name="Fire TV Stick - 3rd Gen (2020)" os_name="Fire OS 7" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Amazon AFTSSS"/>
                 <test weight="5" matchtype="partial" webuseragent="AFTSSS"/>
+                <test weight="5" matchtype="partial" webuseragent="FIRETVSTICK2020"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Fire TV Stick 4K - 1st Gen (2018)" os_name="Fire OS 6" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
@@ -1118,10 +1135,17 @@
                 <test weight="7" matchtype="partial" webuseragent="FIRETVSTICK2018"/>
             </webuseragent_tests>
         </fingerprint>
-        <fingerprint name="Fire TV Stick Basic and 2nd Gen (2016-2019)" os_name="Fire OS 5" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
+        <fingerprint name="Fire TV Stick 4K MAX (2021)" os_name="Fire OS 7" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="AFTKA"/>
+                <test weight="5" matchtype="partial" webuseragent="FIRETVSTICK2021"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Fire TV Stick Basic and 2nd Gen (2016-2019)" os_name="Fire OS 5" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <webuseragent_tests>
                 <test weight="7" matchtype="partial" webuseragent="Amazon AFTT"/>
                 <test weight="5" matchtype="partial" webuseragent="AFTT"/>
+                <test weight="5" matchtype="partial" webuseragent="FIRETVSTICK2016"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Fire TV Stick Lite - 1st Gen (2020)" os_name="Fire OS 7" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html" comments="" author="xnih13@gmail.com" last_updated="2020-12-23">
@@ -1148,6 +1172,11 @@
         <fingerprint name="Grendel Scan" os_name="Grendel" os_class="Scanner" os_vendor="Grendel" os_url="http://grendel-scan.com/" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2011-12-31">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Grendel-Scan"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="HP DesignJet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="HP" device_url="http://hp.com" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="HP DesignJet"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="HP Laserjet" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="HP" device_url="http://hp.com" comments="MFP M575" author="xnih13@gmail.com" last_updated="2020-05-13">
@@ -4466,6 +4495,11 @@
                 <test weight="5" matchtype="partial" webuseragent="pve/6."/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="PurpleAir Device" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-07-08">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="PurpleAir"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="QQLive" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Streaming" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2020-12-24">
             <webuseragent_tests>
                 <test weight="5" matchtype="exact" webuseragent="qqlive"/>
@@ -4504,6 +4538,16 @@
         <fingerprint name="Roku DVP 10" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
                 <test weight="5" matchtype="partial" webuseragent="Roku/DVP-10"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku DVP 11" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Roku/DVP-11"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Roku DVP 12" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <webuseragent_tests>
+                <test weight="5" matchtype="partial" webuseragent="Roku/DVP-12"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Roku DVP 8" os_name="Linux" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Roku" device_url="http://www.roku.com/" comments="" author="xnih13@gmail.com" last_updated="2019-02-09">

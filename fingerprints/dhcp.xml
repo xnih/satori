@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2023-05-20" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2023-07-08" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -420,10 +420,10 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Axis 216FD" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+        <fingerprint name="Axis 216FD" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <dhcp_tests>
-                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,216D"/>
-                <test weight="10" matchtype="partial" dhcptype="Discover" dhcpvendorcode="AXIS,Network Camera,216D"/>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,216FD"/>
+                <test weight="10" matchtype="partial" dhcptype="Discover" dhcpvendorcode="AXIS,Network Camera,216FD"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,50,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
@@ -438,11 +438,24 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="AXIS M3005" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,M3005"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="AXIS M3203" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
             <dhcp_tests>
                 <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,M3203"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="AXIS M5065" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,PTZ Network Camera,M5065"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Axis Network Camera" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="twohlers@bradfordnetworks.com" last_updated="2021-05-03">
@@ -464,6 +477,11 @@
                 <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,P3224-LV"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,55,60,12,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="AXIS P3301" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,P3301"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="AXIS P3304" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
@@ -535,11 +553,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,60,12,145,55,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Big-IP F5" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-10-27">
+        <fingerprint name="Big-IP F5" os_name="" os_class="" os_vendor="" os_url="" device_type="Load Balancer" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,28,3,15,6,12,42,26"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,51,55,60,255"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="F5Networks"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="F5Networks"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="BlackBerry" os_name="" os_class="" os_vendor="" os_url="" device_type="Smartphone" device_vendor="BlackBerry" device_url="http://www.blackberry.com" comments="" author="xnih13@gmail.com" last_updated="2009-08-25">
@@ -747,6 +766,11 @@
                 <test weight="1" matchtype="exact" dhcptype="Request" ipttl="64"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="ChromeOS" os_name="ChromeOS" os_class="ChromeOS" os_vendor="Google, Inc." os_url="http://www.google.com/chromebook" device_type="" device_vendor="" device_url="" comments="" author="twohlers@yahoo.com" last_updated="2023-07-08">
+            <dhcp_tests>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="chromeos"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Cisco 7841 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
@@ -921,11 +945,13 @@
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco Systems, Inc. IP Phone CP-8841"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco 8851 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
+        <fingerprint name="Cisco 8851 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,35,66,150,2,7,42,43,58,59,159,160"/>
-                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco Systems, Inc. IP Phone CP-8851"/>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="CP-8851"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="CP-8851"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,54,61,12,60,50,125,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco 8945 IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2014-09-11">
@@ -1185,7 +1211,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,57,61,54,50,12,55,60,255"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco Aironet 9105AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
+        <fingerprint name="Cisco Aironet 9105AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP C9105AX"/>
@@ -1194,6 +1220,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP C9105AX"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco Aironet 9120AX" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
@@ -4392,7 +4419,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Inform" dhcpvendorcode="Mfg=Xerox"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="support@packetfence.org" last_updated="2010-08-02">
+        <fingerprint name="Xerox Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="support@packetfence.org" last_updated="2023-07-08">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="51,1,3,58,59,12,44,54,6,15,144"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,28,3,15,6,12,44,78,79"/>
@@ -4406,6 +4433,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpvendorcode="Xerox Phaser"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,2,3,6,12,15,26,28,85,86,87,88,44,45,46,47,70,69,78,79"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,2,3,6,12,15,26,28,85,86,87,88,44,45,46,47,70,69,78,79,120"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="XEROX Netweork Printer"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Xerox WorkCentre" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Xerox Corp." device_url="http://www.xerox.com" comments="Printers" author="xnih13@gmail.com" last_updated="2012-07-28">
