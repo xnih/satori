@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2023-07-08" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2023-07-24" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Echo Dot" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>
@@ -525,6 +525,13 @@
                 <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_5"/>
             </webuseragent_tests>
         </fingerprint>
+        <fingerprint name="Apple TV OS 16.6.x" os_name="iOS 16" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2023-07-24">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; U; CPU OS 16_6"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TVOS,16.6"/>
+                <test weight="7" matchtype="partial" webuseragent="Apple TV; CPU OS 16_6"/>
+            </webuseragent_tests>
+        </fingerprint>
         <fingerprint name="Apple TV OS 8.4.1" os_name="iOS" os_class="iOS" os_vendor="Apple" os_url="" device_type="Digital Media Receiver" device_vendor="Apple" device_url="store.apple.com/apple-tv" comments="" author="xnih13@gmail.com" last_updated="2020-05-13">
             <webuseragent_tests>
                 <test weight="10" matchtype="partial" webuseragent="Apple TV; U; CPU OS 8_4_1"/>
@@ -794,6 +801,13 @@
                 <test weight="7" matchtype="partial" webuseragent="Watch OS,9.5"/>
                 <test weight="7" matchtype="partial" webuseragent="watchOS/9.5"/>
                 <test weight="7" matchtype="partial" webuseragent="WatchOS 9.5"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Apple Watch OS 9.6.x" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="" author="xnih13@gmail.com" last_updated="2023-07-24">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="Watch OS,9.6"/>
+                <test weight="7" matchtype="partial" webuseragent="watchOS/9.6"/>
+                <test weight="7" matchtype="partial" webuseragent="WatchOS 9.6"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Apple Watch SE" os_name="iOS" os_class="iOS" os_vendor="Apple, Inc." os_url="http://www.apple.com" device_type="SmartWatch" device_vendor="Apple, Inc." device_url="http://www.apple.com/" comments="https://gist.github.com/adamawolf/3048717" author="xnih13@gmail.com" last_updated="2021-09-29">
@@ -4374,6 +4388,17 @@
                 <test weight="7" matchtype="partial" webuseragent="OS X Version 13.4."/>
                 <test weight="7" matchtype="partial" webuseragent="macOS, 13.4"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS,13.4"/>
+            </webuseragent_tests>
+        </fingerprint>
+        <fingerprint name="Mac OS X - 13.5.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2023-07-24">
+            <webuseragent_tests>
+                <test weight="7" matchtype="partial" webuseragent="OS X 13_5_"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 13.5."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X/13.5."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X,13.5."/>
+                <test weight="7" matchtype="partial" webuseragent="OS X Version 13.5."/>
+                <test weight="7" matchtype="partial" webuseragent="macOS, 13.5"/>
+                <test weight="7" matchtype="partial" webuseragent="macOS,13.5"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="masscan" os_name="" os_class="" os_vendor="" os_url="" device_type="Scanner" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
