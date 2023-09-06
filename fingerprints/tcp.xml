@@ -937,6 +937,11 @@
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="14600:64:1:60:M1460,S,T,N,W7:."/>
             </tcp_tests>
         </fingerprint>
+        <fingerprint name="Schneider Electric Modicon M221 PLC" os_name="Modicon M221" os_class="ICS device" os_vendor="Schneider Electric" os_url="https://www.se.com/se/sv/product-range/62128-logic-controller-modicon-m221/" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2023-09-06">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:64:0:44:M1460:."/>
+            </tcp_tests>
+        </fingerprint>
         <fingerprint name="Siemens RUGGEDCOM RS910" os_name="Siemens RUGGEDCOM RS910" os_class="ICS device" os_vendor="Phoenix Contact" os_url="https://www.phoenixcontact.com/" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="4380:60:0:40::."/>
