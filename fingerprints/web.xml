@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<WEBSERVER created="2008-10-04" last_updated="2023-07-09" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBSERVER created="2008-10-04" last_updated="2023-12-12" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Load Balancer" os_name="" os_class="" os_vendor="" os_url="https://aws.amazon.com/elasticloadbalancing/" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-05-19">
             <webserver_tests>
@@ -49,6 +49,11 @@
         <fingerprint name="Brother Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Brother Industries, Ltd." device_url="http://www.brother.com" comments="MFC 7820N" author="xnih13@gmail.com" last_updated="2009-02-15">
             <webserver_tests>
                 <test weight="5" matchtype="exact" webserver="Debut/0.07"/>
+            </webserver_tests>
+        </fingerprint>
+        <fingerprint name="Canon Image Runner" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon" device_url="www.canon.com" comments="" author="xnih13@gmail.com" last_updated="2023-12-12">
+            <webserver_tests>
+                <test weight="10" matchtype="exact" webserver="CANON HTTP Server"/>
             </webserver_tests>
         </fingerprint>
         <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon" device_url="www.canon.com" comments="" author="xnih13@gmail.com" last_updated="2020-12-12">
