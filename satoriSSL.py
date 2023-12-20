@@ -308,7 +308,8 @@ def ja3erUpdate():
 
 def trisulnsmUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
-  url = 'https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json'
+  #url = 'https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json'
+  url = 'https://raw.githubusercontent.com/trisulnsm/ja3prints/master/ja3fingerprint.json'
   trisulnsmFile = satoriPath + '/fingerprints/trisulnsm.json'
 
   with open(trisulnsmFile, 'wb') as f:
