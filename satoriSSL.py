@@ -286,7 +286,7 @@ def decodeSSLRecords(recs):
 def ja3erUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
   url = 'https://ja3er.com/getAllUasJson'
-  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
+  backupurl = 'https://web.archive.org/web/20220123045913/https://ja3er.com/getAllUasJson'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
   with open(ja3erFile, 'wb') as f:
