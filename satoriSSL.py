@@ -6,20 +6,20 @@ from os import remove
 from os.path import exists
 from pathlib import Path
 from pypacker.layer12 import ethernet
-from pypacker.layer3 import ip
 from datetime import datetime
 from pypacker import pypacker, triggerlist
 import hashlib
 import requests
 
 class Extension(pypacker.Packet):
-	"""
-	Handshake protocol extension
-	"""
-	__hdr__ = (
-		("type", "H", 0),
-		("len", "H", 0)
-	)
+  """
+  Handshake protocol extension
+  """
+  __hdr__ = (
+    ("type", "H", 0),
+    ("len", "H", 0)
+  )
+
 
 class clientHandshakeHello(pypacker.Packet):
   __hdr__ = (
@@ -30,7 +30,7 @@ class clientHandshakeHello(pypacker.Packet):
     ("sid_len", "B", 32),
     ("sid", None, triggerlist.TriggerList),  #var length
     ("cipsuite_len", "H", 0x0032),
-    ("ciphersuite", None, triggerlist.TriggerList), #var length
+    ("ciphersuite", None, triggerlist.TriggerList),  #var length
     ("compr_len", "B", 0),
     ("compression", "B", 0),
     ("ext_len", "H", 0x0000),
@@ -39,9 +39,9 @@ class clientHandshakeHello(pypacker.Packet):
 
   pypackerVersion = satoriCommon.checkPyPackerVersion()
 
-  if float(pypackerVersion) >= 5.4:
+  if float(pypackerVersion) >= 5.3:
     len_i = pypacker.get_property_bytes_num("len")
-  else: #4.9 or below use .off
+  else:
     len_i = pypacker.get_property_bytes_num("len", ">I")
 
   @staticmethod
@@ -59,23 +59,39 @@ class clientHandshakeHello(pypacker.Packet):
     return extensions
 
   def _dissect(self, buf):
-    sid_len = buf[38]
-    offset = 38 + 1
-    sid = buf[offset:offset + sid_len]
-    self.sid.append(sid)
-    offset = offset + sid_len
-    cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
-    offset = offset + 2
-    ciphersuite = buf[offset:offset + cipsuite_len]
-    self.ciphersuite.append(ciphersuite)
-    offset = offset + cipsuite_len + 2
-    ext_len = struct.unpack('!h',buf[offset:offset+2])[0]
-    offset = offset + 2
-    self._init_triggerlist("extensions", buf[offset:], self.__parse_extension)
-    offset = offset + ext_len
+    pypackerVersion = satoriCommon.checkPyPackerVersion()
 
+    if float(pypackerVersion) <= 5.1:
+      sid_len = buf[38]
+      offset = 38 + 1
+      sid = buf[offset:offset + sid_len]
+      self.sid.append(sid)
+      offset = offset + sid_len
+      cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      offset = offset + 2
+      ciphersuite = buf[offset:offset + cipsuite_len]
+      self.ciphersuite.append(ciphersuite)
+      offset = offset + cipsuite_len + 2
+      ext_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      offset = offset + 2
+      self._init_triggerlist("extensions", buf[offset:], self.__parse_extension)
+      offset = offset + ext_len
+    else:
+      sid_len = buf[38]
+      offset = 38 + 1
+      sid = buf[offset:offset + sid_len]
+      self.sid(sid, self)
+      offset = offset + sid_len
+      cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      offset = offset + 2
+      ciphersuite = buf[offset:offset + cipsuite_len]
+      self.ciphersuite(ciphersuite, self)
+      offset = offset + cipsuite_len + 2
+      ext_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      offset = offset + 2
+      self.extensions(buf[offset:], self.__parse_extension)
+      offset = offset + ext_len
     return len(buf)
-
 
 class serverHandshakeHello(pypacker.Packet):
   __hdr__ = (
@@ -95,8 +111,7 @@ class serverHandshakeHello(pypacker.Packet):
 
   pypackerVersion = satoriCommon.checkPyPackerVersion()
 
-  #this seems to work for now, but may not be a perfect fix for the changes from 4.9 to 5.0
-  if float(pypackerVersion) >= 5.4:
+  if float(pypackerVersion) >= 5.3:
     len_i = pypacker.get_property_bytes_num("len")
   else: #4.9 or below use .off
     len_i = pypacker.get_property_bytes_num("len", ">I")
@@ -116,28 +131,47 @@ class serverHandshakeHello(pypacker.Packet):
     return extensions
 
   def _dissect(self, buf):
-    sid_len = buf[38]
-    offset = 38 + 1
-    sid = buf[offset:offset + sid_len]
-    self.sid.append(sid)
-    offset = offset + sid_len
-    #the next few lines are just to bypass some stuff that isn't there in my testing so far, but left, just in case for cleanup later
-#    cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
-    cipsuite_len = 2  #test for now
-#   offset = offset + 2
-    ciphersuite = buf[offset:offset + cipsuite_len]
-    self.ciphersuite.append(ciphersuite)
-    offset = offset + cipsuite_len + 1
-    ext_len = struct.unpack('!h',buf[offset:offset+2])[0]
-    offset = offset + 2
-    self._init_triggerlist("extensions", buf[offset:], self.__parse_extension)
-    offset = offset + ext_len
+    pypackerVersion = satoriCommon.checkPyPackerVersion()
 
+    if float(pypackerVersion) <= 5.1:
+      sid_len = buf[38]
+      offset = 38 + 1
+      sid = buf[offset:offset + sid_len]
+      self.sid.append(sid)
+      offset = offset + sid_len
+      #the next few lines are just to bypass some stuff that isn't there in my testing so far, but left, just in case for cleanup later
+  #    cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      cipsuite_len = 2  #test for now
+  #   offset = offset + 2
+      ciphersuite = buf[offset:offset + cipsuite_len]
+      self.ciphersuite.append(ciphersuite)
+      offset = offset + cipsuite_len + 1
+      ext_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      offset = offset + 2
+      self._init_triggerlist("extensions", buf[offset:], self.__parse_extension)
+      offset = offset + ext_len
+    else:
+      sid_len = buf[38]
+      offset = 38 + 1
+      sid = buf[offset:offset + sid_len]
+      self.sid(sid, self)
+      offset = offset + sid_len
+      # the next few lines are just to bypass some stuff that isn't there in my testing so far, but left, just in case for cleanup later
+      #    cipsuite_len = struct.unpack('!h',buf[offset:offset+2])[0]
+      cipsuite_len = 2  # test for now
+      #   offset = offset + 2
+      ciphersuite = buf[offset:offset + cipsuite_len]
+      self.ciphersuite(ciphersuite, self)
+      offset = offset + cipsuite_len + 1
+      ext_len = struct.unpack('!h', buf[offset:offset + 2])[0]
+      offset = offset + 2
+      self.extensions(buf[offset:], self.__parse_extension)
+      offset = offset + ext_len
     return len(buf)
 
 
 def version():
-  dateReleased='satoriSSL.py - 2023-03-03'
+  dateReleased='satoriSSL.py - 2023-12-26'
   print(dateReleased)
 
 
@@ -153,6 +187,10 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   fingerprint = None
+
+  hash = ''
+  fpType = ''
+  sslFingerprint = ''
 
   if (len(ssl1.records) > 0):
     [fpType, hash] = decodeSSLRecords(ssl1.records)
@@ -181,6 +219,7 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
 def decodeSSLRecords(recs):
   ja3 = ''
   ja3s = ''
+  ja4 = ''
   fpType = ''
   res = ''
   version = ''
@@ -200,7 +239,6 @@ def decodeSSLRecords(recs):
         if handshake.type == 1:  #check to verify client hello
           len = handshake.len
           clientHello = clientHandshakeHello(rec.body_bytes)
-
           #get version
           version = clientHello.tlsversion
 
@@ -286,7 +324,7 @@ def decodeSSLRecords(recs):
 def ja3erUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
   url = 'https://ja3er.com/getAllUasJson'
-  backupurl = 'https://drive.google.com/u/0/uc?id=1rr5AAn7PZOa9xD5-1T4DgQFeyPzERf7g&export=download&confirm=t'
+  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
   with open(ja3erFile, 'wb') as f:
@@ -308,8 +346,7 @@ def ja3erUpdate():
 
 def trisulnsmUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
-  #url = 'https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json'
-  url = 'https://raw.githubusercontent.com/trisulnsm/ja3prints/master/ja3fingerprint.json'
+  url = 'https://raw.githubusercontent.com/trisulnsm/trisul-scripts/master/lua/frontend_scripts/reassembly/ja3/prints/ja3fingerprint.json'
   trisulnsmFile = satoriPath + '/fingerprints/trisulnsm.json'
 
   with open(trisulnsmFile, 'wb') as f:
@@ -320,7 +357,7 @@ def trisulnsmUpdate():
       print('check file %s' % trisulnsmFile)
     except Exception as e:
       print(e)
-      remove(trisulsmFile)
+      remove(trisulnsmFile)
 
 
 def BuildSSLFingerprintFiles():
