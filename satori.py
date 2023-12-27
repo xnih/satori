@@ -25,7 +25,7 @@ import satoriNTP
 
 
 def versionInfo():
-  dateReleased='satori.py - 2023-07-03'
+  dateReleased='satori.py - 2023-12-27'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
@@ -171,7 +171,7 @@ def main():
   ntpCheck = False
 
   #read in fingerprints
-  [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList] = satoriSSL.BuildSSLFingerprintFiles()
+  [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList] = satoriSSL.BuildSSLFingerprintFiles()
   [sExactList, saExactList, sPartialList, saPartialList] = satoriTCP.BuildTCPFingerprintFiles()
   [DiscoverOptionsExactList, DiscoverOptionsPartialList, RequestOptionsExactList, RequestOptionsPartialList, ReleaseOptionsExactList, ReleaseOptionsPartialList, ACKOptionsExactList, ACKOptionsPartialList, AnyOptionsExactList, AnyOptionsPartialList, InformOptionsExactList, InformOptionsPartialList, DiscoverOption55ExactList, DiscoverOption55PartialList, RequestOption55ExactList, RequestOption55PartialList, ReleaseOption55ExactList, ReleaseOption55PartialList, ACKOption55ExactList, ACKOption55PartialList, AnyOption55ExactList, AnyOption55PartialList, InformOption55ExactList, InformOption55PartialList, DiscoverVendorCodeExactList, DiscoverVendorCodePartialList, RequestVendorCodeExactList, RequestVendorCodePartialList, ReleaseVendorCodeExactList, ReleaseVendorCodePartialList, ACKVendorCodeExactList, ACKVendorCodePartialList, AnyVendorCodeExactList, AnyVendorCodePartialList, InformVendorCodeExactList, InformVendorCodePartialList, DiscoverTTLExactList, DiscoverTTLPartialList, RequestTTLExactList, RequestTTLPartialList, ReleaseTTLExactList, ACKTTLExactList, AnyTTLExactList, InformTTLExactList, ACKTTLPartialList, AnyTTLPartialList, InformTTLPartialList, NAKOptionsPartialList, NAKOptionsExactList, NAKOption55PartialList, NAKOption55ExactList, NAKVendorCodePartialList, NAKVendorCodeExactList, NAKTTLPartialList, NAKTTLExactList, OfferOptionsPartialList, OfferOptionsExactList, OfferOption55PartialList, OfferOption55ExactList, OfferVendorCodePartialList, OfferVendorCodeExactList, OfferTTLPartialList, OfferTTLExactList, DeclineOptionsPartialList, DeclineOptionsExactList, DeclineOption55PartialList, DeclineOption55ExactList, DeclineVendorCodePartialList, DeclineVendorCodeExactList, DeclineTTLPartialList, DeclineTTLExactList] = satoriDHCP.BuildDHCPFingerprintFiles()
   [useragentExactList, useragentPartialList] = satoriHTTP.BuildHTTPUserAgentFingerprintFiles()
@@ -236,8 +236,9 @@ def main():
 
             try:
               if sslPacket and sslCheck:
-                [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-                printCheck(timeStamp, fingerprint)
+                [timeStamp, fingerprints] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList)
+                for fingerprint in fingerprints:
+                  printCheck(timeStamp, fingerprint)
             except:
               pass
 
@@ -344,8 +345,9 @@ def main():
 
         try:
           if sslPacket and sslCheck:
-            [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-            printCheck(timeStamp, fingerprint)
+            [timeStamp, fingerprints] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList)
+            for fingerprint in fingerprints:
+              printCheck(timeStamp, fingerprint)
         except:
           pass
 
@@ -454,8 +456,9 @@ def main():
 
         try:
           if sslPacket and sslCheck:
-            [timeStamp, fingerprint] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList)
-            printCheck(timeStamp, fingerprint)
+            [timeStamp, fingerprints] = satoriSSL.sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList)
+            for fingerprint in fingerprints:
+              printCheck(timeStamp, fingerprint)
         except:
           pass
 

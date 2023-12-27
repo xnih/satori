@@ -10,6 +10,7 @@ from datetime import datetime
 from pypacker import pypacker, triggerlist
 import hashlib
 import requests
+from hashlib import sha256
 
 class Extension(pypacker.Packet):
   """
@@ -171,11 +172,11 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2023-12-26'
+  dateReleased='satoriSSL.py - 2023-12-27'
   print(dateReleased)
 
 
-def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
+def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList):  #instead of pushing the fingerprint files in each time would it make sense to make them globals?  Does it matter?
   if layer == 'eth':
     src_mac = pkt[ethernet.Ethernet].src_s
   else:
@@ -188,104 +189,239 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   fingerprint = None
 
-  hash = ''
-  fpType = ''
   sslFingerprint = ''
+  results = {}
+  fingerprints = []
 
   if (len(ssl1.records) > 0):
-    [fpType, hash] = decodeSSLRecords(ssl1.records)
+    results = decodeSSLRecords(ssl1.records)
 
-  #lookup fingerprint needed
-  if hash != '':
+  for fpType in results:
+    #lookup fingerprint needed
+    hash = results[fpType]
+    if hash != '':
 
-    if fpType == 'ja3':
-      sslXMLFingerprint = sslFingerprintLookup(sslJA3XMLExactList, hash)
-      sslJSONFingerprint = sslFingerprintLookup(sslJA3JSONExactList, hash)
-      fingerprint = sslXMLFingerprint + '|' + sslJSONFingerprint
+      if fpType == 'ja3':
+        sslXMLFingerprint = sslFingerprintLookup(sslJA3XMLExactList, hash)
+        sslJSONFingerprint = sslFingerprintLookup(sslJA3JSONExactList, hash)
+        fingerprint = sslXMLFingerprint + '|' + sslJSONFingerprint
 
-      if fingerprint.startswith('|'):
-        fingerprint = fingerprint[1:]
-      if fingerprint.endswith('|'):
-        fingerprint = fingerprint[:-1]
+        if fingerprint.startswith('|'):
+          fingerprint = fingerprint[1:]
+        if fingerprint.endswith('|'):
+          fingerprint = fingerprint[:-1]
 
-      sslFingerprint = satoriCommon.sortFingerprint(fingerprint)
-    elif fpType == 'ja3s':
-      sslFingerprint = sslFingerprintLookup(sslJA3SXMLExactList, hash)
+        sslFingerprint = satoriCommon.sortFingerprint(fingerprint)
+        fingerprint = ip4.src_s + ';' + src_mac + ';SSL;' + fpType + ';' + hash + ';' + sslFingerprint
+        fingerprints.append(fingerprint)
 
-    fingerprint = ip4.src_s + ';' + src_mac + ';SSL;' + fpType + ';' + hash + ';' + sslFingerprint
-  return [timeStamp, fingerprint]
+      elif fpType == 'ja3s':
+        sslFingerprint = sslFingerprintLookup(sslJA3SXMLExactList, hash)
+
+      elif fpType == 'ja4':
+        sslFingerprint = sslFingerprintLookup(sslJA4XMLExactList, hash)
+
+        fingerprint = ip4.src_s + ';' + src_mac + ';SSL;' + fpType + ';' + hash + ';' + sslFingerprint
+        fingerprints.append(fingerprint)
+
+  return [timeStamp, fingerprints]
 
 
 def decodeSSLRecords(recs):
   ja3 = ''
   ja3s = ''
   ja4 = ''
+  ja4_a = ''
+  ja4_b = ''
+  ja4_c = ''
+  alpn = '00'
   fpType = ''
-  res = ''
+  results = {}
   version = ''
   ciphersuite = ''
   extensions = ''
   elipticleCurve = ''
   elipticleCurveFormats = ''
+  supportedVersions = ''
+  signatures = ''
+  sni = 'i'
+  delcreds = ''
 
-  GREASE_TABLE = {0x0a0a: True, 0x1a1a: True, 0x2a2a: True, 0x3a3a: True,
-                  0x4a4a: True, 0x5a5a: True, 0x6a6a: True, 0x7a7a: True,
-                  0x8a8a: True, 0x9a9a: True, 0xaaaa: True, 0xbaba: True,
-                  0xcaca: True, 0xdada: True, 0xeaea: True, 0xfafa: True}
+  GREASE_TABLE = {'0xa0a', '0x1a1a', '0x2a2a', '0x3a3a',
+                  '0x4a4a', '0x5a5a', '0x6a6a', '0x7a7a',
+                  '0x8a8a', '0x9a9a', '0xaaaa', '0xbaba',
+                  '0xcaca', '0xdada', '0xeaea', '0xfafa'}
 
+  #for now ja4 will ONLY be TCP no UDP quic packets
   for rec in recs:
     if rec.type == 22: #check to see if it was a handshake
       for handshake in rec:
         if handshake.type == 1:  #check to verify client hello
+          ja4_a = ja4_a + 't'
           len = handshake.len
           clientHello = clientHandshakeHello(rec.body_bytes)
-          #get version
+          #get version doesn't really work for tls 1.3 anymore
           version = clientHello.tlsversion
 
-          #build ciphersuite ja3 piece
+          #build ciphersuite
           len = int(clientHello.cipsuite_len)
           offset = 0
+          cipherCount = 0
+          cipherList = []
           while offset <= len-1:
             value = struct.unpack('!H',clientHello.ciphersuite[0][offset:offset+2])[0]
-            ciphersuite = ciphersuite + '-' + str(value)
             offset = offset + 2
+            if hex(value) not in GREASE_TABLE:
+              ciphersuite = ciphersuite + '-' + str(value)
+              cipherList.append(hex(value)[2:].zfill(4))
+              cipherCount = cipherCount + 1
           if ciphersuite != '':
             ciphersuite = ciphersuite[1:]
+          cipherList.sort()
+          cipher = ''
+          for i in cipherList:
+            cipher = cipher + i + ','
+          cipher = cipher[:-1]
+          strCipherCount = str(cipherCount).zfill(2)
+          ja4_b = sha256(cipher.encode('utf-8')).hexdigest()[:12]
 
-          #build extension ja3 piece
+          #build extension
           len = int(clientHello.ext_len)
-          for ext in clientHello.extensions:
-            if ext.type not in GREASE_TABLE:
-              extensions = extensions + '-' + str(ext.type)
-            if ext.type == 10:  #elipticle curve
-              offset = 0
-              len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
-              offset = offset + 2
-              while offset <= len:
-                value = struct.unpack('!H',ext.body_bytes[offset:offset+2])[0]
-                elipticleCurve = elipticleCurve + '-' + str(value)
-                offset = offset + 2
-              if elipticleCurve != '':
-                elipticleCurve = elipticleCurve[1:]
+          extensionCount = 0
+          extensionList = []
+          sortedExtensionList = []
 
-            if ext.type == 11:  #elipticle curve formats
-              offset = 0
-              len = struct.unpack('!B', ext.body_bytes[offset:offset+1])[0]
-              offset = offset + 1
-              while offset <= len:
-                value = struct.unpack('!B',ext.body_bytes[offset:offset+1])[0]
-                elipticleCurveFormats = elipticleCurveFormats + '-' + str(value)
+          for ext in clientHello.extensions:
+            if hex(ext.type) not in GREASE_TABLE:
+              extensionCount = extensionCount + 1
+              extensions = extensions + '-' + str(ext.type)
+
+              ignoreList = [0, 16]
+              if ext.type not in ignoreList:
+                extensionList.append(hex(ext.type)[2:].zfill(4))
+
+              if ext.type == 0:  #server name
+                sni = 'd'
+
+              if ext.type == 10:  #elipticle curve
+                offset = 0
+                len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
+                offset = offset + 2
+                while offset <= len:
+                  value = struct.unpack('!H',ext.body_bytes[offset:offset+2])[0]
+                  elipticleCurve = elipticleCurve + '-' + str(value)
+                  offset = offset + 2
+                if elipticleCurve != '':
+                  elipticleCurve = elipticleCurve[1:]
+
+              if ext.type == 11:  #elipticle curve formats
+                offset = 0
+                len = struct.unpack('!B', ext.body_bytes[offset:offset+1])[0]
                 offset = offset + 1
-              if elipticleCurveFormats != '':
-                elipticleCurveFormats = elipticleCurveFormats[1:]
+                while offset <= len:
+                  value = struct.unpack('!B',ext.body_bytes[offset:offset+1])[0]
+                  elipticleCurveFormats = elipticleCurveFormats + '-' + str(value)
+                  offset = offset + 1
+                if elipticleCurveFormats != '':
+                  elipticleCurveFormats = elipticleCurveFormats[1:]
+
+              if ext.type == 13:  #signature
+                offset = 0
+                len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
+                offset = offset + 2
+                while offset <= len:
+                  value = struct.unpack('!H',ext.body_bytes[offset:offset+2])[0]
+                  signatures = signatures + ',' + hex(value)[2:].zfill(4)
+                  offset = offset + 2
+                if signatures != '':
+                  signatures = signatures[1:]
+
+              if ext.type == 16:  #ALPN
+                offset = 0
+                len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
+                offset = offset + 2
+                len = struct.unpack('!B', ext.body_bytes[offset:offset+1])[0]
+                offset = offset + 1
+                value = ''
+                for i in range(len):
+                  value = value + chr(struct.unpack('b', ext.body_bytes[offset:offset+1])[0])
+                  offset = offset + 1
+                alpn = value[0] + value[-1]
+
+              if ext.type == 34:  #delegated creds
+                offset = 0
+                len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
+                offset = offset + 2
+                while offset <= len:
+                  value = struct.unpack('!H',ext.body_bytes[offset:offset+2])[0]
+                  delcreds = delcreds + ',' + hex(value)[2:].zfill(4)
+                  offset = offset + 2
+                if delcreds != '':
+                  delcreds = delcreds[1:]
+
+              if ext.type == 43:  #supported versions
+                tls = 0
+                offset = 0
+                len = struct.unpack('!B', ext.body_bytes[offset:offset+1])[0]
+                offset = offset + 1
+                while offset <= len:
+                  value = str(struct.unpack('!H',ext.body_bytes[offset:offset+2])[0])
+                  offset = offset + 2
+                  if hex(int(value)) not in GREASE_TABLE:
+                    if value == '256':
+                      tls = s1
+                    elif value == '512':
+                      tls = s2
+                    elif value == '768':
+                      tls = s3
+                    elif value == '769':
+                      tls = 10
+                    elif value == '770':
+                      tls = 11
+                    elif value == '771':
+                      tls = 12
+                    elif value == '772':
+                      tls = 13
+                    supportedVersions = supportedVersions + '-' + str(tls)
+                if supportedVersions != '':
+                  supportedVersions = supportedVersions[1:]
+                #first value is preferred so using that for fingerprint
+                tls = supportedVersions.split('-')[0]
 
           if extensions != '':
             extensions = extensions[1:]
 
+            strExtensionCount = str(extensionCount).zfill(2)
+
+            sortedExtensionList = extensionList.copy()
+            sortedExtensionList.sort()
+            extent = ''
+            for i in sortedExtensionList:
+              extent = extent + i + ','
+            extent = extent[:-1]
+
+            temp = extent
+            if signatures + delcreds != '':
+              temp = temp + '_'
+              if delcreds != '':
+                temp = temp + delcreds
+                if signatures != '':
+                  temp = temp + ','
+              if signatures != '':
+                temp = temp + signatures
+            else:
+              temp = extent
+            ja4_c = sha256(temp.encode('utf-8')).hexdigest()[:12]
+
           fpType = 'ja3'
           ja3 = str(version) + ',' + str(ciphersuite) + ',' + str(extensions) + ',' + str(elipticleCurve) + ',' + str(elipticleCurveFormats)
           ja3 = hashlib.md5(ja3.encode('utf-8')).hexdigest()
-          res = ja3
+          results[fpType]=ja3
+
+          fpType = 'ja4'
+          ja4_a = ja4_a + str(tls) + sni + strCipherCount + strExtensionCount + alpn
+          ja4 = ja4_a + '_' + ja4_b + '_' + ja4_c
+          results[fpType]=ja4
 
         elif handshake.type == 2:  #check to verify server hello
           len = handshake.len
@@ -316,9 +452,9 @@ def decodeSSLRecords(recs):
           fpType = 'ja3s'
           ja3s = str(version) + ',' + str(ciphersuite) + ',' + str(extensions)
           ja3s = hashlib.md5(ja3s.encode('utf-8')).hexdigest()
-          res = ja3s
+          results[fpType] = ja3s
 
-  return [fpType, res]
+  return results
 
 
 def ja3erUpdate():
@@ -365,6 +501,7 @@ def BuildSSLFingerprintFiles():
   sslJA3XMLExactList = {}
   sslJA3SXMLExactList = {}
   sslJA3JSONExactList = {}
+  sslJA4XMLExactList = {}
 
   satoriPath = str(Path(__file__).resolve().parent)
 
@@ -390,7 +527,13 @@ def BuildSSLFingerprintFiles():
             sslJA3XMLExactList[sslsig] = oldValue + '|' + os + ':' + weight
           else:
             sslJA3XMLExactList[sslsig] = os + ':' + weight
-        else: #ja3s sigs (should we test or just continue to assume?)
+        elif testtype == 'ja4':
+          if sslsig in sslJA4XMLExactList:
+            oldValue = sslJA4XMLExactList.get(sslsig)
+            sslJA4XMLExactList[sslsig] = oldValue + '|' + os + ':' + weight
+          else:
+            sslJA4XMLExactList[sslsig] = os + ':' + weight
+        elif testtype == 'ja3s': 
           if sslsig in sslJA3SXMLExactList:
             oldValue = sslJA3SXMLExactList.get(sslsig)
             sslJA3SXMLExactList[sslsig] = oldValue + '|' + os + ':' + weight
@@ -436,7 +579,7 @@ def BuildSSLFingerprintFiles():
     for fp in jsonObj:
       sslJA3JSONExactList[fp['ja3_hash']] = fp['desc'] + ':' + weight
 
-  return [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList]
+  return [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList]
 
 
 def sslFingerprintLookup(exactList, value):
