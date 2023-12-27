@@ -6,7 +6,7 @@ It currently supports fingerprinting by the following means:
 - TCP
 - HTTP (User Agent and Server)
 - SMB (TCP and UDP)
-- SSL (JA3/JA3S) 
+- SSL (JA3/JA3S/JA4) 
 
 This program was started back in 2004 and had a decent life as a windows program, doing passive OS fingerprinting for 10 years with regular updates, but it fell by the wayside.  It has been a goal to get it back out here, written in something that I could share the code with others.  
 
