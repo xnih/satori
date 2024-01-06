@@ -22,10 +22,11 @@ import satoriCommon
 import satoriSSL
 import satoriDNS
 import satoriNTP
+import satoriSSH
 
 
 def versionInfo():
-  dateReleased='satori.py - 2023-12-27'
+  dateReleased='satori.py - 2024-01-06'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
@@ -34,6 +35,7 @@ def versionInfo():
   satoriSSL.version()
   satoriDNS.version()
   satoriNTP.version()
+  satoriSSH.version()
   satoriCommon.version()
   satoriCommon.getImportVersions()
 
@@ -47,6 +49,7 @@ def packetType(buf):
   smbPacket = False
   dnsPacket = False
   ntpPacket = False
+  sshPacket = False
   quicPacket = False
 
   #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
@@ -71,6 +74,12 @@ def packetType(buf):
         tcp1 = eth[ip.IP].upper_layer
         if (tcp1.sport == 138) or (tcp1.dport == 138) or (tcp1.sport == 139) or (tcp1.dport == 138) or (tcp1.sport == 445) or (tcp1.dport == 445):
           smbPacket = True
+        #attempt to tell if it is SSH, kludgy!
+        try:
+          if 'SSH' in tcp1.body_bytes.decode("utf-8"):
+            sshPacket = True
+        except:
+          pass
 
     if (eth[ethernet.Ethernet, ip.IP, udp.UDP] is not None):
       if eth[udp.UDP] != None:
@@ -114,7 +123,12 @@ def packetType(buf):
         tcp1 = lcc[ip.IP].upper_layer
         if (tcp1.sport == 138) or (tcp1.dport == 138) or (tcp1.sport == 139) or (tcp1.dport == 138) or (tcp1.sport == 445) or (tcp1.dport == 445):
           smbPacket = True
-
+        #attempt to tell if it is SSH, kludgy!
+        try:
+          if 'SSH' in tcp1.body_bytes.decode("utf-8"):
+            sshPacket = True
+        except:
+          pass
 
     if (lcc[linuxcc.LinuxCC, ip.IP, udp.UDP] is not None):
       if lcc[udp.UDP] != None:
@@ -136,7 +150,7 @@ def packetType(buf):
         if (udp1.dport == 443):
           quicPacket = True
 
-  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket)
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket, sshPacket)
 
 
 def printCheck(timeStamp, fingerprint):
@@ -176,6 +190,7 @@ def main():
   sslCheck = False
   dnsCheck = False
   ntpCheck = False
+  sshCheck = False
 
   #read in fingerprints
   [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList] = satoriSSL.BuildSSLFingerprintFiles()
@@ -188,6 +203,7 @@ def main():
   [browserExactList, browserPartialList] = satoriSMB.BuildSMBUDPFingerprintFiles()
   [dnsExactList, dnsPartialList] = satoriDNS.BuildDNSFingerprintFiles()
   [ntpExactList, ntpPartialList] = satoriNTP.BuildNTPFingerprintFiles()
+  [sshExactList, sshPartialList] = satoriSSH.BuildSSHFingerprintFiles()
 
   #check pypacker version due to changes between 4.9 and 5.0 for one TCP feature
   pypackerVersion = satoriCommon.checkPyPackerVersion()
@@ -201,6 +217,7 @@ def main():
     sslCheck = True
     ntpCheck = True
     dnsCheck = True
+    sshCheck = True
   else:
     mod = modules.split(',')
     for i in range(len(mod)):
@@ -220,6 +237,8 @@ def main():
         dnsCheck = True
       elif (mod[i].lower() == 'ntp'):
         ntpCheck = True
+      elif (mod[i].lower() == 'ssh'):
+        sshCheck = True
 
   if (directory != ''):  #probably a better way to do this and dupe most of the below code from preader section, but DHCP passing parameters into a procedure sucks.
     onlyfiles = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
@@ -232,7 +251,7 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket, sshPacket) = packetType(buf)
 
             try:
               if tcpPacket and tcpCheck:
@@ -318,6 +337,13 @@ def main():
             except:
               pass
 
+            try:
+              if sshPacket and sshCheck:
+                [timeStamp, fingerprint] = satoriSSH.sshProcess(pkt, layer, ts, sshExactList, sshPartialList)
+                printCheck(timeStamp, fingerprint)
+            except:
+              pass
+
           except (KeyboardInterrupt, SystemExit):
             raise
           except ValueError as e:
@@ -341,7 +367,7 @@ def main():
       try:
         counter = counter + 1
         ts = ts/1000000000
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket, sshPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -437,6 +463,13 @@ def main():
         except:
           pass
 
+        try:
+          if sshPacket and sshCheck:
+            [timeStamp, fingerprint] = satoriSSH.sshProcess(pkt, layer, ts, sshExactList, sshPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
       except (KeyboardInterrupt, SystemExit):
         raise
       except ValueError as e:
@@ -460,7 +493,7 @@ def main():
         counter = counter + 1
         (header, buf) = preader.next()
         ts = header.getts()[0]
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket, sshPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -551,6 +584,13 @@ def main():
         try:
           if ntpPacket and ntpCheck:
             [timeStamp, fingerprint] = satoriNTP.ntpProcess(pkt, layer, ts, ntpExactList, ntpPartialList)
+            printCheck(timeStamp, fingerprint)
+        except:
+          pass
+
+        try:
+          if sshPacket and sshCheck:
+            [timeStamp, fingerprint] = satoriSSH.sshProcess(pkt, layer, ts, sshExactList, sshPartialList)
             printCheck(timeStamp, fingerprint)
         except:
           pass
