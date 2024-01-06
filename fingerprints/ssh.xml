@@ -26,6 +26,7 @@
         <fingerprint name="Cisco Router" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-Cisco-1.25"/>
+                <test weight="10" matchtype="exact" ssh="SSH-1.99-Cisco-1.25"/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Cisco DNA Center?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
