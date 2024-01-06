@@ -226,6 +226,55 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
 
   return [timeStamp, fingerprints]
 
+def quicProcess(pkt, layer, ts, sslJA4XMLExactList):
+  if layer == 'eth':
+    src_mac = pkt[ethernet.Ethernet].src_s
+  else:
+    #fake filler mac for all the others that don't have it, may have to add some elif above
+    src_mac = '00:00:00:00:00:00'
+
+  ip4 = pkt.upper_layer
+  udp1 = pkt.upper_layer.upper_layer
+  print(udp1)
+
+  timeStamp = datetime.utcfromtimestamp(ts).isoformat()
+  fingerprint = None
+
+  sslFingerprint = ''
+  results = {}
+  fingerprints = []
+
+  #decode quic here
+#  if (len(ssl1.records) > 0):
+#    results = decodeSSLRecords(ssl1.records)
+# https://www.bitahoy.com/blog/post/dissecting-quic-in-python
+# First byte contains packet number length
+#first_byte = raw_quic_packet[0] ^ (mask[0] & 0x0f)
+#pnl = (first_byte & 0x03) + 1
+# static constant
+#salt = bytes.fromhex("38762cf7f55934b34d179ae6a4c80cadccbb7f0a")
+
+#https://www.rfc-editor.org/rfc/rfc9001.html#name-header-protection
+#This process in pseudocode is:
+#initial_salt = 0x38762cf7f55934b34d179ae6a4c80cadccbb7f0a
+#initial_secret = HKDF-Extract(initial_salt,client_dst_connection_id)
+#client_initial_secret = HKDF-Expand-Label(initial_secret,"client in", "",Hash.length)
+#server_initial_secret = HKDF-Expand-Label(initial_secret,"server in", "",Hash.length)
+
+
+  for fpType in results:
+    #lookup fingerprint needed
+    hash = results[fpType]
+    if hash != '':
+
+      if fpType == 'ja4':
+        sslFingerprint = sslFingerprintLookup(sslJA4XMLExactList, hash)
+
+        fingerprint = ip4.src_s + ';' + src_mac + ';SSL;' + fpType + ';' + hash + ';' + sslFingerprint
+        fingerprints.append(fingerprint)
+
+  return [timeStamp, fingerprints]
+
 
 def decodeSSLRecords(recs):
   ja3 = ''
@@ -348,6 +397,7 @@ def decodeSSLRecords(recs):
                   offset = offset + 1
                 alpn = value[0] + value[-1]
 
+              # this probably isn't needed now that we've determined FoxIO's python code that was adding delegated creds was a bug in their code.  But it is parsed now in case I ever use it future.
               if ext.type == 34:  #delegated creds
                 offset = 0
                 len = struct.unpack('!H', ext.body_bytes[offset:offset+2])[0]
@@ -401,14 +451,8 @@ def decodeSSLRecords(recs):
             extent = extent[:-1]
 
             temp = extent
-            if signatures + delcreds != '':
-              temp = temp + '_'
-              if delcreds != '':
-                temp = temp + delcreds
-                if signatures != '':
-                  temp = temp + ','
-              if signatures != '':
-                temp = temp + signatures
+            if signatures != '':
+              temp = temp + '_' + signatures
             else:
               temp = extent
             ja4_c = sha256(temp.encode('utf-8')).hexdigest()[:12]

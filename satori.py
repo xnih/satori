@@ -47,6 +47,7 @@ def packetType(buf):
   smbPacket = False
   dnsPacket = False
   ntpPacket = False
+  quicPacket = False
 
   #try to determine what type of packets we have, there is the chance that 0x800 may be in the spot we're checking, may want to add better testing in future
   eth = ethernet.Ethernet(buf)
@@ -87,6 +88,9 @@ def packetType(buf):
         udp1 = eth[ip.IP].upper_layer
         if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
           smbPacket = True
+        #attempt to tell if it is quic, kludgy!
+        if (udp1.dport == 443):
+          quicPacket = True
 
 
   lcc = linuxcc.LinuxCC(buf)
@@ -128,8 +132,11 @@ def packetType(buf):
         udp1 = lcc[ip.IP].upper_layer
         if (udp1.sport == 138) or (udp1.dport == 138) or (udp1.sport == 139) or (udp1.dport == 138) or (udp1.sport == 445) or (udp1.dport == 445):
           smbPacket = True
+        #attempt to tell if it is quic, kludgy!
+        if (udp1.dport == 443):
+          quicPacket = True
 
-  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket)
+  return(pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket)
 
 
 def printCheck(timeStamp, fingerprint):
@@ -225,7 +232,7 @@ def main():
             counter = counter + 1
             ts = ts/1000000000
 
-            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
+            (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
 
             try:
               if tcpPacket and tcpCheck:
@@ -334,7 +341,7 @@ def main():
       try:
         counter = counter + 1
         ts = ts/1000000000
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -350,6 +357,14 @@ def main():
               printCheck(timeStamp, fingerprint)
         except:
           pass
+
+#        try:
+#          if quicPacket and sslCheck:
+#            [timeStamp, fingerprints] = satoriSSL.quicProcess(pkt, layer, ts, sslJA4XMLExactList)
+#            for fingerprint in fingerprints:
+#              printCheck(timeStamp, fingerprint)
+#        except:
+#          pass
 
         try:
           if dhcpPacket and dhcpCheck:
@@ -445,7 +460,7 @@ def main():
         counter = counter + 1
         (header, buf) = preader.next()
         ts = header.getts()[0]
-        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket) = packetType(buf)
+        (pkt, layer, tcpPacket, dhcpPacket, httpPacket, udpPacket, sslPacket, smbPacket, dnsPacket, ntpPacket, quicPacket) = packetType(buf)
 
         try:
           if tcpPacket and tcpCheck:
@@ -461,6 +476,14 @@ def main():
               printCheck(timeStamp, fingerprint)
         except:
           pass
+
+#        try:
+#          if quicPacket and sslCheck:
+#            [timeStamp, fingerprints] = satoriSSL.quicProcess(pkt, layer, ts, sslJA4XMLExactList)
+#            for fingerprint in fingerprints:
+#              printCheck(timeStamp, fingerprint)
+#        except:
+#          pass
 
         try:
           if dhcpPacket and dhcpCheck:
