@@ -23,7 +23,7 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-JSCH-0.1.53"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="Cisco" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Cisco Router" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-Cisco-1.25"/>
             </ssh_tests>
@@ -131,6 +131,11 @@
         <fingerprint name="Ubuntu - OpenSSH 7.6p1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.7"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Ubuntu - OpenSSH 8.2p1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+            <ssh_tests>
+                <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11"/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Ubuntu - OpenSSH 8.9p1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
