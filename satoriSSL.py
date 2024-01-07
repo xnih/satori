@@ -172,7 +172,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2023-12-27'
+  dateReleased='satoriSSL.py - 2024-01-06'
   print(dateReleased)
 
 
@@ -204,7 +204,7 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
       if fpType == 'ja3':
         sslXMLFingerprint = sslFingerprintLookup(sslJA3XMLExactList, hash)
         sslJSONFingerprint = sslFingerprintLookup(sslJA3JSONExactList, hash)
-        fingerprint = sslXMLFingerprint + '|' + sslJSONFingerprint
+        fingerprint = sslXMLFingerprint + '|' + sslJSONFingerprint.replace("\n", "").replace("\r", "").strip()
 
         if fingerprint.startswith('|'):
           fingerprint = fingerprint[1:]
