@@ -16,7 +16,7 @@ from pypacker.layer3 import ip
 
 
 def version():
-  dateReleased='satoriHTTP.py - 2021-01-04'
+  dateReleased='satoriHTTP.py - 2024-01-06'
   print(dateReleased)
 
 
@@ -104,12 +104,12 @@ def httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialLis
   if (hdrUserAgent != ''):
     httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, hdrUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
-    changedUserAgent = hdrUserAgent.replace(';', '|')
+    changedUserAgent = hdrUserAgent.replace(';', '|').strip().replace("\n", "").replace("\r", "")
     fingerprintHdrUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
   if (bodyUserAgent != ''):
     httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent)
     #not ideal but converting any ; to | for parsing reasons!
-    changedUserAgent = bodyUserAgent.replace(';', '|')
+    changedUserAgent = bodyUserAgent.replace(';', '|').strip().replace("\n", "").replace("\r", "")
     fingerprintBodyUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
 
   return [timeStamp, fingerprintHdrUserAgent, fingerprintBodyUserAgent]
