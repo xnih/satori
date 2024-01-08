@@ -1,3 +1,5 @@
+import sys
+import gzip, shutil
 import untangle
 import json
 import struct
@@ -172,7 +174,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2024-01-06'
+  dateReleased='satoriSSL.py - 2024-01-08'
   print(dateReleased)
 
 
@@ -504,7 +506,9 @@ def decodeSSLRecords(recs):
 def ja3erUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
   url = 'https://ja3er.com/getAllUasJson'
-  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
+#  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
+  backupurl = 'https://drive.google.com/uc?export=download&id=14Q_yJSHVc4Hb_NHK_zqxwpo09YmD3vZ7'
+  ja3erGZFile = satoriPath + '/fingerprints/ja3er.json.gz'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
   with open(ja3erFile, 'wb') as f:
@@ -512,16 +516,23 @@ def ja3erUpdate():
       print('attempting to download %s, this will take awhile as it is a 210MB file...' % url)
       resp = requests.get(url, verify=False, timeout=(10, 60))  #not ideal to ignore https, but don't want to deal with certs
       f.write(resp.content)
-      print('check file %s' % ja3erFile)
+      print('check file: %s' % ja3erFile)
     except Exception as e:
-      try:
-        print('failed to download %s, now attempting to download from %s, this will take awhile as it is a 210MB file...' % (url, backupurl))
-        resp = requests.get(backupurl, verify=False, timeout=(10, 60))  #not ideal to ignore https, but don't want to deal with certs
-        f.write(resp.content)
-        print('check file %s' % ja3erFile)
-      except Exception as e:
-        print(e)
-        remove(ja3erFile)
+      f.close()
+      remove(ja3erFile)
+      with open(ja3erGZFile, 'wb') as f:
+        try:
+          print('failed to download %s, now attempting to download from %s, this is a compressed version so hopefully faster...' % (url, backupurl))
+          resp = requests.get(backupurl, verify=False, timeout=(10, 60), allow_redirects=True)  #not ideal to ignore https, but don't want to deal with certs
+          f.write(resp.content)
+          print('attempting to uncompress file %s' % ja3erGZFile)
+          with gzip.open(ja3erGZFile, 'rb') as f_in:
+            with open(ja3erFile, 'wb') as f_out:
+              shutil.copyfileobj(f_in, f_out)
+          remove(ja3erGZFile)
+        except Exception as e:
+          print(e)
+          remove(ja3erGZFile)
 
 
 def trisulnsmUpdate():
@@ -589,39 +600,50 @@ def BuildSSLFingerprintFiles():
   weight = '5'  #added a default value of 5 for all fingerprints
 
   if exists(json_file_path):
-    with open(json_file_path, 'r') as j:
-      contents = json.loads(j.read())
-    j.close()
+    try:
+      with open(json_file_path, 'r') as j:
+        contents = json.loads(j.read())
+      j.close()
 
-    for fp in contents:
-      sslJA3JSONExactList[fp['md5']] = fp['User-Agent'] + ':' + weight
+      for fp in contents:
+        sslJA3JSONExactList[fp['md5']] = fp['User-Agent'] + ':' + weight
+    except Exception as e:
+     print('Issue with ja3er.json, deleting file, redownload again if you want to try again, otherwise just kick off satori the same way again')
+     print(e)
+     remove(json_file_path)
+     sys.exit(1)
 
   #trisulnsm load
   file_path = satoriPath + '/fingerprints/trisulnsm.json'
   weight = '5'  #added a default value of 5 for all fingerprints
 
-
   if exists(file_path):
-    j = open(file_path, 'r')
-    contents = j.readlines()
-    j.close()
+    try:
+      j = open(file_path, 'r')
+      contents = j.readlines()
+      j.close()
 
-    # stripe all the line feeds
-    contents = list(map(lambda x:x.strip(),contents))
+      # stripe all the line feeds
+      contents = list(map(lambda x:x.strip(),contents))
 
-    content = '['
-    for i in contents:
-      if i != "":
-        if i[0] == '{':
-          content += i + ','
-    content = content[:-1]
-    content = content + ']'
+      content = '['
+      for i in contents:
+        if i != "":
+          if i[0] == '{':
+            content += i + ','
+      content = content[:-1]
+      content = content + ']'
 
-    #convert string json object
-    jsonObj = json.loads(content)
+      #convert string json object
+      jsonObj = json.loads(content)
 
-    for fp in jsonObj:
-      sslJA3JSONExactList[fp['ja3_hash']] = fp['desc'] + ':' + weight
+      for fp in jsonObj:
+        sslJA3JSONExactList[fp['ja3_hash']] = fp['desc'] + ':' + weight
+    except Exception as e:
+      print('Issue with trisulnsm.json, deleting file, redownload again if you want to try again, otherwise just kick off satori the same way again')
+      print(e)
+      remove(file_path)
+      sys.exit(1)
 
   return [sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JSONExactList, sslJA4XMLExactList]
 
