@@ -51,16 +51,6 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8662467bc96db2d387755570446a7946"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Malicious - " os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
-            <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig=""/>
-            </ssl_tests>
-        </fingerprint>
-        <fingerprint name="Malicious - " os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
-            <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig=""/>
-            </ssl_tests>
-        </fingerprint>
         <fingerprint name="Malicious - Adware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="fb58831f892190644fe44e25bc830b45"/>
