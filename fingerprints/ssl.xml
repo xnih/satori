@@ -23,13 +23,19 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1516h2_8daaf6152771_e5627efa2ab1"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Chrome 118-120" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Chrome 118-120" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1517h2_8daaf6152771_b1ff8ab2d16f"/>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1516h2_8daaf6152771_02713d6af862"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Firefox 116-121" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-08">
+        <fingerprint name="curl" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="4ea056e63b7910cbf543f0c095064dfe"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d3113h2_e8f1e7e78f70_ce5650b735ce"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Firefox 116-121" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_5c2c66f702b0"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="b5001237acdf006056b409cc433726b0"/>
@@ -39,7 +45,7 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="a195b9c006fcb23ab9a2343b0871e362"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Git (cli)" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-08">
+        <fingerprint name="Git (cli)" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d2912h2_723694b0fccc_288f874c93d6"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8662467bc96db2d387755570446a7946"/>
@@ -260,6 +266,12 @@
                 <test weight="5" matchtype="exact" testtype="ja3s" sslsig="623de93db17d313345d7ea481e7443cf"/>
             </ssl_tests>
         </fingerprint>
+        <fingerprint name="nmap" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d751100_479067518aa3_d41ae481755e"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="1c1cd8b08328d6eb175075eb50739048"/>
+            </ssl_tests>
+        </fingerprint>
         <fingerprint name="Possible False Positive - Tofsee" os_name="False Positive" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2022-04-05">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7643725fcff971e3051fe0e47fc2c71"/>
@@ -285,6 +297,12 @@
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e7d705a3286e19ea42f587b344ee6865"/>
                 <test weight="5" matchtype="exact" testtype="ja3s" sslsig="a95ca7eab4d47d051a5cd4fb7b6005dc"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="wget" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="e91ce64088cf382a3a56b713620f0204"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d751100_479067518aa3_fb8d5ffd48c1"/>
             </ssl_tests>
         </fingerprint>
     </fingerprints>
