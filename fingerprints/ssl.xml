@@ -29,14 +29,20 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1516h2_8daaf6152771_02713d6af862"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Firefox 116-121" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Firefox 116-121" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-08">
             <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_a815a0c236aa"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1714h1_5b57614c22b0_c1d5e2fdb8fd"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_81188fb5472b"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_9448bd19f75d"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_da9aa2e0e994"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1716h2_5b57614c22b0_dad4e9517cd9"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_5c2c66f702b0"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="b5001237acdf006056b409cc433726b0"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1716h2_5b57614c22b0_28a30a3f7180"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_7121afd63204"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a696a018266f1e7e33d73ecf3b64f8fd"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a195b9c006fcb23ab9a2343b0871e362"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Git (cli)" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-08">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d2912h2_723694b0fccc_288f874c93d6"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="8662467bc96db2d387755570446a7946"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - " os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
@@ -267,6 +273,7 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d291300_723694b0fccc_2cc26d266019"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="f35ce21b44ac0b87d3266294bb1b0e20"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="473cd7cb9faa642487833865d516e578"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="0d3fcf6999f33c6af23278bf162455d8"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="SoftEther VPN" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
