@@ -48,15 +48,18 @@ def Dupes():
   satoriPath = str(Path(__file__).resolve().parent)
 
   findDupes(satoriPath + '/fingerprints/browser.xml')
-  findDupes(satoriPath + '/fingerprints/dhcpv6.xml')
   findDupes(satoriPath + '/fingerprints/dhcp.xml')
-  findDupes(satoriPath + '/fingerprints/mac.xml')
+  findDupes(satoriPath + '/fingerprints/dhcpv6.xml')
+  findDupes(satoriPath + '/fingerprints/dns.xml')
+  findDupes(satoriPath + '/fingerprints/icmp.xml')
+  findDupes(satoriPath + '/fingerprints/ntp.xml')
   findDupes(satoriPath + '/fingerprints/sip.xml')
   findDupes(satoriPath + '/fingerprints/smb.xml')
-  findDupes(satoriPath + '/fingerprints/tcp.xml')
+  findDupes(satoriPath + '/fingerprints/ssh.xml')
   findDupes(satoriPath + '/fingerprints/ssl.xml')
-  findDupes(satoriPath + '/fingerprints/webuseragent.xml')
+  findDupes(satoriPath + '/fingerprints/tcp.xml')
   findDupes(satoriPath + '/fingerprints/web.xml')
+  findDupes(satoriPath + '/fingerprints/webuseragent.xml')
 
 
 def sort_key(val):
