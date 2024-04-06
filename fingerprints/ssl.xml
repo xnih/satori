@@ -16,14 +16,14 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<SSL created="2021-12-13" last_updated="2024-01-08" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<SSL created="2021-12-13" last_updated="2024-04-06" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Chrome" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1516h2_8daaf6152771_e5627efa2ab1"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Chrome 118-120" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
+        <fingerprint name="Chrome 118-123" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-04-06">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1517h2_8daaf6152771_b1ff8ab2d16f"/>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1516h2_8daaf6152771_02713d6af862"/>
@@ -35,7 +35,7 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d3113h2_e8f1e7e78f70_ce5650b735ce"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Firefox 116-121" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
+        <fingerprint name="Firefox 116-122" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-04-06">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_5c2c66f702b0"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="b5001237acdf006056b409cc433726b0"/>
@@ -43,6 +43,7 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h2_5b57614c22b0_7121afd63204"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="a696a018266f1e7e33d73ecf3b64f8fd"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="a195b9c006fcb23ab9a2343b0871e362"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h1_5b57614c22b0_7121afd63204"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Git (cli)" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
