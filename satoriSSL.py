@@ -174,7 +174,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2024-01-08'
+  dateReleased='satoriSSL.py - 2024-04-06'
   print(dateReleased)
 
 
@@ -505,9 +505,7 @@ def decodeSSLRecords(recs):
 
 def ja3erUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
-  url = 'https://ja3er.com/getAllUasJson'
-#  backupurl = 'https://drive.google.com/u/0/uc?id=1M41DtHGoyghZQYsqXBJgbProGguexZoT&export=download&confirm=t&uuid=03473495-6383-40a6-86f9-3765961d134f'
-  backupurl = 'https://drive.google.com/uc?export=download&id=14Q_yJSHVc4Hb_NHK_zqxwpo09YmD3vZ7'
+  url = 'https://github.com/xnih/ja3er/raw/main/ja3er.json.gz'
   ja3erGZFile = satoriPath + '/fingerprints/ja3er.json.gz'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
