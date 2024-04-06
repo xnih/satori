@@ -16,7 +16,7 @@
 <!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
 <!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
 <!--                                                                                    -->
-<DHCP created="2005-08-21" last_updated="2024-01-10" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2024-04-06" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -669,6 +669,15 @@
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,33,3,6,12,15,26,28,42,43,51,58,59,119"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="BrightSign HD225" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2024-04-06">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="BrightSign HD225"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="BrightSign HD225"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="50,53,54,55,57,61,60,12,145,25"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,55,57,61,60,12,116,145,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,3,6,12,15,26,28,33,42,43,51,58,59,119"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="BrightSign LS424" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="BrightSign LS424"/>
@@ -1287,6 +1296,14 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,54,50,61,12,60,55,255"/>
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP C9120AX"/>
                 <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP C9120AX"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Aironet 9164" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2024-04-06">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP CW9164"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco ATA 186" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
