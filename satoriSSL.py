@@ -505,7 +505,8 @@ def decodeSSLRecords(recs):
 
 def ja3erUpdate():
   satoriPath = str(Path(__file__).resolve().parent)
-  url = 'https://github.com/xnih/ja3er/raw/main/ja3er.json.gz'
+  url = 'https://ja3er.com/getAllUasJson'
+  backupurl = 'https://github.com/xnih/ja3er/raw/main/ja3er.json.gz'
   ja3erGZFile = satoriPath + '/fingerprints/ja3er.json.gz'
   ja3erFile = satoriPath + '/fingerprints/ja3er.json'
 
