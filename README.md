@@ -3,22 +3,29 @@ Python rewrite of passive OS fingerprinting tool.
 
 It currently supports fingerprinting by the following means:
 - DHCP
-- TCP
+- DNS
 - HTTP (User Agent and Server)
-- SMB (TCP and UDP)
-- SSL (JA3/JA3S/JA4) 
+- NTP
+- SMB (TCP and UDP, though limited usefulness with nobody running SMBv1 anymore)
+- SSH
+- SSL (JA3/JA3S/JA4)
+- TCP
 
 This program was started back in 2004 and had a decent life as a windows program, doing passive OS fingerprinting for 10 years with regular updates, but it fell by the wayside.  It has been a goal to get it back out here, written in something that I could share the code with others.  
 
-I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules into this that were in the windows version and more importantly update the fingerprint files.
+I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules (and have over the last 5+ years) into this that were in the windows version and more importantly update the fingerprint files.
 
 ## interesting notes
 Verified it appears to run fine on Risc V Architecture on the VisionFive 2 at least with no mods.
 
-## ssl - if you want more fingerprints
-You'll need to download the ja3er.com json file if you want a decent DB of fingerprints, otherwise the xml version that is part of satori right now is primarily from sslbl.abuse.ch/ja3-fingerprints
+## ssl - if you want more 3rd party fingerprints
+The current SSL fingerprints, in the xml ssl.xml are primarily from sslbl.abuse.ch/ja3-fingerprints, or ones I've found in my testing over the years.
 
-To download the j3er.com ones do a 'satori.py --ja3update'.  Though please be aware it is going to ignore the cert when it goes to download this, if you are not comfortable with that grab the file manually and drop it in the fingerprint directory.
+To download additional ssl 3rd party fingerprints you can do:
+- j3er.com - 'python3 satori.py --ja3update' 
+- trisulnsm - 'python3 satori.py  --trisulnsm'
+
+The j3er ones haven't been updated in years and it is unknown if the trisulnsm ones are being updated anymore either.  Please be aware with both that satori is going to ignore the cert when it goes to download this, if you are not comfortable with that grab the files manually and drop it in the fingerprint directory.
 
 ## requirements
 ### os related
