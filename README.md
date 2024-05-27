@@ -31,11 +31,13 @@ The j3er ones haven't been updated in years and it is unknown if the trisulnsm o
 ### os related
 - libpcap-dev
 
-### os related Armbian
+Note:  Windows install - While this should probably work on windows like any other python3 program, I've never figured out how to get the pcap header files properly installed there/seen by python, though I haven't tried in years either.  So for now, recommendation is to install on linux.
+
+### os related (may not be needed on all os versions/distros)
 - python3-dev 
 
 ### python related
-- python3
+- python3 (will not run on python2 due to some of the other python packages)
 - pypacker*
 - pcapyplus* 
 - untangle*
