@@ -37,6 +37,7 @@ Note:  Windows install - While this should probably work on windows like any oth
 - python3-dev 
 
 ### python related
+#### required
 - python3 (will not run on python2 due to some of the other python packages)
 - pypacker*
 - pcapyplus* 
