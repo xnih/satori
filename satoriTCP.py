@@ -17,7 +17,7 @@ from datetime import datetime
 #
 
 def version():
-  dateReleased='satoriTCP.py - 2021-11-08'
+  dateReleased='satoriTCP.py - 2024-05-27'
   print(dateReleased)
 
 
@@ -368,10 +368,11 @@ def computeNearTTL(info):
   elif (info>16) and (info<=32):
     ttl = 32
     ethTTL = 43
-  elif (info>32) and (info<=60):
-    ttl = 60 #unlikely to find many of these anymore
-    ethTTL = 64
-  elif (info>60) and (info<=64):
+#  elif (info>32) and (info<=60):
+#    ttl = 60 #unlikely to find many of these anymore
+#    ethTTL = 64
+#  elif (info>60) and (info<=64):
+  elif (info>32) and (info<=64):
     ttl = 64
     ethTTL = 64
   elif (info>64) and (info<=128):
