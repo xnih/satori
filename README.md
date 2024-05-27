@@ -74,3 +74,8 @@ The content pack currently contains about 5 rules to properly parse the data.  I
 
 ## version
 This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point and I've been running it in production like systems since I put this out here!
+
+If you want to know version of individual modules you can do
+- python3 satori.py --version
+
+It will just give you a date of when that module was last updated along with what version of the 3rd party modules you're running that satori sees.
