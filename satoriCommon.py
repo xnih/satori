@@ -3,7 +3,7 @@ import pkg_resources
 from pathlib import Path
 
 def version():
-  dateReleased='satoriCommon.py - 2021-12-13'
+  dateReleased='satoriCommon.py - 2024-01-10'
   print(dateReleased)
 
 
