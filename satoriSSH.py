@@ -16,7 +16,7 @@ from pypacker.layer3 import ip
 
 
 def version():
-  dateReleased='satoriSSH.py - 2021-01-04'
+  dateReleased='satoriSSH.py - 2024-01-06'
   print(dateReleased)
 
 
