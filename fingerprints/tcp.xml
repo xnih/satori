@@ -1,22 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--                                                                                    -->
-<!-- Terms of use of fingerprint data:                                                  -->
-<!-- You are welcome to use the fingerprint data provided as long as you:               -->
-<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
-<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
-<!--     http://github.com/xnih/satori                                                  -->
-<!--                                                                                    -->
-<!-- If you are using this for your own programs it is highly recommended you           -->
-<!-- contribute new fingerprints                                                        -->
-<!--                                                                                    -->
-<!-- Updates can be found at:                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
-<!-- example:                                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
-<!--                                                                                    -->
-<TCP created="2005-08-21" last_updated="2024-01-09" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<TCP created="2005-08-21" last_updated="2024-05-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="1763 MicroLogix 1100 PLC" os_name="1763 MicroLogix 1100 PLC" os_class="ICS device" os_vendor="Allen-Bradley" os_url="https://ab.rockwellautomation.com/Programmable-Controllers/MicroLogix-1100" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
@@ -320,6 +303,11 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="28960:64:1:60:M1460,N,N,T,N,W4:ZAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="28960:64:1:60:M1460,S,T,N,W4:ZAT"/>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="29200:64:1:44:M1460:ZA"/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Debian 12.5" os_name="Linux" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-05-27">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W7:."/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Debian 3.1" os_name="Linux 2.6" os_class="Linux" os_vendor="Debian" os_url="http://www.debian.org" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2009-03-03">

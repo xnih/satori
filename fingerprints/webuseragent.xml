@@ -1,22 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--                                                                                    -->
-<!-- Terms of use of fingerprint data:                                                  -->
-<!-- You are welcome to use the fingerprint data provided as long as you:               -->
-<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
-<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
-<!--     http://github.com/xnih/satori                                                  -->
-<!--                                                                                    -->
-<!-- If you are using this for your own programs it is highly recommended you           -->
-<!-- contribute new fingerprints                                                        -->
-<!--                                                                                    -->
-<!-- Updates can be found at:                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
-<!-- example:                                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
-<!--                                                                                    -->
-<WEBUSERAGENT created="2006-08-05" last_updated="2024-04-06" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<WEBUSERAGENT created="2006-08-05" last_updated="2024-05-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Amazon Echo Dot" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="Amazon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2021-05-03">
             <webuseragent_tests>

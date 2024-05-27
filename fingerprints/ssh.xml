@@ -1,32 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--                                                                                    -->
-<!-- Terms of use of fingerprint data:                                                  -->
-<!-- You are welcome to use the fingerprint data provided as long as you:               -->
-<!-- 1.  Notify the author of this file of your intentions, email to xnih13@gmail.com   -->
-<!-- 2.  Somewhere in your documentation you provide a link to Satori:                  -->
-<!--     http://github.com/xnih/satori                                                  -->
-<!--                                                                                    -->
-<!-- If you are using this for your own programs it is highly recommended you           -->
-<!-- contribute new fingerprints                                                        -->
-<!--                                                                                    -->
-<!-- Updates can be found at:                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/[filename]        -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/[filename]       -->
-<!-- example:                                                                           -->
-<!-- http://chatteronthewire.org/download/updates/satori/fingerprints/dhcp.xml          -->
-<!-- https://raw.githubusercontent.com/xnih/satori/master/fingerprints/dhcp.xml         -->
-<!--                                                                                    -->
-<SSH created="2024-01-06" last_updated="2024-01-06" author="xnih13@gmail.com" last_edited_by="" last_edited_with="">
+<SSH created="2024-01-06" last_updated="2024-05-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="Boomi" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-JSCH-0.1.53"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="Cisco Router" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Cisco Call Manager" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
             <ssh_tests>
-                <test weight="10" matchtype="exact" ssh="SSH-2.0-Cisco-1.25"/>
-                <test weight="10" matchtype="exact" ssh="SSH-1.99-Cisco-1.25"/>
+                <test weight="5" matchtype="exact" ssh="SSH-2.0-JSCH-0.1.54"/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Cisco DNA Center?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -37,6 +19,18 @@
         <fingerprint name="Cisco Prime?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-XDE_PAL_3.4.8"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Cisco Router" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="10" matchtype="exact" ssh="SSH-2.0-Cisco-1.25"/>
+                <test weight="10" matchtype="exact" ssh="SSH-1.99-Cisco-1.25"/>
+                <test weight="5" matchtype="exact" ssh="SSH-2.0-Cisco-2.0"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Cyberduck 8.6.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="5" matchtype="partial" ssh="SSH-2.0-Cyberduck/8.6."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="FlowSsh" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -64,19 +58,14 @@
                 <test weight="5" matchtype="partial" ssh="libssh"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
-            <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.3."/>
-            </ssh_tests>
-        </fingerprint>
         <fingerprint name="libssh 0.3.4" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.3.4"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.4.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.4."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.3."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh 0.4.8" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -84,9 +73,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.4.8"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.5.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.4.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.5."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.4."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh 0.5.5" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -94,9 +83,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.5.5"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.6.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.5.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.6."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.5."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh 0.6.0" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -109,9 +98,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.6.3"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.7.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.6.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.7."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.6."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh 0.7.7" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -119,9 +108,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.7.7"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh 0.9.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.7.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.9."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.7."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh 0.9.3" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -134,9 +123,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh_0.9.6"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh2 1.10.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh 0.9.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh2_1.10."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh_0.9."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh2 1.10.0" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -144,9 +133,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh2_1.10.0"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="libssh2 1.11.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="libssh2 1.10.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh2_1.11."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh2_1.10."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="libssh2 1.11.0" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -154,14 +143,19 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-libssh2_1.11.0"/>
             </ssh_tests>
         </fingerprint>
+        <fingerprint name="libssh2 1.11.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+            <ssh_tests>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-libssh2_1.11."/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Nessus" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="tenable" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="5" matchtype="partial" ssh="SSH-2.0-${jndi:ldap://log4shell-ssh-DKyXZXqRY3m7c6v1EWC9${lower:ten}.w.nessus.org/nessus}"/>
+            </ssh_tests>
+        </fingerprint>
         <fingerprint name="OpenSSH 3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_3."/>
-            </ssh_tests>
-        </fingerprint>
-        <fingerprint name="OpenSSH 4.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
-            <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_4."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 4.3" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -169,9 +163,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_4.3"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="OpenSSH 5.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="OpenSSH 4.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_5."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_4."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 5.2" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -189,9 +183,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_5.9"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="OpenSSH 6.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="OpenSSH 5.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_6."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_5."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 6.1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -204,9 +198,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_6.2"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="OpenSSH 7.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="OpenSSH 6.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_7."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_6."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 7.4" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -214,9 +208,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_7.4"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="OpenSSH 8.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="OpenSSH 7.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_8."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_7."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 8.0" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -229,9 +223,9 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_8.8"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="OpenSSH 9.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="OpenSSH 8.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_9."/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_8."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="OpenSSH 9.1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -244,6 +238,16 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_9.4"/>
             </ssh_tests>
         </fingerprint>
+        <fingerprint name="OpenSSH 9.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+            <ssh_tests>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-OpenSSH_9."/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="OS X 14.2.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="7" matchtype="exact" ssh="Mac OS X/14.2."/>
+            </ssh_tests>
+        </fingerprint>
         <fingerprint name="paramiko" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="5" matchtype="partial" ssh="SSH-2.0-paramiko"/>
@@ -254,19 +258,14 @@
                 <test weight="5" matchtype="partial" ssh="SSH-2.0-PuTTY"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="PuTTY 0.7x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
-            <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-PuTTY_Release_0.7"/>
-            </ssh_tests>
-        </fingerprint>
         <fingerprint name="PuTTY 0.79" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-PuTTY_Release_0.79"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="PuTTY 0.8x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="PuTTY 0.7x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
-                <test weight="7" matchtype="partial" ssh="SSH-2.0-PuTTY_Release_0.8"/>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-PuTTY_Release_0.7"/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="PuTTY 0.80" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -274,9 +273,19 @@
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-PuTTY_Release_0.80"/>
             </ssh_tests>
         </fingerprint>
+        <fingerprint name="PuTTY 0.8x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+            <ssh_tests>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-PuTTY_Release_0.8"/>
+            </ssh_tests>
+        </fingerprint>
         <fingerprint name="rclone 1.55" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
             <ssh_tests>
                 <test weight="10" matchtype="partial" ssh="SSH-2.0-rclone/v1.55.1"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="SecureCRT 9.3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-SecureCRT_9.3."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Ubuntu - OpenSSH 7.6p1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -304,9 +313,19 @@
                 <test weight="5" matchtype="exact" ssh="SSH-2.0-PuTTY"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="Windows 8.1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Windows 10" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
             <ssh_tests>
                 <test weight="10" matchtype="exact" ssh="SSH-2.0-OpenSSH_for_Windows_8.1"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Windows 11" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="10" matchtype="exact" ssh="OpenSSH_for_Windows_8.6"/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="WinSCP 6.1.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
+            <ssh_tests>
+                <test weight="7" matchtype="partial" ssh="SSH-2.0-WinSCP_release_6.1."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="ZMap/ZGrab 9" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
