@@ -30,13 +30,15 @@ To download the j3er.com ones do a 'satori.py --ja3update'.  Though please be aw
 ### python related
 - python3
 - pypacker*
-- pcapy*  (Due to problems with pcapy I would recommend pcapyplus instead - depending on distro may need these installed prior:libpcap-dev, python3-dev; along with setuptools if using pip3 to install)
-- pcapyplus (same warnings as pcapy, but this seems to work with latest setuptools)
+- pcapyplus* 
 - untangle*
-- requests*  (new requirement for the SSL fingerprinting)
+- requests*  
 
 #### optional
-- netifaces* (while not specifically needed saves some error messages at least on rasbianos)
+- netifaces* (while not specifically needed saves some error messages depending on distro)
+
+#### retired/historic
+- pcapy*  (Due to problems with pcapy I would recommend pcapyplus instead - depending on distro may need these installed prior:libpcap-dev, python3-dev; along with setuptools if using pip3 to install)
 
 *(if you use pip to install it, remember to use pip3)
 
@@ -51,7 +53,7 @@ periodically get the latest fingerprint files and any updates:
 
 modules feature is optional
 
-I have added the ability to listen to live packets, but be aware, you are running as root typically to do this, use at own risk as mentioned before, I am by no means a programmer!
+If you are using the interface option, this has to be run as root in most/all cases, so there are potential risks.
 
 ## graylog
 I'm only a novice working with graylog, but feeding satori logs into it is much faster for processing through them after the fact than grep!
