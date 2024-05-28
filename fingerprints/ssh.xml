@@ -11,9 +11,9 @@
                 <test weight="5" matchtype="exact" ssh="SSH-2.0-JSCH-0.1.54"/>
             </ssh_tests>
         </fingerprint>
-        <fingerprint name="Cisco DNA Center?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
+        <fingerprint name="Cisco DNA Center?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-05-27">
             <ssh_tests>
-                <test weight="10" matchtype="exact" ssh="SSH-2.0-XDE_PAL_3.4.23"/>
+                <test weight="10" matchtype="partial" ssh="SSH-2.0-XDE_PAL_3.4.2"/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Cisco Prime?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
@@ -286,6 +286,11 @@
         <fingerprint name="SecureCRT 9.3.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-11">
             <ssh_tests>
                 <test weight="7" matchtype="partial" ssh="SSH-2.0-SecureCRT_9.3."/>
+            </ssh_tests>
+        </fingerprint>
+        <fingerprint name="Insecure - SSH 1.x" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-05-27">
+            <ssh_tests>
+                <test weight="10" matchtype="partial" ssh="SSH-1."/>
             </ssh_tests>
         </fingerprint>
         <fingerprint name="Ubuntu - OpenSSH 7.6p1" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-06">
