@@ -1281,12 +1281,14 @@
                 <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP C9120AX"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Cisco Aironet 9164" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2024-04-06">
+        <fingerprint name="Cisco Aironet 9164" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2024-05-27">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP CW9164"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,15,3,28,12,6,7,26,42,43"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,12,60,55,255"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP CW9164"/>
+                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP CW9164"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Cisco ATA 186" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
@@ -2946,7 +2948,7 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,3,6,12,15,42,43"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="Meraki Indoor" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Meraki" device_url="http://meraki.com/products_services/access_points/indoor/" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
+        <fingerprint name="Meraki Indoor" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Meraki" device_url="http://meraki.com/products_services/access_points/indoor/" comments="" author="xnih13@gmail.com" last_updated="2024-05-27">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,60,55"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,3,6,12,15,28,40,41,42"/>
@@ -2954,6 +2956,7 @@
                 <test weight="1" matchtype="exact" dhcptype="Discover" ipttl="64"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="MERAKI"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="MERAKI"/>
+                <test weight="5" matchtype="exact" dhcptype="Release" dhcpvendorcode="MERAKI"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Mitel IP Phone" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="Mitel Corp." device_url="http://www.mitel.com/DocController?documentId=9517" comments="" author="eric.sans@enterasys.com" last_updated="2012-07-21">
