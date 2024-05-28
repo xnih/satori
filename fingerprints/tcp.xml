@@ -325,6 +325,11 @@
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="10000:64:1:52:N,N,M1426,S,N,W0:."/>
             </tcp_tests>
         </fingerprint>
+        <fingerprint name="EndeavourOS" os_name="Linux 6.x" os_class="Linux" os_vendor="" os_url="https://endeavouros.com" device_type="" device_vendor="" device_url="" comments="" author="cgonzalezsanz98@gmail.com" last_updated="2024-01-03">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="32120:64:1:60:M1460,S,T,N,W7:."/>
+            </tcp_tests>
+        </fingerprint>
         <fingerprint name="ESX 2.x" os_name="ESX 2.x" os_class="Linux" os_vendor="VMware, Inc." os_url="http://www.vmware.com" device_type="" device_vendor="" device_url="" comments="may just be generic linux fingerprint, not esx, need more tests" author="xnih13@gmail.com" last_updated="2008-10-20">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="SA" tcpsig="5840:64:1:48:M1460,N,N,S:A"/>
