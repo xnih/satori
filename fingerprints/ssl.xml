@@ -51,6 +51,7 @@
         <fingerprint name="MacOS - Microsoft Remote Desktop" os_name="" os_class="MacOS" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e4d448cdfe06dc1243c1eb026c74ac9a"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="td220700_0d4ca5d4ec72_3304d8368043"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="MacOS - pupys rdp module" os_name="" os_class="MacOS" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
