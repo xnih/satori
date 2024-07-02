@@ -49,18 +49,6 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8662467bc96db2d387755570446a7946"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Rammina Remote Desktop Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
-            <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a3afc2c46ba4a7d7fbe1cfb7a3031c2f"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d311000_e8f1e7e78f70_1f22a2ca17c4"/>
-            </ssl_tests>
-        </fingerprint>
-        <fingerprint name="Rammina Remote Desktop Client - 3rd party checking?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
-            <ssl_tests>
-                <test weight="5" matchtype="exact" testtype="ja3" sslsig="0149f47eabf9a20d0893e2a44e5a6323"/>
-                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d3112h2_e8f1e7e78f70_b26ce05bbdd6"/>
-            </ssl_tests>
-        </fingerprint>
         <fingerprint name="MacOS - FreeRDP" os_name="" os_class="MacOS" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="75fb48a465416d66291fb52a733d4787"/>
@@ -139,11 +127,13 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8515076cbbca9dce33151b798f782456"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Malicious - Cobalt Strike" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="thedfirreport.com/2020/10/ryuks-return" last_updated="2022-09-21">
+        <fingerprint name="Malicious - Cobalt Strike" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="thedfirreport.com/2020/10/ryuks-return" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="a0e9f5d64349fb13191bc781f81f42e1"/>
                 <test weight="5" matchtype="exact" testtype="ja3s" sslsig="ae4edc6faf64d08308082ad26be60767"/>
                 <test weight="5" matchtype="exact" testtype="ja3s" sslsig="aa29d305dff6e6ac9cd244a62c6ad0c2"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="72a589da586844d7f0818ce684948eea"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="b742b407517bac9536a77a7b0fee28e9"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - CoinMiner" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
@@ -184,10 +174,12 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c201b92f8b483fa388be174d6689f534"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Malicious - IcedID" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://www.netresec.com/" last_updated="2022-09-21">
+        <fingerprint name="Malicious - IcedID" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://www.netresec.com/" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="a0e9f5d64349fb13191bc781f81f42e1"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="3b5074b1b5d032e5620f69f9f700ff0e"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="4d7a28d6f2263ed61de88ca66eb011e3 "/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="80b3a14bccc8598a1f3bbe83e71f735f"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - IcedID Malware" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
@@ -198,6 +190,13 @@
         <fingerprint name="Malicious - JBifrost" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="51a7ad14509fd614c7bb3a50c4982b8c"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Malicious - Metasploit" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="72a589da586844d7f0818ce684948eea"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a0e9f5d64349fb13191bc781f81f42e1"/>
+                <test weight="5" matchtype="exact" testtype="ja3s" sslsig="70999de61602be74d4b25185843bd18e"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="Malicious - Quakbot" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
@@ -277,7 +276,7 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="1712287800ac91b34cadd5884ce85568"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Malicious - Trickbot" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2021-12-13">
+        <fingerprint name="Malicious - Trickbot" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="https://sslbl.abuse.ch/ja3-fingerprints/" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8916410db85077a5460817142dcbc8de"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="534ce2dbc413c68e908363b5df0ae5e0"/>
@@ -290,6 +289,7 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="c50f6a8b9173676b47ba6085bd0c6cee"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="6734f37431670b3ab4292b8f60f29984"/>
                 <test weight="5" matchtype="exact" testtype="ja3s" sslsig="623de93db17d313345d7ea481e7443cf"/>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="6734f37431670b3ab4292b8f60f29984 "/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="nmap" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
@@ -304,6 +304,18 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="32926ca3e59f0413d0b98725454594f5"/>
             </ssl_tests>
         </fingerprint>
+        <fingerprint name="Rammina Remote Desktop Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a3afc2c46ba4a7d7fbe1cfb7a3031c2f"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d311000_e8f1e7e78f70_1f22a2ca17c4"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Rammina Remote Desktop Client - 3rd party checking?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="0149f47eabf9a20d0893e2a44e5a6323"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d3112h2_e8f1e7e78f70_b26ce05bbdd6"/>
+            </ssl_tests>
+        </fingerprint>
         <fingerprint name="Snapcraft.io on Ubuntu 22" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-01-08">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d190900_9dc949149365_97f8aa674fd9"/>
@@ -314,7 +326,7 @@
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="0d3fcf6999f33c6af23278bf162455d8"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="SoftEther VPN" os_name="Malicious" os_class="Malicious" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2023-12-27">
+        <fingerprint name="SoftEther VPN" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d880900_fcb5b95cb75a_b0d3b4ac2a14"/>
             </ssl_tests>
@@ -331,37 +343,37 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d751100_479067518aa3_fb8d5ffd48c1"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 10 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 10 - RDP" os_name="Windows 10" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="ce5f3254611a8c095a3d821d44539877"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 2008r2 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 2008r2 - RDP" os_name="Windows 2008r2" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="e6a4e2358d4eee6122403f3cb835bcbd"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 2012 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 2012 - RDP" os_name="Windows 2012" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="bc2874f25a8254edb36147c151527cfa"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 2012r2 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 2012r2 - RDP" os_name="Windows 2012r2" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="3e686105164b7c9a4cbd59142f18a4e7"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 2016 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 2016 - RDP" os_name="Windows 2016" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="67e3d18fd9dddbbc8eca65f7dedac674"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 2019 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 2019 - RDP" os_name="Windows 2019" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="ce5f3254611a8c095a3d821d44539877"/>
             </ssl_tests>
         </fingerprint>
-        <fingerprint name="Windows 7 - RDP" os_name="Windows XP SP3" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
+        <fingerprint name="Windows 7 - RDP" os_name="Windows 7" os_class="Windows" os_vendor="Microsoft" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="d54b3eb800cbeccf99fd5d5cdcd7b5b5"/>
             </ssl_tests>
