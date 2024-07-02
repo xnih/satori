@@ -26,7 +26,7 @@ import satoriSSH
 
 
 def versionInfo():
-  dateReleased='satori.py - 2024-01-06'
+  dateReleased='satori.py - 2024-07-02'
   print(dateReleased)
   satoriTCP.version()
   satoriDHCP.version()
@@ -74,6 +74,9 @@ def packetType(buf):
         tcp1 = eth[ip.IP].upper_layer
         if (tcp1.sport == 138) or (tcp1.dport == 138) or (tcp1.sport == 139) or (tcp1.dport == 138) or (tcp1.sport == 445) or (tcp1.dport == 445):
           smbPacket = True
+        #attempt to tell if it is RDP to run through SSL test, kludgy!
+        if (tcp1.dport == 3389):
+          sslPacket = True
         #attempt to tell if it is SSH, kludgy!
         try:
           if 'SSH' in tcp1.body_bytes.decode("utf-8"):

@@ -8,6 +8,7 @@ from os import remove
 from os.path import exists
 from pathlib import Path
 from pypacker.layer12 import ethernet
+from pypacker.layer4 import ssl
 from datetime import datetime
 from pypacker import pypacker, triggerlist
 import hashlib
@@ -174,7 +175,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2024-04-06'
+  dateReleased='satoriSSL.py - 2024-07-02'
   print(dateReleased)
 
 
@@ -186,7 +187,8 @@ def sslProcess(pkt, layer, ts, sslJA3XMLExactList, sslJA3SXMLExactList, sslJA3JS
     src_mac = '00:00:00:00:00:00'
 
   ip4 = pkt.upper_layer
-  ssl1 = pkt.upper_layer.upper_layer.upper_layer
+  ssl1 = ssl.SSL(ip4.upper_layer.body_bytes)
+#  print(ssl1)
 
   timeStamp = datetime.utcfromtimestamp(ts).isoformat()
   fingerprint = None
@@ -297,6 +299,7 @@ def decodeSSLRecords(recs):
   signatures = ''
   sni = 'i'
   delcreds = ''
+  tls = ''
 
   GREASE_TABLE = {'0xa0a', '0x1a1a', '0x2a2a', '0x3a3a',
                   '0x4a4a', '0x5a5a', '0x6a6a', '0x7a7a',
