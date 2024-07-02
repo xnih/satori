@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TCP created="2005-08-21" last_updated="2024-05-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<TCP created="2005-08-21" last_updated="2024-07-02" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="1763 MicroLogix 1100 PLC" os_name="1763 MicroLogix 1100 PLC" os_class="ICS device" os_vendor="Allen-Bradley" os_url="https://ab.rockwellautomation.com/Programmable-Controllers/MicroLogix-1100" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2018-11-06">
             <tcp_tests>
@@ -991,6 +991,11 @@
         <fingerprint name="Ubuntu 22.x" os_name="" os_class="Linux" os_vendor="Ubuntu" os_url="http://ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-09">
             <tcp_tests>
                 <test weight="5" matchtype="exact" tcpflag="S" tcpsig="64240:64:1:60:M1460,S,T,N,W7:."/>
+            </tcp_tests>
+        </fingerprint>
+        <fingerprint name="Ubuntu 24.x" os_name="" os_class="Linux" os_vendor="Ubuntu" os_url="http://ubuntu.com" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-07-02">
+            <tcp_tests>
+                <test weight="5" matchtype="exact" tcpflag="S" tcpsig="32120:64:1:60:M1460,S,T,N,W7:."/>
             </tcp_tests>
         </fingerprint>
         <fingerprint name="Westermo MRD-355" os_name="Westermo MRD-355" os_class="ICS device" os_vendor="Westermo" os_url="https://www.westermo.com/products/routers/wireless-routers/mrd-355" device_type="" device_vendor="" device_url="" comments="" author="netresec.com" last_updated="2021-09-12">

@@ -37,10 +37,28 @@
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d1715h1_5b57614c22b0_7121afd63204"/>
             </ssl_tests>
         </fingerprint>
+        <fingerprint name="FreeRDP 2.11" os_name="" os_class="MacOS" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a3afc2c46ba4a7d7fbe1cfb7a3031c2f"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d311000_e8f1e7e78f70_1f22a2ca17c4"/>
+            </ssl_tests>
+        </fingerprint>
         <fingerprint name="Git (cli)" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2024-01-08">
             <ssl_tests>
                 <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d2912h2_723694b0fccc_288f874c93d6"/>
                 <test weight="5" matchtype="exact" testtype="ja3" sslsig="8662467bc96db2d387755570446a7946"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Rammina Remote Desktop Client" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="a3afc2c46ba4a7d7fbe1cfb7a3031c2f"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d311000_e8f1e7e78f70_1f22a2ca17c4"/>
+            </ssl_tests>
+        </fingerprint>
+        <fingerprint name="Rammina Remote Desktop Client - 3rd party checking?" os_name="" os_class="" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="" author="" last_updated="2024-07-02">
+            <ssl_tests>
+                <test weight="5" matchtype="exact" testtype="ja3" sslsig="0149f47eabf9a20d0893e2a44e5a6323"/>
+                <test weight="5" matchtype="exact" testtype="ja4" sslsig="t13d3112h2_e8f1e7e78f70_b26ce05bbdd6"/>
             </ssl_tests>
         </fingerprint>
         <fingerprint name="MacOS - FreeRDP" os_name="" os_class="MacOS" os_vendor="" os_url="" device_type="" device_vendor="" device_url="" comments="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4" author="Adel Karimi" last_updated="2024-07-02">
