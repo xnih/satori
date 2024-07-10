@@ -321,6 +321,7 @@ def decodeSSLRecords(recs):
           len = int(clientHello.cipsuite_len)
           offset = 0
           cipherCount = 0
+          strCipherCount = str(cipherCount).zfill(2)
           cipherList = []
           while offset <= len-1:
             value = struct.unpack('!H',clientHello.ciphersuite[0][offset:offset+2])[0]
@@ -342,6 +343,7 @@ def decodeSSLRecords(recs):
           #build extension
           len = int(clientHello.ext_len)
           extensionCount = 0
+          strExtensionCount = str(extensionCount).zfill(2)
           extensionList = []
           sortedExtensionList = []
 
