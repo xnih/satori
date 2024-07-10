@@ -279,6 +279,25 @@ def quicProcess(pkt, layer, ts, sslJA4XMLExactList):
 
   return [timeStamp, fingerprints]
 
+def tlsVersion(value):
+  tls = ''
+
+  if value == '256':
+    tls = 's1'
+  elif value == '512':
+    tls = 's2'
+  elif value == '768':
+    tls = 's3'
+  elif value == '769':
+    tls = '10'
+  elif value == '770':
+    tls = '11'
+  elif value == '771':
+    tls = '12'
+  elif value == '772':
+    tls = '13'
+
+  return tls
 
 def decodeSSLRecords(recs):
   ja3 = ''
@@ -316,6 +335,7 @@ def decodeSSLRecords(recs):
           clientHello = clientHandshakeHello(rec.body_bytes)
           #get version doesn't really work for tls 1.3 anymore
           version = clientHello.tlsversion
+          tls = tlsVersion(str(version))
 
           #build ciphersuite
           len = int(clientHello.cipsuite_len)
@@ -424,20 +444,7 @@ def decodeSSLRecords(recs):
                   value = str(struct.unpack('!H',ext.body_bytes[offset:offset+2])[0])
                   offset = offset + 2
                   if hex(int(value)) not in GREASE_TABLE:
-                    if value == '256':
-                      tls = 's1'
-                    elif value == '512':
-                      tls = 's2'
-                    elif value == '768':
-                      tls = 's3'
-                    elif value == '769':
-                      tls = '10'
-                    elif value == '770':
-                      tls = '11'
-                    elif value == '771':
-                      tls = '12'
-                    elif value == '772':
-                      tls = '13'
+                    tls = tlsVersion(value)
                     supportedVersions = supportedVersions + '-' + tls
                 if supportedVersions != '':
                   supportedVersions = supportedVersions[1:]
