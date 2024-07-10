@@ -175,7 +175,7 @@ class serverHandshakeHello(pypacker.Packet):
 
 
 def version():
-  dateReleased='satoriSSL.py - 2024-07-02'
+  dateReleased='satoriSSL.py - 2024-07-09'
   print(dateReleased)
 
 
@@ -415,7 +415,6 @@ def decodeSSLRecords(recs):
                   delcreds = delcreds[1:]
 
               if ext.type == 43:  #supported versions
-                tls = 0
                 offset = 0
                 len = struct.unpack('!B', ext.body_bytes[offset:offset+1])[0]
                 offset = offset + 1
@@ -424,20 +423,20 @@ def decodeSSLRecords(recs):
                   offset = offset + 2
                   if hex(int(value)) not in GREASE_TABLE:
                     if value == '256':
-                      tls = s1
+                      tls = 's1'
                     elif value == '512':
-                      tls = s2
+                      tls = 's2'
                     elif value == '768':
-                      tls = s3
+                      tls = 's3'
                     elif value == '769':
-                      tls = 10
+                      tls = '10'
                     elif value == '770':
-                      tls = 11
+                      tls = '11'
                     elif value == '771':
-                      tls = 12
+                      tls = '12'
                     elif value == '772':
-                      tls = 13
-                    supportedVersions = supportedVersions + '-' + str(tls)
+                      tls = '13'
+                    supportedVersions = supportedVersions + '-' + tls
                 if supportedVersions != '':
                   supportedVersions = supportedVersions[1:]
                 #first value is preferred so using that for fingerprint
@@ -468,7 +467,7 @@ def decodeSSLRecords(recs):
           results[fpType]=ja3
 
           fpType = 'ja4'
-          ja4_a = ja4_a + str(tls) + sni + strCipherCount + strExtensionCount + alpn
+          ja4_a = ja4_a + tls + sni + strCipherCount + strExtensionCount + alpn
           ja4 = ja4_a + '_' + ja4_b + '_' + ja4_c
           results[fpType]=ja4
 
