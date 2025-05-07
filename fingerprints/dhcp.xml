@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<DHCP created="2005-08-21" last_updated="2024-05-27" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
+<DHCP created="2005-08-21" last_updated="2025-05-07" author="xnih13@gmail.com" last_edited_by="" last_edited_with="Fingerprint Editor">
     <fingerprints>
         <fingerprint name="2Wire Residential Gateway" os_name="" os_class="" os_vendor="" os_url="" device_type="Router" device_vendor="2Wire, Inc." device_url="http://www.2wire.com" comments="Routers and APs" author="support@packetfence.org" last_updated="2009-02-09">
             <dhcp_tests>
@@ -439,6 +439,11 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Axis Bullet Camera P1468" os_name="" os_class="" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Bullet Camera,P1468-LE"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="AXIS M3005" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2023-07-08">
             <dhcp_tests>
                 <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,M3005"/>
@@ -496,6 +501,12 @@
             <dhcp_tests>
                 <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,P3304"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Axis Q1786" os_name="" os_class="Linux" os_vendor="" os_url="" device_type="IP Network Camera" device_vendor="Axis Communications" device_url="http://www.axis.com/products/video/camera/index.htm" comments="" author="xnih13@gmail.com" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="partial" dhcptype="Request" dhcpvendorcode="AXIS,Network Camera,Q1786-LE"/>
+                <test weight="10" matchtype="partial" dhcptype="Discover" dhcpvendorcode="AXIS,Network Camera,Q1786-LE"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Backtrack 1.0" os_name="Linux 2.6" os_class="Linux" os_vendor="remote-exploit.org" os_url="http://www.remote-exploit.org" device_type="" device_vendor="" device_url="" comments="slax distro" author="xnih13@gmail.com" last_updated="2009-03-01">
@@ -633,11 +644,12 @@
                 <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="BrightSign AU335"/>
             </dhcp_tests>
         </fingerprint>
-        <fingerprint name="BrightSign HD1022" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
+        <fingerprint name="BrightSign HD1022" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2025-05-07">
             <dhcp_tests>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,57,60,12,145,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,121,33,3,6,12,15,28,43,51,58,59,119"/>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="BrightSign HD1022"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="BrightSign HD1022"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="BrightSign HD223" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2023-05-20">
@@ -659,6 +671,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="50,53,54,55,57,61,60,12,145,25"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,55,57,61,60,12,116,145,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoption55="1,121,3,6,12,15,26,28,33,42,43,51,58,59,119"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="BrightSign LS423" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="BrightSign LS423"/>
+                <test weight="5" matchtype="exact" dhcptype="Discover" dhcpvendorcode="BrightSign LS423"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="BrightSign LS424" os_name="" os_class="" os_vendor="" os_url="" device_type="Digital Signage" device_vendor="BrightSign" device_url="https://www.brightsign.biz/digital-signage-products" comments="" author="xnih13@gmail.com" last_updated="2021-01-06">
@@ -770,6 +788,12 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,15,44"/>
                 <test weight="5" matchtype="exact" dhcptype="Discover" dhcpoptions="53,61,55,57,60,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,55,57,60,255"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Cannon Image Runner C6860" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Cannon" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Canon iR-ADV C6860"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Canon iR-ADV C6860"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Canon Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Canon, Inc." device_url="http://www.canon.com" comments="Printers" author="support@packetfence.org" last_updated="2023-05-20">
@@ -1281,6 +1305,13 @@
                 <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP C9120AX"/>
             </dhcp_tests>
         </fingerprint>
+        <fingerprint name="Cisco Aironet 9163" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2024-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP CW9163"/>
+                <test weight="10" matchtype="exact" dhcptype="Discover" dhcpvendorcode="Cisco AP CW9163"/>
+                <test weight="10" matchtype="exact" dhcptype="Release" dhcpvendorcode="Cisco AP CW9163"/>
+            </dhcp_tests>
+        </fingerprint>
         <fingerprint name="Cisco Aironet 9164" os_name="" os_class="" os_vendor="" os_url="" device_type="Wireless Access Point" device_vendor="Cisco Systems, Inc." device_url="http://www.cisco.com" comments="" author="xnih13@gmail.com" last_updated="2024-05-27">
             <dhcp_tests>
                 <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Cisco AP CW9164"/>
@@ -1451,6 +1482,11 @@
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="3,6,15,28,12,7,9,42,48,49"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,28,2,3,15,6,12,44,47"/>
                 <test weight="5" matchtype="exact" dhcptype="Any" dhcpoption55="1,28,2,3,15,6,12,44,47,26"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Dell 2155CN Color Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Dell 2155cn Color MFP"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Dell C1760nw Color Printer" os_name="" os_class="" os_vendor="" os_url="" device_type="Printer" device_vendor="Dell, Inc." device_url="http://www.dell.com" comments="Printers" author="support@packetfence.org" last_updated="2020-12-11">
@@ -3432,6 +3468,26 @@
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoptions="53,61,12,60,55,255"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpoption55="1,3,6,12,15,28,42"/>
                 <test weight="5" matchtype="exact" dhcptype="Request" dhcpvendorcode="udhcp 1.16.1"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Poly Edge E220" os_name="" os_class="" os_vendor="" os_url="" device_type="VoIP Phone" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Poly-EdgeE220"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Poly Edge E320" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Phone" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Poly-EdgeE320"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Poly Edge E550" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Phone" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Poly-EdgeE550"/>
+            </dhcp_tests>
+        </fingerprint>
+        <fingerprint name="Poly Trio C60" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Phone" device_vendor="" device_url="" comments="" author="" last_updated="2025-05-07">
+            <dhcp_tests>
+                <test weight="10" matchtype="exact" dhcptype="Request" dhcpvendorcode="Poly-TrioC60"/>
             </dhcp_tests>
         </fingerprint>
         <fingerprint name="Polycom Studio X70" os_name="" os_class="" os_vendor="" os_url="" device_type="Video Phone" device_vendor="Polycom, Inc." device_url="http://www.poly.com" comments="" author="xnih13@gmail.com" last_updated="2023-12-12">
