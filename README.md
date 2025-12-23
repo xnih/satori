@@ -15,6 +15,9 @@ This program was started back in 2004 and had a decent life as a windows program
 
 I am NOT a programmer, I hack code together, so this is what it is.  Time permitting I'll continue to bring new modules (and have over the last 5+ years) into this that were in the windows version and more importantly update the fingerprint files.
 
+## standalone app
+satori-ua.py, it uses the fingerprint database, but I needed somethign that was reliable to determine OS on a number of occasions and figured may as well use a DB that I had!  Feed it a useragent by itself or a file full of them.
+
 ## interesting notes
 Verified it appears to run fine on Risc V Architecture on the VisionFive 2 at least with no mods.
 
