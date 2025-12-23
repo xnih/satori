@@ -40,10 +40,10 @@ def httpUserAgentProcess(ua, useragentExactList, useragentPartialList):
     os = checkMacOSX(os, browser)
 
     #satori FP
-    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, ua)
+    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, ua.lower())
 
     #not ideal but converting any ; to | for parsing reasons!
-    fingerprintHdrUserAgent = ua + '|' + os + '|' + browser + '|' + device + '|' + httpUserAgentFingerprint
+    fingerprintHdrUserAgent = '"' + ua + '"|"' + os + '"|"' + browser + '"|"' + device + '"|"' + httpUserAgentFingerprint + '"'
 
     print(fingerprintHdrUserAgent)
 
@@ -66,7 +66,7 @@ def BuildHTTPUserAgentFingerprintFiles():
       if test is None:  #if testsCount = 1, then untangle doesn't allow us to iterate through it
         test = obj.WEBUSERAGENT.fingerprints.fingerprint[x].webuseragent_tests.test
       matchtype = test['matchtype']
-      webuseragent = test['webuseragent']
+      webuseragent = test['webuseragent'].lower()
       weight = test['weight']
       if matchtype == 'exact':
         if webuseragent in useragentExactList:
