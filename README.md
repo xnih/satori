@@ -4,7 +4,7 @@ Python rewrite of passive OS fingerprinting tool.
 It currently supports fingerprinting by the following means:
 - DHCP
 - DNS
-- HTTP (User Agent and Server)
+- HTTP (User Agent and Server) *check out satori-ua note below
 - NTP
 - SMB (TCP and UDP, though limited usefulness with nobody running SMBv1 anymore)
 - SSH
