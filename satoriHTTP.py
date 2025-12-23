@@ -16,7 +16,7 @@ from pypacker.layer3 import ip
 
 
 def version():
-  dateReleased='satoriHTTP.py - 2024-04-06'
+  dateReleased='satoriHTTP.py - 2025-12-22'
   print(dateReleased)
 
 
@@ -55,12 +55,12 @@ def httpServerProcess(pkt, layer, ts, serverExactList, serverPartialList):
   fingerprintBodyServer = None
 
   if (hdrServer != ''):
-    httpServerFingerprint = fingerprintLookup(serverExactList, serverPartialList, hdrServer)
+    httpServerFingerprint = fingerprintLookup(serverExactList, serverPartialList, hdrServer.lower())
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = hdrUserAgent.replace(';', '|')
     fingerprintHdrServer = ip4.src_s + ';' + src_mac + ';HTTPSERVER;' + hdrServer + ';' + httpServerFingerprint
   if (bodyServer != ''):
-    httpServerFingerprint = fingerprintLookup(serverExactList, serverPartialList, bodyServer)
+    httpServerFingerprint = fingerprintLookup(serverExactList, serverPartialList, bodyServer.lower())
     #not ideal but converting any ; to | for parsing reasons!
 #    changedUserAgent = bodyUserAgent.replace(';', '|')
     fingerprintBodyServer = ip4.src_s + ';' + src_mac + ';HTTPSERVER;' + bodyServer + ';' + httpServerFingerprint
@@ -102,12 +102,12 @@ def httpUserAgentProcess(pkt, layer, ts, useragentExactList, useragentPartialLis
   fingerprintBodyUserAgent = None
 
   if (hdrUserAgent != ''):
-    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, hdrUserAgent)
+    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, hdrUserAgent.lower())
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = hdrUserAgent.replace(';', '|').replace("\n", "").replace("\r", "").strip()
     fingerprintHdrUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
   if (bodyUserAgent != ''):
-    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent)
+    httpUserAgentFingerprint = fingerprintLookup(useragentExactList, useragentPartialList, bodyUserAgent.lower())
     #not ideal but converting any ; to | for parsing reasons!
     changedUserAgent = bodyUserAgent.replace(';', '|').replace("\n", "").replace("\r", "").strip()
     fingerprintBodyUserAgent = ip4.src_s + ';' + src_mac + ';USERAGENT;' + changedUserAgent + ';' + httpUserAgentFingerprint
@@ -170,7 +170,7 @@ def BuildHTTPUserAgentFingerprintFiles():
       if test is None:  #if testsCount = 1, then untangle doesn't allow us to iterate through it
         test = obj.WEBUSERAGENT.fingerprints.fingerprint[x].webuseragent_tests.test
       matchtype = test['matchtype']
-      webuseragent = test['webuseragent']
+      webuseragent = test['webuseragent'].lower()
       weight = test['weight']
       if matchtype == 'exact':
         if webuseragent in useragentExactList:
