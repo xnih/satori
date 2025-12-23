@@ -5526,6 +5526,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.0"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.0"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.1.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5543,6 +5544,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.1"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.1"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.1"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.2.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5560,6 +5562,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.2"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.2"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.2"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.3.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5577,6 +5580,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.3"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.3"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.3"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.4.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5594,6 +5598,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.4"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.4"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.4"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.5.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5611,6 +5616,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.5"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.5"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.5"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.6.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5628,6 +5634,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.6"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.6"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.6"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.7.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5645,6 +5652,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS 13.7"/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 13.7"/>
                 <test weight="7" matchtype="partial" webuseragent="macOS/13.7"/>
+                <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 13.x" os_name="Ventura" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
@@ -5660,6 +5668,7 @@
                 <test weight="5" matchtype="partial" webuseragent="macOS 13."/>
                 <test weight="5" matchtype="partial" webuseragent="Mac 13."/>
                 <test weight="5" matchtype="partial" webuseragent="macOS/13."/>
+                <test weight="5" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18."/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 14.0.x" os_name="Sonoma" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-22">
