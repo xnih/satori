@@ -5991,7 +5991,7 @@
                 <test weight="7" matchtype="partial" webuseragent="OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16."/>
                 <test weight="7" matchtype="partial" webuseragent="Mac 11.2"/>
                 <test weight="7" matchtype="partial" webuseragent="Darwin 20.3"/>
-                <test weight="7" matchtype="partial" webuseragent="Darwin 20.3"/>
+                <test weight="7" matchtype="partial" webuseragent="Darwin/20.3"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 11.3.x" os_name="Big Sur" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-23">
@@ -6441,7 +6441,7 @@
                 <test weight="7" matchtype="partial" webuseragent="macOS/14.0"/>
                 <test weight="7" matchtype="partial" webuseragent="mac/14.0"/>
                 <test weight="7" matchtype="partial" webuseragent="Darwin 23.0"/>
-                <test weight="7" matchtype="partial" webuseragent="Darwin 23.0"/>
+                <test weight="7" matchtype="partial" webuseragent="Darwin/23.0"/>
             </webuseragent_tests>
         </fingerprint>
         <fingerprint name="Mac OS X - 14.1.x" os_name="Sonoma" os_class="Mac OS" os_vendor="Apple, Inc." os_url="http://www.apple.com/macosx" device_type="" device_vendor="" device_url="" comments="" author="xnih13@gmail.com" last_updated="2025-12-23">
