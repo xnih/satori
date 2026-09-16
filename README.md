@@ -80,24 +80,34 @@ I created an alert that looks like this where we're ignoring specific useragents
 
 Type
     Aggregation
+    
 Search Query
     test_type:USERAGENT AND NOT useragent:(/EIS Update.*/ OR /SEP.*/ OR "Avast NCC" OR "AMD Catalyst Install Manager" OR "Avast Antivirus" OR /.*EpicGamesLauncher.*/ OR "OfficeClickToRun" OR "AMDUEP" OR "Norton Suite Emergency Update Agent" OR "Avast NCC" OR /.*PlayStation 4.*/ OR /.*EAV.*/ OR /.*MicroMessenger.*/ OR /.*WinHttp\-Autoproxy\-Service.*/ OR "Avast NCC" OR /.*Microsoft\-ATL\-Native.*/ OR /.*Roku.*/ OR /.*"Battle.net".*/ OR /Blizzard.*/) AND NOT source_ip:(10.12.1.16) AND os_guess:(/.*Roku.*/ OR /.*Linux.*/ OR /.*Microsoft.*/ OR /.*iPad.*/ OR /.*iPhone.*/ OR /.*"Mac OS".*/ OR /.*Android.*/)
+
 Search Filters
     No filters configured
+
 Streams
     satori
+
 Search within
     24 hours
+
 Use Cron Scheduling
     no
+
 Execute search every
     1 hours
+
 Enable scheduling
     yes
+
 Group by Field(s)
     source_ip
+
 Create Events if
     card(useragent) > 10 AND [card(os_guess) > 3]
+
 Actions
 
 ## version
