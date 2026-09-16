@@ -75,6 +75,31 @@ You can do things like " NOT os_guess:* " to find devices that satori was unable
 
 The content pack currently contains about 5 rules to properly parse the data.  It may not be ideal on how they are configured, I've spent a very limited amount of timing with graylog!  It has worked well enough for what I've done in testing.  nxlog would probably be a good way to inject them into graylog, but to date I've just used netcat and pushed them into a raw tcp listener!
 
+### detecting residential proxies
+I created an alert that looks like this where we're ignoring specific useragents and hard coding it to specific os_guess's for example and then if we see more than 10 unique useragents and more than 3 unique useragents, then it sends us a notice:
+
+Type
+    Aggregation
+Search Query
+    test_type:USERAGENT AND NOT useragent:(/EIS Update.*/ OR /SEP.*/ OR "Avast NCC" OR "AMD Catalyst Install Manager" OR "Avast Antivirus" OR /.*EpicGamesLauncher.*/ OR "OfficeClickToRun" OR "AMDUEP" OR "Norton Suite Emergency Update Agent" OR "Avast NCC" OR /.*PlayStation 4.*/ OR /.*EAV.*/ OR /.*MicroMessenger.*/ OR /.*WinHttp\-Autoproxy\-Service.*/ OR "Avast NCC" OR /.*Microsoft\-ATL\-Native.*/ OR /.*Roku.*/ OR /.*"Battle.net".*/ OR /Blizzard.*/) AND NOT source_ip:(10.12.1.16) AND os_guess:(/.*Roku.*/ OR /.*Linux.*/ OR /.*Microsoft.*/ OR /.*iPad.*/ OR /.*iPhone.*/ OR /.*"Mac OS".*/ OR /.*Android.*/)
+Search Filters
+    No filters configured
+Streams
+    satori
+Search within
+    24 hours
+Use Cron Scheduling
+    no
+Execute search every
+    1 hours
+Enable scheduling
+    yes
+Group by Field(s)
+    source_ip
+Create Events if
+    card(useragent) > 10 AND [card(os_guess) > 3]
+Actions
+
 ## version
 This currently really is version 0.1 of this.  Just to reiterate I am not a programmer, expecially in python, I just hack stuff together, so you have been warned.  But with that said, seems stable at this point and I've been running it in production like systems since I put this out here!
 
